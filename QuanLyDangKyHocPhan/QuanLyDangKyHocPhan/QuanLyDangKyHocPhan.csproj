@@ -65,6 +65,12 @@
     <Compile Include="AcountWindow.Designer.cs">
       <DependentUpon>AcountWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\ControlStudentManagerment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ControlStudentManagerment.Designer.cs">
+      <DependentUpon>ControlStudentManagerment.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\DropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="AcountWindow.resx">
       <DependentUpon>AcountWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\ControlStudentManagerment.resx">
+      <DependentUpon>ControlStudentManagerment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,9 +126,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8_search_32px_2.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_bookmark_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_remove_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_support_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

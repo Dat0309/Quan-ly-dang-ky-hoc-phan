@@ -32,8 +32,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvDSSV = new System.Windows.Forms.ListView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbbTenKhoa = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
@@ -42,13 +42,25 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaGradientButton2 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
             this.btnTimKiem = new Guna.UI.WinForms.GunaGradientButton();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lvDSSV);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(339, 179);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(712, 500);
@@ -56,9 +68,38 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách";
             // 
+            // lvDSSV
+            // 
+            this.lvDSSV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvDSSV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvDSSV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDSSV.GridLines = true;
+            this.lvDSSV.HideSelection = false;
+            this.lvDSSV.Location = new System.Drawing.Point(3, 19);
+            this.lvDSSV.Name = "lvDSSV";
+            this.lvDSSV.Size = new System.Drawing.Size(706, 478);
+            this.lvDSSV.TabIndex = 0;
+            this.lvDSSV.UseCompatibleStateImageBehavior = false;
+            this.lvDSSV.View = System.Windows.Forms.View.Details;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.gunaLabel7);
+            this.groupBox2.Controls.Add(this.gunaLabel6);
+            this.groupBox2.Controls.Add(this.gunaLabel5);
+            this.groupBox2.Controls.Add(this.gunaLabel4);
+            this.groupBox2.Controls.Add(this.gunaLabel3);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(14, 179);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(319, 500);
@@ -66,19 +107,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             // 
-            // lvDSSV
-            // 
-            this.lvDSSV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvDSSV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvDSSV.HideSelection = false;
-            this.lvDSSV.Location = new System.Drawing.Point(3, 19);
-            this.lvDSSV.Name = "lvDSSV";
-            this.lvDSSV.Size = new System.Drawing.Size(706, 478);
-            this.lvDSSV.TabIndex = 0;
-            this.lvDSSV.UseCompatibleStateImageBehavior = false;
-            // 
             // cbbTenKhoa
             // 
+            this.cbbTenKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbTenKhoa.BackColor = System.Drawing.Color.Transparent;
             this.cbbTenKhoa.BaseColor = System.Drawing.Color.White;
             this.cbbTenKhoa.BorderColor = System.Drawing.Color.Silver;
@@ -99,6 +131,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaLabel1
             // 
+            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(338, 45);
@@ -109,6 +143,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaComboBox1
             // 
+            this.gunaComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
             this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
@@ -129,6 +165,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaLabel2
             // 
+            this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.Location = new System.Drawing.Point(761, 46);
@@ -139,6 +177,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaGradientButton3
             // 
+            this.gunaGradientButton3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaGradientButton3.AnimationHoverSpeed = 0.07F;
             this.gunaGradientButton3.AnimationSpeed = 0.03F;
             this.gunaGradientButton3.BackColor = System.Drawing.Color.Transparent;
@@ -167,6 +207,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaGradientButton2
             // 
+            this.gunaGradientButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaGradientButton2.AnimationHoverSpeed = 0.07F;
             this.gunaGradientButton2.AnimationSpeed = 0.03F;
             this.gunaGradientButton2.BackColor = System.Drawing.Color.Transparent;
@@ -195,6 +237,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaGradientButton1
             // 
+            this.gunaGradientButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
             this.gunaGradientButton1.AnimationSpeed = 0.03F;
             this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
@@ -244,10 +288,89 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnTimKiem.OnHoverImage = null;
             this.btnTimKiem.OnPressedColor = System.Drawing.Color.Black;
             this.btnTimKiem.Radius = 20;
-            this.btnTimKiem.Size = new System.Drawing.Size(129, 42);
+            this.btnTimKiem.Size = new System.Drawing.Size(125, 40);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "IDSV";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Họ";
+            this.columnHeader2.Width = 94;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tên";
+            this.columnHeader3.Width = 65;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Ngày sinh";
+            this.columnHeader4.Width = 94;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Địa chỉ";
+            this.columnHeader5.Width = 268;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Số điện thoại";
+            this.columnHeader6.Width = 96;
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.Location = new System.Drawing.Point(6, 41);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(53, 20);
+            this.gunaLabel3.TabIndex = 0;
+            this.gunaLabel3.Text = "Mã SV";
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(6, 117);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(57, 20);
+            this.gunaLabel4.TabIndex = 1;
+            this.gunaLabel4.Text = "Họ Tên";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(6, 193);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(78, 20);
+            this.gunaLabel5.TabIndex = 2;
+            this.gunaLabel5.Text = "Ngày sinh";
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Location = new System.Drawing.Point(6, 269);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(56, 20);
+            this.gunaLabel6.TabIndex = 3;
+            this.gunaLabel6.Text = "Địa chỉ";
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Location = new System.Drawing.Point(6, 345);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(80, 20);
+            this.gunaLabel7.TabIndex = 4;
+            this.gunaLabel7.Text = "Điện thoại";
             // 
             // ControlStudentManagerment
             // 
@@ -266,6 +389,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.Name = "ControlStudentManagerment";
             this.Size = new System.Drawing.Size(1065, 711);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +411,16 @@ namespace QuanLyDangKyHocPhan.CustomControl
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton2;
         private Guna.UI.WinForms.GunaGradientButton gunaGradientButton3;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
     }
 }

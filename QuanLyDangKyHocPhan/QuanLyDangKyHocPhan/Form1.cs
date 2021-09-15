@@ -7,17 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyDangKyHocPhan.CustomControl;
 
 namespace QuanLyDangKyHocPhan
 {
     public partial class Form1 : Form
     {
-        StartUpControl startUp = new StartUpControl();
         public Form1()
         {
             InitializeComponent();
-            slidePanel.Height = btnHome.Height;
-            startUp.BringToFront();
+            startUpControl1.BringToFront();
+
             ddmQuanLy.IsMainMenu = true;
             ddmHocVu.IsMainMenu = true;
             ddmThongKe.IsMainMenu = true;
@@ -27,7 +27,9 @@ namespace QuanLyDangKyHocPhan
         {
             slidePanel.Height = btnHome.Height;
             slidePanel.Location = btnHome.Location;
-            startUp.BringToFront();
+            //UCstartUp.Dock = DockStyle.Fill;
+            //pnShow.Controls["UCstartUp"].BringToFront();
+            startUpControl1.BringToFront();
         }
 
         private void btnQL_Click(object sender, EventArgs e)
@@ -61,6 +63,13 @@ namespace QuanLyDangKyHocPhan
         {
             slidePanel.Height = btnUser.Height;
             slidePanel.Location = btnUser.Location;
+        }
+
+        private void tsmiQLSV_Click(object sender, EventArgs e)
+        {
+            slidePanel.Height = btnQL.Height;
+            slidePanel.Location = btnQL.Location;
+            controlStudentManagerment1.BringToFront();
         }
     }
 }

@@ -32,28 +32,30 @@ namespace QuanLyDangKyHocPhan
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnShow = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.btnUser = new Guna.UI.WinForms.GunaButton();
+            this.btnDKHP = new Guna.UI.WinForms.GunaButton();
             this.btnHocPhi = new Guna.UI.WinForms.GunaButton();
             this.btnThongKe = new Guna.UI.WinForms.GunaButton();
             this.btnHocVu = new Guna.UI.WinForms.GunaButton();
             this.btnQL = new Guna.UI.WinForms.GunaButton();
             this.btnHome = new Guna.UI.WinForms.GunaButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnShow = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.ucqlhp1 = new QuanLyDangKyHocPhan.CustomControl.UCQLHP();
             this.controlStudentManagerment1 = new QuanLyDangKyHocPhan.CustomControl.ControlStudentManagerment();
             this.startUpControl1 = new QuanLyDangKyHocPhan.StartUpControl();
             this.ddmQuanLy = new QuanLyDangKyHocPhan.CustomControl.DropDownMenu(this.components);
             this.tsmiQLSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQLHP = new System.Windows.Forms.ToolStripMenuItem();
             this.ddmHocVu = new QuanLyDangKyHocPhan.CustomControl.DropDownMenu(this.components);
-            this.tsmiCTDT = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLichThi = new System.Windows.Forms.ToolStripMenuItem();
             this.ddmThongKe = new QuanLyDangKyHocPhan.CustomControl.DropDownMenu(this.components);
             this.tsmiLKDSSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLKDSHP = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLapDSThi = new System.Windows.Forms.ToolStripMenuItem();
+            this.uddkhp1 = new QuanLyDangKyHocPhan.CustomControl.UDDKHP();
             this.panel1.SuspendLayout();
             this.pnShow.SuspendLayout();
             this.ddmQuanLy.SuspendLayout();
@@ -68,6 +70,7 @@ namespace QuanLyDangKyHocPhan
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.slidePanel);
             this.panel1.Controls.Add(this.btnUser);
+            this.panel1.Controls.Add(this.btnDKHP);
             this.panel1.Controls.Add(this.btnHocPhi);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.btnHocVu);
@@ -84,7 +87,30 @@ namespace QuanLyDangKyHocPhan
             this.slidePanel.Location = new System.Drawing.Point(0, 89);
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(10, 56);
-            this.slidePanel.TabIndex = 10;
+            this.slidePanel.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1290, 10);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnShow
+            // 
+            this.pnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnShow.Controls.Add(this.uddkhp1);
+            this.pnShow.Controls.Add(this.ucqlhp1);
+            this.pnShow.Controls.Add(this.controlStudentManagerment1);
+            this.pnShow.Controls.Add(this.startUpControl1);
+            this.pnShow.Location = new System.Drawing.Point(225, 12);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(1065, 711);
+            this.pnShow.TabIndex = 2;
             // 
             // btnUser
             // 
@@ -96,9 +122,9 @@ namespace QuanLyDangKyHocPhan
             this.btnUser.FocusedColor = System.Drawing.Color.Empty;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Image = null;
+            this.btnUser.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_male_user_64px;
             this.btnUser.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUser.Location = new System.Drawing.Point(0, 413);
+            this.btnUser.Location = new System.Drawing.Point(0, 475);
             this.btnUser.Name = "btnUser";
             this.btnUser.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnUser.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -106,10 +132,35 @@ namespace QuanLyDangKyHocPhan
             this.btnUser.OnHoverImage = null;
             this.btnUser.OnPressedColor = System.Drawing.Color.Black;
             this.btnUser.Size = new System.Drawing.Size(225, 56);
-            this.btnUser.TabIndex = 9;
+            this.btnUser.TabIndex = 11;
             this.btnUser.Text = "Tài khoản";
             this.btnUser.TextOffsetX = 10;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // btnDKHP
+            // 
+            this.btnDKHP.AnimationHoverSpeed = 0.07F;
+            this.btnDKHP.AnimationSpeed = 0.03F;
+            this.btnDKHP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.btnDKHP.BorderColor = System.Drawing.Color.Black;
+            this.btnDKHP.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDKHP.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDKHP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDKHP.ForeColor = System.Drawing.Color.White;
+            this.btnDKHP.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_student_registration_64px;
+            this.btnDKHP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDKHP.Location = new System.Drawing.Point(0, 413);
+            this.btnDKHP.Name = "btnDKHP";
+            this.btnDKHP.OnHoverBaseColor = System.Drawing.Color.DimGray;
+            this.btnDKHP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDKHP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDKHP.OnHoverImage = null;
+            this.btnDKHP.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDKHP.Size = new System.Drawing.Size(225, 56);
+            this.btnDKHP.TabIndex = 9;
+            this.btnDKHP.Text = "Đăng ký học phần";
+            this.btnDKHP.TextOffsetX = 10;
+            this.btnDKHP.Click += new System.EventHandler(this.btnDKHP_Click);
             // 
             // btnHocPhi
             // 
@@ -121,7 +172,7 @@ namespace QuanLyDangKyHocPhan
             this.btnHocPhi.FocusedColor = System.Drawing.Color.Empty;
             this.btnHocPhi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHocPhi.ForeColor = System.Drawing.Color.White;
-            this.btnHocPhi.Image = null;
+            this.btnHocPhi.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_money_bag_64px;
             this.btnHocPhi.ImageSize = new System.Drawing.Size(20, 20);
             this.btnHocPhi.Location = new System.Drawing.Point(0, 346);
             this.btnHocPhi.Name = "btnHocPhi";
@@ -146,7 +197,7 @@ namespace QuanLyDangKyHocPhan
             this.btnThongKe.FocusedColor = System.Drawing.Color.Empty;
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Image = null;
+            this.btnThongKe.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_statistics_64px;
             this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
             this.btnThongKe.Location = new System.Drawing.Point(0, 280);
             this.btnThongKe.Name = "btnThongKe";
@@ -171,7 +222,7 @@ namespace QuanLyDangKyHocPhan
             this.btnHocVu.FocusedColor = System.Drawing.Color.Empty;
             this.btnHocVu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHocVu.ForeColor = System.Drawing.Color.White;
-            this.btnHocVu.Image = null;
+            this.btnHocVu.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_study_64px;
             this.btnHocVu.ImageSize = new System.Drawing.Size(20, 20);
             this.btnHocVu.Location = new System.Drawing.Point(0, 214);
             this.btnHocVu.Name = "btnHocVu";
@@ -196,7 +247,7 @@ namespace QuanLyDangKyHocPhan
             this.btnQL.FocusedColor = System.Drawing.Color.Empty;
             this.btnQL.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQL.ForeColor = System.Drawing.Color.White;
-            this.btnQL.Image = null;
+            this.btnQL.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_product_management_64px;
             this.btnQL.ImageSize = new System.Drawing.Size(20, 20);
             this.btnQL.Location = new System.Drawing.Point(0, 150);
             this.btnQL.Name = "btnQL";
@@ -221,7 +272,7 @@ namespace QuanLyDangKyHocPhan
             this.btnHome.FocusedColor = System.Drawing.Color.Empty;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = null;
+            this.btnHome.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_home_64px;
             this.btnHome.ImageSize = new System.Drawing.Size(20, 20);
             this.btnHome.Location = new System.Drawing.Point(0, 89);
             this.btnHome.Name = "btnHome";
@@ -236,29 +287,16 @@ namespace QuanLyDangKyHocPhan
             this.btnHome.TextOffsetX = 10;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel2
+            // ucqlhp1
             // 
-            this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1290, 10);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnShow
-            // 
-            this.pnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnShow.Controls.Add(this.controlStudentManagerment1);
-            this.pnShow.Controls.Add(this.startUpControl1);
-            this.pnShow.Location = new System.Drawing.Point(225, 12);
-            this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(1065, 711);
-            this.pnShow.TabIndex = 2;
+            this.ucqlhp1.Location = new System.Drawing.Point(0, -3);
+            this.ucqlhp1.Name = "ucqlhp1";
+            this.ucqlhp1.Size = new System.Drawing.Size(1065, 711);
+            this.ucqlhp1.TabIndex = 2;
             // 
             // controlStudentManagerment1
             // 
+            this.controlStudentManagerment1.AutoScroll = true;
             this.controlStudentManagerment1.Location = new System.Drawing.Point(0, -3);
             this.controlStudentManagerment1.Name = "controlStudentManagerment1";
             this.controlStudentManagerment1.Size = new System.Drawing.Size(1065, 711);
@@ -299,34 +337,27 @@ namespace QuanLyDangKyHocPhan
             this.tsmiQLHP.Name = "tsmiQLHP";
             this.tsmiQLHP.Size = new System.Drawing.Size(197, 24);
             this.tsmiQLHP.Text = "Quản lý học phần";
+            this.tsmiQLHP.Click += new System.EventHandler(this.tsmiQLHP_Click);
             // 
             // ddmHocVu
             // 
             this.ddmHocVu.IsMainMenu = false;
             this.ddmHocVu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCTDT,
             this.tsmiLichThi});
             this.ddmHocVu.MenuItemHeight = 25;
             this.ddmHocVu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.ddmHocVu.Name = "ddmHocVu";
             this.ddmHocVu.PrimaryColor = System.Drawing.Color.Empty;
-            this.ddmHocVu.Size = new System.Drawing.Size(154, 52);
-            // 
-            // tsmiCTDT
-            // 
-            this.tsmiCTDT.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsmiCTDT.ForeColor = System.Drawing.Color.White;
-            this.tsmiCTDT.Name = "tsmiCTDT";
-            this.tsmiCTDT.Size = new System.Drawing.Size(153, 24);
-            this.tsmiCTDT.Text = "CT Đào tạo";
+            this.ddmHocVu.Size = new System.Drawing.Size(128, 28);
             // 
             // tsmiLichThi
             // 
             this.tsmiLichThi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiLichThi.ForeColor = System.Drawing.Color.White;
             this.tsmiLichThi.Name = "tsmiLichThi";
-            this.tsmiLichThi.Size = new System.Drawing.Size(153, 24);
+            this.tsmiLichThi.Size = new System.Drawing.Size(127, 24);
             this.tsmiLichThi.Text = "Lịch thi";
+            this.tsmiLichThi.Click += new System.EventHandler(this.tsmiLichThi_Click);
             // 
             // ddmThongKe
             // 
@@ -365,6 +396,14 @@ namespace QuanLyDangKyHocPhan
             this.tsmiLapDSThi.Size = new System.Drawing.Size(165, 24);
             this.tsmiLapDSThi.Text = "Lập DS Thi";
             // 
+            // uddkhp1
+            // 
+            this.uddkhp1.AutoScroll = true;
+            this.uddkhp1.Location = new System.Drawing.Point(0, -3);
+            this.uddkhp1.Name = "uddkhp1";
+            this.uddkhp1.Size = new System.Drawing.Size(1065, 711);
+            this.uddkhp1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,7 +433,7 @@ namespace QuanLyDangKyHocPhan
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private Guna.UI.WinForms.GunaButton btnHome;
-        private Guna.UI.WinForms.GunaButton btnUser;
+        private Guna.UI.WinForms.GunaButton btnDKHP;
         private Guna.UI.WinForms.GunaButton btnHocPhi;
         private Guna.UI.WinForms.GunaButton btnThongKe;
         private Guna.UI.WinForms.GunaButton btnHocVu;
@@ -402,9 +441,7 @@ namespace QuanLyDangKyHocPhan
         private CustomControl.DropDownMenu ddmQuanLy;
         private System.Windows.Forms.ToolStripMenuItem tsmiQLSV;
         private System.Windows.Forms.ToolStripMenuItem tsmiQLHP;
-        private System.Windows.Forms.Panel slidePanel;
         private CustomControl.DropDownMenu ddmHocVu;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCTDT;
         private System.Windows.Forms.ToolStripMenuItem tsmiLichThi;
         private CustomControl.DropDownMenu ddmThongKe;
         private System.Windows.Forms.ToolStripMenuItem tsmiLKDSSV;
@@ -412,6 +449,10 @@ namespace QuanLyDangKyHocPhan
         private System.Windows.Forms.ToolStripMenuItem tsmiLapDSThi;
         private CustomControl.ControlStudentManagerment controlStudentManagerment1;
         private StartUpControl startUpControl1;
+        private CustomControl.UCQLHP ucqlhp1;
+        private Guna.UI.WinForms.GunaButton btnUser;
+        private System.Windows.Forms.Panel slidePanel;
+        private CustomControl.UDDKHP uddkhp1;
     }
 }
 

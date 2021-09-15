@@ -76,6 +76,18 @@
     </Compile>
     <Compile Include="CustomControl\MenuColorTable.cs" />
     <Compile Include="CustomControl\MenuRender.cs" />
+    <Compile Include="CustomControl\UCQLHP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UCQLHP.Designer.cs">
+      <DependentUpon>UCQLHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\UDDKHP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UDDKHP.Designer.cs">
+      <DependentUpon>UDDKHP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\ControlStudentManagerment.resx">
       <DependentUpon>ControlStudentManagerment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UCQLHP.resx">
+      <DependentUpon>UCQLHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UDDKHP.resx">
+      <DependentUpon>UDDKHP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -140,6 +158,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_support_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_product_management_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_study_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_statistics_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_money_bag_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_student_registration_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_male_user_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bookmark_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checked_64px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

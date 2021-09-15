@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDangKyHocPhan.CustomControl
 {
-    public partial class ControlStudentManagerment : UserControl
+    public partial class UCQLHP : UserControl
     {
-        public ControlStudentManagerment()
+        public UCQLHP()
         {
             InitializeComponent();
         }
-
     }
 }

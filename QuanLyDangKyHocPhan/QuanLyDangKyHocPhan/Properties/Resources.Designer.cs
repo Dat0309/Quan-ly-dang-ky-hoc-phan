@@ -73,6 +73,66 @@ namespace QuanLyDangKyHocPhan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bookmark_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_bookmark_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_checked_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_checked_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_home_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_home_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_male_user_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_male_user_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_money_bag_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_money_bag_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_product_management_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_product_management_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_remove_16px {
             get {
                 object obj = ResourceManager.GetObject("icons8_remove_16px", resourceCulture);
@@ -86,6 +146,36 @@ namespace QuanLyDangKyHocPhan.Properties {
         internal static System.Drawing.Bitmap icons8_search_32px_2 {
             get {
                 object obj = ResourceManager.GetObject("icons8_search_32px_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_statistics_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_statistics_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_student_registration_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_student_registration_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_study_64px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_study_64px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

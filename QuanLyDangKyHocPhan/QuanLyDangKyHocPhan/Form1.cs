@@ -59,17 +59,34 @@ namespace QuanLyDangKyHocPhan
             slidePanel.Location = btnHocPhi.Location;
         }
 
+
+        private void tsmiQLSV_Click(object sender, EventArgs e)
+        {
+            controlStudentManagerment1.BringToFront();
+        }
+
+        private void tsmiQLHP_Click(object sender, EventArgs e)
+        {
+            ucqlhp1.BringToFront();
+        }
+
+
+        private void tsmiLichThi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDKHP_Click(object sender, EventArgs e)
+        {
+            slidePanel.Height = btnDKHP.Height;
+            slidePanel.Location = btnDKHP.Location;
+            uddkhp1.BringToFront();
+        }
+
         private void btnUser_Click(object sender, EventArgs e)
         {
             slidePanel.Height = btnUser.Height;
             slidePanel.Location = btnUser.Location;
-        }
-
-        private void tsmiQLSV_Click(object sender, EventArgs e)
-        {
-            slidePanel.Height = btnQL.Height;
-            slidePanel.Location = btnQL.Location;
-            controlStudentManagerment1.BringToFront();
         }
     }
 }

@@ -7,4 +7,7 @@ Lược đồ ER đề tài quản lý đăng ký học phần
 ![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/UIDKHP.png)
 ![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/UIQLMH.png)
 ![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/UIQLSV.png)
-![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/UIQLSV.png)
+![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/HocPhi.png)
+![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/LapDSSV.png)
+![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/LichThi.png)
+![image](https://github.com/Dat0309/Quan-ly-dang-ky-hoc-phan/blob/main/LietKeDSHP.png)

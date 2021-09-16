@@ -76,11 +76,35 @@
     </Compile>
     <Compile Include="CustomControl\MenuColorTable.cs" />
     <Compile Include="CustomControl\MenuRender.cs" />
+    <Compile Include="CustomControl\UCHocPhi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UCHocPhi.Designer.cs">
+      <DependentUpon>UCHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\UCLichThi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UCLichThi.Designer.cs">
+      <DependentUpon>UCLichThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\UCQLHP.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CustomControl\UCQLHP.Designer.cs">
       <DependentUpon>UCQLHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\UC_LKDSHP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UC_LKDSHP.Designer.cs">
+      <DependentUpon>UC_LKDSHP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\UC_LKDSSVDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UC_LKDSSVDangKy.Designer.cs">
+      <DependentUpon>UC_LKDSSVDangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\UDDKHP.cs">
       <SubType>UserControl</SubType>
@@ -108,8 +132,20 @@
     <EmbeddedResource Include="CustomControl\ControlStudentManagerment.resx">
       <DependentUpon>ControlStudentManagerment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UCHocPhi.resx">
+      <DependentUpon>UCHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UCLichThi.resx">
+      <DependentUpon>UCLichThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\UCQLHP.resx">
       <DependentUpon>UCQLHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UC_LKDSHP.resx">
+      <DependentUpon>UC_LKDSHP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UC_LKDSSVDangKy.resx">
+      <DependentUpon>UC_LKDSSVDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\UDDKHP.resx">
       <DependentUpon>UDDKHP.cs</DependentUpon>

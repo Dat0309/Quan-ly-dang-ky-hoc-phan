@@ -57,6 +57,7 @@ namespace QuanLyDangKyHocPhan
         {
             slidePanel.Height = btnHocPhi.Height;
             slidePanel.Location = btnHocPhi.Location;
+            ucHocPhi1.BringToFront();
         }
 
 
@@ -73,7 +74,7 @@ namespace QuanLyDangKyHocPhan
 
         private void tsmiLichThi_Click(object sender, EventArgs e)
         {
-
+            ucLichThi1.BringToFront();
         }
 
         private void btnDKHP_Click(object sender, EventArgs e)
@@ -87,6 +88,16 @@ namespace QuanLyDangKyHocPhan
         {
             slidePanel.Height = btnUser.Height;
             slidePanel.Location = btnUser.Location;
+        }
+
+        private void tsmiLKDSSV_Click(object sender, EventArgs e)
+        {
+            uC_LKDSSVDangKy1.BringToFront();
+        }
+
+        private void tsmiLKDSHP_Click(object sender, EventArgs e)
+        {
+            uC_LKDSHP1.BringToFront();
         }
     }
 }

@@ -63,6 +63,16 @@ namespace QuanLyDangKyHocPhan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exitgv {
+            get {
+                object obj = ResourceManager.GetObject("exitgv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_bookmark_24px {
             get {
                 object obj = ResourceManager.GetObject("icons8_add_bookmark_24px", resourceCulture);
@@ -226,6 +236,16 @@ namespace QuanLyDangKyHocPhan.Properties {
         internal static System.Drawing.Bitmap icons8_support_50px {
             get {
                 object obj = ResourceManager.GetObject("icons8_support_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginsv {
+            get {
+                object obj = ResourceManager.GetObject("loginsv", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

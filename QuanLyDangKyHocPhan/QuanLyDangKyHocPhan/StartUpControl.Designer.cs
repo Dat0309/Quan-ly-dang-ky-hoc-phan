@@ -41,6 +41,8 @@ namespace QuanLyDangKyHocPhan
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -52,6 +54,9 @@ namespace QuanLyDangKyHocPhan
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::QuanLyDangKyHocPhan.Properties.Resources.splash;
             this.pictureBox1.Location = new System.Drawing.Point(527, 137);
             this.pictureBox1.Name = "pictureBox1";
@@ -86,6 +91,7 @@ namespace QuanLyDangKyHocPhan
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +104,7 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaButton1
             // 
+            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaButton1.Animated = true;
             this.gunaButton1.AnimationHoverSpeed = 0.07F;
             this.gunaButton1.AnimationSpeed = 0.03F;
@@ -117,7 +124,7 @@ namespace QuanLyDangKyHocPhan
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 20;
+            this.gunaButton1.Radius = 15;
             this.gunaButton1.Size = new System.Drawing.Size(203, 51);
             this.gunaButton1.TabIndex = 17;
             this.gunaButton1.Text = "Giáo Vụ";
@@ -125,6 +132,7 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaButton2
             // 
+            this.gunaButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gunaButton2.Animated = true;
             this.gunaButton2.AnimationHoverSpeed = 0.07F;
             this.gunaButton2.AnimationSpeed = 0.03F;
@@ -144,7 +152,7 @@ namespace QuanLyDangKyHocPhan
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Radius = 20;
+            this.gunaButton2.Radius = 15;
             this.gunaButton2.Size = new System.Drawing.Size(203, 51);
             this.gunaButton2.TabIndex = 18;
             this.gunaButton2.Text = "Sinh viên";

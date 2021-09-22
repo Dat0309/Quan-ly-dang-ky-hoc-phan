@@ -91,6 +91,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaSeparator1
             // 
+            this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
             this.gunaSeparator1.Location = new System.Drawing.Point(34, 81);
             this.gunaSeparator1.Name = "gunaSeparator1";
@@ -99,8 +101,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaLabel1
             // 
-            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(382, 40);
@@ -111,6 +112,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaTextBox1
             // 
+            this.gunaTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
             this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
@@ -149,7 +151,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 20;
+            this.gunaButton1.Radius = 15;
             this.gunaButton1.Size = new System.Drawing.Size(127, 45);
             this.gunaButton1.TabIndex = 31;
             this.gunaButton1.Text = "Tìm kiếm";
@@ -157,8 +159,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaLabel2
             // 
-            this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.Location = new System.Drawing.Point(382, 94);

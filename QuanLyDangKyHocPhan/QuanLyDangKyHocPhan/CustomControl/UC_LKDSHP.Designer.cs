@@ -32,22 +32,21 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cbbTenKhoa = new Guna.UI.WinForms.GunaComboBox();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.cbbTenKhoa = new Guna.UI.WinForms.GunaComboBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // gunaLabel2
             // 
-            this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.Location = new System.Drawing.Point(442, 94);
@@ -59,6 +58,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // gunaTextBox1
             // 
+            this.gunaTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
             this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
@@ -99,26 +99,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // gunaSeparator1
-            // 
-            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.gunaSeparator1.Location = new System.Drawing.Point(34, 81);
-            this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(1000, 10);
-            this.gunaSeparator1.TabIndex = 34;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(314, 47);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(76, 20);
-            this.gunaLabel1.TabIndex = 33;
-            this.gunaLabel1.Text = "Tìm theo:";
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Mã HP";
@@ -144,10 +124,35 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader5.Text = "Số TC";
             this.columnHeader5.Width = 120;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Ghi chú";
+            this.columnHeader6.Width = 455;
+            // 
+            // gunaSeparator1
+            // 
+            this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.gunaSeparator1.Location = new System.Drawing.Point(34, 81);
+            this.gunaSeparator1.Name = "gunaSeparator1";
+            this.gunaSeparator1.Size = new System.Drawing.Size(1000, 10);
+            this.gunaSeparator1.TabIndex = 34;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(314, 47);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(76, 20);
+            this.gunaLabel1.TabIndex = 33;
+            this.gunaLabel1.Text = "Tìm theo:";
+            // 
             // cbbTenKhoa
             // 
-            this.cbbTenKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbTenKhoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbTenKhoa.BackColor = System.Drawing.Color.Transparent;
             this.cbbTenKhoa.BaseColor = System.Drawing.Color.White;
             this.cbbTenKhoa.BorderColor = System.Drawing.Color.Silver;
@@ -170,11 +175,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.cbbTenKhoa.Size = new System.Drawing.Size(102, 26);
             this.cbbTenKhoa.TabIndex = 39;
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Ghi chú";
-            this.columnHeader6.Width = 455;
-            // 
             // gunaButton1
             // 
             this.gunaButton1.Animated = true;
@@ -196,7 +196,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 20;
+            this.gunaButton1.Radius = 15;
             this.gunaButton1.Size = new System.Drawing.Size(127, 45);
             this.gunaButton1.TabIndex = 37;
             this.gunaButton1.Text = "Tìm kiếm";

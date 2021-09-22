@@ -96,6 +96,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.cbbTenKhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbTenKhoa.ForeColor = System.Drawing.Color.Black;
             this.cbbTenKhoa.FormattingEnabled = true;
+            this.cbbTenKhoa.Items.AddRange(new object[] {
+            "Công nghệ thông tin"});
             this.cbbTenKhoa.Location = new System.Drawing.Point(390, 45);
             this.cbbTenKhoa.Name = "cbbTenKhoa";
             this.cbbTenKhoa.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -195,6 +197,17 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.gunaComboBox3.ForeColor = System.Drawing.Color.Black;
             this.gunaComboBox3.FormattingEnabled = true;
+            this.gunaComboBox3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.gunaComboBox3.Location = new System.Drawing.Point(101, 312);
             this.gunaComboBox3.Name = "gunaComboBox3";
             this.gunaComboBox3.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -217,6 +230,17 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.gunaComboBox2.ForeColor = System.Drawing.Color.Black;
             this.gunaComboBox2.FormattingEnabled = true;
+            this.gunaComboBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
             this.gunaComboBox2.Location = new System.Drawing.Point(101, 251);
             this.gunaComboBox2.Name = "gunaComboBox2";
             this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -251,6 +275,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
             this.gunaComboBox1.FormattingEnabled = true;
+            this.gunaComboBox1.Items.AddRange(new object[] {
+            "Công nghệ thông tin"});
             this.gunaComboBox1.Location = new System.Drawing.Point(101, 139);
             this.gunaComboBox1.Name = "gunaComboBox1";
             this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -413,7 +439,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 20;
+            this.gunaButton1.Radius = 15;
             this.gunaButton1.Size = new System.Drawing.Size(127, 45);
             this.gunaButton1.TabIndex = 22;
             this.gunaButton1.Text = "Tìm kiếm";
@@ -440,7 +466,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton4.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton4.OnHoverImage = null;
             this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton4.Radius = 20;
+            this.gunaButton4.Radius = 15;
             this.gunaButton4.Size = new System.Drawing.Size(111, 37);
             this.gunaButton4.TabIndex = 25;
             this.gunaButton4.Text = "Xóa";
@@ -467,7 +493,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton3.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton3.OnHoverImage = null;
             this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton3.Radius = 20;
+            this.gunaButton3.Radius = 15;
             this.gunaButton3.Size = new System.Drawing.Size(139, 37);
             this.gunaButton3.TabIndex = 24;
             this.gunaButton3.Text = "Cập nhật";
@@ -494,7 +520,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Radius = 20;
+            this.gunaButton2.Radius = 15;
             this.gunaButton2.Size = new System.Drawing.Size(116, 37);
             this.gunaButton2.TabIndex = 23;
             this.gunaButton2.Text = "Thêm";

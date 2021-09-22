@@ -35,15 +35,15 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.SuspendLayout();
             // 
             // cbbTenKhoa
@@ -60,10 +60,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.cbbTenKhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbTenKhoa.ForeColor = System.Drawing.Color.Black;
             this.cbbTenKhoa.FormattingEnabled = true;
-            this.cbbTenKhoa.Items.AddRange(new object[] {
-            "Mã HP",
-            "Tên HP",
-            "Tên Khóa"});
             this.cbbTenKhoa.Location = new System.Drawing.Point(112, 42);
             this.cbbTenKhoa.Name = "cbbTenKhoa";
             this.cbbTenKhoa.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -118,6 +114,31 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader6.Text = "Ngày thi";
             this.columnHeader6.Width = 73;
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Giờ thi";
+            this.columnHeader3.Width = 68;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thời tượng";
+            this.columnHeader4.Width = 75;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Phòng thi";
+            this.columnHeader7.Width = 88;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Địa điểm";
+            this.columnHeader8.Width = 202;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Ghi chú";
+            this.columnHeader9.Width = 82;
+            // 
             // gunaSeparator1
             // 
             this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
@@ -164,10 +185,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
             this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.Items.AddRange(new object[] {
-            "Mã HP",
-            "Tên HP",
-            "Tên Khóa"});
             this.gunaComboBox1.Location = new System.Drawing.Point(296, 42);
             this.gunaComboBox1.Name = "gunaComboBox1";
             this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -175,31 +192,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaComboBox1.Radius = 3;
             this.gunaComboBox1.Size = new System.Drawing.Size(102, 26);
             this.gunaComboBox1.TabIndex = 48;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Giờ thi";
-            this.columnHeader3.Width = 68;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thời tượng";
-            this.columnHeader4.Width = 75;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Phòng thi";
-            this.columnHeader7.Width = 88;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Địa điểm";
-            this.columnHeader8.Width = 202;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Ghi chú";
-            this.columnHeader9.Width = 82;
             // 
             // UCLichThi
             // 

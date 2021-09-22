@@ -32,6 +32,11 @@ namespace QuanLyDangKyHocPhan
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnShow = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.btnClose = new Guna.UI.WinForms.GunaButton();
             this.btnUser = new Guna.UI.WinForms.GunaButton();
             this.btnDKHP = new Guna.UI.WinForms.GunaButton();
             this.btnHocPhi = new Guna.UI.WinForms.GunaButton();
@@ -39,8 +44,7 @@ namespace QuanLyDangKyHocPhan
             this.btnHocVu = new Guna.UI.WinForms.GunaButton();
             this.btnQL = new Guna.UI.WinForms.GunaButton();
             this.btnHome = new Guna.UI.WinForms.GunaButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnShow = new System.Windows.Forms.Panel();
+            this.ucHocPhi1 = new QuanLyDangKyHocPhan.CustomControl.UCHocPhi();
             this.ucLichThi1 = new QuanLyDangKyHocPhan.CustomControl.UCLichThi();
             this.uC_LKDSHP1 = new QuanLyDangKyHocPhan.CustomControl.UC_LKDSHP();
             this.uC_LKDSSVDangKy1 = new QuanLyDangKyHocPhan.CustomControl.UC_LKDSSVDangKy();
@@ -48,8 +52,6 @@ namespace QuanLyDangKyHocPhan
             this.ucqlhp1 = new QuanLyDangKyHocPhan.CustomControl.UCQLHP();
             this.controlStudentManagerment1 = new QuanLyDangKyHocPhan.CustomControl.ControlStudentManagerment();
             this.startUpControl1 = new QuanLyDangKyHocPhan.StartUpControl();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.ddmQuanLy = new QuanLyDangKyHocPhan.CustomControl.DropDownMenu(this.components);
             this.tsmiQLSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQLHP = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +61,6 @@ namespace QuanLyDangKyHocPhan
             this.tsmiLKDSSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLKDSHP = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLapDSThi = new System.Windows.Forms.ToolStripMenuItem();
-            this.ucHocPhi1 = new QuanLyDangKyHocPhan.CustomControl.UCHocPhi();
             this.panel1.SuspendLayout();
             this.pnShow.SuspendLayout();
             this.ddmQuanLy.SuspendLayout();
@@ -72,6 +73,7 @@ namespace QuanLyDangKyHocPhan
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.slidePanel);
             this.panel1.Controls.Add(this.btnUser);
             this.panel1.Controls.Add(this.btnDKHP);
@@ -80,7 +82,7 @@ namespace QuanLyDangKyHocPhan
             this.panel1.Controls.Add(this.btnHocVu);
             this.panel1.Controls.Add(this.btnQL);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 11);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 723);
             this.panel1.TabIndex = 0;
@@ -92,6 +94,62 @@ namespace QuanLyDangKyHocPhan
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(10, 56);
             this.slidePanel.TabIndex = 12;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1290, 10);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnShow
+            // 
+            this.pnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnShow.Controls.Add(this.ucHocPhi1);
+            this.pnShow.Controls.Add(this.ucLichThi1);
+            this.pnShow.Controls.Add(this.uC_LKDSHP1);
+            this.pnShow.Controls.Add(this.uC_LKDSSVDangKy1);
+            this.pnShow.Controls.Add(this.uddkhp1);
+            this.pnShow.Controls.Add(this.ucqlhp1);
+            this.pnShow.Controls.Add(this.controlStudentManagerment1);
+            this.pnShow.Controls.Add(this.startUpControl1);
+            this.pnShow.Location = new System.Drawing.Point(225, 12);
+            this.pnShow.Name = "pnShow";
+            this.pnShow.Size = new System.Drawing.Size(1065, 711);
+            this.pnShow.TabIndex = 2;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClose.Animated = true;
+            this.btnClose.AnimationHoverSpeed = 0.07F;
+            this.btnClose.AnimationSpeed = 0.03F;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BaseColor = System.Drawing.Color.Teal;
+            this.btnClose.BorderColor = System.Drawing.Color.Black;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.FocusedColor = System.Drawing.Color.Empty;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_close_window_26px;
+            this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnClose.Location = new System.Drawing.Point(12, 657);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverBaseColor = System.Drawing.Color.Teal;
+            this.btnClose.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnClose.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnClose.OnHoverImage = null;
+            this.btnClose.OnPressedColor = System.Drawing.Color.Black;
+            this.btnClose.Radius = 20;
+            this.btnClose.Size = new System.Drawing.Size(191, 43);
+            this.btnClose.TabIndex = 38;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnUser
             // 
@@ -268,32 +326,13 @@ namespace QuanLyDangKyHocPhan
             this.btnHome.TextOffsetX = 10;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel2
+            // ucHocPhi1
             // 
-            this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1290, 10);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnShow
-            // 
-            this.pnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnShow.Controls.Add(this.ucHocPhi1);
-            this.pnShow.Controls.Add(this.ucLichThi1);
-            this.pnShow.Controls.Add(this.uC_LKDSHP1);
-            this.pnShow.Controls.Add(this.uC_LKDSSVDangKy1);
-            this.pnShow.Controls.Add(this.uddkhp1);
-            this.pnShow.Controls.Add(this.ucqlhp1);
-            this.pnShow.Controls.Add(this.controlStudentManagerment1);
-            this.pnShow.Controls.Add(this.startUpControl1);
-            this.pnShow.Location = new System.Drawing.Point(225, 12);
-            this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(1065, 711);
-            this.pnShow.TabIndex = 2;
+            this.ucHocPhi1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucHocPhi1.Location = new System.Drawing.Point(0, 0);
+            this.ucHocPhi1.Name = "ucHocPhi1";
+            this.ucHocPhi1.Size = new System.Drawing.Size(1065, 711);
+            this.ucHocPhi1.TabIndex = 7;
             // 
             // ucLichThi1
             // 
@@ -347,6 +386,9 @@ namespace QuanLyDangKyHocPhan
             // 
             // startUpControl1
             // 
+            this.startUpControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.startUpControl1.Location = new System.Drawing.Point(3, 0);
             this.startUpControl1.Name = "startUpControl1";
             this.startUpControl1.Size = new System.Drawing.Size(1049, 672);
@@ -441,14 +483,6 @@ namespace QuanLyDangKyHocPhan
             this.tsmiLapDSThi.Size = new System.Drawing.Size(165, 24);
             this.tsmiLapDSThi.Text = "Lập DS Thi";
             // 
-            // ucHocPhi1
-            // 
-            this.ucHocPhi1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucHocPhi1.Location = new System.Drawing.Point(0, 0);
-            this.ucHocPhi1.Name = "ucHocPhi1";
-            this.ucHocPhi1.Size = new System.Drawing.Size(1065, 711);
-            this.ucHocPhi1.TabIndex = 7;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,7 +491,7 @@ namespace QuanLyDangKyHocPhan
             this.Controls.Add(this.pnShow);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -502,6 +536,7 @@ namespace QuanLyDangKyHocPhan
         private CustomControl.UC_LKDSHP uC_LKDSHP1;
         private CustomControl.UCLichThi ucLichThi1;
         private CustomControl.UCHocPhi ucHocPhi1;
+        private Guna.UI.WinForms.GunaButton btnClose;
     }
 }
 

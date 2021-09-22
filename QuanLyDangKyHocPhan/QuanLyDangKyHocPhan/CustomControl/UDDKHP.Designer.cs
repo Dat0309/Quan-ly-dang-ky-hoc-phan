@@ -68,6 +68,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.cbbTenKhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbTenKhoa.ForeColor = System.Drawing.Color.Black;
             this.cbbTenKhoa.FormattingEnabled = true;
+            this.cbbTenKhoa.Items.AddRange(new object[] {
+            "CQ19CT-PM"});
             this.cbbTenKhoa.Location = new System.Drawing.Point(195, 13);
             this.cbbTenKhoa.Name = "cbbTenKhoa";
             this.cbbTenKhoa.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
@@ -152,7 +154,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 20;
+            this.gunaButton1.Radius = 15;
             this.gunaButton1.Size = new System.Drawing.Size(148, 37);
             this.gunaButton1.TabIndex = 25;
             this.gunaButton1.Text = "Xác nhận ";
@@ -180,7 +182,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Radius = 20;
+            this.gunaButton2.Radius = 15;
             this.gunaButton2.Size = new System.Drawing.Size(185, 37);
             this.gunaButton2.TabIndex = 24;
             this.gunaButton2.Text = "Kết quả đăng ký";

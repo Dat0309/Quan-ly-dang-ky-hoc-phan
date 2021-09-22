@@ -99,5 +99,15 @@ namespace QuanLyDangKyHocPhan
         {
             uC_LKDSHP1.BringToFront();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        }
     }
 }

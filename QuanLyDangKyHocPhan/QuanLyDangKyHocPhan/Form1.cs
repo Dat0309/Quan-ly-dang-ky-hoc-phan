@@ -74,7 +74,9 @@ namespace QuanLyDangKyHocPhan
 
         private void tsmiQLHP_Click(object sender, EventArgs e)
         {
-            ucqlhp1.BringToFront();
+            var item = new UCQLHP(context);
+            item.Dock = DockStyle.Fill;
+            pnShow.Controls["ucqlhp1"].BringToFront();
         }
 
 

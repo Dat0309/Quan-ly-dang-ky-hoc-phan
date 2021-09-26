@@ -15,7 +15,8 @@ namespace QuanLyDangKyHocPhan
         static void Main()
         {
             Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
-            Context context = new Context(dataSource);
+            Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
+            Context context = new Context(dataSource,dataSourceHP);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);           
             Application.Run(new Form1(context));

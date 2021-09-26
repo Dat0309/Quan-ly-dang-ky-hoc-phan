@@ -4,7 +4,8 @@ namespace QuanLyDangKyHocPhan
     public partial class Form1
     {
         public static Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
-        Context context = new Context(dataSource);
+        public static Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
+        Context context = new Context(dataSource,dataSourceHP);
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -49,7 +50,7 @@ namespace QuanLyDangKyHocPhan
             this.uC_LKDSHP1 = new QuanLyDangKyHocPhan.CustomControl.UC_LKDSHP();
             this.uC_LKDSSVDangKy1 = new QuanLyDangKyHocPhan.CustomControl.UC_LKDSSVDangKy();
             this.uddkhp1 = new QuanLyDangKyHocPhan.CustomControl.UDDKHP();
-            this.ucqlhp1 = new QuanLyDangKyHocPhan.CustomControl.UCQLHP();
+            this.ucqlhp1 = new QuanLyDangKyHocPhan.CustomControl.UCQLHP(context);
             this.controlStudentManagerment1 = new QuanLyDangKyHocPhan.CustomControl.ControlStudentManagerment(context);
             this.startUpControl1 = new QuanLyDangKyHocPhan.StartUpControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();

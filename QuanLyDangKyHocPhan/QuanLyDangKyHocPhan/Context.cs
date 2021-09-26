@@ -12,10 +12,13 @@ namespace QuanLyDangKyHocPhan
     {
         private List<SinhVien> dssv;
         private IDataSource dataSource;
+        private List<HocPhan> dshp;
+        private IDataSourceHP dataSourceHP;
 
-        public Context(IDataSource dataSource)
+        public Context(IDataSource dataSource, IDataSourceHP dataSourceHP)
         {
             this.dataSource = dataSource;
+            this.dataSourceHP = dataSourceHP;
         }
         public List<SinhVien> GetSV()
         {
@@ -23,9 +26,19 @@ namespace QuanLyDangKyHocPhan
                 dssv = dataSource.GetSV();
             return dssv;
         }
+        public List<HocPhan> GetHP()
+        {
+            if (dshp == null)
+                dshp = dataSourceHP.GetHP();
+            return dshp;
+        }
         public void SaveSV()
         {
             dataSource.Save(dssv);
+        }
+        public void SaveHP()
+        {
+            dataSourceHP.Save(dshp);
         }
     }
 }

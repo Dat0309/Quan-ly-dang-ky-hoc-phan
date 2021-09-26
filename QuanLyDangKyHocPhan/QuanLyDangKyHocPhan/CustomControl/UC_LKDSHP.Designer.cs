@@ -34,14 +34,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.cbbTenKhoa = new Guna.UI.WinForms.GunaComboBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // gunaLabel2
@@ -85,10 +84,9 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader7});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -108,16 +106,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.columnHeader2.Text = "Tên HP";
             this.columnHeader2.Width = 260;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tín chỉ LT";
-            this.columnHeader3.Width = 77;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tín chỉ TH";
-            this.columnHeader4.Width = 87;
             // 
             // columnHeader5
             // 
@@ -202,6 +190,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.Text = "Tìm kiếm";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Loại HP";
+            this.columnHeader7.Width = 91;
+            // 
             // UC_LKDSHP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,10 +223,9 @@ namespace QuanLyDangKyHocPhan.CustomControl
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private Guna.UI.WinForms.GunaComboBox cbbTenKhoa;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

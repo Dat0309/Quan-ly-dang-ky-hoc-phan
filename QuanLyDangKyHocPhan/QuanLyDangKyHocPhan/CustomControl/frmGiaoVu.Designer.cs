@@ -33,16 +33,16 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaButtonLoginGV = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaControlBoxMini = new Guna.UI.WinForms.GunaControlBox();
+            this.gunaControlBoxExit = new Guna.UI.WinForms.GunaControlBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2TextBox1
@@ -90,91 +90,60 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gunaControlBox2);
-            this.panel1.Controls.Add(this.gunaControlBox1);
+            this.panel1.Controls.Add(this.gunaControlBoxMini);
+            this.panel1.Controls.Add(this.gunaControlBoxExit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(405, 41);
             this.panel1.TabIndex = 47;
             // 
-            // gunaControlBox2
-            // 
-            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox2.AnimationSpeed = 0.03F;
-            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
-            this.gunaControlBox2.IconColor = System.Drawing.Color.DimGray;
-            this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(307, 0);
-            this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(51, 41);
-            this.gunaControlBox2.TabIndex = 43;
-            // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(354, 0);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(51, 41);
-            this.gunaControlBox1.TabIndex = 43;
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.gunaPictureBox1);
+            this.panel2.Controls.Add(this.gunaPictureBox);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(404, 204);
             this.panel2.TabIndex = 48;
             // 
-            // gunaPictureBox1
+            // gunaPictureBox
             // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(112, 9);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(170, 141);
-            this.gunaPictureBox1.TabIndex = 0;
-            this.gunaPictureBox1.TabStop = false;
+            this.gunaPictureBox.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox.Location = new System.Drawing.Point(112, 9);
+            this.gunaPictureBox.Name = "gunaPictureBox";
+            this.gunaPictureBox.Size = new System.Drawing.Size(170, 141);
+            this.gunaPictureBox.TabIndex = 0;
+            this.gunaPictureBox.TabStop = false;
             // 
-            // gunaButton2
+            // gunaButtonLoginGV
             // 
-            this.gunaButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.gunaButton2.Animated = true;
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton2.BaseColor = System.Drawing.Color.Teal;
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = null;
-            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(123, 492);
-            this.gunaButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Radius = 20;
-            this.gunaButton2.Size = new System.Drawing.Size(159, 60);
-            this.gunaButton2.TabIndex = 51;
-            this.gunaButton2.Text = "Đăng Nhập";
-            this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButtonLoginGV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.gunaButtonLoginGV.Animated = true;
+            this.gunaButtonLoginGV.AnimationHoverSpeed = 0.07F;
+            this.gunaButtonLoginGV.AnimationSpeed = 0.03F;
+            this.gunaButtonLoginGV.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButtonLoginGV.BaseColor = System.Drawing.Color.Teal;
+            this.gunaButtonLoginGV.BorderColor = System.Drawing.Color.Black;
+            this.gunaButtonLoginGV.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButtonLoginGV.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButtonLoginGV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButtonLoginGV.ForeColor = System.Drawing.Color.White;
+            this.gunaButtonLoginGV.Image = null;
+            this.gunaButtonLoginGV.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButtonLoginGV.Location = new System.Drawing.Point(123, 492);
+            this.gunaButtonLoginGV.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaButtonLoginGV.Name = "gunaButtonLoginGV";
+            this.gunaButtonLoginGV.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
+            this.gunaButtonLoginGV.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButtonLoginGV.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButtonLoginGV.OnHoverImage = null;
+            this.gunaButtonLoginGV.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButtonLoginGV.Radius = 20;
+            this.gunaButtonLoginGV.Size = new System.Drawing.Size(159, 60);
+            this.gunaButtonLoginGV.TabIndex = 51;
+            this.gunaButtonLoginGV.Text = "Đăng Nhập";
+            this.gunaButtonLoginGV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -222,6 +191,37 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.guna2TextBox2.TabIndex = 50;
             this.guna2TextBox2.UseSystemPasswordChar = true;
             // 
+            // gunaControlBoxMini
+            // 
+            this.gunaControlBoxMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBoxMini.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBoxMini.AnimationSpeed = 0.03F;
+            this.gunaControlBoxMini.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
+            this.gunaControlBoxMini.IconColor = System.Drawing.Color.DimGray;
+            this.gunaControlBoxMini.IconSize = 15F;
+            this.gunaControlBoxMini.Location = new System.Drawing.Point(307, 0);
+            this.gunaControlBoxMini.Name = "gunaControlBoxMini";
+            this.gunaControlBoxMini.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBoxMini.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBoxMini.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBoxMini.Size = new System.Drawing.Size(51, 41);
+            this.gunaControlBoxMini.TabIndex = 44;
+            // 
+            // gunaControlBoxExit
+            // 
+            this.gunaControlBoxExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBoxExit.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBoxExit.AnimationSpeed = 0.03F;
+            this.gunaControlBoxExit.IconColor = System.Drawing.Color.DimGray;
+            this.gunaControlBoxExit.IconSize = 15F;
+            this.gunaControlBoxExit.Location = new System.Drawing.Point(354, 0);
+            this.gunaControlBoxExit.Name = "gunaControlBoxExit";
+            this.gunaControlBoxExit.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBoxExit.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBoxExit.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBoxExit.Size = new System.Drawing.Size(51, 41);
+            this.gunaControlBoxExit.TabIndex = 45;
+            // 
             // frmGiaoVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,7 +231,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.gunaButton2);
+            this.Controls.Add(this.gunaButtonLoginGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2TextBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -240,7 +240,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,12 +251,12 @@ namespace QuanLyDangKyHocPhan.CustomControl
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox;
+        private Guna.UI.WinForms.GunaButton gunaButtonLoginGV;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBoxMini;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBoxExit;
     }
 }

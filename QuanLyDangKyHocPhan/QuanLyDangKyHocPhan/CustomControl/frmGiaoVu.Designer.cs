@@ -34,8 +34,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
+            this.btnHide = new Guna.UI.WinForms.GunaControlBox();
+            this.btnClose = new Guna.UI.WinForms.GunaControlBox();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -49,17 +49,20 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.panel2.Controls.Add(this.gunaPictureBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(-9, 47);
+            this.panel2.Location = new System.Drawing.Point(-7, 38);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(404, 205);
+            this.panel2.Size = new System.Drawing.Size(303, 167);
             this.panel2.TabIndex = 48;
             // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(112, 16);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(84, 13);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(170, 141);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(128, 115);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
             // 
@@ -69,54 +72,57 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.label2.Enabled = false;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(61, 160);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(46, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 34);
+            this.label2.Size = new System.Drawing.Size(217, 26);
             this.label2.TabIndex = 41;
             this.label2.Text = "Đăng nhập giáo vụ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.gunaControlBox2);
-            this.panel1.Controls.Add(this.gunaControlBox1);
+            this.panel1.Controls.Add(this.btnHide);
+            this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(387, 41);
+            this.panel1.Size = new System.Drawing.Size(304, 33);
             this.panel1.TabIndex = 47;
             // 
-            // gunaControlBox2
+            // btnHide
             // 
-            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox2.AnimationSpeed = 0.03F;
-            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
-            this.gunaControlBox2.IconColor = System.Drawing.Color.DimGray;
-            this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(289, 0);
-            this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(51, 41);
-            this.gunaControlBox2.TabIndex = 43;
+            this.btnHide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHide.AnimationHoverSpeed = 0.07F;
+            this.btnHide.AnimationSpeed = 0.03F;
+            this.btnHide.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
+            this.btnHide.IconColor = System.Drawing.Color.DimGray;
+            this.btnHide.IconSize = 15F;
+            this.btnHide.Location = new System.Drawing.Point(231, 0);
+            this.btnHide.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.btnHide.OnHoverIconColor = System.Drawing.Color.White;
+            this.btnHide.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHide.Size = new System.Drawing.Size(38, 33);
+            this.btnHide.TabIndex = 43;
             // 
-            // gunaControlBox1
+            // btnClose
             // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.DimGray;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(336, 0);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(51, 41);
-            this.gunaControlBox1.TabIndex = 43;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.AnimationHoverSpeed = 0.07F;
+            this.btnClose.AnimationSpeed = 0.03F;
+            this.btnClose.IconColor = System.Drawing.Color.DimGray;
+            this.btnClose.IconSize = 15F;
+            this.btnClose.Location = new System.Drawing.Point(266, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.btnClose.OnHoverIconColor = System.Drawing.Color.White;
+            this.btnClose.OnPressedColor = System.Drawing.Color.Black;
+            this.btnClose.Size = new System.Drawing.Size(38, 33);
+            this.btnClose.TabIndex = 43;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // gunaButton2
             // 
@@ -133,8 +139,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
             this.gunaButton2.Image = null;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(114, 428);
-            this.gunaButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaButton2.Location = new System.Drawing.Point(86, 386);
             this.gunaButton2.Name = "gunaButton2";
             this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -142,7 +147,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton2.OnHoverImage = null;
             this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton2.Radius = 20;
-            this.gunaButton2.Size = new System.Drawing.Size(159, 63);
+            this.gunaButton2.Size = new System.Drawing.Size(119, 51);
             this.gunaButton2.TabIndex = 51;
             this.gunaButton2.Text = "Đăng Nhập";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,10 +158,9 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(42, 517);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(32, 420);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 46;
             // 
             // guna2TextBox2
@@ -179,8 +183,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.guna2TextBox2.IconRight = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconRight")));
             this.guna2TextBox2.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.guna2TextBox2.IconRightSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox2.Location = new System.Drawing.Point(31, 355);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox2.Location = new System.Drawing.Point(23, 288);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.Gray;
@@ -188,7 +192,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.SelectionStart = 8;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(318, 47);
+            this.guna2TextBox2.Size = new System.Drawing.Size(238, 38);
             this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2TextBox2.TabIndex = 49;
             this.guna2TextBox2.UseSystemPasswordChar = true;
@@ -210,23 +214,25 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.IconLeftSize = new System.Drawing.Size(35, 35);
-            this.guna2TextBox1.Location = new System.Drawing.Point(31, 300);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2TextBox1.Location = new System.Drawing.Point(23, 244);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.SelectionStart = 17;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(318, 47);
+            this.guna2TextBox1.Size = new System.Drawing.Size(238, 38);
             this.guna2TextBox1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2TextBox1.TabIndex = 50;
             // 
             // frmGiaoVu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 562);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(304, 495);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gunaButton2);
@@ -234,6 +240,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.Controls.Add(this.guna2TextBox2);
             this.Controls.Add(this.guna2TextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGiaoVu";
             this.Text = "frmGiaoVu";
             this.panel2.ResumeLayout(false);
@@ -251,8 +258,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
+        private Guna.UI.WinForms.GunaControlBox btnHide;
+        private Guna.UI.WinForms.GunaControlBox btnClose;
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;

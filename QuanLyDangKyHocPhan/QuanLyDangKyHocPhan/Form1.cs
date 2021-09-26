@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyDangKyHocPhan.CustomControl;
+using QuanLyDangKyHocPhan.Model;
 
 namespace QuanLyDangKyHocPhan
 {
     public partial class Form1 : Form
     {
-        public Form1()
+
+        public Form1(Context context)
         {
             InitializeComponent();
             startUpControl1.BringToFront();
+            this.context = context;
 
             ddmQuanLy.IsMainMenu = true;
             ddmHocVu.IsMainMenu = true;
@@ -63,7 +66,10 @@ namespace QuanLyDangKyHocPhan
 
         private void tsmiQLSV_Click(object sender, EventArgs e)
         {
-            controlStudentManagerment1.BringToFront();
+            //controlStudentManagerment1.BringToFront();
+            var item = new ControlStudentManagerment(context);
+            item.Dock = DockStyle.Fill;
+            pnShow.Controls["controlStudentManagerment1"].BringToFront();
         }
 
         private void tsmiQLHP_Click(object sender, EventArgs e)
@@ -108,6 +114,16 @@ namespace QuanLyDangKyHocPhan
         private void gunaButton1_Click(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        }
+
+        private void ucHocPhi1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

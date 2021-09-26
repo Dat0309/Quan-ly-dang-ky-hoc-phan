@@ -41,11 +41,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaDateTimePicker1 = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txtDiaChi = new Guna.UI.WinForms.GunaTextBox();
+            this.dtpNS = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.txtHo = new Guna.UI.WinForms.GunaTextBox();
+            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
+            this.txtMSSV = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
@@ -61,6 +61,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.txtTen = new Guna.UI.WinForms.GunaTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +94,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader5,
             this.columnHeader7});
             this.lvDSSV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDSSV.FullRowSelect = true;
             this.lvDSSV.GridLines = true;
             this.lvDSSV.HideSelection = false;
             this.lvDSSV.Location = new System.Drawing.Point(3, 21);
@@ -100,10 +103,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.lvDSSV.TabIndex = 0;
             this.lvDSSV.UseCompatibleStateImageBehavior = false;
             this.lvDSSV.View = System.Windows.Forms.View.Details;
+            this.lvDSSV.SelectedIndexChanged += new System.EventHandler(this.lvDSSV_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "IDSV";
+            this.columnHeader1.Text = "MSSV";
             // 
             // columnHeader2
             // 
@@ -134,11 +138,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox2.Controls.Add(this.gunaTextBox3);
-            this.groupBox2.Controls.Add(this.gunaDateTimePicker1);
-            this.groupBox2.Controls.Add(this.gunaTextBox2);
-            this.groupBox2.Controls.Add(this.gunaComboBox2);
-            this.groupBox2.Controls.Add(this.gunaTextBox1);
+            this.groupBox2.Controls.Add(this.txtTen);
+            this.groupBox2.Controls.Add(this.gunaLabel7);
+            this.groupBox2.Controls.Add(this.txtDiaChi);
+            this.groupBox2.Controls.Add(this.dtpNS);
+            this.groupBox2.Controls.Add(this.txtHo);
+            this.groupBox2.Controls.Add(this.cbbLop);
+            this.groupBox2.Controls.Add(this.txtMSSV);
             this.groupBox2.Controls.Add(this.gunaLabel8);
             this.groupBox2.Controls.Add(this.gunaLabel6);
             this.groupBox2.Controls.Add(this.gunaLabel5);
@@ -152,109 +158,114 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
             // 
-            // gunaTextBox3
+            // txtDiaChi
             // 
-            this.gunaTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox3.BorderSize = 1;
-            this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox3.Location = new System.Drawing.Point(101, 197);
-            this.gunaTextBox3.Name = "gunaTextBox3";
-            this.gunaTextBox3.PasswordChar = '\0';
-            this.gunaTextBox3.Radius = 3;
-            this.gunaTextBox3.SelectedText = "";
-            this.gunaTextBox3.Size = new System.Drawing.Size(212, 30);
-            this.gunaTextBox3.TabIndex = 10;
+            this.txtDiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.txtDiaChi.BaseColor = System.Drawing.Color.White;
+            this.txtDiaChi.BorderColor = System.Drawing.Color.Silver;
+            this.txtDiaChi.BorderSize = 1;
+            this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiaChi.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDiaChi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtDiaChi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDiaChi.Location = new System.Drawing.Point(101, 259);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.PasswordChar = '\0';
+            this.txtDiaChi.Radius = 3;
+            this.txtDiaChi.SelectedText = "";
+            this.txtDiaChi.Size = new System.Drawing.Size(212, 30);
+            this.txtDiaChi.TabIndex = 10;
             // 
-            // gunaDateTimePicker1
+            // dtpNS
             // 
-            this.gunaDateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePicker1.BaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaDateTimePicker1.CustomFormat = null;
-            this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.gunaDateTimePicker1.Location = new System.Drawing.Point(101, 161);
-            this.gunaDateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.gunaDateTimePicker1.Name = "gunaDateTimePicker1";
-            this.gunaDateTimePicker1.OnHoverBaseColor = System.Drawing.Color.White;
-            this.gunaDateTimePicker1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaDateTimePicker1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaDateTimePicker1.Radius = 3;
-            this.gunaDateTimePicker1.Size = new System.Drawing.Size(105, 30);
-            this.gunaDateTimePicker1.TabIndex = 9;
-            this.gunaDateTimePicker1.Text = "9/15/2021";
-            this.gunaDateTimePicker1.Value = new System.DateTime(2021, 9, 15, 19, 22, 32, 410);
+            this.dtpNS.BackColor = System.Drawing.Color.Transparent;
+            this.dtpNS.BaseColor = System.Drawing.Color.White;
+            this.dtpNS.BorderColor = System.Drawing.Color.Silver;
+            this.dtpNS.CustomFormat = null;
+            this.dtpNS.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpNS.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpNS.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpNS.ForeColor = System.Drawing.Color.Black;
+            this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNS.Location = new System.Drawing.Point(101, 120);
+            this.dtpNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpNS.Name = "dtpNS";
+            this.dtpNS.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtpNS.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpNS.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtpNS.OnPressedColor = System.Drawing.Color.Black;
+            this.dtpNS.Radius = 3;
+            this.dtpNS.Size = new System.Drawing.Size(160, 30);
+            this.dtpNS.TabIndex = 9;
+            this.dtpNS.Text = "9/15/2021";
+            this.dtpNS.Value = new System.DateTime(2021, 9, 15, 19, 22, 32, 410);
             // 
-            // gunaTextBox2
+            // txtHo
             // 
-            this.gunaTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox2.BorderSize = 1;
-            this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox2.Location = new System.Drawing.Point(101, 121);
-            this.gunaTextBox2.Name = "gunaTextBox2";
-            this.gunaTextBox2.PasswordChar = '\0';
-            this.gunaTextBox2.Radius = 3;
-            this.gunaTextBox2.SelectedText = "";
-            this.gunaTextBox2.Size = new System.Drawing.Size(212, 30);
-            this.gunaTextBox2.TabIndex = 8;
+            this.txtHo.BackColor = System.Drawing.Color.Transparent;
+            this.txtHo.BaseColor = System.Drawing.Color.White;
+            this.txtHo.BorderColor = System.Drawing.Color.Silver;
+            this.txtHo.BorderSize = 1;
+            this.txtHo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHo.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtHo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtHo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtHo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHo.Location = new System.Drawing.Point(101, 165);
+            this.txtHo.Name = "txtHo";
+            this.txtHo.PasswordChar = '\0';
+            this.txtHo.Radius = 3;
+            this.txtHo.SelectedText = "";
+            this.txtHo.Size = new System.Drawing.Size(212, 30);
+            this.txtHo.TabIndex = 8;
             // 
-            // gunaComboBox2
+            // cbbLop
             // 
-            this.gunaComboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cbbLop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox2.BorderSize = 1;
-            this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox2.FormattingEnabled = true;
-            this.gunaComboBox2.Location = new System.Drawing.Point(101, 81);
-            this.gunaComboBox2.Name = "gunaComboBox2";
-            this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
-            this.gunaComboBox2.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox2.Radius = 3;
-            this.gunaComboBox2.Size = new System.Drawing.Size(73, 26);
-            this.gunaComboBox2.TabIndex = 7;
+            this.cbbLop.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLop.BaseColor = System.Drawing.Color.White;
+            this.cbbLop.BorderColor = System.Drawing.Color.Silver;
+            this.cbbLop.BorderSize = 1;
+            this.cbbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLop.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbLop.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbLop.ForeColor = System.Drawing.Color.Black;
+            this.cbbLop.FormattingEnabled = true;
+            this.cbbLop.Items.AddRange(new object[] {
+            "CTK42",
+            "CTK43",
+            "CTK44",
+            "CTK45"});
+            this.cbbLop.Location = new System.Drawing.Point(101, 81);
+            this.cbbLop.Name = "cbbLop";
+            this.cbbLop.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
+            this.cbbLop.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbLop.Radius = 3;
+            this.cbbLop.Size = new System.Drawing.Size(160, 26);
+            this.cbbLop.TabIndex = 7;
             // 
-            // gunaTextBox1
+            // txtMSSV
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(101, 41);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 3;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(160, 30);
-            this.gunaTextBox1.TabIndex = 6;
+            this.txtMSSV.BackColor = System.Drawing.Color.Transparent;
+            this.txtMSSV.BaseColor = System.Drawing.Color.White;
+            this.txtMSSV.BorderColor = System.Drawing.Color.Silver;
+            this.txtMSSV.BorderSize = 1;
+            this.txtMSSV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMSSV.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMSSV.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMSSV.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtMSSV.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMSSV.Location = new System.Drawing.Point(101, 41);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.PasswordChar = '\0';
+            this.txtMSSV.Radius = 3;
+            this.txtMSSV.SelectedText = "";
+            this.txtMSSV.Size = new System.Drawing.Size(160, 30);
+            this.txtMSSV.TabIndex = 6;
             // 
             // gunaLabel8
             // 
@@ -270,7 +281,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(7, 201);
+            this.gunaLabel6.Location = new System.Drawing.Point(7, 263);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(56, 20);
             this.gunaLabel6.TabIndex = 3;
@@ -280,7 +291,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(6, 161);
+            this.gunaLabel5.Location = new System.Drawing.Point(6, 120);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(78, 20);
             this.gunaLabel5.TabIndex = 2;
@@ -290,11 +301,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(6, 121);
+            this.gunaLabel4.Location = new System.Drawing.Point(6, 171);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(57, 20);
+            this.gunaLabel4.Size = new System.Drawing.Size(33, 20);
             this.gunaLabel4.TabIndex = 1;
-            this.gunaLabel4.Text = "Họ Tên";
+            this.gunaLabel4.Text = "Họ ";
             // 
             // gunaLabel3
             // 
@@ -486,6 +497,35 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.Text = "Tìm kiếm";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Location = new System.Drawing.Point(7, 219);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(33, 20);
+            this.gunaLabel7.TabIndex = 11;
+            this.gunaLabel7.Text = "Tên";
+            // 
+            // txtTen
+            // 
+            this.txtTen.BackColor = System.Drawing.Color.Transparent;
+            this.txtTen.BaseColor = System.Drawing.Color.White;
+            this.txtTen.BorderColor = System.Drawing.Color.Silver;
+            this.txtTen.BorderSize = 1;
+            this.txtTen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTen.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTen.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtTen.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTen.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTen.Location = new System.Drawing.Point(101, 212);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.PasswordChar = '\0';
+            this.txtTen.Radius = 3;
+            this.txtTen.SelectedText = "";
+            this.txtTen.Size = new System.Drawing.Size(212, 30);
+            this.txtTen.TabIndex = 12;
+            // 
             // ControlStudentManagerment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,6 +544,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.Controls.Add(this.groupBox1);
             this.Name = "ControlStudentManagerment";
             this.Size = new System.Drawing.Size(1065, 711);
+            this.Load += new System.EventHandler(this.ControlStudentManagerment_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -533,17 +574,19 @@ namespace QuanLyDangKyHocPhan.CustomControl
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txtMSSV;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
+        private Guna.UI.WinForms.GunaTextBox txtHo;
+        private Guna.UI.WinForms.GunaComboBox cbbLop;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
-        private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePicker1;
+        private Guna.UI.WinForms.GunaTextBox txtDiaChi;
+        private Guna.UI.WinForms.GunaDateTimePicker dtpNS;
         private Guna.UI.WinForms.GunaButton gunaButton4;
         private Guna.UI.WinForms.GunaButton gunaButton3;
         private Guna.UI.WinForms.GunaButton gunaButton2;
         private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaTextBox txtTen;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
     }
 }

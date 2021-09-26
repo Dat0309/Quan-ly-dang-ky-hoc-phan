@@ -14,9 +14,11 @@ namespace QuanLyDangKyHocPhan
         [STAThread]
         static void Main()
         {
+            Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
+            Context context = new Context(dataSource);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);           
-            Application.Run(new Form1());
+            Application.Run(new Form1(context));
         }
     }
 }

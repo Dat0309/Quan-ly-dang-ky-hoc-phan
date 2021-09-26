@@ -22,10 +22,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             Application.Exit();
         }
 
-        private void gunaControlBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -65,6 +61,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

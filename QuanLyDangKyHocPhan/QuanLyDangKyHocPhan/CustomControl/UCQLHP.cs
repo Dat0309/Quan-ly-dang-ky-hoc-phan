@@ -13,19 +13,17 @@ namespace QuanLyDangKyHocPhan.CustomControl
 {
     public partial class UCQLHP : UserControl
     {
-        public Context context;
+        public static Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
+        public static Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
+        Context context = new Context(dataSource, dataSourceHP);
         private List<HocPhan> dshp;
         QLHP qlhp;
         public UCQLHP()
         {
-            InitializeComponent();
-        }
-        public UCQLHP(Context context)
-        {
-            this.context = context;
             dshp = context.GetHP();
             InitializeComponent();
         }
+
 
         #region Các hàm xử lý chức năng
         //Thêm học phần vào listview

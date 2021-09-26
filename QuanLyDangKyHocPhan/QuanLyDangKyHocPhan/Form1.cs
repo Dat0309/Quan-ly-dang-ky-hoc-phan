@@ -14,6 +14,7 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class Form1 : Form
     {
+        Context context;
 
         public Form1(Context context)
         {
@@ -67,14 +68,14 @@ namespace QuanLyDangKyHocPhan
         private void tsmiQLSV_Click(object sender, EventArgs e)
         {
             //controlStudentManagerment1.BringToFront();
-            var item = new ControlStudentManagerment(context);
+            var item = new ControlStudentManagerment();
             item.Dock = DockStyle.Fill;
             pnShow.Controls["controlStudentManagerment1"].BringToFront();
         }
 
         private void tsmiQLHP_Click(object sender, EventArgs e)
         {
-            var item = new UCQLHP(context);
+            var item = new UCQLHP();
             item.Dock = DockStyle.Fill;
             pnShow.Controls["ucqlhp1"].BringToFront();
         }
@@ -118,14 +119,15 @@ namespace QuanLyDangKyHocPhan
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
         }
 
-        private void ucHocPhi1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void tsmiLapDSThi_Click(object sender, EventArgs e)
+        {
+            ucldst1.BringToFront();
         }
     }
 }

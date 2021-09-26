@@ -36,11 +36,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.cbbTenKhoa = new Guna.UI.WinForms.GunaComboBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // gunaLabel2
@@ -117,6 +117,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader6.Text = "Ghi chú";
             this.columnHeader6.Width = 455;
             // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Loại HP";
+            this.columnHeader7.Width = 91;
+            // 
             // gunaSeparator1
             // 
             this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -185,15 +190,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Radius = 15;
-            this.gunaButton1.Size = new System.Drawing.Size(127, 45);
+            this.gunaButton1.Size = new System.Drawing.Size(136, 37);
             this.gunaButton1.TabIndex = 37;
             this.gunaButton1.Text = "Tìm kiếm";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Loại HP";
-            this.columnHeader7.Width = 91;
             // 
             // UC_LKDSHP
             // 

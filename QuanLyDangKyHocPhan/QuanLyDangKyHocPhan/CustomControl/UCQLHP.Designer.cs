@@ -32,6 +32,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtLoaiHP = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.txtSoTC = new Guna.UI.WinForms.GunaTextBox();
             this.gunaSeparator2 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
@@ -50,14 +52,12 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
             this.btnUpdate = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.txtTimKiemHP = new Guna.UI.WinForms.GunaTextBox();
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.txtLoaiHP = new Guna.UI.WinForms.GunaTextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,38 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
+            // 
+            // txtLoaiHP
+            // 
+            this.txtLoaiHP.BackColor = System.Drawing.Color.Transparent;
+            this.txtLoaiHP.BaseColor = System.Drawing.Color.White;
+            this.txtLoaiHP.BorderColor = System.Drawing.Color.Silver;
+            this.txtLoaiHP.BorderSize = 1;
+            this.txtLoaiHP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLoaiHP.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLoaiHP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtLoaiHP.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtLoaiHP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLoaiHP.Location = new System.Drawing.Point(102, 295);
+            this.txtLoaiHP.Name = "txtLoaiHP";
+            this.txtLoaiHP.PasswordChar = '\0';
+            this.txtLoaiHP.Radius = 3;
+            this.txtLoaiHP.ReadOnly = true;
+            this.txtLoaiHP.SelectedText = "";
+            this.txtLoaiHP.Size = new System.Drawing.Size(91, 30);
+            this.txtLoaiHP.TabIndex = 27;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Location = new System.Drawing.Point(14, 301);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(62, 20);
+            this.gunaLabel2.TabIndex = 26;
+            this.gunaLabel2.Text = "Loại HP";
             // 
             // txtSoTC
             // 
@@ -356,6 +388,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.columnHeader4.Text = "Tín chỉ TH";
             this.columnHeader4.Width = 121;
             // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Loại HP";
+            this.columnHeader6.Width = 86;
+            // 
             // btnSearch
             // 
             this.btnSearch.Animated = true;
@@ -378,7 +415,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnSearch.OnHoverImage = null;
             this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
             this.btnSearch.Radius = 15;
-            this.btnSearch.Size = new System.Drawing.Size(127, 45);
+            this.btnSearch.Size = new System.Drawing.Size(140, 37);
             this.btnSearch.TabIndex = 22;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -397,7 +434,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_remove_16px;
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(816, 120);
+            this.btnDelete.Location = new System.Drawing.Point(629, 120);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -424,7 +461,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_support_50px;
             this.btnUpdate.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpdate.Location = new System.Drawing.Point(568, 120);
+            this.btnUpdate.Location = new System.Drawing.Point(474, 120);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -482,43 +519,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.txtTimKiemHP.SelectedText = "";
             this.txtTimKiemHP.Size = new System.Drawing.Size(212, 30);
             this.txtTimKiemHP.TabIndex = 26;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Loại HP";
-            this.columnHeader6.Width = 86;
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(14, 301);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(62, 20);
-            this.gunaLabel2.TabIndex = 26;
-            this.gunaLabel2.Text = "Loại HP";
-            // 
-            // txtLoaiHP
-            // 
-            this.txtLoaiHP.BackColor = System.Drawing.Color.Transparent;
-            this.txtLoaiHP.BaseColor = System.Drawing.Color.White;
-            this.txtLoaiHP.BorderColor = System.Drawing.Color.Silver;
-            this.txtLoaiHP.BorderSize = 1;
-            this.txtLoaiHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLoaiHP.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtLoaiHP.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtLoaiHP.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtLoaiHP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLoaiHP.Location = new System.Drawing.Point(102, 295);
-            this.txtLoaiHP.Name = "txtLoaiHP";
-            this.txtLoaiHP.PasswordChar = '\0';
-            this.txtLoaiHP.Radius = 3;
-            this.txtLoaiHP.ReadOnly = true;
-            this.txtLoaiHP.SelectedText = "";
-            this.txtLoaiHP.Size = new System.Drawing.Size(91, 30);
-            this.txtLoaiHP.TabIndex = 27;
             // 
             // UCQLHP
             // 

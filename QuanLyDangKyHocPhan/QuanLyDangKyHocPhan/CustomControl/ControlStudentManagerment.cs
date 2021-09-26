@@ -13,16 +13,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
 {
     public partial class ControlStudentManagerment : UserControl
     {
-        public Context context;
+        public static Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
+        public static Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
+        Context context = new Context(dataSource, dataSourceHP);
         private List<SinhVien> dssv;
         QLSV qlsv;
         public ControlStudentManagerment()
         {
-            InitializeComponent();
-        }
-        public ControlStudentManagerment(Context context)
-        {
-            this.context = context;
             dssv = context.GetSV();
             InitializeComponent();
         }

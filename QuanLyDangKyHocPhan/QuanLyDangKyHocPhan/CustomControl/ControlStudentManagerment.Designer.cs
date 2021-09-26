@@ -209,6 +209,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.dtpNS.BackColor = System.Drawing.Color.Transparent;
             this.dtpNS.BaseColor = System.Drawing.Color.White;
             this.dtpNS.BorderColor = System.Drawing.Color.Silver;
+            this.dtpNS.BorderSize = 1;
             this.dtpNS.CustomFormat = null;
             this.dtpNS.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpNS.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
@@ -349,7 +350,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
             this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.BorderSize = 0;
+            this.gunaComboBox1.BorderSize = 1;
             this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
@@ -415,7 +416,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnDelete.Radius = 15;
             this.btnDelete.Size = new System.Drawing.Size(111, 37);
             this.btnDelete.TabIndex = 21;
-            this.btnDelete.Text = "/";
+            this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnUpdate
@@ -494,7 +495,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Radius = 15;
-            this.gunaButton1.Size = new System.Drawing.Size(127, 45);
+            this.gunaButton1.Size = new System.Drawing.Size(133, 37);
             this.gunaButton1.TabIndex = 18;
             this.gunaButton1.Text = "Tìm kiếm";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

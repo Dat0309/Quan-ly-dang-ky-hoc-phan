@@ -3,9 +3,6 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class Form1
     {
-        public static Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
-        public static Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
-        Context context = new Context(dataSource,dataSourceHP);
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -45,13 +42,14 @@ namespace QuanLyDangKyHocPhan
             this.btnHome = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnShow = new System.Windows.Forms.Panel();
+            this.ucldst1 = new QuanLyDangKyHocPhan.CustomControl.UCLDST();
             this.ucHocPhi1 = new QuanLyDangKyHocPhan.CustomControl.UCHocPhi();
             this.ucLichThi1 = new QuanLyDangKyHocPhan.CustomControl.UCLichThi();
             this.uC_LKDSHP1 = new QuanLyDangKyHocPhan.CustomControl.UC_LKDSHP();
             this.uC_LKDSSVDangKy1 = new QuanLyDangKyHocPhan.CustomControl.UC_LKDSSVDangKy();
             this.uddkhp1 = new QuanLyDangKyHocPhan.CustomControl.UDDKHP();
-            this.ucqlhp1 = new QuanLyDangKyHocPhan.CustomControl.UCQLHP(context);
-            this.controlStudentManagerment1 = new QuanLyDangKyHocPhan.CustomControl.ControlStudentManagerment(context);
+            this.ucqlhp1 = new QuanLyDangKyHocPhan.CustomControl.UCQLHP();
+            this.controlStudentManagerment1 = new QuanLyDangKyHocPhan.CustomControl.ControlStudentManagerment();
             this.startUpControl1 = new QuanLyDangKyHocPhan.StartUpControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
@@ -137,7 +135,7 @@ namespace QuanLyDangKyHocPhan
             this.btnUser.FocusedColor = System.Drawing.Color.Empty;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.White;
-            this.btnUser.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_male_user_64px;
+            this.btnUser.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_logout_rounded_up_26px_11;
             this.btnUser.ImageSize = new System.Drawing.Size(20, 20);
             this.btnUser.Location = new System.Drawing.Point(0, 475);
             this.btnUser.Name = "btnUser";
@@ -148,7 +146,7 @@ namespace QuanLyDangKyHocPhan
             this.btnUser.OnPressedColor = System.Drawing.Color.Black;
             this.btnUser.Size = new System.Drawing.Size(225, 56);
             this.btnUser.TabIndex = 11;
-            this.btnUser.Text = "Tài khoản";
+            this.btnUser.Text = "Đăng Xuất";
             this.btnUser.TextOffsetX = 10;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -316,6 +314,7 @@ namespace QuanLyDangKyHocPhan
             this.pnShow.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnShow.Controls.Add(this.ucldst1);
             this.pnShow.Controls.Add(this.ucHocPhi1);
             this.pnShow.Controls.Add(this.ucLichThi1);
             this.pnShow.Controls.Add(this.uC_LKDSHP1);
@@ -329,6 +328,14 @@ namespace QuanLyDangKyHocPhan
             this.pnShow.Size = new System.Drawing.Size(1065, 711);
             this.pnShow.TabIndex = 2;
             // 
+            // ucldst1
+            // 
+            this.ucldst1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucldst1.Location = new System.Drawing.Point(0, 0);
+            this.ucldst1.Name = "ucldst1";
+            this.ucldst1.Size = new System.Drawing.Size(1065, 711);
+            this.ucldst1.TabIndex = 8;
+            // 
             // ucHocPhi1
             // 
             this.ucHocPhi1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -336,7 +343,6 @@ namespace QuanLyDangKyHocPhan
             this.ucHocPhi1.Name = "ucHocPhi1";
             this.ucHocPhi1.Size = new System.Drawing.Size(1065, 711);
             this.ucHocPhi1.TabIndex = 7;
-            this.ucHocPhi1.Load += new System.EventHandler(this.ucHocPhi1_Load);
             // 
             // ucLichThi1
             // 
@@ -486,6 +492,7 @@ namespace QuanLyDangKyHocPhan
             this.tsmiLapDSThi.Name = "tsmiLapDSThi";
             this.tsmiLapDSThi.Size = new System.Drawing.Size(165, 24);
             this.tsmiLapDSThi.Text = "Lập DS Thi";
+            this.tsmiLapDSThi.Click += new System.EventHandler(this.tsmiLapDSThi_Click);
             // 
             // Form1
             // 
@@ -498,7 +505,7 @@ namespace QuanLyDangKyHocPhan
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Quản lý đăng ký học phần";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.pnShow.ResumeLayout(false);
@@ -542,6 +549,7 @@ namespace QuanLyDangKyHocPhan
         private CustomControl.UCLichThi ucLichThi1;
         private CustomControl.UCHocPhi ucHocPhi1;
         private Guna.UI.WinForms.GunaButton btnClose;
+        private CustomControl.UCLDST ucldst1;
     }
 }
 

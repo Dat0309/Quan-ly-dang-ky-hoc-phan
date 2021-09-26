@@ -98,6 +98,12 @@
     <Compile Include="CustomControl\UCHocPhi.Designer.cs">
       <DependentUpon>UCHocPhi.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\UCLDST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\UCLDST.Designer.cs">
+      <DependentUpon>UCLDST.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\UCLichThi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\UCHocPhi.resx">
       <DependentUpon>UCHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\UCLDST.resx">
+      <DependentUpon>UCLDST.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\UCLichThi.resx">
       <DependentUpon>UCLichThi.cs</DependentUpon>
@@ -277,6 +286,8 @@
     <Content Include="Data\DSSV.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icons8_logout_rounded_up_26px_11.png" />
+    <None Include="Resources\icons8_logout_rounded_up_26px_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

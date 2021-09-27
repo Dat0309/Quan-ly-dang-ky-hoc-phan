@@ -58,14 +58,48 @@ namespace QuanLyDangKyHocPhan.CustomControl
 
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void gunaTextBoxMSSV_Enter(object sender, EventArgs e)
+        {
+            if (gunaTextBoxMSSV.Text == "Mã số sinh viên....")
+            {
+                gunaTextBoxMSSV.Text = "";
+                gunaTextBoxMSSV.ForeColor = Color.Black;
+            }
+        }
+
+        private void gunaTextBoxMSSV_Leave(object sender, EventArgs e)
+        {
+            if (gunaTextBoxMSSV.Text == "")
+            {
+                gunaTextBoxMSSV.Text = "Mã số sinh viên....";
+                gunaTextBoxMSSV.ForeColor = Color.White;
+            }
+        }
+
+
+
+        private void gunaTextBoxMKSV_Enter_1(object sender, EventArgs e)
+        {
+            if(gunaTextBoxMKSV.Text == "Nhập mật khẩu...")
+            {
+                gunaTextBoxMKSV.Text = "";
+                gunaTextBoxMKSV.ForeColor = Color.Black;
+            }
+        }
+
+        private void gunaTextBoxMKSV_Leave(object sender, EventArgs e)
+        {
+            if(gunaTextBoxMKSV.Text == "")
+            {
+                gunaTextBoxMKSV.Text = "Nhập mật khẩu...";
+                gunaTextBoxMKSV.ForeColor = Color.White;
+            }
         }
     }
 }

@@ -330,7 +330,6 @@ namespace QuanLyDangKyHocPhan
             // 
             // ucldst1
             // 
-            this.ucldst1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucldst1.Location = new System.Drawing.Point(0, 0);
             this.ucldst1.Name = "ucldst1";
             this.ucldst1.Size = new System.Drawing.Size(1065, 711);

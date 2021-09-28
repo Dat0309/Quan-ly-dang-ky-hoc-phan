@@ -60,7 +60,7 @@ namespace QuanLyDangKyHocPhan
             this.pictureBox1.Image = global::QuanLyDangKyHocPhan.Properties.Resources.splash;
             this.pictureBox1.Location = new System.Drawing.Point(527, 137);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(486, 455);
+            this.pictureBox1.Size = new System.Drawing.Size(502, 494);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -96,7 +96,7 @@ namespace QuanLyDangKyHocPhan
             this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(152, 277);
+            this.label4.Location = new System.Drawing.Point(152, 316);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(243, 25);
             this.label4.TabIndex = 15;
@@ -117,7 +117,7 @@ namespace QuanLyDangKyHocPhan
             this.btnGiaoVu.ForeColor = System.Drawing.Color.White;
             this.btnGiaoVu.Image = null;
             this.btnGiaoVu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnGiaoVu.Location = new System.Drawing.Point(47, 325);
+            this.btnGiaoVu.Location = new System.Drawing.Point(47, 364);
             this.btnGiaoVu.Name = "btnGiaoVu";
             this.btnGiaoVu.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnGiaoVu.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -146,7 +146,7 @@ namespace QuanLyDangKyHocPhan
             this.btnSV.ForeColor = System.Drawing.Color.White;
             this.btnSV.Image = null;
             this.btnSV.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSV.Location = new System.Drawing.Point(285, 325);
+            this.btnSV.Location = new System.Drawing.Point(285, 364);
             this.btnSV.Name = "btnSV";
             this.btnSV.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnSV.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -172,7 +172,7 @@ namespace QuanLyDangKyHocPhan
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "StartUpControl";
-            this.Size = new System.Drawing.Size(1049, 672);
+            this.Size = new System.Drawing.Size(1065, 711);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,12 +15,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
     {
         public static Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
         public static Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
-        Context context = new Context(dataSource, dataSourceHP);
-        private List<SinhVien> dssv;
         QLSV qlsv;
         public ControlStudentManagerment()
         {
-            dssv = context.GetSV();
+            qlsv = QLSV.gettInstance(Context.gettInstance(dataSource, dataSourceHP));
             InitializeComponent();
         }
         #region Các hàm xử lý chức năng
@@ -91,7 +89,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
 
         private void ControlStudentManagerment_Load(object sender, EventArgs e)
         {
-            qlsv = new QLSV(context);
             LoadSVToLV(qlsv.dssv);
         }
 
@@ -105,6 +102,19 @@ namespace QuanLyDangKyHocPhan.CustomControl
             }
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

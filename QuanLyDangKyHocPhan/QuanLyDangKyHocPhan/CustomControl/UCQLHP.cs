@@ -15,12 +15,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
     {
         public static Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
         public static Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
-        Context context = new Context(dataSource, dataSourceHP);
-        private List<HocPhan> dshp;
         QLHP qlhp;
         public UCQLHP()
         {
-            dshp = context.GetHP();
+            qlhp = new QLHP(Context.gettInstance(dataSource, dataSourceHP));
             InitializeComponent();
         }
 
@@ -86,7 +84,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
 
         private void UCQLHP_Load(object sender, EventArgs e)
         {
-            qlhp = new QLHP(context);
             LoadSVToLV(qlhp.dshp);
         }
 

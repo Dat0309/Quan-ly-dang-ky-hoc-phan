@@ -8,18 +8,29 @@ namespace QuanLyDangKyHocPhan.Model
 {
     public class QLSV
     {
+        private static QLSV _singleObject;
         Context context;
         public delegate int SoSanh(object sv1, object sv2);
         public List<SinhVien> dssv;
 
-        public QLSV()
+        private QLSV()
         {
+
         }
 
-        public QLSV(Context context)
+        private QLSV(Context context)
         {
             this.context = context;
             this.dssv = context.GetSV();
+        }
+
+        public static QLSV gettInstance(Context context)
+        {
+            if (_singleObject == null)
+            {
+                _singleObject = new QLSV(context);
+            }
+            return _singleObject;
         }
 
         public void Them(SinhVien sv)

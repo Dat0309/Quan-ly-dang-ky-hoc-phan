@@ -10,16 +10,27 @@ namespace QuanLyDangKyHocPhan
 {
     public class Context
     {
+        private static Context _singleObject;
         private List<SinhVien> dssv;
         private IDataSource dataSource;
         private List<HocPhan> dshp;
         private IDataSourceHP dataSourceHP;
 
-        public Context(IDataSource dataSource, IDataSourceHP dataSourceHP)
+        private Context(IDataSource dataSource, IDataSourceHP dataSourceHP)
         {
             this.dataSource = dataSource;
             this.dataSourceHP = dataSourceHP;
         }
+
+        public static Context gettInstance(IDataSource dataSource, IDataSourceHP dataSourceHP)
+        {
+            if (_singleObject == null)
+            {
+                _singleObject = new Context(dataSource,dataSourceHP);
+            }
+            return _singleObject;
+        }
+
         public List<SinhVien> GetSV()
         {
             if (dssv == null)

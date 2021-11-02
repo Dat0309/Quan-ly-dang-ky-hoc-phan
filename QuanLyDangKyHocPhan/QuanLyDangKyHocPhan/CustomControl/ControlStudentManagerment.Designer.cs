@@ -73,9 +73,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lvDSSV);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(339, 179);
+            this.groupBox1.Location = new System.Drawing.Point(452, 220);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(712, 500);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(949, 615);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách";
@@ -96,9 +98,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.lvDSSV.FullRowSelect = true;
             this.lvDSSV.GridLines = true;
             this.lvDSSV.HideSelection = false;
-            this.lvDSSV.Location = new System.Drawing.Point(3, 21);
+            this.lvDSSV.Location = new System.Drawing.Point(4, 26);
+            this.lvDSSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lvDSSV.Name = "lvDSSV";
-            this.lvDSSV.Size = new System.Drawing.Size(706, 476);
+            this.lvDSSV.Size = new System.Drawing.Size(940, 585);
             this.lvDSSV.TabIndex = 0;
             this.lvDSSV.UseCompatibleStateImageBehavior = false;
             this.lvDSSV.View = System.Windows.Forms.View.Details;
@@ -150,9 +153,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.groupBox2.Controls.Add(this.gunaLabel4);
             this.groupBox2.Controls.Add(this.gunaLabel3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(14, 179);
+            this.groupBox2.Location = new System.Drawing.Point(19, 220);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 500);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(425, 615);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin";
@@ -168,21 +173,23 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.txtTen.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtTen.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTen.Location = new System.Drawing.Point(101, 212);
+            this.txtTen.Location = new System.Drawing.Point(135, 261);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTen.Name = "txtTen";
             this.txtTen.PasswordChar = '\0';
             this.txtTen.Radius = 3;
             this.txtTen.SelectedText = "";
-            this.txtTen.Size = new System.Drawing.Size(212, 30);
+            this.txtTen.Size = new System.Drawing.Size(283, 37);
             this.txtTen.TabIndex = 12;
             // 
             // gunaLabel7
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(7, 219);
+            this.gunaLabel7.Location = new System.Drawing.Point(9, 270);
+            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(33, 20);
+            this.gunaLabel7.Size = new System.Drawing.Size(41, 25);
             this.gunaLabel7.TabIndex = 11;
             this.gunaLabel7.Text = "Tên";
             // 
@@ -197,12 +204,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.txtDiaChi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtDiaChi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDiaChi.Location = new System.Drawing.Point(101, 259);
+            this.txtDiaChi.Location = new System.Drawing.Point(135, 319);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.Radius = 3;
             this.txtDiaChi.SelectedText = "";
-            this.txtDiaChi.Size = new System.Drawing.Size(212, 30);
+            this.txtDiaChi.Size = new System.Drawing.Size(283, 37);
             this.txtDiaChi.TabIndex = 10;
             // 
             // dtpNS
@@ -217,7 +225,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.dtpNS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNS.ForeColor = System.Drawing.Color.Black;
             this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNS.Location = new System.Drawing.Point(101, 120);
+            this.dtpNS.Location = new System.Drawing.Point(135, 148);
+            this.dtpNS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpNS.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNS.Name = "dtpNS";
@@ -226,7 +235,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.dtpNS.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtpNS.OnPressedColor = System.Drawing.Color.Black;
             this.dtpNS.Radius = 3;
-            this.dtpNS.Size = new System.Drawing.Size(160, 30);
+            this.dtpNS.Size = new System.Drawing.Size(213, 37);
             this.dtpNS.TabIndex = 9;
             this.dtpNS.Text = "9/15/2021";
             this.dtpNS.Value = new System.DateTime(2021, 9, 15, 19, 22, 32, 410);
@@ -242,12 +251,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.txtHo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtHo.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtHo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtHo.Location = new System.Drawing.Point(101, 165);
+            this.txtHo.Location = new System.Drawing.Point(135, 203);
+            this.txtHo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHo.Name = "txtHo";
             this.txtHo.PasswordChar = '\0';
             this.txtHo.Radius = 3;
             this.txtHo.SelectedText = "";
-            this.txtHo.Size = new System.Drawing.Size(212, 30);
+            this.txtHo.Size = new System.Drawing.Size(283, 37);
             this.txtHo.TabIndex = 8;
             // 
             // cbbLop
@@ -269,12 +279,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
             "CTK43",
             "CTK44",
             "CTK45"});
-            this.cbbLop.Location = new System.Drawing.Point(101, 81);
+            this.cbbLop.Location = new System.Drawing.Point(135, 100);
+            this.cbbLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbLop.Name = "cbbLop";
             this.cbbLop.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
             this.cbbLop.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbLop.Radius = 3;
-            this.cbbLop.Size = new System.Drawing.Size(160, 26);
+            this.cbbLop.Size = new System.Drawing.Size(212, 31);
             this.cbbLop.TabIndex = 7;
             // 
             // txtMSSV
@@ -288,21 +299,23 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.txtMSSV.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtMSSV.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtMSSV.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMSSV.Location = new System.Drawing.Point(101, 41);
+            this.txtMSSV.Location = new System.Drawing.Point(135, 50);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.PasswordChar = '\0';
             this.txtMSSV.Radius = 3;
             this.txtMSSV.SelectedText = "";
-            this.txtMSSV.Size = new System.Drawing.Size(160, 30);
+            this.txtMSSV.Size = new System.Drawing.Size(213, 37);
             this.txtMSSV.TabIndex = 6;
             // 
             // gunaLabel8
             // 
             this.gunaLabel8.AutoSize = true;
             this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel8.Location = new System.Drawing.Point(6, 81);
+            this.gunaLabel8.Location = new System.Drawing.Point(8, 100);
+            this.gunaLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(34, 20);
+            this.gunaLabel8.Size = new System.Drawing.Size(44, 25);
             this.gunaLabel8.TabIndex = 5;
             this.gunaLabel8.Text = "Lớp";
             // 
@@ -310,9 +323,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(7, 263);
+            this.gunaLabel6.Location = new System.Drawing.Point(9, 324);
+            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(56, 20);
+            this.gunaLabel6.Size = new System.Drawing.Size(71, 25);
             this.gunaLabel6.TabIndex = 3;
             this.gunaLabel6.Text = "Địa chỉ";
             // 
@@ -320,9 +334,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(6, 120);
+            this.gunaLabel5.Location = new System.Drawing.Point(8, 148);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(78, 20);
+            this.gunaLabel5.Size = new System.Drawing.Size(98, 25);
             this.gunaLabel5.TabIndex = 2;
             this.gunaLabel5.Text = "Ngày sinh";
             // 
@@ -330,9 +345,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(6, 171);
+            this.gunaLabel4.Location = new System.Drawing.Point(8, 210);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(33, 20);
+            this.gunaLabel4.Size = new System.Drawing.Size(42, 25);
             this.gunaLabel4.TabIndex = 1;
             this.gunaLabel4.Text = "Họ ";
             // 
@@ -340,9 +356,10 @@ namespace QuanLyDangKyHocPhan.CustomControl
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(6, 41);
+            this.gunaLabel3.Location = new System.Drawing.Point(8, 50);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(53, 20);
+            this.gunaLabel3.Size = new System.Drawing.Size(67, 25);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Mã SV";
             // 
@@ -363,30 +380,33 @@ namespace QuanLyDangKyHocPhan.CustomControl
             "Lớp ",
             "Tên",
             "Địa Chỉ"});
-            this.gunaComboBox1.Location = new System.Drawing.Point(387, 42);
+            this.gunaComboBox1.Location = new System.Drawing.Point(516, 52);
+            this.gunaComboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaComboBox1.Name = "gunaComboBox1";
             this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.Turquoise;
             this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
             this.gunaComboBox1.Radius = 3;
-            this.gunaComboBox1.Size = new System.Drawing.Size(108, 26);
+            this.gunaComboBox1.Size = new System.Drawing.Size(143, 31);
             this.gunaComboBox1.TabIndex = 5;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(309, 43);
+            this.gunaLabel2.Location = new System.Drawing.Point(412, 53);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(72, 20);
+            this.gunaLabel2.Size = new System.Drawing.Size(90, 25);
             this.gunaLabel2.TabIndex = 6;
             this.gunaLabel2.Text = "Tìm theo";
             // 
             // gunaSeparator1
             // 
             this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.gunaSeparator1.Location = new System.Drawing.Point(35, 75);
+            this.gunaSeparator1.Location = new System.Drawing.Point(47, 92);
+            this.gunaSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(1000, 10);
+            this.gunaSeparator1.Size = new System.Drawing.Size(1333, 12);
             this.gunaSeparator1.TabIndex = 10;
             // 
             // gunaElipse1
@@ -407,7 +427,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_remove_16px;
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(630, 120);
+            this.btnDelete.Location = new System.Drawing.Point(840, 148);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -415,10 +436,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnDelete.OnHoverImage = null;
             this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
             this.btnDelete.Radius = 15;
-            this.btnDelete.Size = new System.Drawing.Size(111, 37);
+            this.btnDelete.Size = new System.Drawing.Size(148, 46);
             this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -434,7 +456,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_support_50px;
             this.btnUpdate.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpdate.Location = new System.Drawing.Point(474, 120);
+            this.btnUpdate.Location = new System.Drawing.Point(632, 148);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnUpdate.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -442,10 +465,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnUpdate.OnHoverImage = null;
             this.btnUpdate.OnPressedColor = System.Drawing.Color.Black;
             this.btnUpdate.Radius = 15;
-            this.btnUpdate.Size = new System.Drawing.Size(139, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(185, 46);
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
@@ -461,7 +485,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_bookmark_24px;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(342, 120);
+            this.btnAdd.Location = new System.Drawing.Point(456, 148);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -469,10 +494,11 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.btnAdd.OnHoverImage = null;
             this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdd.Radius = 15;
-            this.btnAdd.Size = new System.Drawing.Size(116, 37);
+            this.btnAdd.Size = new System.Drawing.Size(155, 46);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // gunaButton1
             // 
@@ -488,7 +514,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_search_32px_2;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(35, 26);
+            this.gunaButton1.Location = new System.Drawing.Point(47, 32);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.DarkCyan;
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -496,7 +523,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Radius = 15;
-            this.gunaButton1.Size = new System.Drawing.Size(133, 37);
+            this.gunaButton1.Size = new System.Drawing.Size(177, 46);
             this.gunaButton1.TabIndex = 18;
             this.gunaButton1.Text = "Tìm kiếm";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -512,17 +539,18 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(501, 42);
+            this.gunaTextBox1.Location = new System.Drawing.Point(668, 52);
+            this.gunaTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
             this.gunaTextBox1.Radius = 3;
             this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(240, 26);
+            this.gunaTextBox1.Size = new System.Drawing.Size(320, 37);
             this.gunaTextBox1.TabIndex = 22;
             // 
             // ControlStudentManagerment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.gunaTextBox1);
@@ -535,8 +563,9 @@ namespace QuanLyDangKyHocPhan.CustomControl
             this.Controls.Add(this.gunaComboBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ControlStudentManagerment";
-            this.Size = new System.Drawing.Size(1065, 711);
+            this.Size = new System.Drawing.Size(1420, 875);
             this.Load += new System.EventHandler(this.ControlStudentManagerment_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

@@ -14,14 +14,13 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class Form1 : Form
     {
-        Context context;
+        //Data.IDataSource dataSource = new Data.SVDataSource("Data\\DSSV.txt");
+        //Data.IDataSourceHP dataSourceHP = new Data.HPDataSource("Data\\DSHP.txt");
 
-        public Form1(Context context)
+        public Form1()
         {
             InitializeComponent();
             startUpControl1.BringToFront();
-            this.context = context;
-
             ddmQuanLy.IsMainMenu = true;
             ddmHocVu.IsMainMenu = true;
             ddmThongKe.IsMainMenu = true;

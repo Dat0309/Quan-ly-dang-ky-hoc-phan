@@ -83,9 +83,10 @@ namespace QuanLyDangKyHocPhan
             this.panel1.Controls.Add(this.btnHocVu);
             this.panel1.Controls.Add(this.btnQL);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Location = new System.Drawing.Point(0, 11);
+            this.panel1.Location = new System.Drawing.Point(0, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(225, 723);
+            this.panel1.Size = new System.Drawing.Size(300, 890);
             this.panel1.TabIndex = 0;
             // 
             // btnClose
@@ -103,7 +104,8 @@ namespace QuanLyDangKyHocPhan
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_close_window_26px;
             this.btnClose.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnClose.Location = new System.Drawing.Point(12, 657);
+            this.btnClose.Location = new System.Drawing.Point(16, 809);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnHoverBaseColor = System.Drawing.Color.Teal;
             this.btnClose.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -111,7 +113,7 @@ namespace QuanLyDangKyHocPhan
             this.btnClose.OnHoverImage = null;
             this.btnClose.OnPressedColor = System.Drawing.Color.Black;
             this.btnClose.Radius = 20;
-            this.btnClose.Size = new System.Drawing.Size(191, 43);
+            this.btnClose.Size = new System.Drawing.Size(255, 53);
             this.btnClose.TabIndex = 38;
             this.btnClose.Text = "Thoát";
             this.btnClose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -120,9 +122,10 @@ namespace QuanLyDangKyHocPhan
             // slidePanel
             // 
             this.slidePanel.BackColor = System.Drawing.Color.Teal;
-            this.slidePanel.Location = new System.Drawing.Point(0, 89);
+            this.slidePanel.Location = new System.Drawing.Point(0, 110);
+            this.slidePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(10, 56);
+            this.slidePanel.Size = new System.Drawing.Size(13, 69);
             this.slidePanel.TabIndex = 12;
             // 
             // btnUser
@@ -137,14 +140,15 @@ namespace QuanLyDangKyHocPhan
             this.btnUser.ForeColor = System.Drawing.Color.White;
             this.btnUser.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_logout_rounded_up_26px_11;
             this.btnUser.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUser.Location = new System.Drawing.Point(0, 475);
+            this.btnUser.Location = new System.Drawing.Point(0, 585);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUser.Name = "btnUser";
             this.btnUser.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnUser.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnUser.OnHoverForeColor = System.Drawing.Color.White;
             this.btnUser.OnHoverImage = null;
             this.btnUser.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUser.Size = new System.Drawing.Size(225, 56);
+            this.btnUser.Size = new System.Drawing.Size(300, 69);
             this.btnUser.TabIndex = 11;
             this.btnUser.Text = "Đăng Xuất";
             this.btnUser.TextOffsetX = 10;
@@ -162,14 +166,15 @@ namespace QuanLyDangKyHocPhan
             this.btnDKHP.ForeColor = System.Drawing.Color.White;
             this.btnDKHP.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_student_registration_64px;
             this.btnDKHP.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDKHP.Location = new System.Drawing.Point(0, 413);
+            this.btnDKHP.Location = new System.Drawing.Point(0, 508);
+            this.btnDKHP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDKHP.Name = "btnDKHP";
             this.btnDKHP.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnDKHP.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnDKHP.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDKHP.OnHoverImage = null;
             this.btnDKHP.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDKHP.Size = new System.Drawing.Size(225, 56);
+            this.btnDKHP.Size = new System.Drawing.Size(300, 69);
             this.btnDKHP.TabIndex = 9;
             this.btnDKHP.Text = "Đăng ký học phần";
             this.btnDKHP.TextOffsetX = 10;
@@ -187,14 +192,15 @@ namespace QuanLyDangKyHocPhan
             this.btnHocPhi.ForeColor = System.Drawing.Color.White;
             this.btnHocPhi.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_money_bag_64px;
             this.btnHocPhi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHocPhi.Location = new System.Drawing.Point(0, 346);
+            this.btnHocPhi.Location = new System.Drawing.Point(0, 426);
+            this.btnHocPhi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHocPhi.Name = "btnHocPhi";
             this.btnHocPhi.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnHocPhi.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnHocPhi.OnHoverForeColor = System.Drawing.Color.White;
             this.btnHocPhi.OnHoverImage = null;
             this.btnHocPhi.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHocPhi.Size = new System.Drawing.Size(225, 56);
+            this.btnHocPhi.Size = new System.Drawing.Size(300, 69);
             this.btnHocPhi.TabIndex = 8;
             this.btnHocPhi.Text = "Học phí";
             this.btnHocPhi.TextOffsetX = 10;
@@ -212,14 +218,15 @@ namespace QuanLyDangKyHocPhan
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_statistics_64px;
             this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKe.Location = new System.Drawing.Point(0, 280);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 345);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnThongKe.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnThongKe.OnHoverForeColor = System.Drawing.Color.White;
             this.btnThongKe.OnHoverImage = null;
             this.btnThongKe.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKe.Size = new System.Drawing.Size(225, 56);
+            this.btnThongKe.Size = new System.Drawing.Size(300, 69);
             this.btnThongKe.TabIndex = 7;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.TextOffsetX = 10;
@@ -237,14 +244,15 @@ namespace QuanLyDangKyHocPhan
             this.btnHocVu.ForeColor = System.Drawing.Color.White;
             this.btnHocVu.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_study_64px;
             this.btnHocVu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHocVu.Location = new System.Drawing.Point(0, 214);
+            this.btnHocVu.Location = new System.Drawing.Point(0, 263);
+            this.btnHocVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHocVu.Name = "btnHocVu";
             this.btnHocVu.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnHocVu.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnHocVu.OnHoverForeColor = System.Drawing.Color.White;
             this.btnHocVu.OnHoverImage = null;
             this.btnHocVu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHocVu.Size = new System.Drawing.Size(225, 56);
+            this.btnHocVu.Size = new System.Drawing.Size(300, 69);
             this.btnHocVu.TabIndex = 6;
             this.btnHocVu.Text = "Học vụ";
             this.btnHocVu.TextOffsetX = 10;
@@ -262,14 +270,15 @@ namespace QuanLyDangKyHocPhan
             this.btnQL.ForeColor = System.Drawing.Color.White;
             this.btnQL.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_product_management_64px;
             this.btnQL.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnQL.Location = new System.Drawing.Point(0, 150);
+            this.btnQL.Location = new System.Drawing.Point(0, 185);
+            this.btnQL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQL.Name = "btnQL";
             this.btnQL.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnQL.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnQL.OnHoverForeColor = System.Drawing.Color.White;
             this.btnQL.OnHoverImage = null;
             this.btnQL.OnPressedColor = System.Drawing.Color.Black;
-            this.btnQL.Size = new System.Drawing.Size(225, 56);
+            this.btnQL.Size = new System.Drawing.Size(300, 69);
             this.btnQL.TabIndex = 4;
             this.btnQL.Text = "Quản lý";
             this.btnQL.TextOffsetX = 10;
@@ -287,14 +296,15 @@ namespace QuanLyDangKyHocPhan
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_home_64px;
             this.btnHome.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHome.Location = new System.Drawing.Point(0, 89);
+            this.btnHome.Location = new System.Drawing.Point(0, 110);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
             this.btnHome.OnHoverBaseColor = System.Drawing.Color.DimGray;
             this.btnHome.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnHome.OnHoverForeColor = System.Drawing.Color.White;
             this.btnHome.OnHoverImage = null;
             this.btnHome.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHome.Size = new System.Drawing.Size(225, 56);
+            this.btnHome.Size = new System.Drawing.Size(300, 69);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.TextOffsetX = 10;
@@ -305,8 +315,9 @@ namespace QuanLyDangKyHocPhan
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1290, 10);
+            this.panel2.Size = new System.Drawing.Size(1720, 12);
             this.panel2.TabIndex = 1;
             // 
             // pnShow
@@ -323,48 +334,54 @@ namespace QuanLyDangKyHocPhan
             this.pnShow.Controls.Add(this.ucqlhp1);
             this.pnShow.Controls.Add(this.controlStudentManagerment1);
             this.pnShow.Controls.Add(this.startUpControl1);
-            this.pnShow.Location = new System.Drawing.Point(225, 12);
+            this.pnShow.Location = new System.Drawing.Point(300, 15);
+            this.pnShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnShow.Name = "pnShow";
-            this.pnShow.Size = new System.Drawing.Size(1065, 711);
+            this.pnShow.Size = new System.Drawing.Size(1420, 875);
             this.pnShow.TabIndex = 2;
             // 
             // ucldst1
             // 
             this.ucldst1.Location = new System.Drawing.Point(0, 0);
+            this.ucldst1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucldst1.Name = "ucldst1";
-            this.ucldst1.Size = new System.Drawing.Size(1065, 711);
+            this.ucldst1.Size = new System.Drawing.Size(1420, 875);
             this.ucldst1.TabIndex = 8;
             // 
             // ucHocPhi1
             // 
             this.ucHocPhi1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucHocPhi1.Location = new System.Drawing.Point(0, 0);
+            this.ucHocPhi1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucHocPhi1.Name = "ucHocPhi1";
-            this.ucHocPhi1.Size = new System.Drawing.Size(1065, 711);
+            this.ucHocPhi1.Size = new System.Drawing.Size(1420, 875);
             this.ucHocPhi1.TabIndex = 7;
             // 
             // ucLichThi1
             // 
             this.ucLichThi1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucLichThi1.Location = new System.Drawing.Point(0, 0);
+            this.ucLichThi1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucLichThi1.Name = "ucLichThi1";
-            this.ucLichThi1.Size = new System.Drawing.Size(1065, 711);
+            this.ucLichThi1.Size = new System.Drawing.Size(1420, 875);
             this.ucLichThi1.TabIndex = 6;
             // 
             // uC_LKDSHP1
             // 
             this.uC_LKDSHP1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_LKDSHP1.Location = new System.Drawing.Point(0, 0);
+            this.uC_LKDSHP1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uC_LKDSHP1.Name = "uC_LKDSHP1";
-            this.uC_LKDSHP1.Size = new System.Drawing.Size(1065, 711);
+            this.uC_LKDSHP1.Size = new System.Drawing.Size(1420, 875);
             this.uC_LKDSHP1.TabIndex = 5;
             // 
             // uC_LKDSSVDangKy1
             // 
             this.uC_LKDSSVDangKy1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_LKDSSVDangKy1.Location = new System.Drawing.Point(0, 0);
+            this.uC_LKDSSVDangKy1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uC_LKDSSVDangKy1.Name = "uC_LKDSSVDangKy1";
-            this.uC_LKDSSVDangKy1.Size = new System.Drawing.Size(1065, 711);
+            this.uC_LKDSSVDangKy1.Size = new System.Drawing.Size(1420, 875);
             this.uC_LKDSSVDangKy1.TabIndex = 4;
             // 
             // uddkhp1
@@ -372,16 +389,18 @@ namespace QuanLyDangKyHocPhan
             this.uddkhp1.AutoScroll = true;
             this.uddkhp1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uddkhp1.Location = new System.Drawing.Point(0, 0);
+            this.uddkhp1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uddkhp1.Name = "uddkhp1";
-            this.uddkhp1.Size = new System.Drawing.Size(1065, 711);
+            this.uddkhp1.Size = new System.Drawing.Size(1420, 875);
             this.uddkhp1.TabIndex = 3;
             // 
             // ucqlhp1
             // 
             this.ucqlhp1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucqlhp1.Location = new System.Drawing.Point(0, 0);
+            this.ucqlhp1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucqlhp1.Name = "ucqlhp1";
-            this.ucqlhp1.Size = new System.Drawing.Size(1065, 711);
+            this.ucqlhp1.Size = new System.Drawing.Size(1420, 875);
             this.ucqlhp1.TabIndex = 2;
             // 
             // controlStudentManagerment1
@@ -389,8 +408,9 @@ namespace QuanLyDangKyHocPhan
             this.controlStudentManagerment1.AutoScroll = true;
             this.controlStudentManagerment1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlStudentManagerment1.Location = new System.Drawing.Point(0, 0);
+            this.controlStudentManagerment1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.controlStudentManagerment1.Name = "controlStudentManagerment1";
-            this.controlStudentManagerment1.Size = new System.Drawing.Size(1065, 711);
+            this.controlStudentManagerment1.Size = new System.Drawing.Size(1420, 875);
             this.controlStudentManagerment1.TabIndex = 1;
             // 
             // startUpControl1
@@ -398,13 +418,15 @@ namespace QuanLyDangKyHocPhan
             this.startUpControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.startUpControl1.Location = new System.Drawing.Point(3, 0);
+            this.startUpControl1.Location = new System.Drawing.Point(4, 0);
+            this.startUpControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.startUpControl1.Name = "startUpControl1";
-            this.startUpControl1.Size = new System.Drawing.Size(1049, 672);
+            this.startUpControl1.Size = new System.Drawing.Size(1399, 827);
             this.startUpControl1.TabIndex = 0;
             // 
             // ddmQuanLy
             // 
+            this.ddmQuanLy.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ddmQuanLy.IsMainMenu = false;
             this.ddmQuanLy.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiQLSV,
@@ -413,14 +435,14 @@ namespace QuanLyDangKyHocPhan
             this.ddmQuanLy.MenuItemTextColor = System.Drawing.Color.Empty;
             this.ddmQuanLy.Name = "dropDownMenu1";
             this.ddmQuanLy.PrimaryColor = System.Drawing.Color.Empty;
-            this.ddmQuanLy.Size = new System.Drawing.Size(198, 52);
+            this.ddmQuanLy.Size = new System.Drawing.Size(237, 64);
             // 
             // tsmiQLSV
             // 
             this.tsmiQLSV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiQLSV.ForeColor = System.Drawing.Color.White;
             this.tsmiQLSV.Name = "tsmiQLSV";
-            this.tsmiQLSV.Size = new System.Drawing.Size(197, 24);
+            this.tsmiQLSV.Size = new System.Drawing.Size(236, 30);
             this.tsmiQLSV.Text = "Quản lý sinh viên";
             this.tsmiQLSV.Click += new System.EventHandler(this.tsmiQLSV_Click);
             // 
@@ -429,12 +451,13 @@ namespace QuanLyDangKyHocPhan
             this.tsmiQLHP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiQLHP.ForeColor = System.Drawing.Color.White;
             this.tsmiQLHP.Name = "tsmiQLHP";
-            this.tsmiQLHP.Size = new System.Drawing.Size(197, 24);
+            this.tsmiQLHP.Size = new System.Drawing.Size(236, 30);
             this.tsmiQLHP.Text = "Quản lý học phần";
             this.tsmiQLHP.Click += new System.EventHandler(this.tsmiQLHP_Click);
             // 
             // ddmHocVu
             // 
+            this.ddmHocVu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ddmHocVu.IsMainMenu = false;
             this.ddmHocVu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLichThi});
@@ -442,19 +465,20 @@ namespace QuanLyDangKyHocPhan
             this.ddmHocVu.MenuItemTextColor = System.Drawing.Color.Empty;
             this.ddmHocVu.Name = "ddmHocVu";
             this.ddmHocVu.PrimaryColor = System.Drawing.Color.Empty;
-            this.ddmHocVu.Size = new System.Drawing.Size(128, 28);
+            this.ddmHocVu.Size = new System.Drawing.Size(145, 34);
             // 
             // tsmiLichThi
             // 
             this.tsmiLichThi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiLichThi.ForeColor = System.Drawing.Color.White;
             this.tsmiLichThi.Name = "tsmiLichThi";
-            this.tsmiLichThi.Size = new System.Drawing.Size(127, 24);
+            this.tsmiLichThi.Size = new System.Drawing.Size(144, 30);
             this.tsmiLichThi.Text = "Lịch thi";
             this.tsmiLichThi.Click += new System.EventHandler(this.tsmiLichThi_Click);
             // 
             // ddmThongKe
             // 
+            this.ddmThongKe.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ddmThongKe.IsMainMenu = false;
             this.ddmThongKe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLKDSSV,
@@ -464,14 +488,14 @@ namespace QuanLyDangKyHocPhan
             this.ddmThongKe.MenuItemTextColor = System.Drawing.Color.Empty;
             this.ddmThongKe.Name = "ddmThongKe";
             this.ddmThongKe.PrimaryColor = System.Drawing.Color.Empty;
-            this.ddmThongKe.Size = new System.Drawing.Size(166, 76);
+            this.ddmThongKe.Size = new System.Drawing.Size(197, 94);
             // 
             // tsmiLKDSSV
             // 
             this.tsmiLKDSSV.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiLKDSSV.ForeColor = System.Drawing.Color.White;
             this.tsmiLKDSSV.Name = "tsmiLKDSSV";
-            this.tsmiLKDSSV.Size = new System.Drawing.Size(165, 24);
+            this.tsmiLKDSSV.Size = new System.Drawing.Size(196, 30);
             this.tsmiLKDSSV.Text = "Liệt kê DSSV";
             this.tsmiLKDSSV.Click += new System.EventHandler(this.tsmiLKDSSV_Click);
             // 
@@ -480,7 +504,7 @@ namespace QuanLyDangKyHocPhan
             this.tsmiLKDSHP.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiLKDSHP.ForeColor = System.Drawing.Color.White;
             this.tsmiLKDSHP.Name = "tsmiLKDSHP";
-            this.tsmiLKDSHP.Size = new System.Drawing.Size(165, 24);
+            this.tsmiLKDSHP.Size = new System.Drawing.Size(196, 30);
             this.tsmiLKDSHP.Text = "Liệt kê DSHP";
             this.tsmiLKDSHP.Click += new System.EventHandler(this.tsmiLKDSHP_Click);
             // 
@@ -489,19 +513,20 @@ namespace QuanLyDangKyHocPhan
             this.tsmiLapDSThi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsmiLapDSThi.ForeColor = System.Drawing.Color.White;
             this.tsmiLapDSThi.Name = "tsmiLapDSThi";
-            this.tsmiLapDSThi.Size = new System.Drawing.Size(165, 24);
+            this.tsmiLapDSThi.Size = new System.Drawing.Size(196, 30);
             this.tsmiLapDSThi.Text = "Lập DS Thi";
             this.tsmiLapDSThi.Click += new System.EventHandler(this.tsmiLapDSThi_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1290, 723);
+            this.ClientSize = new System.Drawing.Size(1720, 890);
             this.Controls.Add(this.pnShow);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đăng ký học phần";

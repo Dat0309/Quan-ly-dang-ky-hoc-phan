@@ -42,5 +42,15 @@ namespace QuanLyDangKyHocPhan
         {
             setContent(new DKHPForm());
         }
+
+        private void btnHocPhi_Click(object sender, EventArgs e)
+        {
+            setContent(new HocPhiForm());
+        }
+
+        private void btnLichThi_Click(object sender, EventArgs e)
+        {
+            setContent(new LichThiForm());
+        }
     }
 }

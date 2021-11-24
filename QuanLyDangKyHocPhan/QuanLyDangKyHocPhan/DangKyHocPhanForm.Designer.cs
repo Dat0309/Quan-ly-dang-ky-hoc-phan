@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKyHocPhanForm));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnHocPhi = new Guna.UI.WinForms.GunaButton();
             this.btnLogout = new Guna.UI.WinForms.GunaButton();
             this.btnLichThi = new Guna.UI.WinForms.GunaButton();
             this.btnDKHP = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.Container = new Guna.UI.WinForms.GunaPanel();
-            this.btnHocPhi = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,30 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(260, 753);
             this.gunaPanel1.TabIndex = 1;
+            // 
+            // btnHocPhi
+            // 
+            this.btnHocPhi.AnimationHoverSpeed = 0.07F;
+            this.btnHocPhi.AnimationSpeed = 0.03F;
+            this.btnHocPhi.BaseColor = System.Drawing.Color.White;
+            this.btnHocPhi.BorderColor = System.Drawing.Color.Black;
+            this.btnHocPhi.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnHocPhi.FocusedColor = System.Drawing.Color.Empty;
+            this.btnHocPhi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnHocPhi.ForeColor = System.Drawing.Color.Black;
+            this.btnHocPhi.Image = ((System.Drawing.Image)(resources.GetObject("btnHocPhi.Image")));
+            this.btnHocPhi.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnHocPhi.Location = new System.Drawing.Point(4, 261);
+            this.btnHocPhi.Name = "btnHocPhi";
+            this.btnHocPhi.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnHocPhi.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnHocPhi.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnHocPhi.OnHoverImage = null;
+            this.btnHocPhi.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHocPhi.Size = new System.Drawing.Size(254, 86);
+            this.btnHocPhi.TabIndex = 8;
+            this.btnHocPhi.Text = "Học phí";
+            this.btnHocPhi.Click += new System.EventHandler(this.btnHocPhi_Click);
             // 
             // btnLogout
             // 
@@ -101,6 +125,7 @@
             this.btnLichThi.Size = new System.Drawing.Size(254, 86);
             this.btnLichThi.TabIndex = 2;
             this.btnLichThi.Text = "Lịch thi";
+            this.btnLichThi.Click += new System.EventHandler(this.btnLichThi_Click);
             // 
             // btnDKHP
             // 
@@ -145,29 +170,6 @@
             this.Container.Name = "Container";
             this.Container.Size = new System.Drawing.Size(1222, 753);
             this.Container.TabIndex = 2;
-            // 
-            // btnHocPhi
-            // 
-            this.btnHocPhi.AnimationHoverSpeed = 0.07F;
-            this.btnHocPhi.AnimationSpeed = 0.03F;
-            this.btnHocPhi.BaseColor = System.Drawing.Color.White;
-            this.btnHocPhi.BorderColor = System.Drawing.Color.Black;
-            this.btnHocPhi.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnHocPhi.FocusedColor = System.Drawing.Color.Empty;
-            this.btnHocPhi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnHocPhi.ForeColor = System.Drawing.Color.Black;
-            this.btnHocPhi.Image = ((System.Drawing.Image)(resources.GetObject("btnHocPhi.Image")));
-            this.btnHocPhi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHocPhi.Location = new System.Drawing.Point(4, 261);
-            this.btnHocPhi.Name = "btnHocPhi";
-            this.btnHocPhi.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnHocPhi.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnHocPhi.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnHocPhi.OnHoverImage = null;
-            this.btnHocPhi.OnPressedColor = System.Drawing.Color.Black;
-            this.btnHocPhi.Size = new System.Drawing.Size(254, 86);
-            this.btnHocPhi.TabIndex = 8;
-            this.btnHocPhi.Text = "Học phí";
             // 
             // DangKyHocPhanForm
             // 

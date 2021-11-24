@@ -35,6 +35,9 @@
   <PropertyGroup>
     <StartupObject>QuanLyDangKyHocPhan.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_education.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -74,11 +77,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcountWindow.cs">
+    <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AcountWindow.Designer.cs">
-      <DependentUpon>AcountWindow.cs</DependentUpon>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyHocPhanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyHocPhanForm.Designer.cs">
+      <DependentUpon>DangKyHocPhanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DKHPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DKHPForm.Designer.cs">
+      <DependentUpon>DKHPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DKNgoaiKHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DKNgoaiKHForm.Designer.cs">
+      <DependentUpon>DKNgoaiKHForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DKTheoKeHoachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DKTheoKeHoachForm.Designer.cs">
+      <DependentUpon>DKTheoKeHoachForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -86,29 +113,77 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HocPhanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocPhanForm.Designer.cs">
+      <DependentUpon>HocPhanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AcountWindow.resx">
-      <DependentUpon>AcountWindow.cs</DependentUpon>
+    <Compile Include="QLDKHPForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLDKHPForm.Designer.cs">
+      <DependentUpon>QLDKHPForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVienForm.Designer.cs">
+      <DependentUpon>SinhVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiKhoanForm.Designer.cs">
+      <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyHocPhanForm.resx">
+      <DependentUpon>DangKyHocPhanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DKHPForm.resx">
+      <DependentUpon>DKHPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DKNgoaiKHForm.resx">
+      <DependentUpon>DKNgoaiKHForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DKTheoKeHoachForm.resx">
+      <DependentUpon>DKTheoKeHoachForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HocPhanForm.resx">
+      <DependentUpon>HocPhanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="QLDKHPForm.resx">
+      <DependentUpon>QLDKHPForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVienForm.resx">
+      <DependentUpon>SinhVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiKhoanForm.resx">
+      <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -125,62 +200,13 @@
     <None Include="Resources\splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_add_bookmark_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_remove_16px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_support_50px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_home_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_product_management_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_study_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_statistics_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_money_bag_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8_student_registration_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_male_user_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_bookmark_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_checked_64px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_close_window_48px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_maximize_window_26px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_minimize_window_26px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_close_window_26px.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loginsv.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exitgv.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8_logout_rounded_up_26px_11.png" />
-    <None Include="Resources\icons8_logout_rounded_up_26px_1.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
@@ -194,6 +220,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomControl\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_education.ico" />
+    <None Include="Resources\icons8_student_registration_24px1.png" />
+    <None Include="Resources\icons8_student_registration_24px.png" />
+    <None Include="Resources\icons8_student_male_48px.png" />
+    <None Include="Resources\icons8_glossary_64px.png" />
+    <None Include="Resources\icons8_student_male_64px.png" />
+    <None Include="Resources\i-hc-a-lt.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

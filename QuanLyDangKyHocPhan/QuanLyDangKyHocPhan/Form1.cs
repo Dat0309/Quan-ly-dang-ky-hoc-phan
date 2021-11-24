@@ -10,14 +10,35 @@ using System.Windows.Forms;
 
 namespace QuanLyDangKyHocPhan
 {
-    public partial class Form1 : Form
+    public partial class LoginUI : Form
     {
 
-        public Form1()
+        public LoginUI()
         {
             InitializeComponent();
         }
 
-        
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txtUser.Text == "1")
+            {
+                AdminForm frm = new AdminForm();
+                this.Hide();
+                frm.ShowDialog();
+                this.Close();
+            }
+            else if(txtUser.Text == "2")
+            {
+                DangKyHocPhanForm frm = new DangKyHocPhanForm();
+                this.Hide();
+                frm.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

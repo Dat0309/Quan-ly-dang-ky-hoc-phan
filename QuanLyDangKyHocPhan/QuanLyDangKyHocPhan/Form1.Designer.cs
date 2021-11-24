@@ -1,7 +1,7 @@
 ﻿
 namespace QuanLyDangKyHocPhan
 {
-    public partial class Form1
+    public partial class LoginUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,23 +29,179 @@ namespace QuanLyDangKyHocPhan
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUI));
+            this.txtUser = new Guna.UI.WinForms.GunaTextBox();
+            this.txtPass = new Guna.UI.WinForms.GunaTextBox();
+            this.btnLogin = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnExit = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Form1
+            // txtUser
             // 
+            this.txtUser.BackColor = System.Drawing.Color.Transparent;
+            this.txtUser.BaseColor = System.Drawing.Color.White;
+            this.txtUser.BorderColor = System.Drawing.Color.Silver;
+            this.txtUser.BorderSize = 1;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUser.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtUser.FocusedBorderColor = System.Drawing.Color.Silver;
+            this.txtUser.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUser.Location = new System.Drawing.Point(46, 188);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.PasswordChar = '\0';
+            this.txtUser.Radius = 20;
+            this.txtUser.SelectedText = "";
+            this.txtUser.Size = new System.Drawing.Size(279, 49);
+            this.txtUser.TabIndex = 2;
+            this.txtUser.TextOffsetX = 8;
+            // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.Color.Transparent;
+            this.txtPass.BaseColor = System.Drawing.Color.White;
+            this.txtPass.BorderColor = System.Drawing.Color.Silver;
+            this.txtPass.BorderSize = 1;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtPass.FocusedBorderColor = System.Drawing.Color.Silver;
+            this.txtPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPass.Location = new System.Drawing.Point(46, 248);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '\0';
+            this.txtPass.Radius = 20;
+            this.txtPass.SelectedText = "";
+            this.txtPass.Size = new System.Drawing.Size(279, 49);
+            this.txtPass.TabIndex = 3;
+            this.txtPass.TextOffsetX = 8;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AnimationHoverSpeed = 0.07F;
+            this.btnLogin.AnimationSpeed = 0.03F;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BaseColor = System.Drawing.Color.CadetBlue;
+            this.btnLogin.BorderColor = System.Drawing.Color.Black;
+            this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLogin.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = null;
+            this.btnLogin.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLogin.Location = new System.Drawing.Point(84, 353);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.OnHoverBaseColor = System.Drawing.Color.Teal;
+            this.btnLogin.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLogin.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLogin.OnHoverImage = null;
+            this.btnLogin.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLogin.Radius = 20;
+            this.btnLogin.Size = new System.Drawing.Size(190, 49);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("UTM Copperplate", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.gunaLabel1.Location = new System.Drawing.Point(74, 134);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(219, 21);
+            this.gunaLabel1.TabIndex = 5;
+            this.gunaLabel1.Text = "Đăng nhập để tiếp tục";
+            // 
+            // btnExit
+            // 
+            this.btnExit.AnimationHoverSpeed = 0.07F;
+            this.btnExit.AnimationSpeed = 0.03F;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BaseColor = System.Drawing.Color.CadetBlue;
+            this.btnExit.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = null;
+            this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnExit.Location = new System.Drawing.Point(84, 408);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.OnHoverBaseColor = System.Drawing.Color.Teal;
+            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnExit.OnHoverImage = null;
+            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
+            this.btnExit.Radius = 20;
+            this.btnExit.Size = new System.Drawing.Size(190, 49);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.InitialImage")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(75, 13);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(218, 118);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gunaPictureBox1.TabIndex = 1;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // gunaPanel1
+            // 
+            this.gunaPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaPanel1.BackgroundImage")));
+            this.gunaPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gunaPanel1.Location = new System.Drawing.Point(364, 0);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(486, 475);
+            this.gunaPanel1.TabIndex = 0;
+            // 
+            // LoginUI
+            // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1720, 890);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ClientSize = new System.Drawing.Size(850, 475);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.gunaPictureBox1);
+            this.Controls.Add(this.gunaPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
+            this.Name = "LoginUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đăng ký học phần";
+            this.TransparencyKey = System.Drawing.Color.MediumSeaGreen;
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaTextBox txtUser;
+        private Guna.UI.WinForms.GunaTextBox txtPass;
+        private Guna.UI.WinForms.GunaButton btnLogin;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaButton btnExit;
     }
 }
 

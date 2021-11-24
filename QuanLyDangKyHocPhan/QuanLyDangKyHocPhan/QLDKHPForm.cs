@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyDangKyHocPhan
 {
-    public partial class AcountWindow : Form
+    public partial class QLDKHPForm : Form
     {
-        public AcountWindow()
+        public QLDKHPForm()
         {
             InitializeComponent();
         }

@@ -1,5 +1,9 @@
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\BusinessLogic.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\BusinessLogic.pdb
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Configuration.ConfigurationManager.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Security.AccessControl.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Security.Permissions.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Security.Principal.Windows.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\DataAccess.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\DataAccess.pdb
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.csproj.AssemblyReference.cache
@@ -10,7 +14,3 @@ E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.csproj.CopyComplete
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.pdb
-E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Configuration.ConfigurationManager.dll
-E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Security.AccessControl.dll
-E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Security.Permissions.dll
-E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Security.Principal.Windows.dll

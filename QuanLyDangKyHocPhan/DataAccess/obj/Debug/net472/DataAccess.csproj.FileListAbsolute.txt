@@ -11,3 +11,4 @@ E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.Permissions.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.Principal.Windows.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.CopyComplete
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.AssemblyReference.cache

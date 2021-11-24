@@ -1,6 +1,0 @@
-﻿CT3111D*Lập trình CSDL*4*2*2*Bắt buộc
-20CT1102*Nguyên lý lập trình cấu trúc*4*2*2*Bắt buộc
-CT2108D*Cơ sở dữ liệu*4*2*2*Bắt buộc
-CT2105D*Cấu trúc dữ liệu và thuật giải 2*3*1*2*Tự Chọn
-CT4218D*Hệ quản trị cơ sở dữ liệu*3*1*2*Tự Chọn
-CT3111D*Lập trình CSDL*4*2*2*Bắt buộc

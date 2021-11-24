@@ -34,7 +34,7 @@ namespace DataAccess
         /// <summary>
         /// Ngày sinh sinh viên
         /// </summary>
-        public DateTime NgaySinh { get; set; }
+        public string NgaySinh { get; set; }
 
         /// <summary>
         /// Tên lớp

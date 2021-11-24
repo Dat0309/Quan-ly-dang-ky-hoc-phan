@@ -24,7 +24,7 @@ namespace DataAccess
         /// <summary>
         /// Ngày đăng ký học phần
         /// </summary>
-        public DateTime NgayDangKy { get; set; }
+        public string NgayDangKy { get; set; }
 
         /// <summary>
         /// Học kỳ

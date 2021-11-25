@@ -14,6 +14,7 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class LoginUI : Form
     {
+        public string userName;
         TaiKhoanBL tkBL = new TaiKhoanBL();
         public LoginUI()
         {
@@ -29,6 +30,7 @@ namespace QuanLyDangKyHocPhan
         {
             if (tkBL.Authentication(txtUser.Text, txtPass.Text))
             {
+                userName = txtUser.Text;
                 if(tkBL.GetRoleID(txtUser.Text) == 1)
                 {
                     AdminForm frm = new AdminForm();
@@ -38,7 +40,7 @@ namespace QuanLyDangKyHocPhan
                 }
                 else if(tkBL.GetRoleID(txtUser.Text) == 2)
                 {
-                    DangKyHocPhanForm frm = new DangKyHocPhanForm();
+                    DangKyHocPhanForm frm = new DangKyHocPhanForm(userName);
                     this.Hide();
                     frm.ShowDialog();
                     this.Close();

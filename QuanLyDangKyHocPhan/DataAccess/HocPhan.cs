@@ -26,20 +26,26 @@ namespace DataAccess
         /// Loại học phần
         /// </summary>
         public string LoaiHP { get; set; }
-
         /// <summary>
-        /// Số tín chir lý thuyết
+        /// Học kỳ được mở dạy
         /// </summary>
-        public int TCLT { get; set; }
-
+        public int HocKy { get; set; }
         /// <summary>
-        /// Số tín chỉ thực hành
+        /// Năm được mở dạy vd: năm nhất học kỳ 1
         /// </summary>
-        public int TCTH { get; set; }
+        public int Nam { get; set; }
+        /// <summary>
+        /// Học phần thuộc khoa
+        /// </summary>
+        public string Khoa { get; set; }
 
         /// <summary>
         /// Tổng số tín chỉ
         /// </summary>
         public int TongSoTC { get; set; }
+        /// <summary>
+        /// Giới hạn đăng đăng ký
+        /// </summary>
+        public int GioiHan { get; set; }
     }
 }

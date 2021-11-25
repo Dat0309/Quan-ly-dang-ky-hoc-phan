@@ -31,13 +31,13 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.lvHP = new System.Windows.Forms.ListView();
-            this.btnKeHoach = new Guna.UI.WinForms.GunaButton();
-            this.btnCaiThien = new Guna.UI.WinForms.GunaButton();
-            this.btnKetQua = new Guna.UI.WinForms.GunaButton();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnKeHoach = new Guna.UI.WinForms.GunaButton();
+            this.btnCaiThien = new Guna.UI.WinForms.GunaButton();
+            this.btnKetQua = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,9 @@
             // 
             // lvHP
             // 
+            this.lvHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvHP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -78,8 +81,32 @@
             this.lvHP.UseCompatibleStateImageBehavior = false;
             this.lvHP.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã HP";
+            this.columnHeader1.Width = 200;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên HP";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 400;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Loại HP";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 200;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "STC";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 200;
+            // 
             // btnKeHoach
             // 
+            this.btnKeHoach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnKeHoach.AnimationHoverSpeed = 0.07F;
             this.btnKeHoach.AnimationSpeed = 0.03F;
             this.btnKeHoach.BackColor = System.Drawing.Color.Transparent;
@@ -107,6 +134,7 @@
             // 
             // btnCaiThien
             // 
+            this.btnCaiThien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCaiThien.AnimationHoverSpeed = 0.07F;
             this.btnCaiThien.AnimationSpeed = 0.03F;
             this.btnCaiThien.BackColor = System.Drawing.Color.Transparent;
@@ -134,6 +162,7 @@
             // 
             // btnKetQua
             // 
+            this.btnKetQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnKetQua.AnimationHoverSpeed = 0.07F;
             this.btnKetQua.AnimationSpeed = 0.03F;
             this.btnKetQua.BackColor = System.Drawing.Color.Transparent;
@@ -157,29 +186,6 @@
             this.btnKetQua.TabIndex = 5;
             this.btnKetQua.Text = "Kết quả đăng ký";
             this.btnKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Mã HP";
-            this.columnHeader1.Width = 200;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên HP";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 450;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Loại HP";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 200;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "STC";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 200;
             // 
             // DKHPForm
             // 

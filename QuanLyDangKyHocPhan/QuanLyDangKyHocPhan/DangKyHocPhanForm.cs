@@ -12,9 +12,11 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class DangKyHocPhanForm : Form
     {
-        public DangKyHocPhanForm()
+        string userName;
+        public DangKyHocPhanForm(string user)
         {
             InitializeComponent();
+            userName = user;
         }
 
         #region
@@ -40,7 +42,7 @@ namespace QuanLyDangKyHocPhan
 
         private void btnDKHP_Click(object sender, EventArgs e)
         {
-            setContent(new DKHPForm());
+            setContent(new DKHPForm(userName));
         }
 
         private void btnHocPhi_Click(object sender, EventArgs e)

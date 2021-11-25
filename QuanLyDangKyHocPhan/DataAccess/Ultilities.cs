@@ -21,6 +21,7 @@ namespace DataAccess
 
         public static string HocPhan_GetAll = "HocPhan_GetAll";
         public static string HocPhan_InsertUpdateDelete = "HocPhan_InsertUpdateDelete";
+        public static string GetHPChuaTichLuy = "GetHPChuaTichLuy";
 
         public static string TaiKhoan_GetAll = "TaiKhoan_GetAll";
         public static string TaiKhoan_InsertUpdateDelete = "TaiKhoan_InsertUpdateDelete";

@@ -15,7 +15,7 @@ namespace QuanLyDangKyHocPhan
     public partial class LoginUI : Form
     {
         public string userName;
-        TaiKhoanBL tkBL = new TaiKhoanBL();
+        TaiKhoanBL tkBL = TaiKhoanBL.getInstance();
         public LoginUI()
         {
             InitializeComponent();

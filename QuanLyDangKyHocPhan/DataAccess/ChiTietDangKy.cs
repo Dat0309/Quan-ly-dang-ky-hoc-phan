@@ -34,6 +34,6 @@ namespace DataAccess
         /// <summary>
         /// Năm học
         /// </summary>
-        public int NamHoc { get; set; }
+        public string NamHoc { get; set; }
     }
 }

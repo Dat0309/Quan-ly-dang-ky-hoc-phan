@@ -11,6 +11,20 @@ namespace BusinessLogic
     {
         TaiKhoanDA tkDA = new TaiKhoanDA();
 
+        private static TaiKhoanBL instance;
+
+        private TaiKhoanBL()
+        {
+
+        }
+
+        public static TaiKhoanBL getInstance()
+        {
+            if(instance == null)
+                instance = new TaiKhoanBL();
+            return instance;
+        }
+
         public List<TaiKhoan> GetAll()
         {
             return tkDA.GetAll();

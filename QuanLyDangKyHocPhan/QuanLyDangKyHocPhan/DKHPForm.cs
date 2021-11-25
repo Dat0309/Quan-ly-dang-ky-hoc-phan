@@ -27,7 +27,7 @@ namespace QuanLyDangKyHocPhan
 
         private void LoadHPToLV()
         {
-            HocPhanBL hpBL = new HocPhanBL();
+            HocPhanBL hpBL = HocPhanBL.getInstance();
             listHP = hpBL.GetHPChuaTL(int.Parse(user));
             lvHP.Items.Clear();
 
@@ -51,6 +51,7 @@ namespace QuanLyDangKyHocPhan
         {
             DKTheoKeHoachForm frm = new DKTheoKeHoachForm(user);
             frm.ShowDialog(this);
+            LoadHPToLV();
         }
 
         private void btnCaiThien_Click(object sender, EventArgs e)

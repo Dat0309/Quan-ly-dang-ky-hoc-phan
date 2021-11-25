@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btnKetQua = new Guna.UI.WinForms.GunaButton();
+            this.btnDangKy = new Guna.UI.WinForms.GunaButton();
             this.lvHP = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,32 +63,33 @@
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Danh sách học phần chưa tích luỹ được tổ chức giảng dạy theo kế hoạch";
             // 
-            // btnKetQua
+            // btnDangKy
             // 
-            this.btnKetQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKetQua.AnimationHoverSpeed = 0.07F;
-            this.btnKetQua.AnimationSpeed = 0.03F;
-            this.btnKetQua.BackColor = System.Drawing.Color.Transparent;
-            this.btnKetQua.BaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnKetQua.BorderColor = System.Drawing.Color.Black;
-            this.btnKetQua.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnKetQua.FocusedColor = System.Drawing.Color.Empty;
-            this.btnKetQua.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKetQua.ForeColor = System.Drawing.Color.White;
-            this.btnKetQua.Image = null;
-            this.btnKetQua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnKetQua.Location = new System.Drawing.Point(1283, 456);
-            this.btnKetQua.Name = "btnKetQua";
-            this.btnKetQua.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
-            this.btnKetQua.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnKetQua.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnKetQua.OnHoverImage = null;
-            this.btnKetQua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnKetQua.Radius = 10;
-            this.btnKetQua.Size = new System.Drawing.Size(97, 42);
-            this.btnKetQua.TabIndex = 10;
-            this.btnKetQua.Text = "Đăng ký";
-            this.btnKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDangKy.AnimationHoverSpeed = 0.07F;
+            this.btnDangKy.AnimationSpeed = 0.03F;
+            this.btnDangKy.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangKy.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDangKy.BorderColor = System.Drawing.Color.Black;
+            this.btnDangKy.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDangKy.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.Image = null;
+            this.btnDangKy.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDangKy.Location = new System.Drawing.Point(1283, 456);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
+            this.btnDangKy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDangKy.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDangKy.OnHoverImage = null;
+            this.btnDangKy.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDangKy.Radius = 10;
+            this.btnDangKy.Size = new System.Drawing.Size(97, 42);
+            this.btnDangKy.TabIndex = 10;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // lvHP
             // 
@@ -101,6 +102,7 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
+            this.lvHP.FullRowSelect = true;
             this.lvHP.GridLines = true;
             this.lvHP.HideSelection = false;
             this.lvHP.Location = new System.Drawing.Point(12, 108);
@@ -109,6 +111,7 @@
             this.lvHP.TabIndex = 7;
             this.lvHP.UseCompatibleStateImageBehavior = false;
             this.lvHP.View = System.Windows.Forms.View.Details;
+            this.lvHP.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvHP_ItemChecked);
             // 
             // columnHeader1
             // 
@@ -161,7 +164,7 @@
             this.gunaGroupBox1.Location = new System.Drawing.Point(12, 504);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 10;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(1371, 382);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(1371, 319);
             this.gunaGroupBox1.TabIndex = 11;
             this.gunaGroupBox1.Text = "Phiếu đăng ký học phần";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -171,7 +174,7 @@
             this.gunaLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(841, 354);
+            this.gunaLabel3.Location = new System.Drawing.Point(841, 291);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(308, 20);
             this.gunaLabel3.TabIndex = 4;
@@ -191,7 +194,7 @@
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(1168, 349);
+            this.gunaButton1.Location = new System.Drawing.Point(1168, 286);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -237,7 +240,7 @@
             this.lvKQDK.HideSelection = false;
             this.lvKQDK.Location = new System.Drawing.Point(14, 61);
             this.lvKQDK.Name = "lvKQDK";
-            this.lvKQDK.Size = new System.Drawing.Size(1354, 282);
+            this.lvKQDK.Size = new System.Drawing.Size(1354, 219);
             this.lvKQDK.TabIndex = 0;
             this.lvKQDK.UseCompatibleStateImageBehavior = false;
             this.lvKQDK.View = System.Windows.Forms.View.Details;
@@ -308,7 +311,7 @@
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.gunaGroupBox1);
-            this.Controls.Add(this.btnKetQua);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.lvHP);
             this.Controls.Add(this.gunaPanel1);
             this.Name = "DKTheoKeHoachForm";
@@ -327,7 +330,7 @@
         #endregion
 
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaButton btnKetQua;
+        private Guna.UI.WinForms.GunaButton btnDangKy;
         private System.Windows.Forms.ListView lvHP;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

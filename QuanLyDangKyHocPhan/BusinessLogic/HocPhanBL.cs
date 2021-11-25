@@ -14,6 +14,20 @@ namespace BusinessLogic
     {
         HocPhanDA hpDA = new HocPhanDA();
 
+        private static HocPhanBL instance;
+
+        private HocPhanBL()
+        {
+
+        }
+
+        public static HocPhanBL getInstance()
+        {
+            if(instance == null)
+                instance = new HocPhanBL();
+            return instance;
+        }
+
         /// <summary>
         /// Hàm lấy danh sách học phần
         /// </summary>

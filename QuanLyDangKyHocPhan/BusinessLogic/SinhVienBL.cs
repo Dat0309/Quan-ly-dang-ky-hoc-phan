@@ -12,6 +12,20 @@ namespace BusinessLogic
     /// </summary>
     public class SinhVienBL
     {
+        private static SinhVienBL instance;
+        private SinhVienBL()
+        {
+
+        }
+
+        public static SinhVienBL getInstance()
+        {
+            if(instance == null)
+            {
+                return instance = new SinhVienBL();
+            }
+            return instance;
+        }
         SinhVienDA svDA = new SinhVienDA();
 
         /// <summary>

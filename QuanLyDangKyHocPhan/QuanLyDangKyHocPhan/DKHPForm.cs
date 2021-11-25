@@ -25,15 +25,6 @@ namespace QuanLyDangKyHocPhan
 
         #region
 
-        private int GetNam(string user)
-        {
-            int curYear = DateTime.Now.Year;
-            SinhVienBL svBL = new SinhVienBL();
-            currentSV = svBL.GetByMSSV(int.Parse(user));
-
-            return curYear - 2000 - int.Parse(user.Substring(1, 2)) + 1;
-        }
-
         private void LoadHPToLV()
         {
             HocPhanBL hpBL = new HocPhanBL();
@@ -58,7 +49,7 @@ namespace QuanLyDangKyHocPhan
 
         private void btnKeHoach_Click(object sender, EventArgs e)
         {
-            DKTheoKeHoachForm frm = new DKTheoKeHoachForm();
+            DKTheoKeHoachForm frm = new DKTheoKeHoachForm(user);
             frm.ShowDialog(this);
         }
 

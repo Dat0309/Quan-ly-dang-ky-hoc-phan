@@ -101,5 +101,45 @@ namespace DataAccess
             conn.Close();
             return list;
         }
+
+        /// <summary>
+        /// Lấy danh sách học phần theo kế hoạch
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="nam"></param>
+        /// <param name="hocky"></param>
+        /// <returns></returns>
+        public List<HocPhan> GetHPTheoKH(int mssv, int nam, int hocky)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.GetHPTheoKeHoach;
+
+            cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = mssv;
+            cmd.Parameters.Add("@nam", SqlDbType.Int).Value = nam;
+            cmd.Parameters.Add("@hocky", SqlDbType.Int).Value = hocky;
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<HocPhan> list = new List<HocPhan>();
+            while (reader.Read())
+            {
+                HocPhan hp = new HocPhan();
+                hp.MaHP = reader["MaHP"].ToString();
+                hp.TenHP = reader["TenHP"].ToString();
+                hp.LoaiHP = reader["LoaiHP"].ToString();
+                hp.HocKy = int.Parse(reader["HocKy"].ToString());
+                hp.Nam = int.Parse(reader["Nam"].ToString());
+                hp.Khoa = reader["Khoa"].ToString();
+                hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
+
+                list.Add(hp);
+            }
+            conn.Close();
+            return list;
+        }
     }
 }

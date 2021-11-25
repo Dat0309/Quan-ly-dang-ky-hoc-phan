@@ -14,6 +14,7 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class SinhVienForm : Form
     {
+        SinhVienBL svBL = SinhVienBL.getInstance();
         List<SinhVien> listSV;
         public SinhVienForm()
         {
@@ -24,7 +25,6 @@ namespace QuanLyDangKyHocPhan
 
         private void LoadSinhVienToListView()
         {
-            SinhVienBL svBL = new SinhVienBL();
             listSV = svBL.GetAll();
             lvSV.Items.Clear();
             foreach (var sv in listSV)

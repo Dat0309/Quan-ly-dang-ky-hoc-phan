@@ -98,5 +98,17 @@ namespace BusinessLogic
         {
             return hpDA.GetHPChuaTichLuy(mssv);
         }
+
+        /// <summary>
+        /// Lấy danh sách học phần đăng ký theo kế hoạch
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="nam"></param>
+        /// <param name="hocky"></param>
+        /// <returns></returns>
+        public List<HocPhan> GetHPTheoKeHoach(int mssv, int nam, int hocky)
+        {
+            return hpDA.GetHPTheoKH(mssv, nam, hocky);
+        }
     }
 }

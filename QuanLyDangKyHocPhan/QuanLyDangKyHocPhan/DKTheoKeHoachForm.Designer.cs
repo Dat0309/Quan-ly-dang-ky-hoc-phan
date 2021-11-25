@@ -41,11 +41,13 @@
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvKQDK = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             this.btnKetQua.ForeColor = System.Drawing.Color.White;
             this.btnKetQua.Image = null;
             this.btnKetQua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnKetQua.Location = new System.Drawing.Point(1113, 425);
+            this.btnKetQua.Location = new System.Drawing.Point(1283, 456);
             this.btnKetQua.Name = "btnKetQua";
             this.btnKetQua.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
             this.btnKetQua.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -101,9 +103,9 @@
             this.columnHeader4});
             this.lvHP.GridLines = true;
             this.lvHP.HideSelection = false;
-            this.lvHP.Location = new System.Drawing.Point(12, 72);
+            this.lvHP.Location = new System.Drawing.Point(12, 108);
             this.lvHP.Name = "lvHP";
-            this.lvHP.Size = new System.Drawing.Size(1198, 347);
+            this.lvHP.Size = new System.Drawing.Size(1371, 342);
             this.lvHP.TabIndex = 7;
             this.lvHP.UseCompatibleStateImageBehavior = false;
             this.lvHP.View = System.Windows.Forms.View.Details;
@@ -138,7 +140,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1222, 66);
+            this.gunaPanel1.Size = new System.Drawing.Size(1395, 66);
             this.gunaPanel1.TabIndex = 6;
             // 
             // gunaGroupBox1
@@ -152,14 +154,14 @@
             this.gunaGroupBox1.Controls.Add(this.gunaButton1);
             this.gunaGroupBox1.Controls.Add(this.txtQuantity);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
-            this.gunaGroupBox1.Controls.Add(this.listView1);
+            this.gunaGroupBox1.Controls.Add(this.lvKQDK);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.Red;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(12, 473);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(12, 504);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 10;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(1198, 268);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(1371, 382);
             this.gunaGroupBox1.TabIndex = 11;
             this.gunaGroupBox1.Text = "Phiếu đăng ký học phần";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -169,7 +171,7 @@
             this.gunaLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(668, 240);
+            this.gunaLabel3.Location = new System.Drawing.Point(841, 354);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(308, 20);
             this.gunaLabel3.TabIndex = 4;
@@ -189,7 +191,7 @@
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(995, 235);
+            this.gunaButton1.Location = new System.Drawing.Point(1168, 349);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -220,25 +222,25 @@
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "Tổng số tín chỉ đã đăng ký";
             // 
-            // listView1
+            // lvKQDK
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvKQDK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvKQDK.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(14, 61);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1181, 168);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvKQDK.FullRowSelect = true;
+            this.lvKQDK.GridLines = true;
+            this.lvKQDK.HideSelection = false;
+            this.lvKQDK.Location = new System.Drawing.Point(14, 61);
+            this.lvKQDK.Name = "lvKQDK";
+            this.lvKQDK.Size = new System.Drawing.Size(1354, 282);
+            this.lvKQDK.TabIndex = 0;
+            this.lvKQDK.UseCompatibleStateImageBehavior = false;
+            this.lvKQDK.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
@@ -263,11 +265,48 @@
             this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader8.Width = 200;
             // 
+            // cbbHK
+            // 
+            this.cbbHK.BackColor = System.Drawing.Color.Transparent;
+            this.cbbHK.BaseColor = System.Drawing.Color.White;
+            this.cbbHK.BorderColor = System.Drawing.Color.Silver;
+            this.cbbHK.BorderSize = 1;
+            this.cbbHK.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbHK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbHK.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbHK.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbHK.ForeColor = System.Drawing.Color.Black;
+            this.cbbHK.FormattingEnabled = true;
+            this.cbbHK.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbbHK.Location = new System.Drawing.Point(72, 72);
+            this.cbbHK.Name = "cbbHK";
+            this.cbbHK.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbHK.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbHK.Radius = 5;
+            this.cbbHK.Size = new System.Drawing.Size(121, 31);
+            this.cbbHK.TabIndex = 12;
+            this.cbbHK.SelectedIndexChanged += new System.EventHandler(this.cbbHK_SelectedIndexChanged);
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.Location = new System.Drawing.Point(12, 77);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(54, 20);
+            this.gunaLabel4.TabIndex = 13;
+            this.gunaLabel4.Text = "Học kỳ";
+            // 
             // DKTheoKeHoachForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 753);
+            this.ClientSize = new System.Drawing.Size(1395, 898);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.btnKetQua);
             this.Controls.Add(this.lvHP);
@@ -275,11 +314,13 @@
             this.Name = "DKTheoKeHoachForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DKTheoKeHoachForm";
+            this.Load += new System.EventHandler(this.DKTheoKeHoachForm_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -298,10 +339,12 @@
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.TextBox txtQuantity;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvKQDK;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private Guna.UI.WinForms.GunaComboBox cbbHK;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
     }
 }

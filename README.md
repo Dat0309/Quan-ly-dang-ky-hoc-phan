@@ -1,5 +1,9 @@
 # Quan-ly-dang-ky-hoc-phan
-Đề tài môn lập trình CSDL
-
-Lược đồ ER đề tài quản lý đăng ký học phần
+## Đề tài môn lập trình CSDL
+## Tài khoản: ADMIN
+### user: admin
+### pass: admin
+## Tài khoản sinh viên: 
+### user: masv
+### pass: masv
 

@@ -230,7 +230,7 @@
             this.btnKetQua.ForeColor = System.Drawing.Color.White;
             this.btnKetQua.Image = null;
             this.btnKetQua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnKetQua.Location = new System.Drawing.Point(1110, 427);
+            this.btnKetQua.Location = new System.Drawing.Point(1092, 427);
             this.btnKetQua.Name = "btnKetQua";
             this.btnKetQua.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
             this.btnKetQua.OnHoverBorderColor = System.Drawing.Color.Black;

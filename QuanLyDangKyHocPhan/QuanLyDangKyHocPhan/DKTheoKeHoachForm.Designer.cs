@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnDangKy = new Guna.UI.WinForms.GunaButton();
             this.lvHP = new System.Windows.Forms.ListView();
@@ -38,7 +39,7 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lvKQDK = new System.Windows.Forms.ListView();
@@ -48,8 +49,12 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.cmsKQDK = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xoáHọcPhầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
+            this.cmsKQDK.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -154,7 +159,7 @@
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Controls.Add(this.gunaLabel3);
-            this.gunaGroupBox1.Controls.Add(this.gunaButton1);
+            this.gunaGroupBox1.Controls.Add(this.btnXuat);
             this.gunaGroupBox1.Controls.Add(this.txtQuantity);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
             this.gunaGroupBox1.Controls.Add(this.lvKQDK);
@@ -180,32 +185,33 @@
             this.gunaLabel3.TabIndex = 4;
             this.gunaLabel3.Text = "Sinh viên cần xuất phiếu đăng ký khi cần thiết";
             // 
-            // gunaButton1
+            // btnXuat
             // 
-            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(1168, 286);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 10;
-            this.gunaButton1.Size = new System.Drawing.Size(200, 30);
-            this.gunaButton1.TabIndex = 3;
-            this.gunaButton1.Text = "Xuất ơhiếu đăng ký";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXuat.AnimationHoverSpeed = 0.07F;
+            this.btnXuat.AnimationSpeed = 0.03F;
+            this.btnXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnXuat.BorderColor = System.Drawing.Color.Black;
+            this.btnXuat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXuat.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXuat.ForeColor = System.Drawing.Color.White;
+            this.btnXuat.Image = null;
+            this.btnXuat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXuat.Location = new System.Drawing.Point(1168, 286);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXuat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXuat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXuat.OnHoverImage = null;
+            this.btnXuat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXuat.Radius = 10;
+            this.btnXuat.Size = new System.Drawing.Size(200, 30);
+            this.btnXuat.TabIndex = 3;
+            this.btnXuat.Text = "Xuất phiếu đăng ký";
+            this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // txtQuantity
             // 
@@ -235,6 +241,7 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
+            this.lvKQDK.ContextMenuStrip = this.cmsKQDK;
             this.lvKQDK.FullRowSelect = true;
             this.lvKQDK.GridLines = true;
             this.lvKQDK.HideSelection = false;
@@ -303,6 +310,20 @@
             this.gunaLabel4.TabIndex = 13;
             this.gunaLabel4.Text = "Học kỳ";
             // 
+            // cmsKQDK
+            // 
+            this.cmsKQDK.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsKQDK.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xoáHọcPhầnToolStripMenuItem});
+            this.cmsKQDK.Name = "cmsKQDK";
+            this.cmsKQDK.Size = new System.Drawing.Size(170, 28);
+            // 
+            // xoáHọcPhầnToolStripMenuItem
+            // 
+            this.xoáHọcPhầnToolStripMenuItem.Name = "xoáHọcPhầnToolStripMenuItem";
+            this.xoáHọcPhầnToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.xoáHọcPhầnToolStripMenuItem.Text = "Xoá học phần";
+            // 
             // DKTheoKeHoachForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,6 +343,7 @@
             this.gunaPanel1.PerformLayout();
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
+            this.cmsKQDK.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +361,7 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnXuat;
         private System.Windows.Forms.TextBox txtQuantity;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private System.Windows.Forms.ListView lvKQDK;
@@ -349,5 +371,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private Guna.UI.WinForms.GunaComboBox cbbHK;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private System.Windows.Forms.ContextMenuStrip cmsKQDK;
+        private System.Windows.Forms.ToolStripMenuItem xoáHọcPhầnToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

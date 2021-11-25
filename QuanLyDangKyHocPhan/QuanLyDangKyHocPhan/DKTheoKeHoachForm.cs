@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using BusinessLogic;
+using OfficeOpenXml;
+using System.IO;
 
 namespace QuanLyDangKyHocPhan
 {
@@ -69,6 +71,8 @@ namespace QuanLyDangKyHocPhan
         /// <param name="hocphans"></param>
         private void LoadKQHP(List<HocPhan> hocphans)
         {
+            int soLuongDangKy = 0;
+            txtQuantity.Text = soLuongDangKy.ToString();
             lvKQDK.Items.Clear();
 
             foreach (var hp in hocphans)
@@ -77,6 +81,14 @@ namespace QuanLyDangKyHocPhan
                 item.SubItems.Add(hp.TenHP);
                 item.SubItems.Add(hp.LoaiHP);
                 item.SubItems.Add(hp.TongSoTC.ToString());
+
+                if (soLuongDangKy <= 25)
+                {
+                    soLuongDangKy += hp.TongSoTC;
+                    txtQuantity.Text = soLuongDangKy.ToString();
+                }
+                else if (soLuongDangKy > 25)
+                    MessageBox.Show("Số lượng đăng ký không được quá 25 tín chỉ");
             }
         }
 
@@ -133,9 +145,57 @@ namespace QuanLyDangKyHocPhan
             return -1;
         }
 
-        private void LoadKQHP()
+        /// <summary>
+        /// Xuất kêt quả đăng ký
+        /// </summary>
+        /// <param name="lv"></param>
+        /// <param name="listKQDK"></param>
+        /// <param name="path"></param>
+        private void WriteToExcel(ListView lv, List<HocPhan> listKQDK, string path)
         {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (ExcelPackage p = new ExcelPackage())
+            {
+                p.Workbook.Worksheets.Add("sheet 1");
+                ExcelWorksheet ws = p.Workbook.Worksheets[0];
+                ws.Name = "sheet 1";
+                ws.Cells.Style.Font.Size = 11;
+                ws.Cells.Style.Font.Name = "Calibri";
 
+                List<string> arrCollumHeader = new List<string>();
+                foreach (ColumnHeader item in lv.Columns)
+                {
+                    arrCollumHeader.Add(item.Text);
+                }
+                var countColHeader = arrCollumHeader.Count();
+
+                int colIndex = 1;
+                int rowIndex = 1;
+                //Tao cac Header
+                foreach (var item in arrCollumHeader)
+                {
+                    var cell = ws.Cells[rowIndex, colIndex];
+                    var style = cell.Style.Font;
+                    style.Bold = true;
+
+                    cell.Value = item;
+                    colIndex++;
+                }
+
+                //Lay danh sach sinh vien
+                foreach (var item in listKQDK)
+                {
+                    colIndex = 1;
+                    rowIndex++;
+                    ws.Cells[rowIndex, colIndex++].Value = item.MaHP;
+                    ws.Cells[rowIndex, colIndex++].Value = item.TenHP;
+                    ws.Cells[rowIndex, colIndex++].Value = item.LoaiHP;
+                    ws.Cells[rowIndex, colIndex++].Value = item.TongSoTC;
+                }
+                //save file
+                Byte[] bin = p.GetAsByteArray();
+                File.WriteAllBytes(path, bin);
+            }
         }
 
         #endregion
@@ -158,6 +218,7 @@ namespace QuanLyDangKyHocPhan
             {
                 MessageBox.Show("Đăng ký học phần thành công !!");
                 LoadDSHP();
+                cbbHK.Enabled = false;
             }
             else MessageBox.Show("Thêm dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");
         }
@@ -170,9 +231,32 @@ namespace QuanLyDangKyHocPhan
             {
                 kqhp.Add(GetHPLV(this.lvHP.CheckedItems[i]));
                 i--;
-
             }
             LoadKQHP(kqhp);
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.FileName = string.Format("DangKyHP SV{0} Hoc Ky {1} {2}", currentSV.MSSV.ToString(), cbbHK.Text, DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString());
+            saveFileDialog1.InitialDirectory = @"E:\";
+            saveFileDialog1.DefaultExt = "xlsx";
+            saveFileDialog1.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
+
+            List<HocPhan> kqhp = new List<HocPhan>();
+            int i = this.lvKQDK.Items.Count - 1;
+            while (i >= 0)
+            {
+                kqhp.Add(GetHPLV(this.lvKQDK.Items[i]));
+                i--;
+            }
+
+            DialogResult dlg = saveFileDialog1.ShowDialog();
+            if(dlg == DialogResult.OK)
+            {
+                string path = string.Format(@"{0}", saveFileDialog1.FileName);
+                WriteToExcel(lvKQDK,kqhp,path);
+                MessageBox.Show("Xuất phiếu đăng ký thành công!");
+            }
         }
     }
 }

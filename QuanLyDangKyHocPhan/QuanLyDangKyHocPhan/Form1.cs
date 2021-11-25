@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogic;
+using DataAccess;
 
 namespace QuanLyDangKyHocPhan
 {
     public partial class LoginUI : Form
     {
-
+        TaiKhoanBL tkBL = new TaiKhoanBL();
         public LoginUI()
         {
             InitializeComponent();
@@ -25,19 +27,26 @@ namespace QuanLyDangKyHocPhan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUser.Text == "1")
+            if (tkBL.Authentication(txtUser.Text, txtPass.Text))
             {
-                AdminForm frm = new AdminForm();
-                this.Hide();
-                frm.ShowDialog();
-                this.Close();
+                if(tkBL.GetRoleID(txtUser.Text) == 1)
+                {
+                    AdminForm frm = new AdminForm();
+                    this.Hide();
+                    frm.ShowDialog();
+                    this.Close();
+                }
+                else if(tkBL.GetRoleID(txtUser.Text) == 2)
+                {
+                    DangKyHocPhanForm frm = new DangKyHocPhanForm();
+                    this.Hide();
+                    frm.ShowDialog();
+                    this.Close();
+                }
             }
-            else if(txtUser.Text == "2")
+            else
             {
-                DangKyHocPhanForm frm = new DangKyHocPhanForm();
-                this.Hide();
-                frm.ShowDialog();
-                this.Close();
+                MessageBox.Show("Tài khoản hoặc mật khẩu sai, vui lòng nhập lại");
             }
         }
     }

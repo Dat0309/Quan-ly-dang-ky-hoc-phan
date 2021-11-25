@@ -1,3 +1,58 @@
+create table LichThi
+(
+	id int primary key identity(1,1),
+	MaHP nvarchar(20) references HocPhan(MaHP),
+	HocKy int,
+	NamHoc int,
+	NgayThi smalldatetime,
+	GioThi time,
+	ThoiLuong int,
+	PhongThi nvarchar(100),
+	DiaDiem nvarchar(1000),
+	GhiChu nvarchar(3000)
+)
+go
+
+create table HocPhan
+(
+	MaHP nvarchar(20) primary key,
+	TenHP nvarchar(100),
+	LoaiHP nvarchar(20),
+	HocKy int,
+	Nam int,
+	Khoa nvarchar(100),
+	STC int,
+	GioiHan int
+)
+go
+
+create table CT_DKHP
+(
+MSSV int references SinhVien(MSSV),
+MaHP nvarchar(20) references HocPhan(MaHP),
+NgayDK smalldatetime,
+HocKy int,
+NamHoc int,
+primary key (MSSV,MaHP)
+)
+go
+
+create table HocPhi
+(
+	id int primary key identity(1,1),
+	MSSV int references SinhVien(MSSV),
+	HocKy int,
+	NamHoc int,
+	HocPhi int,
+	CapNhat smalldatetime
+)
+go
+
+--drop table LichThi
+--drop table CT_DKHP
+--drop table HocPhan
+
+
 create procedure SinhVien_GetAll
 as
 select * from SinhVien

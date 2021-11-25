@@ -51,9 +51,5 @@ namespace DataAccess
         /// </summary>
         public string DiaChi { get; set; }
 
-        /// <summary>
-        /// Số điện thoại
-        /// </summary>
-        public string SDT { get; set; }
     }
 }

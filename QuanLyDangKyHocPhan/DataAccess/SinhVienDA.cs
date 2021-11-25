@@ -39,7 +39,6 @@ namespace DataAccess
                 sv.TenLop = reader["TenLop"].ToString();
                 sv.Khoa = reader["Khoa"].ToString();
                 sv.DiaChi = reader["DiaChi"].ToString();
-                sv.SDT = reader["SDT"].ToString();
 
                 list.Add(sv);
             }
@@ -75,7 +74,7 @@ namespace DataAccess
             cmd.Parameters.Add("@TenLop", SqlDbType.NVarChar, 20).Value = sv.TenLop;
             cmd.Parameters.Add("@Khoa", SqlDbType.NVarChar, 100).Value = sv.Khoa;
             cmd.Parameters.Add("@DiaChi", SqlDbType.NVarChar, 1000).Value = sv.DiaChi;
-            cmd.Parameters.Add("@SDT", SqlDbType.VarChar, 10).Value = sv.SDT;
+
 
             cmd.Parameters.Add("@Action", SqlDbType.Int).Value = action;
 

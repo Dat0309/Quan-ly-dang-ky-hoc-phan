@@ -32,10 +32,10 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvKQDK = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
@@ -44,8 +44,11 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnKetQua = new Guna.UI.WinForms.GunaButton();
+            this.btnDangKy = new Guna.UI.WinForms.GunaButton();
             this.lvHP = new System.Windows.Forms.ListView();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -78,32 +81,33 @@
             this.gunaLabel3.TabIndex = 4;
             this.gunaLabel3.Text = "Sinh viên cần xuất phiếu đăng ký khi cần thiết";
             // 
-            // gunaButton1
+            // btnXuat
             // 
-            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(977, 231);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 10;
-            this.gunaButton1.Size = new System.Drawing.Size(200, 25);
-            this.gunaButton1.TabIndex = 3;
-            this.gunaButton1.Text = "Xuất ơhiếu đăng ký";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXuat.AnimationHoverSpeed = 0.07F;
+            this.btnXuat.AnimationSpeed = 0.03F;
+            this.btnXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnXuat.BorderColor = System.Drawing.Color.Black;
+            this.btnXuat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXuat.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXuat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXuat.ForeColor = System.Drawing.Color.White;
+            this.btnXuat.Image = null;
+            this.btnXuat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXuat.Location = new System.Drawing.Point(977, 231);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnXuat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXuat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXuat.OnHoverImage = null;
+            this.btnXuat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXuat.Radius = 10;
+            this.btnXuat.Size = new System.Drawing.Size(200, 25);
+            this.btnXuat.TabIndex = 3;
+            this.btnXuat.Text = "Xuất ơhiếu đăng ký";
+            this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // txtQuantity
             // 
@@ -123,25 +127,25 @@
             this.gunaLabel2.TabIndex = 1;
             this.gunaLabel2.Text = "Tổng số tín chỉ đã đăng ký";
             // 
-            // listView1
+            // lvKQDK
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvKQDK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvKQDK.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(14, 61);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1163, 162);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvKQDK.FullRowSelect = true;
+            this.lvKQDK.GridLines = true;
+            this.lvKQDK.HideSelection = false;
+            this.lvKQDK.Location = new System.Drawing.Point(14, 61);
+            this.lvKQDK.Name = "lvKQDK";
+            this.lvKQDK.Size = new System.Drawing.Size(1163, 162);
+            this.lvKQDK.TabIndex = 0;
+            this.lvKQDK.UseCompatibleStateImageBehavior = false;
+            this.lvKQDK.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader7
             // 
@@ -157,10 +161,10 @@
             this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
             this.gunaGroupBox1.Controls.Add(this.gunaLabel3);
-            this.gunaGroupBox1.Controls.Add(this.gunaButton1);
+            this.gunaGroupBox1.Controls.Add(this.btnXuat);
             this.gunaGroupBox1.Controls.Add(this.txtQuantity);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
-            this.gunaGroupBox1.Controls.Add(this.listView1);
+            this.gunaGroupBox1.Controls.Add(this.lvKQDK);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.Red;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
@@ -216,32 +220,33 @@
             this.columnHeader1.Text = "Mã HP";
             this.columnHeader1.Width = 200;
             // 
-            // btnKetQua
+            // btnDangKy
             // 
-            this.btnKetQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKetQua.AnimationHoverSpeed = 0.07F;
-            this.btnKetQua.AnimationSpeed = 0.03F;
-            this.btnKetQua.BackColor = System.Drawing.Color.Transparent;
-            this.btnKetQua.BaseColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnKetQua.BorderColor = System.Drawing.Color.Black;
-            this.btnKetQua.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnKetQua.FocusedColor = System.Drawing.Color.Empty;
-            this.btnKetQua.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKetQua.ForeColor = System.Drawing.Color.White;
-            this.btnKetQua.Image = null;
-            this.btnKetQua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnKetQua.Location = new System.Drawing.Point(1092, 427);
-            this.btnKetQua.Name = "btnKetQua";
-            this.btnKetQua.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
-            this.btnKetQua.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnKetQua.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnKetQua.OnHoverImage = null;
-            this.btnKetQua.OnPressedColor = System.Drawing.Color.Black;
-            this.btnKetQua.Radius = 10;
-            this.btnKetQua.Size = new System.Drawing.Size(97, 42);
-            this.btnKetQua.TabIndex = 14;
-            this.btnKetQua.Text = "Đăng ký";
-            this.btnKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDangKy.AnimationHoverSpeed = 0.07F;
+            this.btnDangKy.AnimationSpeed = 0.03F;
+            this.btnDangKy.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangKy.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDangKy.BorderColor = System.Drawing.Color.Black;
+            this.btnDangKy.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDangKy.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.Image = null;
+            this.btnDangKy.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDangKy.Location = new System.Drawing.Point(1092, 427);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
+            this.btnDangKy.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDangKy.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDangKy.OnHoverImage = null;
+            this.btnDangKy.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDangKy.Radius = 10;
+            this.btnDangKy.Size = new System.Drawing.Size(97, 42);
+            this.btnDangKy.TabIndex = 14;
+            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // lvHP
             // 
@@ -256,30 +261,70 @@
             this.columnHeader4});
             this.lvHP.GridLines = true;
             this.lvHP.HideSelection = false;
-            this.lvHP.Location = new System.Drawing.Point(9, 57);
+            this.lvHP.Location = new System.Drawing.Point(9, 93);
             this.lvHP.Name = "lvHP";
-            this.lvHP.Size = new System.Drawing.Size(1180, 364);
+            this.lvHP.Size = new System.Drawing.Size(1180, 328);
             this.lvHP.TabIndex = 13;
             this.lvHP.UseCompatibleStateImageBehavior = false;
             this.lvHP.View = System.Windows.Forms.View.Details;
+            this.lvHP.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvHP_ItemChecked);
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.Location = new System.Drawing.Point(7, 62);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(54, 20);
+            this.gunaLabel4.TabIndex = 17;
+            this.gunaLabel4.Text = "Học kỳ";
+            // 
+            // cbbHK
+            // 
+            this.cbbHK.BackColor = System.Drawing.Color.Transparent;
+            this.cbbHK.BaseColor = System.Drawing.Color.White;
+            this.cbbHK.BorderColor = System.Drawing.Color.Silver;
+            this.cbbHK.BorderSize = 1;
+            this.cbbHK.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbHK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbHK.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbHK.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbHK.ForeColor = System.Drawing.Color.Black;
+            this.cbbHK.FormattingEnabled = true;
+            this.cbbHK.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbbHK.Location = new System.Drawing.Point(67, 57);
+            this.cbbHK.Name = "cbbHK";
+            this.cbbHK.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbHK.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbHK.Radius = 5;
+            this.cbbHK.Size = new System.Drawing.Size(121, 31);
+            this.cbbHK.TabIndex = 16;
+            this.cbbHK.SelectedIndexChanged += new System.EventHandler(this.cbbHK_SelectedIndexChanged);
             // 
             // DKNgoaiKHForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 751);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.gunaPanel1);
-            this.Controls.Add(this.btnKetQua);
+            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.lvHP);
             this.Name = "DKNgoaiKHForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DKNgoaiKHForm";
+            this.Load += new System.EventHandler(this.DKNgoaiKHForm_Load);
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -289,10 +334,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnXuat;
         private System.Windows.Forms.TextBox txtQuantity;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvKQDK;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
@@ -301,7 +346,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private Guna.UI.WinForms.GunaButton btnKetQua;
+        private Guna.UI.WinForms.GunaButton btnDangKy;
         private System.Windows.Forms.ListView lvHP;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaComboBox cbbHK;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

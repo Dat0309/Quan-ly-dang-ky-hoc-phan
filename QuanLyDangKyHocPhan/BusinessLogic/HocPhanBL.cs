@@ -120,9 +120,14 @@ namespace BusinessLogic
         /// <param name="nam"></param>
         /// <param name="hocky"></param>
         /// <returns></returns>
-        public List<HocPhan> GetHPTheoKeHoach(int mssv, int nam, int hocky)
+        public List<HocPhan> GetHPTheoKeHoach(int mssv, int nam, int hocky, string khoa)
         {
-            return hpDA.GetHPTheoKH(mssv, nam, hocky);
+            return hpDA.GetHPTheoKH(mssv, nam, hocky, khoa);
+        }
+
+        public List<HocPhan> GetHPNgoaiKeHoach(int mssv,int hocky, string khoa)
+        {
+            return hpDA.GetHPNgoaiKH(mssv,hocky, khoa);
         }
     }
 }

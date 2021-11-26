@@ -228,4 +228,15 @@ begin
 	)and Nam = @nam and HocKy = @hocky
 end
 
+create procedure GetHPNgoaiKeHoach
+@mssv int,
+@khoa nvarchar(100)
+as
+begin
+	select * from HocPhan
+	where MaHP not in (
+	select MaHP from CT_DKHP where MSSV = 1914775
+	)and Khoa = N'Công ngh? thông tin' or Khoa is null
+end
+
 select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP

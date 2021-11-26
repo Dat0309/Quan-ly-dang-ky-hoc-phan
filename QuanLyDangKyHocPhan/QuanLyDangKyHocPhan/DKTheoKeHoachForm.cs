@@ -53,7 +53,7 @@ namespace QuanLyDangKyHocPhan
         private void LoadDSHP()
         {
             HocPhanBL hpBL = HocPhanBL.getInstance();
-            listHP = hpBL.GetHPTheoKeHoach(currentSV.MSSV, nam, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text));
+            listHP = hpBL.GetHPTheoKeHoach(currentSV.MSSV, nam, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentSV.Khoa);
             lvHP.Items.Clear();
 
             foreach (var hp in listHP)

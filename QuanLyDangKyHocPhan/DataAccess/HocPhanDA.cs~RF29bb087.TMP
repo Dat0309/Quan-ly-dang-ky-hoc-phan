@@ -104,8 +104,6 @@ namespace DataAccess
 
         /// <summary>
         /// Lấy danh sách học phần theo kế hoạch
-        /// Học phần theo kế hoạch giảng dạy do khoa đề ra, 
-        /// được chỉ định được mở dạy vào học kỳ nào
         /// </summary>
         /// <param name="mssv"></param>
         /// <param name="nam"></param>
@@ -122,46 +120,6 @@ namespace DataAccess
 
             cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = mssv;
             cmd.Parameters.Add("@nam", SqlDbType.Int).Value = nam;
-            cmd.Parameters.Add("@hocky", SqlDbType.Int).Value = hocky;
-            cmd.Parameters.Add("@khoa", SqlDbType.NVarChar, 100).Value = khoa;
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            List<HocPhan> list = new List<HocPhan>();
-            while (reader.Read())
-            {
-                HocPhan hp = new HocPhan();
-                hp.MaHP = reader["MaHP"].ToString();
-                hp.TenHP = reader["TenHP"].ToString();
-                hp.LoaiHP = reader["LoaiHP"].ToString();
-                hp.HocKy = int.Parse(reader["HocKy"].ToString());
-                hp.Nam = int.Parse(reader["Nam"].ToString());
-                hp.Khoa = reader["Khoa"].ToString();
-                hp.TongSoTC = int.Parse(reader["STC"].ToString());
-                hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
-
-                list.Add(hp);
-            }
-            conn.Close();
-            return list;
-        }
-
-        /// <summary>
-        /// Lấy danh sách học phần ngoài kế hoạch đăng ký của trường đề ra
-        /// Dành cho sinh viên có nhu cầu đăng ký học lại, học cải thiện.
-        /// </summary>
-        /// <param name="mssv"></param>
-        /// <param name="khoa"></param>
-        /// <returns></returns>
-        public List<HocPhan> GetHPNgoaiKH(int mssv,int hocky,string khoa)
-        {
-            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
-            conn.Open();
-
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = Ultilities.GetHPNgoaiKeHoach;
-
-            cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = mssv;
             cmd.Parameters.Add("@hocky", SqlDbType.Int).Value = hocky;
             cmd.Parameters.Add("@khoa", SqlDbType.NVarChar, 100).Value = khoa;
 

@@ -52,12 +52,14 @@ namespace QuanLyDangKyHocPhan
             DKTheoKeHoachForm frm = new DKTheoKeHoachForm(user);
             frm.ShowDialog(this);
             LoadHPToLV();
+            LoadHPToLV();
         }
 
         private void btnCaiThien_Click(object sender, EventArgs e)
         {
-            DKNgoaiKHForm frm = new DKNgoaiKHForm();
+            DKNgoaiKHForm frm = new DKNgoaiKHForm(user);
             frm.ShowDialog(this);
+            LoadHPToLV();
         }
     }
 }

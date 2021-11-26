@@ -216,27 +216,37 @@ begin
 					)
 end
 
-create procedure GetHPTheoKeHoach
+alter procedure GetHPTheoKeHoach
 @mssv int,
 @nam int,
-@hocky int
-as
-begin
-	select * from HocPhan
-	where MaHP not in (
-	select MaHP from CT_DKHP where MSSV = @mssv
-	)and Nam = @nam and HocKy = @hocky
-end
-
-create procedure GetHPNgoaiKeHoach
-@mssv int,
+@hocky int,
 @khoa nvarchar(100)
 as
 begin
 	select * from HocPhan
 	where MaHP not in (
-	select MaHP from CT_DKHP where MSSV = 1914775
-	)and Khoa = N'Công ngh? thông tin' or Khoa is null
+	select MaHP from CT_DKHP where MSSV = @mssv
+	)and Nam = @nam and HocKy = @hocky and (Khoa = @khoa or Khoa is null)
 end
 
-select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP
+alter procedure GetHPNgoaiKeHoach
+@mssv int,
+@hocky int,
+@khoa nvarchar(100)
+as
+begin
+	select * from HocPhan
+	where MaHP not in (
+	select MaHP from CT_DKHP where MSSV = @mssv
+	)and (Khoa = @khoa or Khoa is null) and HocKy = @hocky
+end
+
+select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP and MSSV = 1914775
+
+create procedure GetKQDK
+@mssv int
+as
+begin
+	select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP and MSSV = @mssv
+
+end

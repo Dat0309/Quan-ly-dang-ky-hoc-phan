@@ -186,6 +186,7 @@
             this.btnKetQua.TabIndex = 5;
             this.btnKetQua.Text = "Kết quả đăng ký";
             this.btnKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
             // 
             // DKHPForm
             // 

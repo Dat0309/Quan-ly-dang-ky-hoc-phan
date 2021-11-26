@@ -184,5 +184,42 @@ namespace DataAccess
             conn.Close();
             return list;
         }
+
+        /// <summary>
+        /// Xuất kết quả đăng ký học phần của sinh viên
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <returns></returns>
+        public List<HocPhan> GetKQDK(int mssv)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.GetKQDK;
+
+            cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = mssv;
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<HocPhan> list = new List<HocPhan>();
+            while (reader.Read())
+            {
+                HocPhan hp = new HocPhan();
+                hp.MaHP = reader["MaHP"].ToString();
+                hp.TenHP = reader["TenHP"].ToString();
+                hp.LoaiHP = reader["LoaiHP"].ToString();
+                hp.HocKy = int.Parse(reader["HocKy"].ToString());
+                hp.Nam = int.Parse(reader["Nam"].ToString());
+                hp.Khoa = reader["Khoa"].ToString();
+                hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
+
+                list.Add(hp);
+            }
+            conn.Close();
+            return list;
+
+        }
     }
 }

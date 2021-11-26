@@ -24,6 +24,7 @@ namespace DataAccess
         public static string GetHPChuaTichLuy = "GetHPChuaTichLuy";
         public static string GetHPTheoKeHoach = "GetHPTheoKeHoach";
         public static string GetHPNgoaiKeHoach = "GetHPNgoaiKeHoach";
+        public static string GetKQDK = "GetKQDK";
 
         public static string TaiKhoan_GetAll = "TaiKhoan_GetAll";
         public static string TaiKhoan_InsertUpdateDelete = "TaiKhoan_InsertUpdateDelete";

@@ -91,3 +91,4 @@ E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Deb
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.ComponentModel.Annotations.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\EPPlus.xml
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.KQDKHPForm.resources

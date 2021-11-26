@@ -61,5 +61,11 @@ namespace QuanLyDangKyHocPhan
             frm.ShowDialog(this);
             LoadHPToLV();
         }
+
+        private void btnKetQua_Click(object sender, EventArgs e)
+        {
+            KQDKHPForm frm = new KQDKHPForm(user);
+            frm.ShowDialog(this);
+        }
     }
 }

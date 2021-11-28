@@ -7,3 +7,7 @@
 ### user: masv
 ### pass: masv
 
+## SERVER Hải:DESKTOP-MK7TMGN\SQLEXPRESS
+## SERVER Bảo:
+## SERVER Đạt:WINDOWS-11\SQLEXPRESS
+

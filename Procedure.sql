@@ -175,30 +175,31 @@ end
 go
 
 create procedure TaiKhoan_InsertUpdateDelete
-@Id int output,
-@UserName nvarchar(100),
-@Password nvarchar(100),
-@Active bit,
-@IDQuyen int,
-@CreateDate smalldatetime,
-@Action int
-as
-if @Action = 0
-begin
-	insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate)
-	values (@UserName, @Password, @Active, @IDQuyen, @CreateDate)
-	set @Id = @@IDENTITY
-end
-else if @Action = 1
-begin
-	update TaiKhoan set Active = @Active, @IDQuyen = @IDQuyen
-	where Id = @Id
-end
-else if @Action = 2
-begin
-	update TaiKhoan set Active = 'false'
-	where Id = @Id
-end
+	@Id int output,
+	@UserName nvarchar(100),
+	@Password nvarchar(100),
+	@Active bit,
+	@IDQuyen int,
+	@CreateDate smalldatetime,
+	@FullName nvarchar(100),
+	@Action int
+	as
+	if @Action = 0
+	begin
+		insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate,FullName)
+		values (@UserName, @Password, @Active, @IDQuyen, @CreateDate,@FullName)
+		set @Id = @@IDENTITY
+	end
+	else if @Action = 1
+	begin
+		update TaiKhoan set Active = @Active, @IDQuyen = @IDQuyen
+		where Id = @Id
+	end
+	else if @Action = 2
+	begin
+		update TaiKhoan set Active = 'false'
+		where Id = @Id
+	end
 go
 
 select * from HocPhan

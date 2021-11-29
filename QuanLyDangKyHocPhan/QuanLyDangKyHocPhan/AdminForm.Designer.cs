@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnLogout = new Guna.UI.WinForms.GunaButton();
+            this.btnRole = new Guna.UI.WinForms.GunaButton();
+            this.btnAccount = new Guna.UI.WinForms.GunaButton();
+            this.btnThongKe = new Guna.UI.WinForms.GunaButton();
+            this.btnQLDKHP = new Guna.UI.WinForms.GunaButton();
+            this.btnQLHP = new Guna.UI.WinForms.GunaButton();
             this.btnQLSV = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnQLHP = new Guna.UI.WinForms.GunaButton();
-            this.btnQLDKHP = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKe = new Guna.UI.WinForms.GunaButton();
-            this.btnAccount = new Guna.UI.WinForms.GunaButton();
-            this.btnRole = new Guna.UI.WinForms.GunaButton();
-            this.btnLogout = new Guna.UI.WinForms.GunaButton();
             this.Container = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
@@ -59,6 +59,152 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(260, 753);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.AnimationHoverSpeed = 0.07F;
+            this.btnLogout.AnimationSpeed = 0.03F;
+            this.btnLogout.BaseColor = System.Drawing.Color.White;
+            this.btnLogout.BorderColor = System.Drawing.Color.Black;
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnLogout.FocusedColor = System.Drawing.Color.Empty;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.Black;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnLogout.Location = new System.Drawing.Point(3, 688);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.OnHoverBaseColor = System.Drawing.Color.Salmon;
+            this.btnLogout.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnLogout.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnLogout.OnHoverImage = null;
+            this.btnLogout.OnPressedColor = System.Drawing.Color.Black;
+            this.btnLogout.Size = new System.Drawing.Size(254, 62);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Đăng Xuất";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnRole
+            // 
+            this.btnRole.AnimationHoverSpeed = 0.07F;
+            this.btnRole.AnimationSpeed = 0.03F;
+            this.btnRole.BaseColor = System.Drawing.Color.White;
+            this.btnRole.BorderColor = System.Drawing.Color.Black;
+            this.btnRole.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRole.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRole.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRole.ForeColor = System.Drawing.Color.Black;
+            this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
+            this.btnRole.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRole.Location = new System.Drawing.Point(3, 335);
+            this.btnRole.Name = "btnRole";
+            this.btnRole.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnRole.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnRole.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRole.OnHoverImage = null;
+            this.btnRole.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRole.Size = new System.Drawing.Size(254, 86);
+            this.btnRole.TabIndex = 6;
+            this.btnRole.Text = "Quản lý Quyền";
+            this.btnRole.Click += new System.EventHandler(this.btnRole_Click);
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.AnimationHoverSpeed = 0.07F;
+            this.btnAccount.AnimationSpeed = 0.03F;
+            this.btnAccount.BaseColor = System.Drawing.Color.White;
+            this.btnAccount.BorderColor = System.Drawing.Color.Black;
+            this.btnAccount.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAccount.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAccount.ForeColor = System.Drawing.Color.Black;
+            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
+            this.btnAccount.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAccount.Location = new System.Drawing.Point(3, 421);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnAccount.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAccount.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAccount.OnHoverImage = null;
+            this.btnAccount.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAccount.Size = new System.Drawing.Size(254, 86);
+            this.btnAccount.TabIndex = 5;
+            this.btnAccount.Text = "Quản lý Người Dùng";
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.AnimationHoverSpeed = 0.07F;
+            this.btnThongKe.AnimationSpeed = 0.03F;
+            this.btnThongKe.BaseColor = System.Drawing.Color.White;
+            this.btnThongKe.BorderColor = System.Drawing.Color.Black;
+            this.btnThongKe.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnThongKe.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThongKe.Location = new System.Drawing.Point(4, 249);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnThongKe.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThongKe.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThongKe.OnHoverImage = null;
+            this.btnThongKe.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThongKe.Size = new System.Drawing.Size(254, 86);
+            this.btnThongKe.TabIndex = 4;
+            this.btnThongKe.Text = "Quản lý Học Vụ";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // btnQLDKHP
+            // 
+            this.btnQLDKHP.AnimationHoverSpeed = 0.07F;
+            this.btnQLDKHP.AnimationSpeed = 0.03F;
+            this.btnQLDKHP.BaseColor = System.Drawing.Color.White;
+            this.btnQLDKHP.BorderColor = System.Drawing.Color.Black;
+            this.btnQLDKHP.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnQLDKHP.FocusedColor = System.Drawing.Color.Empty;
+            this.btnQLDKHP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnQLDKHP.ForeColor = System.Drawing.Color.Black;
+            this.btnQLDKHP.Image = ((System.Drawing.Image)(resources.GetObject("btnQLDKHP.Image")));
+            this.btnQLDKHP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnQLDKHP.Location = new System.Drawing.Point(3, 507);
+            this.btnQLDKHP.Name = "btnQLDKHP";
+            this.btnQLDKHP.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnQLDKHP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnQLDKHP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnQLDKHP.OnHoverImage = null;
+            this.btnQLDKHP.OnPressedColor = System.Drawing.Color.Black;
+            this.btnQLDKHP.Size = new System.Drawing.Size(254, 86);
+            this.btnQLDKHP.TabIndex = 3;
+            this.btnQLDKHP.Text = "Quản lý ĐKHP";
+            this.btnQLDKHP.Click += new System.EventHandler(this.btnQLDKHP_Click);
+            // 
+            // btnQLHP
+            // 
+            this.btnQLHP.AnimationHoverSpeed = 0.07F;
+            this.btnQLHP.AnimationSpeed = 0.03F;
+            this.btnQLHP.BaseColor = System.Drawing.Color.White;
+            this.btnQLHP.BorderColor = System.Drawing.Color.Black;
+            this.btnQLHP.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnQLHP.FocusedColor = System.Drawing.Color.Empty;
+            this.btnQLHP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnQLHP.ForeColor = System.Drawing.Color.Black;
+            this.btnQLHP.Image = ((System.Drawing.Image)(resources.GetObject("btnQLHP.Image")));
+            this.btnQLHP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnQLHP.Location = new System.Drawing.Point(3, 163);
+            this.btnQLHP.Name = "btnQLHP";
+            this.btnQLHP.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnQLHP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnQLHP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnQLHP.OnHoverImage = null;
+            this.btnQLHP.OnPressedColor = System.Drawing.Color.Black;
+            this.btnQLHP.Size = new System.Drawing.Size(254, 86);
+            this.btnQLHP.TabIndex = 2;
+            this.btnQLHP.Text = "Quản lý Học Phần";
+            this.btnQLHP.Click += new System.EventHandler(this.btnQLHP_Click);
             // 
             // btnQLSV
             // 
@@ -95,151 +241,6 @@
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.gunaPictureBox2.TabIndex = 0;
             this.gunaPictureBox2.TabStop = false;
-            // 
-            // btnQLHP
-            // 
-            this.btnQLHP.AnimationHoverSpeed = 0.07F;
-            this.btnQLHP.AnimationSpeed = 0.03F;
-            this.btnQLHP.BaseColor = System.Drawing.Color.White;
-            this.btnQLHP.BorderColor = System.Drawing.Color.Black;
-            this.btnQLHP.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnQLHP.FocusedColor = System.Drawing.Color.Empty;
-            this.btnQLHP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnQLHP.ForeColor = System.Drawing.Color.Black;
-            this.btnQLHP.Image = ((System.Drawing.Image)(resources.GetObject("btnQLHP.Image")));
-            this.btnQLHP.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnQLHP.Location = new System.Drawing.Point(3, 163);
-            this.btnQLHP.Name = "btnQLHP";
-            this.btnQLHP.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnQLHP.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnQLHP.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnQLHP.OnHoverImage = null;
-            this.btnQLHP.OnPressedColor = System.Drawing.Color.Black;
-            this.btnQLHP.Size = new System.Drawing.Size(254, 86);
-            this.btnQLHP.TabIndex = 2;
-            this.btnQLHP.Text = "Quản lý Học Phần";
-            this.btnQLHP.Click += new System.EventHandler(this.btnQLHP_Click);
-            // 
-            // btnQLDKHP
-            // 
-            this.btnQLDKHP.AnimationHoverSpeed = 0.07F;
-            this.btnQLDKHP.AnimationSpeed = 0.03F;
-            this.btnQLDKHP.BaseColor = System.Drawing.Color.White;
-            this.btnQLDKHP.BorderColor = System.Drawing.Color.Black;
-            this.btnQLDKHP.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnQLDKHP.FocusedColor = System.Drawing.Color.Empty;
-            this.btnQLDKHP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnQLDKHP.ForeColor = System.Drawing.Color.Black;
-            this.btnQLDKHP.Image = ((System.Drawing.Image)(resources.GetObject("btnQLDKHP.Image")));
-            this.btnQLDKHP.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnQLDKHP.Location = new System.Drawing.Point(3, 507);
-            this.btnQLDKHP.Name = "btnQLDKHP";
-            this.btnQLDKHP.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnQLDKHP.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnQLDKHP.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnQLDKHP.OnHoverImage = null;
-            this.btnQLDKHP.OnPressedColor = System.Drawing.Color.Black;
-            this.btnQLDKHP.Size = new System.Drawing.Size(254, 86);
-            this.btnQLDKHP.TabIndex = 3;
-            this.btnQLDKHP.Text = "Quản lý ĐKHP";
-            this.btnQLDKHP.Click += new System.EventHandler(this.btnQLDKHP_Click);
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.AnimationHoverSpeed = 0.07F;
-            this.btnThongKe.AnimationSpeed = 0.03F;
-            this.btnThongKe.BaseColor = System.Drawing.Color.White;
-            this.btnThongKe.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKe.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKe.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnThongKe.ForeColor = System.Drawing.Color.Black;
-            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
-            this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKe.Location = new System.Drawing.Point(4, 249);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnThongKe.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKe.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKe.OnHoverImage = null;
-            this.btnThongKe.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKe.Size = new System.Drawing.Size(254, 86);
-            this.btnThongKe.TabIndex = 4;
-            this.btnThongKe.Text = "Quản lý Học Vụ";
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.AnimationHoverSpeed = 0.07F;
-            this.btnAccount.AnimationSpeed = 0.03F;
-            this.btnAccount.BaseColor = System.Drawing.Color.White;
-            this.btnAccount.BorderColor = System.Drawing.Color.Black;
-            this.btnAccount.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAccount.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAccount.ForeColor = System.Drawing.Color.Black;
-            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAccount.Location = new System.Drawing.Point(3, 421);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnAccount.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAccount.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAccount.OnHoverImage = null;
-            this.btnAccount.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAccount.Size = new System.Drawing.Size(254, 86);
-            this.btnAccount.TabIndex = 5;
-            this.btnAccount.Text = "Quản lý Người Dùng";
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnRole
-            // 
-            this.btnRole.AnimationHoverSpeed = 0.07F;
-            this.btnRole.AnimationSpeed = 0.03F;
-            this.btnRole.BaseColor = System.Drawing.Color.White;
-            this.btnRole.BorderColor = System.Drawing.Color.Black;
-            this.btnRole.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRole.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRole.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRole.ForeColor = System.Drawing.Color.Black;
-            this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
-            this.btnRole.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRole.Location = new System.Drawing.Point(3, 335);
-            this.btnRole.Name = "btnRole";
-            this.btnRole.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnRole.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRole.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRole.OnHoverImage = null;
-            this.btnRole.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRole.Size = new System.Drawing.Size(254, 86);
-            this.btnRole.TabIndex = 6;
-            this.btnRole.Text = "Quản lý Quyền";
-            this.btnRole.Click += new System.EventHandler(this.btnRole_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogout.AnimationHoverSpeed = 0.07F;
-            this.btnLogout.AnimationSpeed = 0.03F;
-            this.btnLogout.BaseColor = System.Drawing.Color.White;
-            this.btnLogout.BorderColor = System.Drawing.Color.Black;
-            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLogout.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.ForeColor = System.Drawing.Color.Black;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLogout.Location = new System.Drawing.Point(3, 688);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.OnHoverBaseColor = System.Drawing.Color.Salmon;
-            this.btnLogout.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLogout.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLogout.OnHoverImage = null;
-            this.btnLogout.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLogout.Size = new System.Drawing.Size(254, 62);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Đăng Xuất";
-            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Container
             // 

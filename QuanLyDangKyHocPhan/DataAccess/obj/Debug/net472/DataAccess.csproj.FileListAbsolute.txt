@@ -26,3 +26,16 @@ D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAcc
 D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.CopyComplete
 D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.dll
 D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.pdb
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\DataAccess.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\DataAccess.pdb
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Configuration.ConfigurationManager.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.AccessControl.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.Permissions.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.Principal.Windows.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.AssemblyReference.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.AssemblyInfoInputs.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.AssemblyInfo.cs
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.CoreCompileInputs.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.pdb

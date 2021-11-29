@@ -73,5 +73,13 @@ namespace QuanLyDangKyHocPhan
         {
             setContent(new QLDKHPForm());
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginUI DangNhap = new LoginUI();
+            this.Hide();
+            DangNhap.ShowDialog();
+            this.Close();
+        }
     }
 }

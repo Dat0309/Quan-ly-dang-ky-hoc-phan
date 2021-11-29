@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
+
     /// <summary>
     /// lớp quản lý tài khoản
-    /// </summary>
+    /// </summary>   
     public class TaiKhoanDA
     {
-        /// <summary>
-        /// Hàm lấy tất cả danh sách tài khoản
         /// </summary>
         /// <returns></returns>
         public List<TaiKhoan> GetAll()
@@ -79,3 +78,4 @@ namespace DataAccess
         }
     }
 }
+

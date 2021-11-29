@@ -102,6 +102,7 @@
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Đăng Xuất";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnLichThi
             // 

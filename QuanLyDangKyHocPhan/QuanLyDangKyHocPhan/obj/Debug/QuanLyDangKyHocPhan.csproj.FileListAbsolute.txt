@@ -98,3 +98,37 @@ D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyD
 D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QLDKHPForm.resources
 D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienForm.resources
 D:\download\csdl 2\lam nhom\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TaiKhoanForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.exe.config
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.exe
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.pdb
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\BusinessLogic.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\DataAccess.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\EPPlus.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Guna.UI2.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\NuGet.Frameworks.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.ComponentModel.Annotations.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\BusinessLogic.pdb
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\DataAccess.pdb
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\EPPlus.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\NuGet.Frameworks.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.AssemblyReference.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.AdminForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DangKyHocPhanForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DKHPForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DKNgoaiKHForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DKTheoKeHoachForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LoginUI.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhanForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhiForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.KQDKHPForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LichThiForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.Properties.Resources.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QLDKHPForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TaiKhoanForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.GenerateResource.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.CoreCompileInputs.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.exe
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.pdb

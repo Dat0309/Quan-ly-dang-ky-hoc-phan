@@ -235,19 +235,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Kin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\download\\csdl 2\\team\\nhomcsdl\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "D:\\download\\csdl 2\\team\\nhomcsdl\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\download\\csdl 2\\team\\nhomcsdl\\QuanLyDangKyHocPhan\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Kin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -278,7 +278,7 @@
             "version": "[6.0.0, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

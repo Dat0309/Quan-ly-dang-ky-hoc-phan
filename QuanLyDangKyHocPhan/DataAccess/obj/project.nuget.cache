@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "NU1/mYTyUotoBQ/SbkMl4SQ3Lp45uJh9Hphn6WCAuVSXtuLlIfBkSzlKg7kmhGzGVS5JTyAqcuWCmsgxwJ7z1Q==",
+  "dgSpecHash": "40BD9q3hVXzoa8kK4rFKYE6aA/esffa8+t2R4U9MlwfbF3l4ukXz2gJOvExz7m7ZHtqtGudVJIe5yjnUUu6A9A==",
   "success": true,
-  "projectFilePath": "D:\\download\\csdl 2\\team\\nhomcsdl\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+    "C:\\Users\\Kin\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\Kin\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\Kin\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Kin\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

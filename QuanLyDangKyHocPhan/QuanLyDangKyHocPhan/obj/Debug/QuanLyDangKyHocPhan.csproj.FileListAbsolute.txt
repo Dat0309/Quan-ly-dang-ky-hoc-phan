@@ -132,3 +132,40 @@ D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Deb
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.CoreCompileInputs.cache
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.exe
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.exe.config
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.exe
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\BusinessLogic.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\DataAccess.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\EPPlus.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Guna.UI2.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\NuGet.Frameworks.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\BusinessLogic.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\DataAccess.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\EPPlus.xml
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\NuGet.Frameworks.xml
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.AssemblyReference.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.SuggestedBindingRedirects.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.AdminForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DangKyHocPhanForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DKHPForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DKNgoaiKHForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DKTheoKeHoachForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LoginUI.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhanForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhiForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.KQDKHPForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LichThiForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.Properties.Resources.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QLDKHPForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienInfo.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TaiKhoanForm.resources
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.GenerateResource.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.CoreCompileInputs.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.CopyComplete
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.exe
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.pdb

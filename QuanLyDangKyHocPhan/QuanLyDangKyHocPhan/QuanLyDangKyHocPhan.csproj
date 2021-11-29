@@ -165,6 +165,12 @@
     <Compile Include="SinhVienForm.Designer.cs">
       <DependentUpon>SinhVienForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SinhVienInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVienInfo.Designer.cs">
+      <DependentUpon>SinhVienInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaiKhoanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SinhVienForm.resx">
       <DependentUpon>SinhVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVienInfo.resx">
+      <DependentUpon>SinhVienInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoanForm.resx">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>

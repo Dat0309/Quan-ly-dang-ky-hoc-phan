@@ -39,3 +39,17 @@ D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.CoreCompileInputs.cache
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.dll
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\DataAccess.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\DataAccess.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Configuration.ConfigurationManager.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.AccessControl.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.Permissions.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\bin\Debug\net472\System.Security.Principal.Windows.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.AssemblyInfo.cs
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.csproj.CopyComplete
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\DataAccess\obj\Debug\net472\DataAccess.pdb

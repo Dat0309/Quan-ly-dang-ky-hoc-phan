@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hzLnCVwzEL2TprHiy2+EGsWe88QNIgAgblvJvjBzpeJw7tsAT4i+NiIGEdlp0yxG9WbSM48CesPowRt5Fs5Aaw==",
+  "dgSpecHash": "QyU+hbvfm/+ka2IMiicpRm1YHXlPk1OTxAt+UnNmuavTY9EYp18crtPedvYz9S6DB9cEF9yyFgn3K6jiOrVaxg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj",
+  "projectFilePath": "D:\\download\\csdl 2\\team\\nhomcsdl\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kin\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
-    "C:\\Users\\Kin\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
-    "C:\\Users\\Kin\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Kin\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

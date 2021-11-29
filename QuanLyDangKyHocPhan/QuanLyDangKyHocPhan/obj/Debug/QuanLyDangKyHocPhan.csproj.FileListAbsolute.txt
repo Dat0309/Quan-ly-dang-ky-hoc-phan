@@ -169,4 +169,5 @@ C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanL
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.CopyComplete
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.exe
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.pdb
-E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienInfo.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienInfo.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhanInfor.resources

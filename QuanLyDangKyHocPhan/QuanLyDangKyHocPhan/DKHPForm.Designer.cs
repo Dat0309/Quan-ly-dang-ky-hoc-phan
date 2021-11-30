@@ -38,6 +38,7 @@
             this.btnKeHoach = new Guna.UI.WinForms.GunaButton();
             this.btnCaiThien = new Guna.UI.WinForms.GunaButton();
             this.btnKetQua = new Guna.UI.WinForms.GunaButton();
+            this.btnDCHP = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,7 +175,7 @@
             this.btnKetQua.ForeColor = System.Drawing.Color.White;
             this.btnKetQua.Image = null;
             this.btnKetQua.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnKetQua.Location = new System.Drawing.Point(503, 699);
+            this.btnKetQua.Location = new System.Drawing.Point(718, 699);
             this.btnKetQua.Name = "btnKetQua";
             this.btnKetQua.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
             this.btnKetQua.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -188,11 +189,40 @@
             this.btnKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnKetQua.Click += new System.EventHandler(this.btnKetQua_Click);
             // 
+            // btnDCHP
+            // 
+            this.btnDCHP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnDCHP.AnimationHoverSpeed = 0.07F;
+            this.btnDCHP.AnimationSpeed = 0.03F;
+            this.btnDCHP.BackColor = System.Drawing.Color.Transparent;
+            this.btnDCHP.BaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnDCHP.BorderColor = System.Drawing.Color.Black;
+            this.btnDCHP.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDCHP.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDCHP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDCHP.ForeColor = System.Drawing.Color.White;
+            this.btnDCHP.Image = null;
+            this.btnDCHP.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDCHP.Location = new System.Drawing.Point(503, 699);
+            this.btnDCHP.Name = "btnDCHP";
+            this.btnDCHP.OnHoverBaseColor = System.Drawing.Color.SeaGreen;
+            this.btnDCHP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDCHP.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDCHP.OnHoverImage = null;
+            this.btnDCHP.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDCHP.Radius = 10;
+            this.btnDCHP.Size = new System.Drawing.Size(209, 42);
+            this.btnDCHP.TabIndex = 6;
+            this.btnDCHP.Text = "Điều chỉnh KQDK";
+            this.btnDCHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDCHP.Click += new System.EventHandler(this.btnDCHP_Click);
+            // 
             // DKHPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
+            this.Controls.Add(this.btnDCHP);
             this.Controls.Add(this.btnKetQua);
             this.Controls.Add(this.btnCaiThien);
             this.Controls.Add(this.btnKeHoach);
@@ -220,5 +250,6 @@
         private Guna.UI.WinForms.GunaButton btnKeHoach;
         private Guna.UI.WinForms.GunaButton btnCaiThien;
         private Guna.UI.WinForms.GunaButton btnKetQua;
+        private Guna.UI.WinForms.GunaButton btnDCHP;
     }
 }

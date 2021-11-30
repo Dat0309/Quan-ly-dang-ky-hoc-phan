@@ -67,5 +67,11 @@ namespace QuanLyDangKyHocPhan
             KQDKHPForm frm = new KQDKHPForm(user);
             frm.ShowDialog(this);
         }
+
+        private void btnDCHP_Click(object sender, EventArgs e)
+        {
+            DCKQDKForm frm = new DCKQDKForm(user);
+            frm.ShowDialog(this);
+        }
     }
 }

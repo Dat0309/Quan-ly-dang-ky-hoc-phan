@@ -242,7 +242,7 @@ begin
 	)and (Khoa = @khoa or Khoa is null) and HocKy = @hocky
 end
 
-select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP and MSSV = 1914775
+select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP and MSSV = 1914775 and CT_DKHP.HocKy = 1 and CT_DKHP.NamHoc = '2021 - 2022'
 
 create procedure GetKQDK
 @mssv int
@@ -250,4 +250,36 @@ as
 begin
 	select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP and MSSV = @mssv
 
+end
+
+create procedure GetKQDK_HienTai
+@mssv int,
+@hocky int,
+@namhoc varchar(20)
+as
+begin
+	select * from CT_DKHP,HocPhan where CT_DKHP.MaHP = HocPhan.MaHP and MSSV = @mssv and CT_DKHP.HocKy = @hocky and CT_DKHP.NamHoc = @namhoc
+end
+
+create procedure UpdateCTDKHP
+@mssv int,
+@mahp nvarchar(20),
+@ngaydk smalldatetime,
+@hocky int,
+@namhoc varchar(20)
+as
+begin
+	if not exists (select * from CT_DKHP where MSSV = @mssv and MaHP = @mahp)
+	begin
+		insert into CT_DKHP (MSSV, MaHP, NgayDK, HocKy, NamHoc)
+		values (@mssv, @mahp, @ngaydk, @hocky, @namhoc)
+	end	
+end
+
+alter procedure DeleteByKey
+@mssv int,
+@mahp nvarchar(20)
+as
+begin
+	delete from CT_DKHP where MSSV = @mssv and MaHP = @mahp
 end

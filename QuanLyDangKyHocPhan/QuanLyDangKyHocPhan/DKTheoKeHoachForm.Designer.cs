@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnDangKy = new Guna.UI.WinForms.GunaButton();
             this.lvHP = new System.Windows.Forms.ListView();
@@ -49,12 +48,9 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.cmsKQDK = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.xoáHọcPhầnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
-            this.cmsKQDK.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -241,7 +237,6 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
-            this.lvKQDK.ContextMenuStrip = this.cmsKQDK;
             this.lvKQDK.FullRowSelect = true;
             this.lvKQDK.GridLines = true;
             this.lvKQDK.HideSelection = false;
@@ -310,20 +305,6 @@
             this.gunaLabel4.TabIndex = 13;
             this.gunaLabel4.Text = "Học kỳ";
             // 
-            // cmsKQDK
-            // 
-            this.cmsKQDK.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsKQDK.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xoáHọcPhầnToolStripMenuItem});
-            this.cmsKQDK.Name = "cmsKQDK";
-            this.cmsKQDK.Size = new System.Drawing.Size(170, 28);
-            // 
-            // xoáHọcPhầnToolStripMenuItem
-            // 
-            this.xoáHọcPhầnToolStripMenuItem.Name = "xoáHọcPhầnToolStripMenuItem";
-            this.xoáHọcPhầnToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
-            this.xoáHọcPhầnToolStripMenuItem.Text = "Xoá học phần";
-            // 
             // DKTheoKeHoachForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,7 +324,6 @@
             this.gunaPanel1.PerformLayout();
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
-            this.cmsKQDK.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,8 +351,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private Guna.UI.WinForms.GunaComboBox cbbHK;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private System.Windows.Forms.ContextMenuStrip cmsKQDK;
-        private System.Windows.Forms.ToolStripMenuItem xoáHọcPhầnToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

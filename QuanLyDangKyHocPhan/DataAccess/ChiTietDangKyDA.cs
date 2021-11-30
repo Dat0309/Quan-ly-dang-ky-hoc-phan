@@ -82,10 +82,67 @@ namespace DataAccess
 
                 result = cmd.ExecuteNonQuery();
             }
-            
+
             if (result > 0)
                 return 1;
             return 0;
+            conn.Close();
+        }
+
+
+        /// <summary>
+        /// Hàm điều chỉnh học phần
+        /// </summary>
+        /// <param name="ctdk"></param>
+        /// <returns></returns>
+        public int DieuChinhHP(ChiTietDangKy ctdk)
+        {
+            int result = 0;
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.UpdateCTDKHP;
+
+            cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = ctdk.MSSV;
+            cmd.Parameters.Add("@mahp", SqlDbType.NVarChar, 20).Value = ctdk.MaHP;
+            cmd.Parameters.Add("@ngaydk", SqlDbType.DateTime).Value = ctdk.NgayDangKy;
+            cmd.Parameters.Add("@hocky", SqlDbType.Int).Value = ctdk.HocKy;
+            cmd.Parameters.Add("@namhoc", SqlDbType.NVarChar, 20).Value = ctdk.NamHoc;
+
+            result = cmd.ExecuteNonQuery();
+
+
+            if (result > 0)
+                return 1;
+            return 0;
+            conn.Close();
+        }
+
+        /// <summary>
+        /// Xoá theo mã sinh viên và mã học phần
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="mahp"></param>
+        /// <returns></returns>
+        public int DeleteByKey(int mssv, string mahp)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.DeleteByKey;
+
+            cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = mssv;
+            cmd.Parameters.Add("@mahp", SqlDbType.NVarChar, 20).Value = mahp;
+
+            int result = cmd.ExecuteNonQuery();
+            if (result > 0)
+                return 1;
+            return 0;
+
             conn.Close();
         }
     }

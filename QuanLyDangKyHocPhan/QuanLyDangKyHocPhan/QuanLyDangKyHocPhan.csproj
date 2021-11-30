@@ -103,6 +103,12 @@
     <Compile Include="DangKyHocPhanForm.Designer.cs">
       <DependentUpon>DangKyHocPhanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DCKQDKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DCKQDKForm.Designer.cs">
+      <DependentUpon>DCKQDKForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DKHPForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DangKyHocPhanForm.resx">
       <DependentUpon>DangKyHocPhanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCKQDKForm.resx">
+      <DependentUpon>DCKQDKForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DKHPForm.resx">
       <DependentUpon>DKHPForm.cs</DependentUpon>

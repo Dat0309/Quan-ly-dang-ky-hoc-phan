@@ -86,5 +86,15 @@ namespace BusinessLogic
         {
             return ctdkDA.InsertMulti(list, 0);
         }
+
+        public int DieuChinhHocPhan(ChiTietDangKy ct)
+        {
+            return ctdkDA.DieuChinhHP(ct);
+        }
+
+        public int DeleteByKey(int mssv, string mahp)
+        {
+            return ctdkDA.DeleteByKey(mssv, mahp);
+        }
     }
 }

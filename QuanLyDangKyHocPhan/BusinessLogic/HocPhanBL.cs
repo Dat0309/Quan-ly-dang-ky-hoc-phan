@@ -146,5 +146,18 @@ namespace BusinessLogic
         {
             return hpDA.GetKQDK(mssv);
         }
+
+
+        /// <summary>
+        /// Xuất kế quả đăng ký học phần của học kỳ này, năm học này
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="hocky"></param>
+        /// <param name="namhoc"></param>
+        /// <returns></returns>
+        public List<HocPhan> GetCurrentKQHP(int mssv, int hocky, string namhoc)
+        {
+            return hpDA.GetCurrentKQDK(mssv, hocky, namhoc);
+        }
     }
 }

@@ -15,7 +15,19 @@ Create table SinhVien
 	Diachi nvarchar(1000)
 )
 go
-
+Create table Khoa
+(
+	MaKhoa int primary key identity(1,1),
+	TenKhoa nvarchar(100),
+)
+go
+create table Lop
+(
+	MaLop int primary key identity(1,1),
+	TenLop nvarchar(20),
+	MaKhoa int references Khoa(MaKhoa)
+)
+go
 create table HocPhan
 (
 	MaHP nvarchar(20) primary key,
@@ -90,6 +102,14 @@ create procedure SinhVien_GetAll
 as
 select * from SinhVien
 go
+create procedure Khoa_GetAll
+as
+select * from Khoa
+go
+create procedure Lop_GetAll
+as
+select * from Lop
+go
 create procedure HocPhan_GetAll
 as 
 select * from HocPhan
@@ -110,7 +130,7 @@ as
 select * from CT_DKHP
 go
 
-create procedure SinhVien_InsertUpdateDelete
+alter procedure SinhVien_InsertUpdateDelete
 	@MSSV int output,
 	@HoLot nvarchar(100),
 	@Ten nvarchar(50),
@@ -133,6 +153,8 @@ create procedure SinhVien_InsertUpdateDelete
 	end
 	else if @Action = 2
 	begin
+		delete from HocPhi where MSSV = @MSSV
+		delete from CT_DKHP where MSSV = @MSSV
 		delete from SinhVien where MSSV = @MSSV
 	end
 go

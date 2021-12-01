@@ -15,14 +15,15 @@ namespace QuanLyDangKyHocPhan
     public partial class SinhVienForm : Form
     {
         SinhVienBL svBL = SinhVienBL.getInstance();
-        List<SinhVien> listSV;
+        List<SinhVien> listSV ;
+        SinhVien svcurrent;
+       
         public SinhVienForm()
         {
             InitializeComponent();
         }
 
         #region
-
         private void LoadSinhVienToListView()
         {
             listSV = svBL.GetAll();
@@ -37,8 +38,7 @@ namespace QuanLyDangKyHocPhan
                 item.SubItems.Add(sv.TenLop);
                 item.SubItems.Add(sv.Khoa);
                 item.SubItems.Add(sv.DiaChi);
-            }
-            
+            }            
         }
 
         #endregion
@@ -46,6 +46,36 @@ namespace QuanLyDangKyHocPhan
         private void SinhVienForm_Load(object sender, EventArgs e)
         {
             LoadSinhVienToListView();
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var svInFo = new SinhVienInfo();
+            if (svInFo.ShowDialog() == DialogResult.OK)
+            {
+                LoadSinhVienToListView();
+            }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            svcurrent = new SinhVien();
+            if (MessageBox.Show("Bạn chắc chứ", "Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                ListViewItem item = lvSV.SelectedItems[0];
+                svcurrent.MSSV = int.Parse(item.SubItems[0].Text);
+                svcurrent.HoLot = item.SubItems[1].Text;
+                svcurrent.Ten = item.SubItems[2].Text;
+                svcurrent.GioiTinh = item.SubItems[3].Text == "Nam" ? true : false;
+                svcurrent.NgaySinh = item.SubItems[4].Text;
+                svcurrent.TenLop = item.SubItems[5].Text;
+                svcurrent.Khoa = item.SubItems[6].Text;
+                svcurrent.DiaChi = item.SubItems[7].Text;
+                if (svBL.Delete(svcurrent) > 0)
+                {                   
+                    MessageBox.Show("Xóa sinh viên thành công");
+                    LoadSinhVienToListView();
+                }
+                else MessageBox.Show("Xóa thất bại");
+            }
         }
     }
 }

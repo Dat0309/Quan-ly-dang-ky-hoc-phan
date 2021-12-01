@@ -128,6 +128,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lvSV
             // 
@@ -224,6 +225,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // SinhVienForm
             // 

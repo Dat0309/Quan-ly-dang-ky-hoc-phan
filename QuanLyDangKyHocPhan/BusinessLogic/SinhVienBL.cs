@@ -86,7 +86,7 @@ namespace BusinessLogic
         }
 
         /// <summary>
-        /// Xoá sinh viên
+        ///  Sửa sinh viên
         /// </summary>
         /// <param name="sv"></param>
         /// <returns></returns>
@@ -96,7 +96,7 @@ namespace BusinessLogic
         }
 
         /// <summary>
-        /// Sửa sinh viên
+        /// Xoá sinh viên
         /// </summary>
         /// <param name="sv"></param>
         /// <returns></returns>

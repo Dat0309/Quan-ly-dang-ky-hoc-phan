@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnFilter = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.cbbNamHoc = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
@@ -47,20 +48,12 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.btnFilter = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.cbbKhoa = new Guna.UI.WinForms.GunaComboBox();
+            this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.Controls.Add(this.gunaLabel3);
-            this.gunaPanel1.Controls.Add(this.cbbKhoa);
-            this.gunaPanel1.Controls.Add(this.gunaLabel2);
-            this.gunaPanel1.Controls.Add(this.cbbLop);
             this.gunaPanel1.Controls.Add(this.btnFilter);
             this.gunaPanel1.Controls.Add(this.gunaLabel1);
             this.gunaPanel1.Controls.Add(this.cbbNamHoc);
@@ -71,6 +64,33 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1222, 64);
             this.gunaPanel1.TabIndex = 10;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.AnimationHoverSpeed = 0.07F;
+            this.btnFilter.AnimationSpeed = 0.03F;
+            this.btnFilter.BackColor = System.Drawing.Color.Transparent;
+            this.btnFilter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFilter.BorderColor = System.Drawing.Color.Black;
+            this.btnFilter.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFilter.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.Image = null;
+            this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFilter.Location = new System.Drawing.Point(1112, 12);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFilter.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFilter.OnHoverImage = null;
+            this.btnFilter.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFilter.Radius = 10;
+            this.btnFilter.Size = new System.Drawing.Size(87, 42);
+            this.btnFilter.TabIndex = 24;
+            this.btnFilter.Text = "Lọc";
+            this.btnFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // gunaLabel1
             // 
@@ -268,100 +288,39 @@
             this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
-            // btnFilter
+            // btnSearch
             // 
-            this.btnFilter.AnimationHoverSpeed = 0.07F;
-            this.btnFilter.AnimationSpeed = 0.03F;
-            this.btnFilter.BackColor = System.Drawing.Color.Transparent;
-            this.btnFilter.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnFilter.BorderColor = System.Drawing.Color.Black;
-            this.btnFilter.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnFilter.FocusedColor = System.Drawing.Color.Empty;
-            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnFilter.ForeColor = System.Drawing.Color.White;
-            this.btnFilter.Image = null;
-            this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFilter.Location = new System.Drawing.Point(1112, 12);
-            this.btnFilter.Name = "btnFilter";
-            this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnFilter.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnFilter.OnHoverImage = null;
-            this.btnFilter.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFilter.Radius = 10;
-            this.btnFilter.Size = new System.Drawing.Size(87, 42);
-            this.btnFilter.TabIndex = 24;
-            this.btnFilter.Text = "Lọc";
-            this.btnFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(501, 20);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(34, 20);
-            this.gunaLabel2.TabIndex = 26;
-            this.gunaLabel2.Text = "Lớp";
-            // 
-            // cbbLop
-            // 
-            this.cbbLop.BackColor = System.Drawing.Color.Transparent;
-            this.cbbLop.BaseColor = System.Drawing.Color.White;
-            this.cbbLop.BorderColor = System.Drawing.Color.Silver;
-            this.cbbLop.BorderSize = 1;
-            this.cbbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLop.FocusedColor = System.Drawing.Color.Empty;
-            this.cbbLop.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbLop.ForeColor = System.Drawing.Color.Black;
-            this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Items.AddRange(new object[] {
-            ""});
-            this.cbbLop.Location = new System.Drawing.Point(541, 15);
-            this.cbbLop.Name = "cbbLop";
-            this.cbbLop.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbbLop.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbLop.Radius = 5;
-            this.cbbLop.Size = new System.Drawing.Size(121, 31);
-            this.cbbLop.TabIndex = 25;
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(678, 20);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(43, 20);
-            this.gunaLabel3.TabIndex = 28;
-            this.gunaLabel3.Text = "Khoa";
-            // 
-            // cbbKhoa
-            // 
-            this.cbbKhoa.BackColor = System.Drawing.Color.Transparent;
-            this.cbbKhoa.BaseColor = System.Drawing.Color.White;
-            this.cbbKhoa.BorderColor = System.Drawing.Color.Silver;
-            this.cbbKhoa.BorderSize = 1;
-            this.cbbKhoa.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbKhoa.FocusedColor = System.Drawing.Color.Empty;
-            this.cbbKhoa.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbKhoa.ForeColor = System.Drawing.Color.Black;
-            this.cbbKhoa.FormattingEnabled = true;
-            this.cbbKhoa.Location = new System.Drawing.Point(727, 15);
-            this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbbKhoa.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbKhoa.Radius = 5;
-            this.cbbKhoa.Size = new System.Drawing.Size(213, 31);
-            this.cbbKhoa.TabIndex = 27;
+            this.btnSearch.AnimationHoverSpeed = 0.07F;
+            this.btnSearch.AnimationSpeed = 0.03F;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnSearch.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = null;
+            this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSearch.Location = new System.Drawing.Point(838, 74);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSearch.OnHoverImage = null;
+            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSearch.Radius = 10;
+            this.btnSearch.Size = new System.Drawing.Size(58, 34);
+            this.btnSearch.TabIndex = 15;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // QLDKHPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.lvQL);
             this.Controls.Add(this.gunaPanel1);
@@ -398,9 +357,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaComboBox cbbHK;
         private Guna.UI.WinForms.GunaButton btnFilter;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaComboBox cbbKhoa;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaComboBox cbbLop;
+        private Guna.UI.WinForms.GunaButton btnSearch;
     }
 }

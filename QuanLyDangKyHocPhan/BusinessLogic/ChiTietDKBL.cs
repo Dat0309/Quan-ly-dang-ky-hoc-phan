@@ -103,9 +103,9 @@ namespace BusinessLogic
             return ctdkDA.GetChiTietDKHP();
         }
 
-        public SqlDataReader GetChiTietDKHPTheoHocKy(int hocky, string nam, string khoa, string lop)
+        public SqlDataReader GetChiTietDKHPTheoHocKy(int hocky, string nam)
         {
-            return ctdkDA.GetChiTietDKHPTheeoHocKy(hocky, nam, khoa, lop);
+            return ctdkDA.GetChiTietDKHPTheeoHocKy(hocky, nam);
         }
     }
 }

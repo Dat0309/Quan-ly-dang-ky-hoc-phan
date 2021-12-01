@@ -19,8 +19,6 @@ namespace QuanLyDangKyHocPhan
     {
         List<string> years = new List<string>();
         List<string> courses = new List<string>();
-        List<string> listKhoa = new List<string>();
-        List<string> listLop = new List<string>();
 
         ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
         public QLDKHPForm()
@@ -54,17 +52,20 @@ namespace QuanLyDangKyHocPhan
                     AddYears(reader["NamHoc"].ToString());
                 if (!courses.Contains(reader["HocKy"].ToString()))
                     AddCourses(reader["HocKy"].ToString());
-                if (!listKhoa.Contains(reader["Khoa"].ToString()))
-                    AddKhoa(reader["Khoa"].ToString());
-                if (!listLop.Contains(reader["TenLop"].ToString()))
-                    AddLop(reader["TenLop"].ToString());
             }
         }
 
-        private void LoadItemWithCourse(int hocky, string nam, string khoa, string lop)
+        /// <summary>
+        /// Lọc danh sách đăng ký học phần theo các tiêu chí
+        /// </summary>
+        /// <param name="hocky"></param>
+        /// <param name="nam"></param>
+        /// <param name="khoa"></param>
+        /// <param name="lop"></param>
+        private void LoadItemWithCourse(int hocky, string nam)
         {
             lvQL.Items.Clear();
-            SqlDataReader reader = ctdkBL.GetChiTietDKHPTheoHocKy(hocky, nam, khoa, lop);
+            SqlDataReader reader = ctdkBL.GetChiTietDKHPTheoHocKy(hocky, nam);
             while (reader.Read())
             {
                 ListViewItem item = lvQL.Items.Add(reader["MSSV"].ToString());
@@ -86,27 +87,46 @@ namespace QuanLyDangKyHocPhan
         /// <param name="key"></param>
         private void SearchByKey(string key)
         {
-            
+            var items = this.lvQL.Items.Cast<ListViewItem>()
+                .Where(x => (
+                x.SubItems[3].Text.Contains(key) ||
+                x.SubItems[4].Text.Contains(key) ||
+                x.SubItems[5].Text.Contains(key) ||
+                x.SubItems[7].Text.Contains(key)))
+                .ToList();
+
+            lvQL.Items.Clear();
+            foreach (var ct in items)
+            {
+                ListViewItem item = lvQL.Items.Add(ct.SubItems[0].Text);
+                item.SubItems.Add(ct.SubItems[1].Text);
+                item.SubItems.Add(ct.SubItems[2].Text);
+                item.SubItems.Add(ct.SubItems[3].Text);
+                item.SubItems.Add(ct.SubItems[4].Text);
+                item.SubItems.Add(ct.SubItems[5].Text);
+                item.SubItems.Add(ct.SubItems[6].Text);
+                item.SubItems.Add(ct.SubItems[7].Text);
+                item.SubItems.Add(ct.SubItems[8].Text);
+                item.SubItems.Add(ct.SubItems[9].Text);
+            }
         }
 
+        /// <summary>
+        /// Lấy năm học
+        /// </summary>
+        /// <param name="year"></param>
         private void AddYears(string year)
         {
             years.Add(year);
         }
 
+        /// <summary>
+        /// Lấy học kỳ
+        /// </summary>
+        /// <param name="course"></param>
         private void AddCourses(string course)
         {
             courses.Add(course);
-        }
-
-        private void AddKhoa(string khoa)
-        {
-            listKhoa.Add(khoa);
-        }
-
-        private void AddLop(string lop)
-        {
-            listLop.Add(lop);
         }
 
         /// <summary>
@@ -147,21 +167,21 @@ namespace QuanLyDangKyHocPhan
                 }
 
                 //Lay danh sach sinh vien
-                for(int i = 0; i< lvQL.Items.Count; i++)
+                for (int i = 0; i < lvQL.Items.Count; i++)
                 {
                     ListViewItem item = lvQL.Items[i];
                     colIndex = 1;
                     rowIndex++;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["MSSV"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["MaHP"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["HoLot"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["Ten"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["TenHP"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["TenLop"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["LoaiHP"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["Khoa"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["STC"].Text;
-                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems["SLDK"].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[0].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[1].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[2].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[3].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[4].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[5].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[6].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[7].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[8].Text;
+                    ws.Cells[rowIndex, colIndex++].Value = item.SubItems[9].Text;
                 }
                 //save file
                 Byte[] bin = p.GetAsByteArray();
@@ -175,18 +195,11 @@ namespace QuanLyDangKyHocPhan
             LoadItem();
             cbbNamHoc.DataSource = years;
             cbbHK.DataSource = courses;
-            cbbKhoa.DataSource = listKhoa;
-            cbbLop.DataSource = listLop;
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.FileName = string.Format("DanhSach DangKyHocPhan Nam hoc {0}", DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString());
+            saveFileDialog1.FileName = string.Format("Danh Sach Dang Ky Hoc Phan Hoc ky {0} Nam hoc {1}", cbbHK.Text, DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString());
             saveFileDialog1.InitialDirectory = @"E:\";
             saveFileDialog1.DefaultExt = "xlsx";
             saveFileDialog1.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
@@ -204,10 +217,21 @@ namespace QuanLyDangKyHocPhan
         {
             int hocKy = int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text);
             string nam = cbbNamHoc.Text;
-            string khoa = cbbKhoa.Text;
-            string lop = cbbLop.Text;
 
-            LoadItemWithCourse(hocKy, nam, khoa, lop);
+            LoadItemWithCourse(hocKy, nam);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                LoadItem();
+            SearchByKey(txtSearch.Text);
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                LoadItem();
         }
     }
 }

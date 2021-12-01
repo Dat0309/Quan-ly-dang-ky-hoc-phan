@@ -171,7 +171,7 @@ namespace DataAccess
         /// <param name="hocky"></param>
         /// <param name="nam"></param>
         /// <returns></returns>
-        public SqlDataReader GetChiTietDKHPTheeoHocKy(int hocky, string nam, string khoa, string lop)
+        public SqlDataReader GetChiTietDKHPTheeoHocKy(int hocky, string nam)
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
             conn.Open();
@@ -182,8 +182,6 @@ namespace DataAccess
 
             cmd.Parameters.Add("@hocky", SqlDbType.Int).Value = hocky;
             cmd.Parameters.Add("@nam", SqlDbType.VarChar, 20).Value = nam;
-            cmd.Parameters.Add("@khoa", SqlDbType.NVarChar, 100).Value = khoa;
-            cmd.Parameters.Add("@lop", SqlDbType.NVarChar, 20).Value = lop;
 
             SqlDataReader dr = cmd.ExecuteReader();
             return dr;

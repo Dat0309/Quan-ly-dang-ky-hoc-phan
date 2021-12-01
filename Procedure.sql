@@ -78,6 +78,16 @@ as
 select * from CT_DKHP
 go
 
+create procedure Khoa_GetAll
+as
+select * from Khoa
+go
+
+create procedure Lop_GetAll
+as
+select * from Lop
+go
+
 alter procedure SinhVien_InsertUpdateDelete
 @MSSV int output,
 @HoLot nvarchar(100),

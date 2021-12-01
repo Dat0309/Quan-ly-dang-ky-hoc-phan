@@ -20,6 +20,11 @@ namespace DataAccess
         public static string SinhVien_InsertUpdateDelete = "SinhVien_InsertUpdateDelete";
 
         /// <summary>
+        /// Khoa + Lop
+        /// </summary>
+        public static string Khoa_GetAll = "Khoa_GetAll";
+        public static string Lop_GetAll = "Lop_GetAll";
+        /// <summary>
         /// HocPhan procedure
         /// </summary>
         public static string HocPhan_GetAll = "HocPhan_GetAll";

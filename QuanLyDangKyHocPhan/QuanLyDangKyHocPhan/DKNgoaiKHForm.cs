@@ -181,6 +181,18 @@ namespace QuanLyDangKyHocPhan
             }
         }
 
+        /// <summary>
+        /// Xoá học phần vừa đăng ký ra khỏi phiếu học phần
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="mahp"></param>
+        /// <returns></returns>
+        private int Delete(int mssv, string mahp)
+        {
+            ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
+            return ctdkBL.DeleteByKey(mssv, mahp);
+        }
+
         #endregion
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -239,6 +251,26 @@ namespace QuanLyDangKyHocPhan
                 string path = string.Format(@"{0}", saveFileDialog1.FileName);
                 WriteToExcel(lvKQDK, kqhp, path);
                 MessageBox.Show("Xuất phiếu đăng ký thành công!");
+            }
+        }
+
+        private void tsmDelete_Click(object sender, EventArgs e)
+        {
+            ListViewItem item;
+            int count = lvKQDK.Items.Count - 1;
+            for (int i = count; i >= 0; i--)
+            {
+                item = lvKQDK.Items[i];
+                if (item.Selected)
+                {
+                    int result = Delete(currentSV.MSSV, item.SubItems[0].Text.ToString().Trim());
+                    if (result > 0)
+                    {
+                        lvKQDK.Items.Remove(item);
+                        LoadDSHP();
+                    }
+                    else MessageBox.Show("Cập nhật dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");
+                }
             }
         }
     }

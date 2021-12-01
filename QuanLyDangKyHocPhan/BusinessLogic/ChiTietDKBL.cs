@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,6 +96,11 @@ namespace BusinessLogic
         public int DeleteByKey(int mssv, string mahp)
         {
             return ctdkDA.DeleteByKey(mssv, mahp);
+        }
+
+        public SqlDataReader GetChiTietDKHP()
+        {
+            return ctdkDA.GetChiTietDKHP();
         }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
+            this.lvQL = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,45 +40,46 @@
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.Controls.Add(this.gunaTextBox1);
+            this.gunaPanel1.Controls.Add(this.txtSearch);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1222, 64);
             this.gunaPanel1.TabIndex = 10;
             // 
-            // gunaTextBox1
+            // txtSearch
             // 
-            this.gunaTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(915, 10);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 18;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(295, 40);
-            this.gunaTextBox1.TabIndex = 1;
-            this.gunaTextBox1.TextOffsetX = 8;
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BaseColor = System.Drawing.Color.White;
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSearch.FocusedBorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Location = new System.Drawing.Point(915, 10);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.Radius = 18;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(295, 40);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextOffsetX = 8;
             // 
-            // listView1
+            // lvQL
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvQL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvQL.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -87,16 +88,17 @@
             this.columnHeader6,
             this.columnHeader13,
             this.columnHeader7,
-            this.columnHeader8});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 125);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1198, 583);
-            this.listView1.TabIndex = 13;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader8,
+            this.columnHeader9});
+            this.lvQL.FullRowSelect = true;
+            this.lvQL.GridLines = true;
+            this.lvQL.HideSelection = false;
+            this.lvQL.Location = new System.Drawing.Point(12, 125);
+            this.lvQL.Name = "lvQL";
+            this.lvQL.Size = new System.Drawing.Size(1198, 583);
+            this.lvQL.TabIndex = 13;
+            this.lvQL.UseCompatibleStateImageBehavior = false;
+            this.lvQL.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -150,16 +152,21 @@
             this.columnHeader8.Text = "Số TC";
             this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Sô SVDK";
+            // 
             // QLDKHPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvQL);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLDKHPForm";
             this.Text = "QLDKHPForm";
+            this.Load += new System.EventHandler(this.QLDKHPForm_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -168,8 +175,8 @@
         #endregion
 
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
-        private System.Windows.Forms.ListView listView1;
+        private Guna.UI.WinForms.GunaTextBox txtSearch;
+        private System.Windows.Forms.ListView lvQL;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -179,5 +186,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }

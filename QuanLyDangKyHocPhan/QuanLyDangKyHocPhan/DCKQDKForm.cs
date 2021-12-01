@@ -213,6 +213,12 @@ namespace QuanLyDangKyHocPhan
             }
         }
 
+        /// <summary>
+        /// Xoá học phần vừa đăng ký ra khỏi phiếu học phần
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="mahp"></param>
+        /// <returns></returns>
         private int Delete(int mssv, string mahp)
         {
             ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
@@ -280,7 +286,7 @@ namespace QuanLyDangKyHocPhan
                     int result = Delete(currentSV.MSSV, item.SubItems[0].Text.ToString().Trim());
                     if (result > 0)
                     {
-                        MessageBox.Show("Xoá học phần thành công !!");
+                        lvKQDK.Items.Remove(item);
                         LoadDSHP();
                     }
                     else MessageBox.Show("Cập nhật dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");

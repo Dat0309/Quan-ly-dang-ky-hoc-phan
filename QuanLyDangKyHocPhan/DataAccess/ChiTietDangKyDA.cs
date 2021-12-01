@@ -145,5 +145,24 @@ namespace DataAccess
 
             conn.Close();
         }
+
+        /// <summary>
+        /// Lấy danh sách đăng ký học phần của cá sinh viên, sắp xếp theo mã học phần
+        /// Liệt kê số lượng sinh viên đăng ký của mỗi học phần
+        /// </summary>
+        /// <returns></returns>
+        public SqlDataReader GetChiTietDKHP()
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.QLChiTietDKHP;
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+            dr.Close();
+        }
     }
 }

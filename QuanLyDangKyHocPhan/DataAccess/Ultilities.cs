@@ -49,5 +49,6 @@ namespace DataAccess
         public static string CTDK_InsertUpdateDelete = "CTDK_InsertUpdateDelete";
         public static string UpdateCTDKHP = "UpdateCTDKHP";
         public static string DeleteByKey = "DeleteByKey";
+        public static string QLChiTietDKHP = "QLChiTietDKHP";
     }
 }

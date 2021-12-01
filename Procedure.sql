@@ -78,7 +78,7 @@ as
 select * from CT_DKHP
 go
 
-create procedure SinhVien_InsertUpdateDelete
+alter procedure SinhVien_InsertUpdateDelete
 @MSSV int output,
 @HoLot nvarchar(100),
 @Ten nvarchar(50),
@@ -101,6 +101,8 @@ begin
 end
 else if @Action = 2
 begin
+	delete from CT_DKHP where MSSV = @MSSV
+	delete from HocPhi where MSSV = @MSSV
 	delete from SinhVien where MSSV = @MSSV
 end
 go
@@ -308,7 +310,7 @@ go
 
 select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.STC
 from CT_DKHP a, SinhVien b, HocPhan c
-where a.MSSV = b.MSSV and a.MaHP = c.MaHP
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP and a.HocKy = 1 and a.NamHoc = ''
 order by a.MaHP
 
 alter procedure QLChiTietDKHP
@@ -320,13 +322,11 @@ order by a.MaHP
 
 alter procedure GetChiTietTheoHocKyVaNam
 @hocky int,
-@nam varchar(20),
-@khoa nvarchar(100),
-@lop nvarchar(20)
+@nam varchar(20)
 as
 select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.STC,SLDK.SLDK, a.HocKy, a.NamHoc
 from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
-where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP and a.HocKy = @hocky and a.NamHoc = @nam and b.Khoa=@khoa and b.TenLop = @lop
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP and a.HocKy = @hocky and a.NamHoc = @nam
 order by a.MaHP
 
 

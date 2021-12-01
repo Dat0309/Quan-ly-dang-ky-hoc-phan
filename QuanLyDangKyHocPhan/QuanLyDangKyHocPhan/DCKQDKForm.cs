@@ -224,6 +224,7 @@ namespace QuanLyDangKyHocPhan
             ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
             return ctdkBL.DeleteByKey(mssv, mahp);
         }
+
         #endregion
 
         private void cbbHK_SelectedIndexChanged(object sender, EventArgs e)

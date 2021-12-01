@@ -50,5 +50,6 @@ namespace DataAccess
         public static string UpdateCTDKHP = "UpdateCTDKHP";
         public static string DeleteByKey = "DeleteByKey";
         public static string QLChiTietDKHP = "QLChiTietDKHP";
+        public static string GetChiTietTheoHocKyVaNam = "GetChiTietTheoHocKyVaNam";
     }
 }

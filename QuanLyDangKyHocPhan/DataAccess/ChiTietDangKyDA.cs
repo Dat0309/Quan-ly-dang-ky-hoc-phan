@@ -164,5 +164,30 @@ namespace DataAccess
             return dr;
             dr.Close();
         }
+
+        /// <summary>
+        /// Lấy danh sách học phần đăng ký theo năm học và học kỳ tương ứng
+        /// </summary>
+        /// <param name="hocky"></param>
+        /// <param name="nam"></param>
+        /// <returns></returns>
+        public SqlDataReader GetChiTietDKHPTheeoHocKy(int hocky, string nam, string khoa, string lop)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.GetChiTietTheoHocKyVaNam;
+
+            cmd.Parameters.Add("@hocky", SqlDbType.Int).Value = hocky;
+            cmd.Parameters.Add("@nam", SqlDbType.VarChar, 20).Value = nam;
+            cmd.Parameters.Add("@khoa", SqlDbType.NVarChar, 100).Value = khoa;
+            cmd.Parameters.Add("@lop", SqlDbType.NVarChar, 20).Value = lop;
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+            dr.Close();
+        }
     }
 }

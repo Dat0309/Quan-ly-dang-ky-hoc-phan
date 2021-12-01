@@ -283,3 +283,62 @@ as
 begin
 	delete from CT_DKHP where MSSV = @mssv and MaHP = @mahp
 end
+
+alter procedure CTDK_InsertUpdateDelete
+@MSSV int,
+@MaHP varchar(20),
+@NgayDangKy smalldatetime,
+@HocKy int,
+@NamHoc nvarchar(20),
+@Action int
+as
+if @Action = 0
+begin
+	if not exists (select * from CT_DKHP where MSSV = @MSSV and MaHP = @MaHP)
+	begin
+		insert into CT_DKHP (MSSV, MaHP, NgayDK, HocKy, NamHoc)
+		values (@MSSV, @MaHP, @NgayDangKy, @HocKy, @NamHoc)
+	end
+end
+else if @Action = 1
+begin
+	delete from CT_DKHP where MSSV = @MSSV and MaHP = @MaHP
+end
+go
+
+select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.STC
+from CT_DKHP a, SinhVien b, HocPhan c
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP
+order by a.MaHP
+
+alter procedure QLChiTietDKHP
+as
+select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.STC,SLDK.SLDK, a.HocKy, a.NamHoc
+from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP
+order by a.MaHP
+
+alter procedure GetChiTietTheoHocKyVaNam
+@hocky int,
+@nam varchar(20),
+@khoa nvarchar(100),
+@lop nvarchar(20)
+as
+select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.STC,SLDK.SLDK, a.HocKy, a.NamHoc
+from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP and a.HocKy = @hocky and a.NamHoc = @nam and b.Khoa=@khoa and b.TenLop = @lop
+order by a.MaHP
+
+
+create table Khoa
+(
+	MaKhoa int primary key identity(1,1),
+	TenKhoa nvarchar(100)
+)
+
+create table Lop
+(
+	MaLop int primary key identity(1,1),
+	TenLop nvarchar(20),
+	MaKhoa int references Khoa(MaKhoa)
+)

@@ -103,6 +103,8 @@ if @Action = 0
 begin
 	insert into SinhVien (MSSV,HoLot,Ten,GioiTinh,NgaySinh,TenLop,Khoa,DiaChi)
 	values (@MSSV, @HoLot,@Ten,@GioiTinh,@NgaySinh,@TenLop,@Khoa,@Diachi)
+	insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate,FullName)
+	values (@MSSV, @MSSV, 'true', 2, GETDATE(),@HoLot + ' ' + @Ten)
 end
 else if @Action = 1
 begin

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -38,8 +37,8 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lvKQDK = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmsKQDK = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -49,10 +48,11 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnDangKy = new Guna.UI.WinForms.GunaButton();
             this.lvHP = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.cmsKQDK.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -140,8 +140,9 @@
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8});
-            this.lvKQDK.ContextMenuStrip = this.cmsKQDK;
+            this.columnHeader8,
+            this.columnHeader11,
+            this.columnHeader12});
             this.lvKQDK.FullRowSelect = true;
             this.lvKQDK.GridLines = true;
             this.lvKQDK.HideSelection = false;
@@ -158,20 +159,13 @@
             this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader7.Width = 200;
             // 
-            // cmsKQDK
+            // columnHeader11
             // 
-            this.cmsKQDK.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsKQDK.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmDelete});
-            this.cmsKQDK.Name = "cmsKQDK";
-            this.cmsKQDK.Size = new System.Drawing.Size(170, 28);
+            this.columnHeader11.Text = "TCLT";
             // 
-            // tsmDelete
+            // columnHeader12
             // 
-            this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(169, 24);
-            this.tsmDelete.Text = "Xoá học phần";
-            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            this.columnHeader12.Text = "TCTH";
             // 
             // gunaGroupBox1
             // 
@@ -278,7 +272,9 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
+            this.columnHeader4,
+            this.columnHeader9,
+            this.columnHeader10});
             this.lvHP.FullRowSelect = true;
             this.lvHP.GridLines = true;
             this.lvHP.HideSelection = false;
@@ -289,6 +285,14 @@
             this.lvHP.UseCompatibleStateImageBehavior = false;
             this.lvHP.View = System.Windows.Forms.View.Details;
             this.lvHP.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvHP_ItemChecked);
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "TCLT";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "TCTH";
             // 
             // gunaLabel4
             // 
@@ -340,7 +344,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DKNgoaiKHForm";
             this.Load += new System.EventHandler(this.DKNgoaiKHForm_Load);
-            this.cmsKQDK.ResumeLayout(false);
             this.gunaGroupBox1.ResumeLayout(false);
             this.gunaGroupBox1.PerformLayout();
             this.gunaPanel1.ResumeLayout(false);
@@ -373,7 +376,9 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaComboBox cbbHK;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.ContextMenuStrip cmsKQDK;
-        private System.Windows.Forms.ToolStripMenuItem tsmDelete;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }

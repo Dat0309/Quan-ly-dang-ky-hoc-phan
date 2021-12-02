@@ -17,8 +17,10 @@ namespace QuanLyDangKyHocPhan
     public partial class DKNgoaiKHForm : Form
     {
         List<HocPhan> listHP;
+        List<HocPhan> listKQ;
         SinhVien currentSV;
         SinhVienBL svBL = SinhVienBL.getInstance();
+        string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
 
         public DKNgoaiKHForm(string user)
         { 
@@ -27,6 +29,31 @@ namespace QuanLyDangKyHocPhan
         }
 
         #region
+
+        /// <summary>
+        /// Hàm lấy danh sách các môn học đã đăng ký trong học kỳ này
+        /// </summary>
+        private void LoadCurrent_DSKQ()
+        {
+            int soLuongDangKy = 0;
+            HocPhanBL hpBL = HocPhanBL.getInstance();
+            listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
+            lvKQDK.Items.Clear();
+
+            foreach (var hp in listKQ)
+            {
+                soLuongDangKy += hp.TongSoTC;
+                txtQuantity.Text = soLuongDangKy.ToString();
+
+                ListViewItem item = lvKQDK.Items.Add(hp.MaHP.ToString());
+                item.SubItems.Add(hp.TenHP);
+                item.SubItems.Add(hp.LoaiHP);
+                item.SubItems.Add(hp.TongSoTC.ToString());
+                item.SubItems.Add(hp.TCLT.ToString());
+                item.SubItems.Add(hp.TCTH.ToString());
+
+            }
+        }
 
         /// <summary>
         /// Xuất danh sách học phần Ngoài kế hoạch
@@ -45,6 +72,8 @@ namespace QuanLyDangKyHocPhan
                 item.SubItems.Add(hp.TenHP);
                 item.SubItems.Add(hp.LoaiHP);
                 item.SubItems.Add(hp.TongSoTC.ToString());
+                item.SubItems.Add(hp.TCLT.ToString());
+                item.SubItems.Add(hp.TCTH.ToString());
             }
         }
 
@@ -64,6 +93,8 @@ namespace QuanLyDangKyHocPhan
                 item.SubItems.Add(hp.TenHP);
                 item.SubItems.Add(hp.LoaiHP);
                 item.SubItems.Add(hp.TongSoTC.ToString());
+                item.SubItems.Add(hp.TCLT.ToString());
+                item.SubItems.Add(hp.TCTH.ToString());
 
                 if (soLuongDangKy <= 25)
                 {
@@ -87,6 +118,8 @@ namespace QuanLyDangKyHocPhan
             hp.TenHP = item.SubItems[1].Text;
             hp.LoaiHP = item.SubItems[2].Text;
             hp.TongSoTC = int.Parse(item.SubItems[3].Text);
+            hp.TCLT = int.Parse(item.SubItems[4].Text);
+            hp.TCTH = int.Parse(item.SubItems[5].Text);
 
             return hp;
         }
@@ -102,16 +135,16 @@ namespace QuanLyDangKyHocPhan
                 MessageBox.Show("Chưa chọn học phần để đăng ký, vui lòng chọn học phần");
             else
             {
-                List<HocPhan> kqhp = new List<HocPhan>();
+                listKQ = HocPhanBL.getInstance().GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
                 int i = this.lvHP.CheckedItems.Count - 1;
                 while (i >= 0)
                 {
-                    kqhp.Add(GetHPLV(this.lvHP.CheckedItems[i]));
+                    listKQ.Add(GetHPLV(this.lvHP.CheckedItems[i]));
                     i--;
 
                 }
 
-                foreach (var item in kqhp)
+                foreach (var item in listKQ)
                 {
                     ct.MSSV = currentSV.MSSV;
                     ct.MaHP = item.MaHP;
@@ -174,6 +207,8 @@ namespace QuanLyDangKyHocPhan
                     ws.Cells[rowIndex, colIndex++].Value = item.TenHP;
                     ws.Cells[rowIndex, colIndex++].Value = item.LoaiHP;
                     ws.Cells[rowIndex, colIndex++].Value = item.TongSoTC;
+                    ws.Cells[rowIndex, colIndex++].Value = item.TCLT;
+                    ws.Cells[rowIndex, colIndex++].Value = item.TCTH;
                 }
                 //save file
                 Byte[] bin = p.GetAsByteArray();
@@ -193,6 +228,42 @@ namespace QuanLyDangKyHocPhan
             return ctdkBL.DeleteByKey(mssv, mahp);
         }
 
+        /// <summary>
+        /// Hàm tính học phí cho sinh viên
+        /// </summary>
+        /// <returns></returns>
+        private int TongTien()
+        {
+            int TongTien = 0;
+            int i = this.lvKQDK.Items.Count - 1;
+            while (i >= 0)
+            {
+                var hocPhan = GetHPLV(this.lvKQDK.Items[i]);
+                TongTien += hocPhan.TCLT * 300000 + hocPhan.TCTH * 380000;
+                i--;
+            }
+            return TongTien;
+        }
+
+        /// <summary>
+        /// Hàm thêm học phí cho sinh viên
+        /// </summary>
+        /// <param name="hp"></param>
+        /// <returns></returns>
+        private int AddHocPhi()
+        {
+            HocPhi hp = new HocPhi();
+            HocPhiBL hocPhiBL = HocPhiBL.getInstance();
+
+            hp.MSSV = currentSV.MSSV;
+            hp.HocKy = int.Parse(cbbHK.Text);
+            hp.NamHoc = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
+            hp.SoTien = TongTien();
+            hp.CapNhat = DateTime.Now.ToShortDateString();
+            hp.TinhTrang = false;
+
+            return hocPhiBL.Insert(hp);
+        }
         #endregion
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -200,6 +271,7 @@ namespace QuanLyDangKyHocPhan
             int result = InsertChiTietDK();
             if (result > 0)
             {
+                AddHocPhi();
                 MessageBox.Show("Đăng ký học phần thành công !!");
                 LoadDSHP();
                 cbbHK.Enabled = false;
@@ -211,6 +283,7 @@ namespace QuanLyDangKyHocPhan
         {
             if (cbbHK.Text == "") return;
             LoadDSHP();
+            LoadCurrent_DSKQ();
         }
 
         private void DKNgoaiKHForm_Load(object sender, EventArgs e)
@@ -220,14 +293,14 @@ namespace QuanLyDangKyHocPhan
 
         private void lvHP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            List<HocPhan> kqhp = new List<HocPhan>();
+            listKQ = HocPhanBL.getInstance().GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             int i = this.lvHP.CheckedItems.Count - 1;
             while (i >= 0)
             {
-                kqhp.Add(GetHPLV(this.lvHP.CheckedItems[i]));
+                listKQ.Add(GetHPLV(this.lvHP.CheckedItems[i]));
                 i--;
             }
-            LoadKQHP(kqhp);
+            LoadKQHP(listKQ);
         }
 
         private void btnXuat_Click(object sender, EventArgs e)
@@ -251,26 +324,6 @@ namespace QuanLyDangKyHocPhan
                 string path = string.Format(@"{0}", saveFileDialog1.FileName);
                 WriteToExcel(lvKQDK, kqhp, path);
                 MessageBox.Show("Xuất phiếu đăng ký thành công!");
-            }
-        }
-
-        private void tsmDelete_Click(object sender, EventArgs e)
-        {
-            ListViewItem item;
-            int count = lvKQDK.Items.Count - 1;
-            for (int i = count; i >= 0; i--)
-            {
-                item = lvKQDK.Items[i];
-                if (item.Selected)
-                {
-                    int result = Delete(currentSV.MSSV, item.SubItems[0].Text.ToString().Trim());
-                    if (result > 0)
-                    {
-                        lvKQDK.Items.Remove(item);
-                        LoadDSHP();
-                    }
-                    else MessageBox.Show("Cập nhật dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");
-                }
             }
         }
     }

@@ -22,6 +22,8 @@ create table HocPhan
 	Nam int,
 	Khoa nvarchar(100),
 	STC int,
+	TCLT int,
+	TCTH int,
 	GioiHan int
 )
 go
@@ -42,15 +44,18 @@ create table HocPhi
 	id int primary key identity(1,1),
 	MSSV int references SinhVien(MSSV),
 	HocKy int,
-	NamHoc int,
-	HocPhi int,
-	CapNhat smalldatetime
+	NamHoc nvarchar(20),
+	SoTien int,
+	CapNhat smalldatetime,
+	TinhTrang bit
 )
 go
 
 --drop table LichThi
 --drop table CT_DKHP
 --drop table HocPhan
+--drop table LichThi
+--drop table HocPhi
 
 
 create procedure SinhVien_GetAll
@@ -88,6 +93,11 @@ as
 select * from Lop
 go
 
+alter procedure HocPhi_GetAll
+as
+select * from HocPhi where TinhTrang = 'false'
+go
+
 alter procedure SinhVien_InsertUpdateDelete
 @MSSV int output,
 @HoLot nvarchar(100),
@@ -103,6 +113,8 @@ if @Action = 0
 begin
 	insert into SinhVien (MSSV,HoLot,Ten,GioiTinh,NgaySinh,TenLop,Khoa,DiaChi)
 	values (@MSSV, @HoLot,@Ten,@GioiTinh,@NgaySinh,@TenLop,@Khoa,@Diachi)
+	insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate,FullName)
+	values (@MSSV, @MSSV, 'true', 2, GETDATE(),@HoLot + ' ' + @Ten)
 end
 else if @Action = 1
 begin
@@ -125,17 +137,19 @@ alter procedure HocPhan_InsertUpdateDelete
 @Nam int,
 @Khoa nvarchar(100),
 @TongSoTinChi int,
+@TCLT int,
+@TCTH int,
 @GioiHan int,
 @Action int
 as
 if @Action = 0
 begin
-	insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, STC, GioiHan)
-	values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@GioiHan)
+	insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, STC,TCLT,TCTH, GioiHan)
+	values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@TCLT, @TCTH ,@GioiHan)
 end
 else if @Action = 1
 begin
-	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@TongSoTinChi, GioiHan=@GioiHan
+	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@TongSoTinChi,TCLT=@TCLT,TCTH=@TCTH, GioiHan=@GioiHan
 	where MaHP = @MaHP
 end
 else if @Action = 2
@@ -162,6 +176,7 @@ begin
 	delete from CT_DKHP where MSSV = @MSSV and MaHP = @MaHP
 end
 go
+
 
 create procedure Quyen_InsertUpdateDelete
 @Id int output,
@@ -210,6 +225,42 @@ create procedure TaiKhoan_InsertUpdateDelete
 	else if @Action = 2
 	begin
 		update TaiKhoan set Active = 'false'
+		where Id = @Id
+	end
+go
+
+alter procedure HocPhi_InsertUpdateDelete
+	@Id int output,
+	@MSSV int,
+	@HocKy int,
+	@NamHoc nvarchar(20),
+	@SoTien int,
+	@CapNhat smalldatetime,
+	@TinhTrang bit,
+	@Action int
+	as
+	if @Action = 0
+	begin
+		if not exists (select * from HocPhi where MSSV = @MSSV and HocKy=@HocKy and NamHoc = @NamHoc)
+		begin
+			insert into HocPhi(MSSV, HocKy, NamHoc, SoTien, CapNhat, TinhTrang)
+			values (@MSSV, @HocKy, @NamHoc, @SoTien, @CapNhat, @TinhTrang)
+			set @Id = @@IDENTITY
+		end
+		else 
+		begin
+			update HocPhi set SoTien = @SoTien
+		where MSSV = @MSSV and HocKy = @HocKy and NamHoc = @NamHoc
+		end
+	end
+	else if @Action = 1
+	begin
+		update HocPhi set SoTien = @SoTien
+		where MSSV = @MSSV and HocKy = @HocKy and NamHoc = @NamHoc
+	end
+	else if @Action = 2
+	begin
+		delete from HocPhi
 		where Id = @Id
 	end
 go

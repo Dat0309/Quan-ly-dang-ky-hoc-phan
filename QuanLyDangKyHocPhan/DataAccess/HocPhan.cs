@@ -43,6 +43,17 @@ namespace DataAccess
         /// Tổng số tín chỉ
         /// </summary>
         public int TongSoTC { get; set; }
+
+
+        /// <summary>
+        /// TC Ly thuyet
+        /// </summary>
+        public int TCLT { get; set; }
+
+        /// <summary>
+        /// TC thuc hanh
+        /// </summary>
+        public int TCTH { get; set; }
         /// <summary>
         /// Giới hạn đăng đăng ký
         /// </summary>

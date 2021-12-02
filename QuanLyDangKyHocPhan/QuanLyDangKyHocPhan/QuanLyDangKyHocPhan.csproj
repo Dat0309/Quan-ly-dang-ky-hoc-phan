@@ -127,6 +127,12 @@
     <Compile Include="DKTheoKeHoachForm.Designer.cs">
       <DependentUpon>DKTheoKeHoachForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoiMKForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMKForm.Designer.cs">
+      <DependentUpon>DoiMKForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,12 @@
     <Compile Include="TaiKhoanForm.Designer.cs">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinSVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinSVForm.Designer.cs">
+      <DependentUpon>ThongTinSVForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
@@ -207,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DKTheoKeHoachForm.resx">
       <DependentUpon>DKTheoKeHoachForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoiMKForm.resx">
+      <DependentUpon>DoiMKForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -242,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoanForm.resx">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinSVForm.resx">
+      <DependentUpon>ThongTinSVForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

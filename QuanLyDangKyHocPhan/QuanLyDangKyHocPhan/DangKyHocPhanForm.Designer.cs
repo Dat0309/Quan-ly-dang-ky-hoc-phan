@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKyHocPhanForm));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnTaIKhoan = new Guna.UI.WinForms.GunaButton();
             this.btnHocPhi = new Guna.UI.WinForms.GunaButton();
             this.btnLogout = new Guna.UI.WinForms.GunaButton();
             this.btnLichThi = new Guna.UI.WinForms.GunaButton();
@@ -43,6 +44,7 @@
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
+            this.gunaPanel1.Controls.Add(this.btnTaIKhoan);
             this.gunaPanel1.Controls.Add(this.btnHocPhi);
             this.gunaPanel1.Controls.Add(this.btnLogout);
             this.gunaPanel1.Controls.Add(this.btnLichThi);
@@ -53,6 +55,30 @@
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(260, 753);
             this.gunaPanel1.TabIndex = 1;
+            // 
+            // btnTaIKhoan
+            // 
+            this.btnTaIKhoan.AnimationHoverSpeed = 0.07F;
+            this.btnTaIKhoan.AnimationSpeed = 0.03F;
+            this.btnTaIKhoan.BaseColor = System.Drawing.Color.White;
+            this.btnTaIKhoan.BorderColor = System.Drawing.Color.Black;
+            this.btnTaIKhoan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTaIKhoan.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTaIKhoan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnTaIKhoan.ForeColor = System.Drawing.Color.Black;
+            this.btnTaIKhoan.Image = ((System.Drawing.Image)(resources.GetObject("btnTaIKhoan.Image")));
+            this.btnTaIKhoan.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnTaIKhoan.Location = new System.Drawing.Point(4, 351);
+            this.btnTaIKhoan.Name = "btnTaIKhoan";
+            this.btnTaIKhoan.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnTaIKhoan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTaIKhoan.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnTaIKhoan.OnHoverImage = null;
+            this.btnTaIKhoan.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTaIKhoan.Size = new System.Drawing.Size(254, 86);
+            this.btnTaIKhoan.TabIndex = 9;
+            this.btnTaIKhoan.Text = "Thông tin tài khoản";
+            this.btnTaIKhoan.Click += new System.EventHandler(this.btnTaIKhoan_Click);
             // 
             // btnHocPhi
             // 
@@ -198,5 +224,6 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaPanel Container;
         private Guna.UI.WinForms.GunaButton btnHocPhi;
+        private Guna.UI.WinForms.GunaButton btnTaIKhoan;
     }
 }

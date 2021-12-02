@@ -76,6 +76,31 @@ namespace DataAccess
             return 0;
             conn.Close();
         }
+
+        /// <summary>
+        /// Hàm đổi mật khẩu cho sinh viên
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public int UpdatePassword(string userName, string password)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.UpdatePassword;
+
+            cmd.Parameters.Add("@UserName", SqlDbType.NVarChar, 100).Value=userName;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 100).Value = password;
+            
+            int result = cmd.ExecuteNonQuery();
+            if (result > 0)
+                return 1;
+            return 0;
+            conn.Close();
+        }
     }
 }
 

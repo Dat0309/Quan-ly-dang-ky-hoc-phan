@@ -118,6 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnTaIKhoan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAGsSURBVEhL5VTNSgMxEO6hu9mtDyD+3bypB203yeJJ6sVfBH9AFEVEEJukvoDgwYPv4TvoWelJ
+        D4JP4EUEH8BrnUmzku7Gtmt70g8+lkxmvtlMJlP4HwjPoolARou+YJvIQEVVtJnt/uDV+Jwv6a6LnqzM
+        GrffAf/SJWwzlGzcuOeHLotD1GaxFlWNe374gm67RNvJtox7fgw2gVwinqAVIukKEk2DK5GcJETw9SQo
+        SRCexmO2mIslMT+qNToh3Yq4NltQpnjG3mujqkwbt84gNbqaBBHJ1/BEZkvj+6GpaAepH1qe9iSKLWNZ
+        PMXKafG/j6E6G8ZOgpbe6D6nLqf8oM6vA8Vfgc3uZDdtl27ROaeMuEPIQRk/uYRtZhoBAt8yQg4SIJTk
+        Ki3oKXoYSN4gdXaL68wjhOD3tFia0MaQgDXh1R+jCNju4OQNED4JJX9p+bH7VtLUGOm1RHgCT7AjnUCy
+        B2P/xG+o4mdP0gNnAuuSP0zQj4SOudAigu3D+lHboTy+5Hst8T5Heem8PJIIYRJ9J/hNbMCe5lQnDGRO
+        dQP+ZVGxBax3dk4VCl/mizUq5/4lOwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnHocPhi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAASxJREFUSEvt
@@ -141,13 +154,11 @@
   </data>
   <data name="btnLichThi.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAASxJREFUSEvt
-        VFFygkAM5UcWT1N/gO1FtJ5BFlAv0elx9Cp16kGcwZYPTSRhFxu2ZfhyxjfzBpO8vNXgJnji35iU8SzM
-        43lokmVLiCcmeSHJOISZXnTMmVm8IMk4oJnK9SHK9aVl8fqJeZKMQ3NAenQPUEZ/+Q4YNNaO6I4k+YVB
-        Y8VC34hUkX5AXDm1Kir0u6+HbC0asTwi+Pzt5olnXw/ZWmCyj66BS0nLJFsLScSUzJFYGzSiPnYMHGLt
-        8UfUR7K1kERMyRwpaZlka8EFeGl7+N+f4LnjnGSO9PWQrQUXoLG5UEZXTu5mqPJko0y85djXQ7YWXMBv
-        A+If6RdMTVpOC73m2NdDtha+vQLN8k0esotum3GVvnWEEONmpF1UO+Y17iJfD9k+8ReC4ArODodL64WC
-        hgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAADKSURBVEhL7ZExCsIwGEaDUJvbOEjT5BbazQu4aOMVnOwFFR2deo2a1q/8MfyDJIIKffCGwJcX
+        aMXED7FdZtKaRlp9d3aRurum6VuoEohzlyIsT8gS7oGWH8doWmQJfhgvssS8VptPiizBjVJEluBGKSJL
+        hIPc6os8mPPLmfnWg95uFFkiHOS2vOW1vvpnNu70d6PIEuEgVWQJbpQiskQ4+MN/sFPrcBTtXq2QJbJa
+        LdhxhH0LWY+jmD0fKSru0nsW1RB3LVQnvo4QDwkzieES+9CbAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnDKHP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

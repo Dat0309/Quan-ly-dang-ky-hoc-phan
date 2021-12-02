@@ -62,5 +62,10 @@ namespace QuanLyDangKyHocPhan
             DangNhap.ShowDialog();
             this.Close();
         }
+
+        private void btnTaIKhoan_Click(object sender, EventArgs e)
+        {
+            setContent(new ThongTinSVForm(userName));
+        }
     }
 }

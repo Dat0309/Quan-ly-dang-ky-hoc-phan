@@ -40,6 +40,7 @@ namespace DataAccess
         /// </summary>
         public static string TaiKhoan_GetAll = "TaiKhoan_GetAll";
         public static string TaiKhoan_InsertUpdateDelete = "TaiKhoan_InsertUpdateDelete";
+        public static string UpdatePassword = "UpdatePassword";
 
         /// <summary>
         /// Quyen procedure

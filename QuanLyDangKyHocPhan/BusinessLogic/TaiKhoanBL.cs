@@ -34,10 +34,8 @@ namespace BusinessLogic
         {
             List<TaiKhoan> list = GetAll();
             foreach (var tk in list)
-            {
                 if(tk.Id == id)
                     return tk;
-            }
             return null;
         }
 
@@ -45,10 +43,17 @@ namespace BusinessLogic
         {
             List<TaiKhoan> list = GetAll();
             foreach (var tk in list)
-            {
                 if (tk.UserName == username && tk.Password == password)
                     return true;
-            }
+            return false;
+        }
+
+        public bool isCorrectPass(string password)
+        {
+            List<TaiKhoan> list = GetAll();
+            foreach (var tk in list)
+                if (tk.Password == password)
+                    return true;
             return false;
         }
 
@@ -56,10 +61,8 @@ namespace BusinessLogic
         {
             List<TaiKhoan> list = GetAll();
             foreach (var tk in list)
-            {
                 if (tk.UserName == username)
                     return tk.IDQuyen;
-            }
             return -1;
         }
 
@@ -76,6 +79,11 @@ namespace BusinessLogic
         public int Delete(TaiKhoan tk)
         {
             return tkDA.Insert_Update_Delete(tk, 2);
+        }
+
+        public int UpdatePass(string username, string pass)
+        {
+            return tkDA.UpdatePassword(username, pass);
         }
     }
 }

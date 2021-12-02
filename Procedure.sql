@@ -22,6 +22,8 @@ create table HocPhan
 	Nam int,
 	Khoa nvarchar(100),
 	STC int,
+	TCLT int,
+	TCTH int,
 	GioiHan int
 )
 go
@@ -42,15 +44,18 @@ create table HocPhi
 	id int primary key identity(1,1),
 	MSSV int references SinhVien(MSSV),
 	HocKy int,
-	NamHoc int,
-	HocPhi int,
-	CapNhat smalldatetime
+	NamHoc nvarchar(20),
+	SoTien int,
+	CapNhat smalldatetime,
+	TinhTrang bit
 )
 go
 
 --drop table LichThi
 --drop table CT_DKHP
 --drop table HocPhan
+--drop table LichThi
+--drop table HocPhi
 
 
 create procedure SinhVien_GetAll
@@ -86,6 +91,11 @@ go
 create procedure Lop_GetAll
 as
 select * from Lop
+go
+
+alter procedure HocPhi_GetAll
+as
+select * from HocPhi where TinhTrang = 'false'
 go
 
 alter procedure SinhVien_InsertUpdateDelete
@@ -127,17 +137,19 @@ alter procedure HocPhan_InsertUpdateDelete
 @Nam int,
 @Khoa nvarchar(100),
 @TongSoTinChi int,
+@TCLT int,
+@TCTH int,
 @GioiHan int,
 @Action int
 as
 if @Action = 0
 begin
-	insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, STC, GioiHan)
-	values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@GioiHan)
+	insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, STC,TCLT,TCTH, GioiHan)
+	values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@TCLT, @TCTH ,@GioiHan)
 end
 else if @Action = 1
 begin
-	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@TongSoTinChi, GioiHan=@GioiHan
+	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@TongSoTinChi,TCLT=@TCLT,TCTH=@TCTH, GioiHan=@GioiHan
 	where MaHP = @MaHP
 end
 else if @Action = 2
@@ -212,6 +224,37 @@ create procedure TaiKhoan_InsertUpdateDelete
 	else if @Action = 2
 	begin
 		update TaiKhoan set Active = 'false'
+		where Id = @Id
+	end
+go
+
+create procedure HocPhi_InsertUpdateDelete
+	@Id int output,
+	@MSSV int,
+	@HocKy int,
+	@NamHoc nvarchar(20),
+	@SoTien int,
+	@CapNhat smalldatetime,
+	@TinhTrang bit,
+	@Action int
+	as
+	if @Action = 0
+	begin
+		if not exists (select * from HocPhi)
+		begin
+			insert into HocPhi(MSSV, HocKy, NamHoc, SoTien, CapNhat, TinhTrang)
+			values (@MSSV, @HocKy, @NamHoc, @SoTien, @CapNhat, @TinhTrang)
+			set @Id = @@IDENTITY
+		end
+	end
+	else if @Action = 1
+	begin
+		update HocPhi set TinhTrang = @TinhTrang 
+		where Id = @Id
+	end
+	else if @Action = 2
+	begin
+		delete from HocPhi
 		where Id = @Id
 	end
 go

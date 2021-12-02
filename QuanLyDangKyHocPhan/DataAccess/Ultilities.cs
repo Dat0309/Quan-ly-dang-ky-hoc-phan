@@ -56,5 +56,8 @@ namespace DataAccess
         public static string DeleteByKey = "DeleteByKey";
         public static string QLChiTietDKHP = "QLChiTietDKHP";
         public static string GetChiTietTheoHocKyVaNam = "GetChiTietTheoHocKyVaNam";
+
+        public static string HocPhi_GetAll = "HocPhi_GetAll";
+        public static string HocPhi_InsertUpdateDelete = "HocPhi_InsertUpdateDelete";
     }
 }

@@ -31,6 +31,8 @@ namespace DataAccess
                 hp.Nam = int.Parse(reader["Nam"].ToString());
                 hp.Khoa = reader["Khoa"].ToString();
                 hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
                 hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
 
                 list.Add(hp);
@@ -55,6 +57,8 @@ namespace DataAccess
             cmd.Parameters.Add("@Nam", SqlDbType.Int).Value = hp.Nam;
             cmd.Parameters.Add("@Khoa", SqlDbType.NVarChar,100).Value = hp.Khoa;
             cmd.Parameters.Add("@STC", SqlDbType.Int).Value = hp.TongSoTC;
+            cmd.Parameters.Add("@TCLT", SqlDbType.Int).Value = hp.TCLT;
+            cmd.Parameters.Add("@TCTH", SqlDbType.Int).Value = hp.TCTH;
             cmd.Parameters.Add("@GioiHan", SqlDbType.Int).Value = hp.GioiHan;
 
             cmd.Parameters.Add("@Action", SqlDbType.Int).Value = action;
@@ -94,6 +98,8 @@ namespace DataAccess
                 hp.Nam = int.Parse(reader["Nam"].ToString());
                 hp.Khoa = reader["Khoa"].ToString();
                 hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
                 hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
 
                 list.Add(hp);
@@ -137,6 +143,8 @@ namespace DataAccess
                 hp.Nam = int.Parse(reader["Nam"].ToString());
                 hp.Khoa = reader["Khoa"].ToString();
                 hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
                 hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
 
                 list.Add(hp);
@@ -177,6 +185,8 @@ namespace DataAccess
                 hp.Nam = int.Parse(reader["Nam"].ToString());
                 hp.Khoa = reader["Khoa"].ToString();
                 hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
                 hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
 
                 list.Add(hp);
@@ -213,6 +223,8 @@ namespace DataAccess
                 hp.Nam = int.Parse(reader["Nam"].ToString());
                 hp.Khoa = reader["Khoa"].ToString();
                 hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
                 hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
 
                 list.Add(hp);
@@ -253,6 +265,8 @@ namespace DataAccess
                 hp.Nam = int.Parse(reader["Nam"].ToString());
                 hp.Khoa = reader["Khoa"].ToString();
                 hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
                 hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
 
                 list.Add(hp);

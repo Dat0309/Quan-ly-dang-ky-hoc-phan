@@ -30,13 +30,16 @@
         {
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvHP = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txtHocPhi = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.txtSoTienBangChu = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,22 +64,23 @@
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Học phí";
             // 
-            // listView1
+            // lvHP
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvHP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 82);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1198, 580);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvHP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvHP.FullRowSelect = true;
+            this.lvHP.GridLines = true;
+            this.lvHP.HideSelection = false;
+            this.lvHP.Location = new System.Drawing.Point(12, 82);
+            this.lvHP.Name = "lvHP";
+            this.lvHP.Size = new System.Drawing.Size(1198, 580);
+            this.lvHP.TabIndex = 14;
+            this.lvHP.UseCompatibleStateImageBehavior = false;
+            this.lvHP.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -108,35 +112,70 @@
             this.gunaLabel2.TabIndex = 15;
             this.gunaLabel2.Text = "Tổng học phí còn nợ:";
             // 
-            // gunaTextBox1
+            // txtHocPhi
             // 
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(197, 672);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(116, 32);
-            this.gunaTextBox1.TabIndex = 16;
+            this.txtHocPhi.BaseColor = System.Drawing.Color.White;
+            this.txtHocPhi.BorderColor = System.Drawing.Color.Silver;
+            this.txtHocPhi.BorderSize = 1;
+            this.txtHocPhi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHocPhi.Enabled = false;
+            this.txtHocPhi.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtHocPhi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtHocPhi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtHocPhi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtHocPhi.Location = new System.Drawing.Point(286, 672);
+            this.txtHocPhi.Name = "txtHocPhi";
+            this.txtHocPhi.PasswordChar = '\0';
+            this.txtHocPhi.ReadOnly = true;
+            this.txtHocPhi.SelectedText = "";
+            this.txtHocPhi.Size = new System.Drawing.Size(116, 32);
+            this.txtHocPhi.TabIndex = 16;
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(197, 676);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(62, 20);
+            this.gunaLabel3.TabIndex = 17;
+            this.gunaLabel3.Text = "Bằng số";
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.Location = new System.Drawing.Point(197, 715);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(71, 20);
+            this.gunaLabel4.TabIndex = 18;
+            this.gunaLabel4.Text = "Bằng chữ";
+            // 
+            // txtSoTienBangChu
+            // 
+            this.txtSoTienBangChu.AutoSize = true;
+            this.txtSoTienBangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTienBangChu.Location = new System.Drawing.Point(282, 713);
+            this.txtSoTienBangChu.Name = "txtSoTienBangChu";
+            this.txtSoTienBangChu.Size = new System.Drawing.Size(0, 22);
+            this.txtSoTienBangChu.TabIndex = 19;
             // 
             // HocPhiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
-            this.Controls.Add(this.gunaTextBox1);
+            this.Controls.Add(this.txtSoTienBangChu);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.gunaLabel3);
+            this.Controls.Add(this.txtHocPhi);
             this.Controls.Add(this.gunaLabel2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvHP);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HocPhiForm";
             this.Text = "HocPhiForm";
+            this.Load += new System.EventHandler(this.HocPhiForm_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -148,12 +187,15 @@
 
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvHP;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txtHocPhi;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel txtSoTienBangChu;
     }
 }

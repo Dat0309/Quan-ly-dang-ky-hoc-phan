@@ -47,7 +47,7 @@ namespace QuanLyDangKyHocPhan
 
         private void btnHocPhi_Click(object sender, EventArgs e)
         {
-            setContent(new HocPhiForm());
+            setContent(new HocPhiForm(userName));
         }
 
         private void btnLichThi_Click(object sender, EventArgs e)

@@ -177,6 +177,7 @@ begin
 end
 go
 
+
 create procedure Quyen_InsertUpdateDelete
 @Id int output,
 @TenQuyen nvarchar(50),
@@ -228,7 +229,7 @@ create procedure TaiKhoan_InsertUpdateDelete
 	end
 go
 
-create procedure HocPhi_InsertUpdateDelete
+alter procedure HocPhi_InsertUpdateDelete
 	@Id int output,
 	@MSSV int,
 	@HocKy int,
@@ -240,17 +241,22 @@ create procedure HocPhi_InsertUpdateDelete
 	as
 	if @Action = 0
 	begin
-		if not exists (select * from HocPhi)
+		if not exists (select * from HocPhi where MSSV = @MSSV and HocKy=@HocKy and NamHoc = @NamHoc)
 		begin
 			insert into HocPhi(MSSV, HocKy, NamHoc, SoTien, CapNhat, TinhTrang)
 			values (@MSSV, @HocKy, @NamHoc, @SoTien, @CapNhat, @TinhTrang)
 			set @Id = @@IDENTITY
 		end
+		else 
+		begin
+			update HocPhi set SoTien = @SoTien
+		where MSSV = @MSSV and HocKy = @HocKy and NamHoc = @NamHoc
+		end
 	end
 	else if @Action = 1
 	begin
-		update HocPhi set TinhTrang = @TinhTrang 
-		where Id = @Id
+		update HocPhi set SoTien = @SoTien
+		where MSSV = @MSSV and HocKy = @HocKy and NamHoc = @NamHoc
 	end
 	else if @Action = 2
 	begin

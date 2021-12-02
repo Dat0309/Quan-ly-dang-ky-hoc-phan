@@ -17,8 +17,10 @@ namespace QuanLyDangKyHocPhan
     public partial class DKNgoaiKHForm : Form
     {
         List<HocPhan> listHP;
+        List<HocPhan> listKQ;
         SinhVien currentSV;
         SinhVienBL svBL = SinhVienBL.getInstance();
+        string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
 
         public DKNgoaiKHForm(string user)
         { 
@@ -27,6 +29,31 @@ namespace QuanLyDangKyHocPhan
         }
 
         #region
+
+        /// <summary>
+        /// Hàm lấy danh sách các môn học đã đăng ký trong học kỳ này
+        /// </summary>
+        private void LoadCurrent_DSKQ()
+        {
+            int soLuongDangKy = 0;
+            HocPhanBL hpBL = HocPhanBL.getInstance();
+            listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
+            lvKQDK.Items.Clear();
+
+            foreach (var hp in listKQ)
+            {
+                soLuongDangKy += hp.TongSoTC;
+                txtQuantity.Text = soLuongDangKy.ToString();
+
+                ListViewItem item = lvKQDK.Items.Add(hp.MaHP.ToString());
+                item.SubItems.Add(hp.TenHP);
+                item.SubItems.Add(hp.LoaiHP);
+                item.SubItems.Add(hp.TongSoTC.ToString());
+                item.SubItems.Add(hp.TCLT.ToString());
+                item.SubItems.Add(hp.TCTH.ToString());
+
+            }
+        }
 
         /// <summary>
         /// Xuất danh sách học phần Ngoài kế hoạch
@@ -108,16 +135,16 @@ namespace QuanLyDangKyHocPhan
                 MessageBox.Show("Chưa chọn học phần để đăng ký, vui lòng chọn học phần");
             else
             {
-                List<HocPhan> kqhp = new List<HocPhan>();
+                listKQ = HocPhanBL.getInstance().GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
                 int i = this.lvHP.CheckedItems.Count - 1;
                 while (i >= 0)
                 {
-                    kqhp.Add(GetHPLV(this.lvHP.CheckedItems[i]));
+                    listKQ.Add(GetHPLV(this.lvHP.CheckedItems[i]));
                     i--;
 
                 }
 
-                foreach (var item in kqhp)
+                foreach (var item in listKQ)
                 {
                     ct.MSSV = currentSV.MSSV;
                     ct.MaHP = item.MaHP;
@@ -244,11 +271,10 @@ namespace QuanLyDangKyHocPhan
             int result = InsertChiTietDK();
             if (result > 0)
             {
+                AddHocPhi();
                 MessageBox.Show("Đăng ký học phần thành công !!");
                 LoadDSHP();
-                AddHocPhi();
                 cbbHK.Enabled = false;
-                btnDangKy.Enabled = false;
             }
             else MessageBox.Show("Thêm dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");
         }
@@ -257,6 +283,7 @@ namespace QuanLyDangKyHocPhan
         {
             if (cbbHK.Text == "") return;
             LoadDSHP();
+            LoadCurrent_DSKQ();
         }
 
         private void DKNgoaiKHForm_Load(object sender, EventArgs e)
@@ -266,14 +293,14 @@ namespace QuanLyDangKyHocPhan
 
         private void lvHP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            List<HocPhan> kqhp = new List<HocPhan>();
+            listKQ = HocPhanBL.getInstance().GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             int i = this.lvHP.CheckedItems.Count - 1;
             while (i >= 0)
             {
-                kqhp.Add(GetHPLV(this.lvHP.CheckedItems[i]));
+                listKQ.Add(GetHPLV(this.lvHP.CheckedItems[i]));
                 i--;
             }
-            LoadKQHP(kqhp);
+            LoadKQHP(listKQ);
         }
 
         private void btnXuat_Click(object sender, EventArgs e)

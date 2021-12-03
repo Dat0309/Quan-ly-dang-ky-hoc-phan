@@ -229,6 +229,13 @@ create procedure TaiKhoan_InsertUpdateDelete
 	end
 go
 
+alter procedure UpdatePassword
+@UserName nvarchar(100),
+@Password nvarchar(100)
+as
+update TaiKhoan set Password = @Password
+		where UserName = @UserName
+
 alter procedure HocPhi_InsertUpdateDelete
 	@Id int output,
 	@MSSV int,

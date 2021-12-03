@@ -36,7 +36,7 @@ create table HocPhan
 	HocKy int,
 	Nam int,
 	Khoa nvarchar(100),
-	TSTC int,
+	STC int,
 	GioiHan int
 )
 go

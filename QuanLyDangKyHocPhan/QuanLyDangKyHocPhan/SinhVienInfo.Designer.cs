@@ -46,9 +46,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.rtxtDiachi = new System.Windows.Forms.RichTextBox();
+            this.txtDiachi = new System.Windows.Forms.RichTextBox();
             this.cbbKhoa = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbbLop = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnThem
@@ -65,7 +66,7 @@
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
             this.btnThem.Size = new System.Drawing.Size(119, 45);
             this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Xác nhận";
+            this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtMSSV
@@ -263,13 +264,13 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Khoa:";
             // 
-            // rtxtDiachi
+            // txtDiachi
             // 
-            this.rtxtDiachi.Location = new System.Drawing.Point(134, 218);
-            this.rtxtDiachi.Name = "rtxtDiachi";
-            this.rtxtDiachi.Size = new System.Drawing.Size(589, 141);
-            this.rtxtDiachi.TabIndex = 9;
-            this.rtxtDiachi.Text = "";
+            this.txtDiachi.Location = new System.Drawing.Point(134, 218);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(589, 141);
+            this.txtDiachi.TabIndex = 9;
+            this.txtDiachi.Text = "";
             // 
             // cbbKhoa
             // 
@@ -316,15 +317,34 @@
             this.cbbLop.Size = new System.Drawing.Size(192, 36);
             this.cbbLop.TabIndex = 10;
             // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.BorderColor = System.Drawing.Color.White;
+            this.btnCapNhat.BorderRadius = 18;
+            this.btnCapNhat.CheckedState.Parent = this.btnCapNhat;
+            this.btnCapNhat.CustomImages.Parent = this.btnCapNhat;
+            this.btnCapNhat.FillColor = System.Drawing.Color.Teal;
+            this.btnCapNhat.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.HoverState.Parent = this.btnCapNhat;
+            this.btnCapNhat.Location = new System.Drawing.Point(479, 376);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.ShadowDecoration.Parent = this.btnCapNhat;
+            this.btnCapNhat.Size = new System.Drawing.Size(119, 45);
+            this.btnCapNhat.TabIndex = 11;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
             // SinhVienInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(735, 433);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.cbbKhoa);
-            this.Controls.Add(this.rtxtDiachi);
+            this.Controls.Add(this.txtDiachi);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -368,8 +388,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox rtxtDiachi;
+        private System.Windows.Forms.RichTextBox txtDiachi;
         private Guna.UI2.WinForms.Guna2ComboBox cbbKhoa;
         private Guna.UI2.WinForms.Guna2ComboBox cbbLop;
+        private Guna.UI2.WinForms.Guna2Button btnCapNhat;
     }
 }

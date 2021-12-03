@@ -17,7 +17,7 @@ namespace QuanLyDangKyHocPhan
         SinhVienBL svBL = SinhVienBL.getInstance();
         List<SinhVien> listSV ;
         SinhVien svcurrent;
-       
+        private DataTable BangSV;
         public SinhVienForm()
         {
             InitializeComponent();
@@ -75,6 +75,49 @@ namespace QuanLyDangKyHocPhan
                     LoadSinhVienToListView();
                 }
                 else MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void lvSV_DoubleClick(object sender, EventArgs e)
+        {
+            var svInFo = new SinhVienInfo();
+            svcurrent = new SinhVien();
+            ListViewItem item = lvSV.SelectedItems[0];
+            svcurrent.MSSV = int.Parse(item.SubItems[0].Text);
+            svcurrent.HoLot = item.SubItems[1].Text;
+            svcurrent.Ten = item.SubItems[2].Text;
+            svcurrent.GioiTinh = item.SubItems[3].Text == "Nam" ? true : false;
+            svcurrent.NgaySinh = item.SubItems[4].Text;
+            svcurrent.TenLop = item.SubItems[5].Text;
+            svcurrent.Khoa = item.SubItems[6].Text;
+            svcurrent.DiaChi = item.SubItems[7].Text;
+            svInFo.LoadSinhVien(svcurrent);
+            if (svInFo.ShowDialog() == DialogResult.OK)
+            {
+                LoadSinhVienToListView();
+            }
+        }
+        private void LoadSinhVien(string key = "")
+        {
+            listSV = svBL.Find(key);
+            lvSV.Items.Clear();
+            foreach (var sv in listSV)
+            {
+                ListViewItem item = lvSV.Items.Add(sv.MSSV.ToString());
+                item.SubItems.Add(sv.HoLot);
+                item.SubItems.Add(sv.Ten);
+                item.SubItems.Add(sv.GioiTinh == true ? "Nam" : "Nữ");
+                item.SubItems.Add(sv.NgaySinh);
+                item.SubItems.Add(sv.TenLop);
+                item.SubItems.Add(sv.Khoa);
+                item.SubItems.Add(sv.DiaChi);
+            }
+        }
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                LoadSinhVien(txtSearch.Text.ToString());
             }
         }
     }

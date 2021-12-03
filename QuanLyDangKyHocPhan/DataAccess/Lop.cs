@@ -12,16 +12,12 @@ namespace DataAccess
     public class Lop
     {
         /// <summary>
-        /// Mã lóp
-        /// </summary>
-        public int MaLop { get; set; }
-        /// <summary>
         /// Tên lóp
         /// </summary>
         public string TenLop { get; set; }
         /// <summary>
-        /// Mã khoa
+        ///Ten Khoa
         /// </summary>
-        public int MaKhoa { get; set; }
+        public string TenKhoa { get; set; }
     }
 }

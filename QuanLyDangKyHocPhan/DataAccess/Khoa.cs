@@ -12,10 +12,6 @@ namespace DataAccess
     public class Khoa
     {
         /// <summary>
-        /// mã khoa
-        /// </summary>
-        public int MaKhoa { get; set; }
-        /// <summary>
         /// tên khoa
         /// </summary>
         public string TenKhoa { get; set; }

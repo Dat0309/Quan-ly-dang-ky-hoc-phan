@@ -26,7 +26,6 @@ namespace DataAccess
             while (reader.Read())
             {
                 Khoa k = new Khoa();
-                k.MaKhoa = int.Parse(reader["MaKhoa"].ToString());
                 k.TenKhoa = reader["TenKhoa"].ToString();
                 list.Add(k);
             }

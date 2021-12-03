@@ -34,7 +34,7 @@ namespace BusinessLogic
             List<Lop> result = new List<Lop> ();
             foreach(var lop in list)
             {
-                if (lop.MaKhoa.ToString().CompareTo(key.Trim())==0)
+                if (lop.TenKhoa.ToString().CompareTo(key.Trim())==0)
                     result.Add(lop);
             }
             return result;

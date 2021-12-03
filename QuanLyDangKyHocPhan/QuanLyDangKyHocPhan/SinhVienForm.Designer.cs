@@ -65,6 +65,7 @@
             this.txtSearch.Size = new System.Drawing.Size(295, 40);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextOffsetX = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // gunaPanel1
             // 
@@ -153,6 +154,7 @@
             this.lvSV.TabIndex = 4;
             this.lvSV.UseCompatibleStateImageBehavior = false;
             this.lvSV.View = System.Windows.Forms.View.Details;
+            this.lvSV.DoubleClick += new System.EventHandler(this.lvSV_DoubleClick);
             // 
             // columnHeader1
             // 

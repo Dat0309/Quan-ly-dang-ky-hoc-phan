@@ -26,9 +26,8 @@ namespace DataAccess
             while (reader.Read())
             {
                 Lop k = new Lop();
-                k.MaLop = int.Parse(reader["MaLop"].ToString());
                 k.TenLop = reader["TenLop"].ToString();
-                k.MaKhoa = int.Parse(reader["MaKhoa"].ToString());
+                k.TenKhoa = reader["TenKhoa"].ToString();
                 list.Add(k);
             }
             conn.Close();

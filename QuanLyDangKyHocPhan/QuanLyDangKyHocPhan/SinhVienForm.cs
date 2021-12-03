@@ -50,6 +50,7 @@ namespace QuanLyDangKyHocPhan
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var svInFo = new SinhVienInfo();
+            svInFo.LoadStatusAdd();
             if (svInFo.ShowDialog() == DialogResult.OK)
             {
                 LoadSinhVienToListView();
@@ -92,6 +93,7 @@ namespace QuanLyDangKyHocPhan
             svcurrent.Khoa = item.SubItems[6].Text;
             svcurrent.DiaChi = item.SubItems[7].Text;
             svInFo.LoadSinhVien(svcurrent);
+            svInFo.LoadStatusUpdate();
             if (svInFo.ShowDialog() == DialogResult.OK)
             {
                 LoadSinhVienToListView();

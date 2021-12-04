@@ -53,6 +53,7 @@
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.txtWanning = new Guna.UI.WinForms.GunaLabel();
             this.gunaGroupBox1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -329,11 +330,24 @@
             this.cbbHK.TabIndex = 16;
             this.cbbHK.SelectedIndexChanged += new System.EventHandler(this.cbbHK_SelectedIndexChanged);
             // 
+            // txtWanning
+            // 
+            this.txtWanning.AutoSize = true;
+            this.txtWanning.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWanning.ForeColor = System.Drawing.Color.Red;
+            this.txtWanning.Location = new System.Drawing.Point(22, 446);
+            this.txtWanning.Name = "txtWanning";
+            this.txtWanning.Size = new System.Drawing.Size(486, 23);
+            this.txtWanning.TabIndex = 18;
+            this.txtWanning.Text = "Lưu ý sinh viên không được đăng ký quá 25 tính chỉ/học kỳ";
+            this.txtWanning.Visible = false;
+            // 
             // DKNgoaiKHForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 751);
+            this.Controls.Add(this.txtWanning);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.gunaGroupBox1);
@@ -380,5 +394,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
+        private Guna.UI.WinForms.GunaLabel txtWanning;
     }
 }

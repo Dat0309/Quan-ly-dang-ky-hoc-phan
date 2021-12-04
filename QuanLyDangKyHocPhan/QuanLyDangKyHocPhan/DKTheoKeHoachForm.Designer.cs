@@ -53,6 +53,7 @@
             this.cbbHK = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.txtWanning = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -229,6 +230,7 @@
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(51, 27);
             this.txtQuantity.TabIndex = 2;
+            this.txtQuantity.Text = "0";
             // 
             // gunaLabel2
             // 
@@ -329,11 +331,24 @@
             this.gunaLabel4.TabIndex = 13;
             this.gunaLabel4.Text = "Học kỳ";
             // 
+            // txtWanning
+            // 
+            this.txtWanning.AutoSize = true;
+            this.txtWanning.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWanning.ForeColor = System.Drawing.Color.Red;
+            this.txtWanning.Location = new System.Drawing.Point(22, 467);
+            this.txtWanning.Name = "txtWanning";
+            this.txtWanning.Size = new System.Drawing.Size(486, 23);
+            this.txtWanning.TabIndex = 14;
+            this.txtWanning.Text = "Lưu ý sinh viên không được đăng ký quá 25 tính chỉ/học kỳ";
+            this.txtWanning.Visible = false;
+            // 
             // DKTheoKeHoachForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1395, 898);
+            this.Controls.Add(this.txtWanning);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.gunaGroupBox1);
@@ -380,5 +395,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private Guna.UI.WinForms.GunaLabel txtWanning;
     }
 }

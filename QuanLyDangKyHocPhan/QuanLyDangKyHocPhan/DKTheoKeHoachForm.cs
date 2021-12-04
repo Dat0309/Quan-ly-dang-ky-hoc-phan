@@ -104,20 +104,25 @@ namespace QuanLyDangKyHocPhan
 
             foreach (var hp in hocphans)
             {
-                ListViewItem item = lvKQDK.Items.Add(hp.MaHP);
-                item.SubItems.Add(hp.TenHP);
-                item.SubItems.Add(hp.LoaiHP);
-                item.SubItems.Add(hp.TongSoTC.ToString());
-                item.SubItems.Add(hp.TCLT.ToString());
-                item.SubItems.Add(hp.TCTH.ToString());
+                soLuongDangKy += hp.TongSoTC;
+                txtQuantity.Text = soLuongDangKy.ToString();
 
                 if (soLuongDangKy <= 25)
                 {
-                    soLuongDangKy += hp.TongSoTC;
-                    txtQuantity.Text = soLuongDangKy.ToString();
+                    txtWanning.Visible = false;
+                    btnDangKy.Enabled = true;
+                    ListViewItem item = lvKQDK.Items.Add(hp.MaHP);
+                    item.SubItems.Add(hp.TenHP);
+                    item.SubItems.Add(hp.LoaiHP);
+                    item.SubItems.Add(hp.TongSoTC.ToString());
+                    item.SubItems.Add(hp.TCLT.ToString());
+                    item.SubItems.Add(hp.TCTH.ToString());
                 }
                 else if (soLuongDangKy > 25)
-                    MessageBox.Show("Số lượng đăng ký không được quá 25 tín chỉ");
+                {
+                    txtWanning.Visible = true;
+                    btnDangKy.Enabled = false;
+                }
             }
         }
 
@@ -336,10 +341,10 @@ namespace QuanLyDangKyHocPhan
             }
 
             DialogResult dlg = saveFileDialog1.ShowDialog();
-            if(dlg == DialogResult.OK)
+            if (dlg == DialogResult.OK)
             {
                 string path = string.Format(@"{0}", saveFileDialog1.FileName);
-                WriteToExcel(lvKQDK,kqhp,path);
+                WriteToExcel(lvKQDK, kqhp, path);
                 MessageBox.Show("Xuất phiếu đăng ký thành công!");
             }
         }

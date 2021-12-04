@@ -30,6 +30,7 @@ namespace QuanLyDangKyHocPhan
             cbbKhoa.ValueMember = "TenKhoa";
             cbbKhoa.DisplayMember = "TenKhoa";
         }
+
         private void btnHuy_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn thực hiện thao tác này?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
@@ -62,6 +63,7 @@ namespace QuanLyDangKyHocPhan
             }
             return -1;
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             int result = InsertHocPhan();
@@ -109,13 +111,15 @@ namespace QuanLyDangKyHocPhan
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            int result = UpdateHocPhan();
-            if (result > 0)
             {
-                MessageBox.Show("Cập nhật học phần thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult = DialogResult.OK;
+                int result = UpdateHocPhan();
+                if (result > 0)
+                {
+                    MessageBox.Show("Cập nhật học phần thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult = DialogResult.OK;
+                }
+                else MessageBox.Show("Cập nhật thất bại, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else MessageBox.Show("Cập nhật thất bại, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public void LoadHocPhan(HocPhan hocPhan)
         {

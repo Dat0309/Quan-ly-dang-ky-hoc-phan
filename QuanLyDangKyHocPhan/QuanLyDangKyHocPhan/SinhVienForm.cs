@@ -194,10 +194,9 @@ namespace QuanLyDangKyHocPhan
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearch.Text != "")
-            {
-                LoadSinhVien(txtSearch.Text.ToString());
-            }
+            if (txtSearch.Text == "")
+                LoadSinhVienToListView();
+            LoadSinhVien(txtSearch.Text.ToString());
         }
 
         private void btnAddFromFile_Click(object sender, EventArgs e)

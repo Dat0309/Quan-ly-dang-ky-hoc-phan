@@ -62,3 +62,17 @@ E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.csproj.CopyComplete
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\obj\Debug\net472\BusinessLogic.pdb
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\Microsoft.Extensions.Primitives.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Buffers.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Memory.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Numerics.Vectors.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.ValueTuple.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\Microsoft.Extensions.Primitives.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Buffers.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Memory.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Numerics.Vectors.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.ValueTuple.dll

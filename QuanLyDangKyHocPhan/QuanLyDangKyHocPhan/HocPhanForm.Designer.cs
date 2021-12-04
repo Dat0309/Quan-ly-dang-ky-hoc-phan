@@ -30,7 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.btnThemExcel = new Guna.UI.WinForms.GunaButton();
             this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.lvHP = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,14 +48,15 @@
             this.sửaSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
-            this.btnReset = new Guna.UI.WinForms.GunaButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gunaPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.Controls.Add(this.gunaButton1);
+            this.gunaPanel1.Controls.Add(this.btnSave);
+            this.gunaPanel1.Controls.Add(this.btnThemExcel);
             this.gunaPanel1.Controls.Add(this.txtSearch);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
@@ -62,31 +64,60 @@
             this.gunaPanel1.Size = new System.Drawing.Size(1222, 64);
             this.gunaPanel1.TabIndex = 5;
             // 
-            // gunaButton1
+            // btnSave
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.DimGray;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(12, 10);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 10;
-            this.gunaButton1.Size = new System.Drawing.Size(122, 42);
-            this.gunaButton1.TabIndex = 2;
-            this.gunaButton1.Text = "Thêm từ file";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor = System.Drawing.Color.Green;
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = null;
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.Location = new System.Drawing.Point(140, 8);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = null;
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 10;
+            this.btnSave.Size = new System.Drawing.Size(84, 42);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Thêm";
+            this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnThemExcel
+            // 
+            this.btnThemExcel.AnimationHoverSpeed = 0.07F;
+            this.btnThemExcel.AnimationSpeed = 0.03F;
+            this.btnThemExcel.BackColor = System.Drawing.Color.Transparent;
+            this.btnThemExcel.BaseColor = System.Drawing.Color.DimGray;
+            this.btnThemExcel.BorderColor = System.Drawing.Color.Black;
+            this.btnThemExcel.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnThemExcel.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThemExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemExcel.ForeColor = System.Drawing.Color.White;
+            this.btnThemExcel.Image = null;
+            this.btnThemExcel.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThemExcel.Location = new System.Drawing.Point(12, 10);
+            this.btnThemExcel.Name = "btnThemExcel";
+            this.btnThemExcel.OnHoverBaseColor = System.Drawing.Color.Black;
+            this.btnThemExcel.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThemExcel.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThemExcel.OnHoverImage = null;
+            this.btnThemExcel.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThemExcel.Radius = 10;
+            this.btnThemExcel.Size = new System.Drawing.Size(122, 42);
+            this.btnThemExcel.TabIndex = 2;
+            this.btnThemExcel.Text = "Thêm từ file";
+            this.btnThemExcel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThemExcel.Click += new System.EventHandler(this.btnThemExcel_Click);
             // 
             // txtSearch
             // 
@@ -259,40 +290,15 @@
             this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
-            // btnReset
+            // openFileDialog1
             // 
-            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReset.AnimationHoverSpeed = 0.07F;
-            this.btnReset.AnimationSpeed = 0.03F;
-            this.btnReset.BackColor = System.Drawing.Color.Transparent;
-            this.btnReset.BaseColor = System.Drawing.Color.Green;
-            this.btnReset.BorderColor = System.Drawing.Color.Black;
-            this.btnReset.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnReset.FocusedColor = System.Drawing.Color.Empty;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Image = null;
-            this.btnReset.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnReset.Location = new System.Drawing.Point(1126, 66);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
-            this.btnReset.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnReset.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnReset.OnHoverImage = null;
-            this.btnReset.OnPressedColor = System.Drawing.Color.Black;
-            this.btnReset.Radius = 10;
-            this.btnReset.Size = new System.Drawing.Size(84, 42);
-            this.btnReset.TabIndex = 9;
-            this.btnReset.Text = "Reload";
-            this.btnReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // HocPhanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.lvHP);
             this.Controls.Add(this.gunaButton2);
@@ -310,7 +316,7 @@
         #endregion
 
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnThemExcel;
         private Guna.UI.WinForms.GunaTextBox txtSearch;
         private System.Windows.Forms.ListView lvHP;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -327,6 +333,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sửaSinhViênToolStripMenuItem;
-        private Guna.UI.WinForms.GunaButton btnReset;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Guna.UI.WinForms.GunaButton btnSave;
     }
 }

@@ -34,5 +34,8 @@ namespace DataAccess
 
         public static string ChiTietDK_GetAll = "ChiTietDK_GetAll";
         public static string CTDK_InsertUpdateDelete = "CTDK_InsertUpdateDelete";
+
+        public static string Khoa_GetAll = "Khoa_GetAll";
+
     }
 }

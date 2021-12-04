@@ -3,6 +3,12 @@ go
 use QLDKHP
 go
 
+create table Khoa
+(
+	MaKhoa int primary key identity(1,1),
+	TenKhoa nvarchar (100)
+)
+
 Create table SinhVien
 (
 	MSSV int primary key,
@@ -16,15 +22,21 @@ Create table SinhVien
 )
 go
 
+<<<<<<< Updated upstream
 create table HocPhan
+=======
+>>>>>>> Stashed changes
+create table HocPhan 
 (
 	MaHP nvarchar(20) primary key,
 	TenHP nvarchar(100),
 	LoaiHP nvarchar(20),
 	HocKy int,
 	Nam int,
-	Khoa nvarchar(100),
-	TSTC int,
+	Khoa nvarchar(100),  
+	STC int,
+	TCLT int,
+	TCTH int,
 	GioiHan int
 )
 go
@@ -144,18 +156,20 @@ create procedure HocPhan_InsertUpdateDelete
 	@HocKy int,
 	@Nam int,
 	@Khoa nvarchar(100),
-	@TongSoTinChi int,
+	@STC int,
+	@TCLT int,
+	@TCTH int,
 	@GioiHan int,
 	@Action int
 	as
 	if @Action = 0
 	begin
-		insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, TSTC, GioiHan)
-		values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@GioiHan)
+		insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam, Khoa, STC, TCLT, TCTH, GioiHan)
+		values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa, @STC, @TCLT, @TCTH,@GioiHan)
 	end
 	else if @Action = 1
 	begin
-		update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,TSTC=@TongSoTinChi, GioiHan=@GioiHan
+		update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@STC, GioiHan=@GioiHan
 		where MaHP = @MaHP
 	end
 	else if @Action = 2
@@ -215,3 +229,7 @@ create procedure TaiKhoan_InsertUpdateDelete
 	end
 go
 
+create procedure Khoa_GetAll
+as
+select * from Khoa
+go

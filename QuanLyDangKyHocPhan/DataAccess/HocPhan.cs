@@ -46,6 +46,8 @@ namespace DataAccess
         /// <summary>
         /// Giới hạn đăng đăng ký
         /// </summary>
+        public int TCLT { get; set; }
+        public int TCTH { get; set; }
         public int GioiHan { get; set; }
     }
 }

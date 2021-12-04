@@ -133,6 +133,12 @@
     <Compile Include="HocPhanForm.Designer.cs">
       <DependentUpon>HocPhanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HocPhanInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HocPhanInfo.Designer.cs">
+      <DependentUpon>HocPhanInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="HocPhiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HocPhanForm.resx">
       <DependentUpon>HocPhanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HocPhanInfo.resx">
+      <DependentUpon>HocPhanInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HocPhiForm.resx">
       <DependentUpon>HocPhiForm.cs</DependentUpon>

@@ -37,8 +37,6 @@ HocKy int,
 NamHoc nvarchar(20),
 primary key (MSSV,MaHP)
 )
-go
-
 create table HocPhi
 (
 	id int primary key identity(1,1),
@@ -51,10 +49,10 @@ create table HocPhi
 )
 go
 
+--drop table SinhVien
 --drop table LichThi
 --drop table CT_DKHP
 --drop table HocPhan
---drop table LichThi
 --drop table HocPhi
 
 
@@ -111,10 +109,13 @@ alter procedure SinhVien_InsertUpdateDelete
 as
 if @Action = 0
 begin
-	insert into SinhVien (MSSV,HoLot,Ten,GioiTinh,NgaySinh,TenLop,Khoa,DiaChi)
-	values (@MSSV, @HoLot,@Ten,@GioiTinh,@NgaySinh,@TenLop,@Khoa,@Diachi)
-	insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate,FullName)
-	values (@MSSV, @MSSV, 'true', 2, GETDATE(),@HoLot + ' ' + @Ten)
+	if not exists (select * from SinhVien where MSSV = @MSSV)
+	begin
+		insert into SinhVien (MSSV,HoLot,Ten,GioiTinh,NgaySinh,TenLop,Khoa,DiaChi)
+		values (@MSSV, @HoLot,@Ten,@GioiTinh,@NgaySinh,@TenLop,@Khoa,@Diachi)
+		insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate,FullName)
+		values (@MSSV, @MSSV, 'true', 2, GETDATE(),@HoLot + ' ' + @Ten)
+	end
 end
 else if @Action = 1
 begin
@@ -400,13 +401,14 @@ order by a.MaHP
 
 create table Khoa
 (
-	MaKhoa int primary key identity(1,1),
-	TenKhoa nvarchar(100)
+	TenKhoa nvarchar(100) primary key
 )
 
 create table Lop
 (
-	MaLop int primary key identity(1,1),
-	TenLop nvarchar(20),
-	MaKhoa int references Khoa(MaKhoa)
+	TenLop nvarchar(20) primary key,
+	TenKhoa nvarchar(100) references Khoa(TenKhoa)
 )
+
+drop table Khoa
+drop table Lop

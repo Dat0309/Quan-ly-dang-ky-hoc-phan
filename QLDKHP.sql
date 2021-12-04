@@ -3,6 +3,12 @@ go
 use QLDKHP
 go
 
+create table Khoa
+(
+	MaKhoa int primary key identity(1,1),
+	TenKhoa nvarchar (100)
+)
+
 Create table SinhVien
 (
 	MSSV int primary key,
@@ -15,28 +21,22 @@ Create table SinhVien
 	Diachi nvarchar(1000)
 )
 go
-Create table Khoa
-(
-	MaKhoa int primary key identity(1,1),
-	TenKhoa nvarchar(100),
-)
-go
-create table Lop
-(
-	MaLop int primary key identity(1,1),
-	TenLop nvarchar(20),
-	MaKhoa int references Khoa(MaKhoa)
-)
-go
+
+<<<<<<< Updated upstream
 create table HocPhan
+=======
+>>>>>>> Stashed changes
+create table HocPhan 
 (
 	MaHP nvarchar(20) primary key,
 	TenHP nvarchar(100),
 	LoaiHP nvarchar(20),
 	HocKy int,
 	Nam int,
-	Khoa nvarchar(100),
+	Khoa nvarchar(100),  
 	STC int,
+	TCLT int,
+	TCTH int,
 	GioiHan int
 )
 go
@@ -102,14 +102,6 @@ create procedure SinhVien_GetAll
 as
 select * from SinhVien
 go
-create procedure Khoa_GetAll
-as
-select * from Khoa
-go
-create procedure Lop_GetAll
-as
-select * from Lop
-go
 create procedure HocPhan_GetAll
 as 
 select * from HocPhan
@@ -130,7 +122,7 @@ as
 select * from CT_DKHP
 go
 
-alter procedure SinhVien_InsertUpdateDelete
+create procedure SinhVien_InsertUpdateDelete
 	@MSSV int output,
 	@HoLot nvarchar(100),
 	@Ten nvarchar(50),
@@ -153,8 +145,6 @@ alter procedure SinhVien_InsertUpdateDelete
 	end
 	else if @Action = 2
 	begin
-		delete from HocPhi where MSSV = @MSSV
-		delete from CT_DKHP where MSSV = @MSSV
 		delete from SinhVien where MSSV = @MSSV
 	end
 go
@@ -166,18 +156,20 @@ create procedure HocPhan_InsertUpdateDelete
 	@HocKy int,
 	@Nam int,
 	@Khoa nvarchar(100),
-	@TongSoTinChi int,
+	@STC int,
+	@TCLT int,
+	@TCTH int,
 	@GioiHan int,
 	@Action int
 	as
 	if @Action = 0
 	begin
-		insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, TSTC, GioiHan)
-		values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@GioiHan)
+		insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam, Khoa, STC, TCLT, TCTH, GioiHan)
+		values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa, @STC, @TCLT, @TCTH,@GioiHan)
 	end
 	else if @Action = 1
 	begin
-		update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,TSTC=@TongSoTinChi, GioiHan=@GioiHan
+		update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@STC, GioiHan=@GioiHan
 		where MaHP = @MaHP
 	end
 	else if @Action = 2
@@ -237,3 +229,7 @@ create procedure TaiKhoan_InsertUpdateDelete
 	end
 go
 
+create procedure Khoa_GetAll
+as
+select * from Khoa
+go

@@ -28,25 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
+            this.lvHP = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.sửaSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
+            this.btnReset = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
             this.gunaPanel1.Controls.Add(this.gunaButton1);
-            this.gunaPanel1.Controls.Add(this.gunaTextBox1);
+            this.gunaPanel1.Controls.Add(this.txtSearch);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
@@ -79,48 +88,55 @@
             this.gunaButton1.Text = "Thêm từ file";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaTextBox1
+            // txtSearch
             // 
-            this.gunaTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(915, 10);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 18;
-            this.gunaTextBox1.SelectedText = "";
-            this.gunaTextBox1.Size = new System.Drawing.Size(295, 40);
-            this.gunaTextBox1.TabIndex = 1;
-            this.gunaTextBox1.TextOffsetX = 8;
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BaseColor = System.Drawing.Color.White;
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSearch.FocusedBorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Location = new System.Drawing.Point(915, 10);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.Radius = 18;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(295, 40);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextOffsetX = 8;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // listView1
+            // lvHP
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lvHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvHP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 114);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1198, 574);
-            this.listView1.TabIndex = 8;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.lvHP.ContextMenuStrip = this.contextMenuStrip1;
+            this.lvHP.FullRowSelect = true;
+            this.lvHP.GridLines = true;
+            this.lvHP.HideSelection = false;
+            this.lvHP.Location = new System.Drawing.Point(12, 114);
+            this.lvHP.MultiSelect = false;
+            this.lvHP.Name = "lvHP";
+            this.lvHP.Size = new System.Drawing.Size(1198, 574);
+            this.lvHP.TabIndex = 8;
+            this.lvHP.UseCompatibleStateImageBehavior = false;
+            this.lvHP.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -131,6 +147,61 @@
             this.columnHeader2.Text = "Tên học phần";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 250;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Loại học phần";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Học Kỳ";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Năm";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 120;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Tổng số tín chỉ";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 120;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "TCLT";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "TCTH";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Khoa";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Giới hạn";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sửaSinhViênToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 28);
+            // 
+            // sửaSinhViênToolStripMenuItem
+            // 
+            this.sửaSinhViênToolStripMenuItem.Name = "sửaSinhViênToolStripMenuItem";
+            this.sửaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.sửaSinhViênToolStripMenuItem.Text = "Sửa sinh viên";
+            this.sửaSinhViênToolStripMenuItem.Click += new System.EventHandler(this.sửaSinhViênToolStripMenuItem_Click);
             // 
             // gunaButton2
             // 
@@ -158,6 +229,7 @@
             this.gunaButton2.TabIndex = 6;
             this.gunaButton2.Text = "Xoá";
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click_1);
             // 
             // gunaButton3
             // 
@@ -185,44 +257,52 @@
             this.gunaButton3.TabIndex = 7;
             this.gunaButton3.Text = "Thêm";
             this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
-            // columnHeader3
+            // btnReset
             // 
-            this.columnHeader3.Text = "Loại học phần";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tín chỉ lý thuyết";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 120;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Tín chỉ thực hành";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 120;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Tổng số tín chỉ";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 120;
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.AnimationHoverSpeed = 0.07F;
+            this.btnReset.AnimationSpeed = 0.03F;
+            this.btnReset.BackColor = System.Drawing.Color.Transparent;
+            this.btnReset.BaseColor = System.Drawing.Color.Green;
+            this.btnReset.BorderColor = System.Drawing.Color.Black;
+            this.btnReset.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnReset.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Image = null;
+            this.btnReset.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnReset.Location = new System.Drawing.Point(1126, 66);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
+            this.btnReset.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReset.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReset.OnHoverImage = null;
+            this.btnReset.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReset.Radius = 10;
+            this.btnReset.Size = new System.Drawing.Size(84, 42);
+            this.btnReset.TabIndex = 9;
+            this.btnReset.Text = "Reload";
+            this.btnReset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // HocPhanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.gunaPanel1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvHP);
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.gunaButton3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HocPhanForm";
             this.Text = "HocPhanForm";
+            this.Load += new System.EventHandler(this.HocPhanForm_Load);
             this.gunaPanel1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -231,8 +311,8 @@
 
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
-        private System.Windows.Forms.ListView listView1;
+        private Guna.UI.WinForms.GunaTextBox txtSearch;
+        private System.Windows.Forms.ListView lvHP;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private Guna.UI.WinForms.GunaButton gunaButton2;
@@ -241,5 +321,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem sửaSinhViênToolStripMenuItem;
+        private Guna.UI.WinForms.GunaButton btnReset;
     }
 }

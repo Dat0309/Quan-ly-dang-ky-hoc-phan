@@ -118,8 +118,8 @@ namespace QuanLyDangKyHocPhan
             rdbtnNam.Checked = sv.GioiTinh ? true : false;
             rdbtnNu.Checked = sv.GioiTinh == false ? true : false;
             dtpNgaySinh.Text = sv.NgaySinh;
-            cbbLop.Text = sv.TenLop;
             cbbKhoa.Text = sv.Khoa;
+            cbbLop.Text = sv.TenLop;
             txtDiachi.Text = sv.DiaChi;
             cbbKhoa.Enabled = false;
             cbbLop.Enabled = false;

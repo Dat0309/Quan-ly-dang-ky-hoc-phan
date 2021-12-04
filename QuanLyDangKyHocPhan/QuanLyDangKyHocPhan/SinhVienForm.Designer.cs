@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.toolbar = new Guna.UI.WinForms.GunaPanel();
+            this.btnSave = new Guna.UI.WinForms.GunaButton();
             this.btnAddFromFile = new Guna.UI.WinForms.GunaButton();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
             this.lvSV = new System.Windows.Forms.ListView();
@@ -42,7 +43,8 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.gunaPanel1.SuspendLayout();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -67,15 +69,44 @@
             this.txtSearch.TextOffsetX = 8;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // gunaPanel1
+            // toolbar
             // 
-            this.gunaPanel1.Controls.Add(this.btnAddFromFile);
-            this.gunaPanel1.Controls.Add(this.txtSearch);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1204, 64);
-            this.gunaPanel1.TabIndex = 2;
+            this.toolbar.Controls.Add(this.btnSave);
+            this.toolbar.Controls.Add(this.btnAddFromFile);
+            this.toolbar.Controls.Add(this.txtSearch);
+            this.toolbar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.toolbar.Location = new System.Drawing.Point(0, 0);
+            this.toolbar.Name = "toolbar";
+            this.toolbar.Size = new System.Drawing.Size(1204, 64);
+            this.toolbar.TabIndex = 2;
+            // 
+            // btnSave
+            // 
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor = System.Drawing.Color.Firebrick;
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.Enabled = false;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = null;
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.Location = new System.Drawing.Point(151, 10);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = null;
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 10;
+            this.btnSave.Size = new System.Drawing.Size(84, 42);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAddFromFile
             // 
@@ -102,6 +133,7 @@
             this.btnAddFromFile.TabIndex = 2;
             this.btnAddFromFile.Text = "Thêm từ file";
             this.btnAddFromFile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAddFromFile.Click += new System.EventHandler(this.btnAddFromFile_Click);
             // 
             // btnDelete
             // 
@@ -229,6 +261,10 @@
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // SinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,12 +273,12 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lvSV);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.gunaPanel1);
+            this.Controls.Add(this.toolbar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SinhVienForm";
             this.Text = "SinhVienForm";
             this.Load += new System.EventHandler(this.SinhVienForm_Load);
-            this.gunaPanel1.ResumeLayout(false);
+            this.toolbar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -250,7 +286,7 @@
         #endregion
 
         private Guna.UI.WinForms.GunaTextBox txtSearch;
-        private Guna.UI.WinForms.GunaPanel gunaPanel1;
+        private Guna.UI.WinForms.GunaPanel toolbar;
         private Guna.UI.WinForms.GunaButton btnAddFromFile;
         private Guna.UI.WinForms.GunaButton btnDelete;
         private System.Windows.Forms.ListView lvSV;
@@ -263,5 +299,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private Guna.UI.WinForms.GunaButton btnAdd;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Guna.UI.WinForms.GunaButton btnSave;
     }
 }

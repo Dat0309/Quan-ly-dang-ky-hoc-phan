@@ -366,6 +366,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "HocPhanInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HocPhanInfo";
             ((System.ComponentModel.ISupportInitialize)(this.nbSTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbTCLT)).EndInit();

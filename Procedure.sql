@@ -133,11 +133,11 @@ go
 alter procedure HocPhan_InsertUpdateDelete
 @MaHP varchar(20) output,
 @TenHP nvarchar(50),
-@LoaiHocPhan nvarchar(20),
+@LoaiHP nvarchar(20),
 @HocKy int,
 @Nam int,
 @Khoa nvarchar(100),
-@TongSoTinChi int,
+@STC int,
 @TCLT int,
 @TCTH int,
 @GioiHan int,
@@ -146,11 +146,11 @@ as
 if @Action = 0
 begin
 	insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, STC,TCLT,TCTH, GioiHan)
-	values (@MaHP,@TenHP,@LoaiHocPhan,@HocKy,@Nam,@Khoa,@TongSoTinChi,@TCLT, @TCTH ,@GioiHan)
+	values (@MaHP,@TenHP,@LoaiHP,@HocKy,@Nam,@Khoa,@TongSoTinChi,@TCLT, @TCTH ,@GioiHan)
 end
 else if @Action = 1
 begin
-	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHocPhan, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@TongSoTinChi,TCLT=@TCLT,TCTH=@TCTH, GioiHan=@GioiHan
+	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHP, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@TongSoTinChi,TCLT=@TCLT,TCTH=@TCTH, GioiHan=@GioiHan
 	where MaHP = @MaHP
 end
 else if @Action = 2

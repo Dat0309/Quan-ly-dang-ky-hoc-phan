@@ -233,3 +233,4 @@ D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Deb
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TaiKhoanInfo.resources
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QuyenForm.resources
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QuyenInfo.resources
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TaiKhoanInfo.resources

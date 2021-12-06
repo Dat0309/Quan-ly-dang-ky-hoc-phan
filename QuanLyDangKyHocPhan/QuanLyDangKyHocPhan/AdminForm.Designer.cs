@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.btnLogout = new Guna.UI.WinForms.GunaButton();
-            this.btnRole = new Guna.UI.WinForms.GunaButton();
             this.btnAccount = new Guna.UI.WinForms.GunaButton();
             this.btnThongKe = new Guna.UI.WinForms.GunaButton();
             this.btnQLDKHP = new Guna.UI.WinForms.GunaButton();
@@ -51,7 +50,6 @@
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
             this.gunaPanel1.Controls.Add(this.btnLogout);
-            this.gunaPanel1.Controls.Add(this.btnRole);
             this.gunaPanel1.Controls.Add(this.btnAccount);
             this.gunaPanel1.Controls.Add(this.btnThongKe);
             this.gunaPanel1.Controls.Add(this.btnQLDKHP);
@@ -90,30 +88,6 @@
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnRole
-            // 
-            this.btnRole.AnimationHoverSpeed = 0.07F;
-            this.btnRole.AnimationSpeed = 0.03F;
-            this.btnRole.BaseColor = System.Drawing.Color.White;
-            this.btnRole.BorderColor = System.Drawing.Color.Black;
-            this.btnRole.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRole.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRole.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRole.ForeColor = System.Drawing.Color.Black;
-            this.btnRole.Image = ((System.Drawing.Image)(resources.GetObject("btnRole.Image")));
-            this.btnRole.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRole.Location = new System.Drawing.Point(3, 335);
-            this.btnRole.Name = "btnRole";
-            this.btnRole.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnRole.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnRole.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRole.OnHoverImage = null;
-            this.btnRole.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRole.Size = new System.Drawing.Size(254, 86);
-            this.btnRole.TabIndex = 6;
-            this.btnRole.Text = "Quản lý Quyền";
-            this.btnRole.Click += new System.EventHandler(this.btnRole_Click);
-            // 
             // btnAccount
             // 
             this.btnAccount.AnimationHoverSpeed = 0.07F;
@@ -126,7 +100,7 @@
             this.btnAccount.ForeColor = System.Drawing.Color.Black;
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAccount.Location = new System.Drawing.Point(3, 421);
+            this.btnAccount.Location = new System.Drawing.Point(3, 338);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnAccount.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -150,7 +124,7 @@
             this.btnThongKe.ForeColor = System.Drawing.Color.Black;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKe.Location = new System.Drawing.Point(4, 249);
+            this.btnThongKe.Location = new System.Drawing.Point(4, 251);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnThongKe.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -174,7 +148,7 @@
             this.btnQLDKHP.ForeColor = System.Drawing.Color.Black;
             this.btnQLDKHP.Image = ((System.Drawing.Image)(resources.GetObject("btnQLDKHP.Image")));
             this.btnQLDKHP.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnQLDKHP.Location = new System.Drawing.Point(3, 507);
+            this.btnQLDKHP.Location = new System.Drawing.Point(3, 425);
             this.btnQLDKHP.Name = "btnQLDKHP";
             this.btnQLDKHP.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnQLDKHP.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -198,7 +172,7 @@
             this.btnQLHP.ForeColor = System.Drawing.Color.Black;
             this.btnQLHP.Image = ((System.Drawing.Image)(resources.GetObject("btnQLHP.Image")));
             this.btnQLHP.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnQLHP.Location = new System.Drawing.Point(3, 163);
+            this.btnQLHP.Location = new System.Drawing.Point(3, 164);
             this.btnQLHP.Name = "btnQLHP";
             this.btnQLHP.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnQLHP.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -289,7 +263,6 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaButton btnQLSV;
-        private Guna.UI.WinForms.GunaButton btnRole;
         private Guna.UI.WinForms.GunaButton btnAccount;
         private Guna.UI.WinForms.GunaButton btnThongKe;
         private Guna.UI.WinForms.GunaButton btnQLDKHP;

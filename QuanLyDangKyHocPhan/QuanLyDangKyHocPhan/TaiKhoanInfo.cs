@@ -33,12 +33,15 @@ namespace QuanLyDangKyHocPhan
             LoadComboboxQuyen();
             btnCapNhat.Enabled = false;
             btnThem.Enabled = true;
+            btnReset.Enabled = false;
         }
 
         public void LoadStatusUpdate()
         {
             btnCapNhat.Enabled = true;
             btnThem.Enabled = false;
+            txtMatKhau.Text = "123456";
+            btnReset.Enabled = true;
         }
         public int InsertTK()
         {
@@ -113,6 +116,14 @@ namespace QuanLyDangKyHocPhan
                 DialogResult = DialogResult.OK;
             }
             else MessageBox.Show("Cập nhật thất bại, vui lòng nhập lại");
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            TaiKhoanBL tkBL = TaiKhoanBL.getInstance();
+            tkBL.UpdatePass(txtTaikhoan.Text, "123456");
+            MessageBox.Show("Reset mật khẩu thành công");
+            this.Close();
         }
     }
 }

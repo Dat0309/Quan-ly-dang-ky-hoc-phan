@@ -46,6 +46,7 @@
             this.rdbtnTrue = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // btnCapNhat
@@ -325,12 +326,32 @@
             this.txtMatKhau.TabIndex = 14;
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
+            // btnReset
+            // 
+            this.btnReset.BorderColor = System.Drawing.Color.White;
+            this.btnReset.BorderRadius = 18;
+            this.btnReset.CheckedState.Parent = this.btnReset;
+            this.btnReset.CustomImages.Parent = this.btnReset;
+            this.btnReset.Enabled = false;
+            this.btnReset.FillColor = System.Drawing.Color.Maroon;
+            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.HoverState.Parent = this.btnReset;
+            this.btnReset.Location = new System.Drawing.Point(324, 208);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.ShadowDecoration.Parent = this.btnReset;
+            this.btnReset.Size = new System.Drawing.Size(131, 45);
+            this.btnReset.TabIndex = 32;
+            this.btnReset.Text = "Reset mật khẩu";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // TaiKhoanInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(740, 265);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.cbbIDQuyen);
             this.Controls.Add(this.label5);
@@ -378,5 +399,6 @@
         private System.Windows.Forms.RadioButton rdbtnTrue;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
+        private Guna.UI2.WinForms.Guna2Button btnReset;
     }
 }

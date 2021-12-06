@@ -205,18 +205,6 @@
     <Compile Include="QLDKHPForm.Designer.cs">
       <DependentUpon>QLDKHPForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuyenForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuyenForm.Designer.cs">
-      <DependentUpon>QuyenForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QuyenInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuyenInfo.Designer.cs">
-      <DependentUpon>QuyenInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="SinhVienForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,12 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLDKHPForm.resx">
       <DependentUpon>QLDKHPForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuyenForm.resx">
-      <DependentUpon>QuyenForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuyenInfo.resx">
-      <DependentUpon>QuyenInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SinhVienForm.resx">
       <DependentUpon>SinhVienForm.cs</DependentUpon>

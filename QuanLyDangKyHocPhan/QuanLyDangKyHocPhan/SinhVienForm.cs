@@ -20,7 +20,6 @@ namespace QuanLyDangKyHocPhan
         SinhVienBL svBL = SinhVienBL.getInstance();
         List<SinhVien> listSV;
         SinhVien svcurrent;
-        private DataTable BangSV;
         public SinhVienForm()
         {
             InitializeComponent();
@@ -195,7 +194,7 @@ namespace QuanLyDangKyHocPhan
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
-                LoadSinhVienToListView();
+            LoadSinhVienToListView();
             LoadSinhVien(txtSearch.Text.ToString());
         }
 

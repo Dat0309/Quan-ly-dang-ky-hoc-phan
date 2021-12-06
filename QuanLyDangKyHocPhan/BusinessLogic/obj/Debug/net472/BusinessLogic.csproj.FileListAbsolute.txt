@@ -76,3 +76,10 @@ E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Numerics.Vectors.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.ValueTuple.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\Microsoft.Extensions.Primitives.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Buffers.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Memory.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Numerics.Vectors.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.Runtime.CompilerServices.Unsafe.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\BusinessLogic\bin\Debug\net472\System.ValueTuple.dll

@@ -39,8 +39,12 @@
             this.btnQLSV = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.Container = new Guna.UI.WinForms.GunaPanel();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.fileSystemWatcher2 = new System.IO.FileSystemWatcher();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaPanel1
@@ -250,6 +254,16 @@
             this.Container.Size = new System.Drawing.Size(1222, 753);
             this.Container.TabIndex = 2;
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // fileSystemWatcher2
+            // 
+            this.fileSystemWatcher2.EnableRaisingEvents = true;
+            this.fileSystemWatcher2.SynchronizingObject = this;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -264,6 +278,8 @@
             this.Load += new System.EventHandler(this.AdminForm_Load);
             this.gunaPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +296,7 @@
         private Guna.UI.WinForms.GunaButton btnQLHP;
         private Guna.UI.WinForms.GunaButton btnLogout;
         private Guna.UI.WinForms.GunaPanel Container;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.IO.FileSystemWatcher fileSystemWatcher2;
     }
 }

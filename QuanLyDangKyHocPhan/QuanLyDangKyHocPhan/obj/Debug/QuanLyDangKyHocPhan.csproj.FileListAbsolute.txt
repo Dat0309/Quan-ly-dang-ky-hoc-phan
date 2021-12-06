@@ -133,7 +133,6 @@ C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanL
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.exe
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.pdb
 D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.SinhVienInfo.resources
-D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhanInfor.resources
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.exe.config
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.exe
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\QuanLyDangKyHocPhan.pdb
@@ -210,3 +209,27 @@ E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Deb
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.ValueTuple.xml
 E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhanInfo.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Buffers.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Memory.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Numerics.Vectors.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.ValueTuple.dll
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Buffers.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Memory.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Numerics.Vectors.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\bin\Debug\System.ValueTuple.xml
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.SuggestedBindingRedirects.cache
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DCKQDKForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.DoiMKForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.HocPhanInfo.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LoadingFrm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.ThongTinSVForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.csproj.CopyComplete
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TaiKhoanInfo.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QuyenForm.resources
+D:\download\csdl 2\team\nhomcsdl\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.QuyenInfo.resources

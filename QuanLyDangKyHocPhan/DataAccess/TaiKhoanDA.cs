@@ -37,7 +37,6 @@ namespace DataAccess
                 tk.IDQuyen = int.Parse(reader["IDQuyen"].ToString());
                 tk.CreateDate = DateTime.Parse(reader["CreateDate"].ToString()).ToShortDateString();
                 tk.FullName = reader["FullName"].ToString();
-
                 list.Add(tk);
             }
             conn.Close();
@@ -67,7 +66,7 @@ namespace DataAccess
             cmd.Parameters.Add("@Active", SqlDbType.Bit).Value = tk.Active;
             cmd.Parameters.Add("@IDQuyen", SqlDbType.Int).Value = tk.IDQuyen;
             cmd.Parameters.Add("@CreateDate", SqlDbType.SmallDateTime).Value = tk.CreateDate;
-
+            cmd.Parameters.Add("@FullName", SqlDbType.NVarChar,100).Value = tk.FullName;
             cmd.Parameters.Add("@Action", SqlDbType.Int).Value = action;
 
             int result = cmd.ExecuteNonQuery();

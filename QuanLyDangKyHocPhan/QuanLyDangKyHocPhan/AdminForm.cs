@@ -59,11 +59,6 @@ namespace QuanLyDangKyHocPhan
             
         }
 
-        private void btnRole_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAccount_Click(object sender, EventArgs e)
         {
             setContent(new TaiKhoanForm());

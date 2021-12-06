@@ -7,12 +7,13 @@ create table Khoa
 (
 	TenKhoa nvarchar (100) primary key
 )
+go
 Create table Lop
 (
 	TenLop nvarchar (20) primary key,
 	TenKhoa nvarchar (100) references Khoa(TenKhoa)
 )
-
+go
 Create table SinhVien
 (
 	MSSV int primary key,
@@ -26,10 +27,6 @@ Create table SinhVien
 )
 go
 
-<<<<<<< Updated upstream
-create table HocPhan
-=======
->>>>>>> Stashed changes
 create table HocPhan 
 (
 	MaHP nvarchar(20) primary key,
@@ -128,64 +125,69 @@ select * from CT_DKHP
 go
 
 create procedure SinhVien_InsertUpdateDelete
-	@MSSV int output,
-	@HoLot nvarchar(100),
-	@Ten nvarchar(50),
-	@GioiTinh bit,
-	@NgaySinh smalldatetime,
-	@TenLop nvarchar(20),
-	@Khoa nvarchar(100),
-	@Diachi nvarchar(1000),
-	@Action int
-	as
-	if @Action = 0
+@MSSV int output,
+@HoLot nvarchar(100),
+@Ten nvarchar(50),
+@GioiTinh bit,
+@NgaySinh smalldatetime,
+@TenLop nvarchar(20),
+@Khoa nvarchar(100),
+@Diachi nvarchar(1000),
+@Action int
+as
+if @Action = 0
+begin
+	if not exists (select * from SinhVien where MSSV = @MSSV)
 	begin
 		insert into SinhVien (MSSV,HoLot,Ten,GioiTinh,NgaySinh,TenLop,Khoa,DiaChi)
 		values (@MSSV, @HoLot,@Ten,@GioiTinh,@NgaySinh,@TenLop,@Khoa,@Diachi)
+		insert into TaiKhoan (UserName, Password, Active, IDQuyen,CreateDate,FullName)
+		values (@MSSV, @MSSV, 'true', 2, GETDATE(),@HoLot + ' ' + @Ten)
 	end
-	else if @Action = 1
-	begin
-		update SinhVien set HoLot=@HoLot,Ten=@Ten,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,TenLop=@TenLop,Khoa=@Khoa,DiaChi=@Diachi
-		where MSSV=@MSSV
-	end
-	else if @Action = 2
-	begin
-		delete from SinhVien where MSSV = @MSSV
-	end
+end
+else if @Action = 1
+begin
+	update SinhVien set HoLot=@HoLot,Ten=@Ten,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh,TenLop=@TenLop,Khoa=@Khoa,DiaChi=@Diachi
+	where MSSV=@MSSV
+end
+else if @Action = 2
+begin
+	delete from CT_DKHP where MSSV = @MSSV
+	delete from HocPhi where MSSV = @MSSV
+	delete from SinhVien where MSSV = @MSSV
+end
 go
 
-alter procedure HocPhan_InsertUpdateDelete
-	@MaHP varchar(20) output,
-	@TenHP nvarchar(50),
-	@LoaiHP nvarchar(20),
-	@HocKy int,
-	@Nam int,
-	@Khoa nvarchar(100),
-	@STC int,
-	@TCLT int,
-	@TCTH int,
-	@GioiHan int,
-	@Action int
-	as
-	if @Action = 0
-	begin
-		insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam, Khoa, STC, TCLT, TCTH, GioiHan)
-		values (@MaHP,@TenHP,@LoaiHP,@HocKy,@Nam,@Khoa, @STC, @TCLT, @TCTH,@GioiHan)
-	end
-	else if @Action = 1
-	begin
-		update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHP, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@STC, GioiHan=@GioiHan
-		where MaHP = @MaHP
-	end
-	else if @Action = 2
-	begin
-		delete from CT_DKHP where MaHP = @MaHP
-		Delete from LichThi where MaHP = @MaHP
-		delete from HocPhan where MaHP = @MaHP
-	end
+create procedure HocPhan_InsertUpdateDelete
+@MaHP varchar(20) output,
+@TenHP nvarchar(50),
+@LoaiHP nvarchar(20),
+@HocKy int,
+@Nam int,
+@Khoa nvarchar(100),
+@STC int,
+@TCLT int,
+@TCTH int,
+@GioiHan int,
+@Action int
+as
+if @Action = 0
+begin
+	insert into HocPhan (MaHP,TenHP, LoaiHP,HocKy,Nam,Khoa, STC,TCLT,TCTH, GioiHan)
+	values (@MaHP,@TenHP,@LoaiHP,@HocKy,@Nam,@Khoa,@STC,@TCLT, @TCTH ,@GioiHan)
+end
+else if @Action = 1
+begin
+	update HocPhan set TenHP = @TenHP, LoaiHP = @LoaiHP, HocKy = @HocKy, Nam = @Nam, Khoa = @Khoa,STC=@STC,TCLT=@TCLT,TCTH=@TCTH, GioiHan=@GioiHan
+	where MaHP = @MaHP
+end
+else if @Action = 2
+begin
+	delete from HocPhan where MaHP = @MaHP
+end
 go
 
-create procedure Quyen_InsertUpdateDelete
+alter procedure Quyen_InsertUpdateDelete
 	@Id int output,
 	@TenQuyen nvarchar(50),
 	@Mota nvarchar(3000),

@@ -38,7 +38,30 @@ namespace BusinessLogic
                     return tk;
             return null;
         }
+        public List<TaiKhoan> Find(string key)
+        {
+            List<TaiKhoan> list = GetAll();
+            List<TaiKhoan> result = new List<TaiKhoan>();
 
+            foreach (var tk in list)
+            {
+                if (tk.UserName.Contains(key)||tk.FullName.Contains(key))
+                    result.Add(tk);
+            }
+            return result;
+        }
+        public List<TaiKhoan> FindtheoQuyen(string quyen)
+        {
+            List<TaiKhoan> list = GetAll();
+            List<TaiKhoan> result = new List<TaiKhoan>();
+
+            foreach (var tk in list)
+            {
+                if (tk.IDQuyen .ToString().CompareTo(quyen) == 0)
+                    result.Add(tk);
+            }
+            return result;
+        }
         public bool Authentication(string username, string password)
         {
             List<TaiKhoan> list = GetAll();

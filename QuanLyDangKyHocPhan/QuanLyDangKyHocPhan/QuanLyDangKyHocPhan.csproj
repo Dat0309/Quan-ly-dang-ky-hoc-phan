@@ -223,6 +223,12 @@
     <Compile Include="TaiKhoanForm.Designer.cs">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoanInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaiKhoanInfo.Designer.cs">
+      <DependentUpon>TaiKhoanInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinSVForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoanForm.resx">
       <DependentUpon>TaiKhoanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaiKhoanInfo.resx">
+      <DependentUpon>TaiKhoanInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinSVForm.resx">
       <DependentUpon>ThongTinSVForm.cs</DependentUpon>

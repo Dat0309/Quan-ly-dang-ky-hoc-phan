@@ -431,4 +431,3 @@ select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.ST
 from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
 where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP
 order by a.MaHP
-

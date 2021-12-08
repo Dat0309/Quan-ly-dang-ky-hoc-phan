@@ -56,7 +56,7 @@ namespace QuanLyDangKyHocPhan
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            
+            setContent(new ThemLichThiForm());
         }
 
         private void btnRole_Click(object sender, EventArgs e)

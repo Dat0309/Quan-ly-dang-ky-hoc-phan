@@ -274,5 +274,37 @@ namespace DataAccess
             conn.Close();
             return list;
         }
+        public List<HocPhan> GetCurrentKQDKHP(int hocky, string namhoc)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.GetHocPhanTheoHocKyVaNam;
+
+            cmd.Parameters.Add("@HocKy", SqlDbType.Int).Value = hocky;
+            cmd.Parameters.Add("@NamHoc", SqlDbType.VarChar, 20).Value = namhoc;
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<HocPhan> list = new List<HocPhan>();
+            while (reader.Read())
+            {
+                HocPhan hp = new HocPhan();
+                hp.MaHP = reader["MaHP"].ToString();
+                hp.TenHP = reader["TenHP"].ToString();
+                hp.LoaiHP = reader["LoaiHP"].ToString();
+                hp.HocKy = int.Parse(reader["HocKy"].ToString());
+                hp.Nam = int.Parse(reader["Nam"].ToString());
+                hp.Khoa = reader["Khoa"].ToString();
+                hp.TongSoTC = int.Parse(reader["STC"].ToString());
+                hp.TCLT = int.Parse(reader["TCLT"].ToString());
+                hp.TCTH = int.Parse(reader["TCTH"].ToString());
+                hp.GioiHan = int.Parse(reader["GioiHan"].ToString());
+                list.Add(hp);
+            }
+            conn.Close();
+            return list;
+        }
     }
 }

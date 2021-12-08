@@ -45,10 +45,11 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.sửaSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SuaHP = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.thêmLịchThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -223,16 +224,16 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sửaSinhViênToolStripMenuItem});
+            this.SuaHP});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(165, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 56);
             // 
-            // sửaSinhViênToolStripMenuItem
+            // SuaHP
             // 
-            this.sửaSinhViênToolStripMenuItem.Name = "sửaSinhViênToolStripMenuItem";
-            this.sửaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
-            this.sửaSinhViênToolStripMenuItem.Text = "Sửa sinh viên";
-            this.sửaSinhViênToolStripMenuItem.Click += new System.EventHandler(this.sửaSinhViênToolStripMenuItem_Click);
+            this.SuaHP.Name = "SuaHP";
+            this.SuaHP.Size = new System.Drawing.Size(210, 24);
+            this.SuaHP.Text = "Sửa học phần";
+            this.SuaHP.Click += new System.EventHandler(this.SuaHP_Click);
             // 
             // gunaButton2
             // 
@@ -294,6 +295,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // thêmLịchThiToolStripMenuItem
+            // 
+            this.thêmLịchThiToolStripMenuItem.Name = "thêmLịchThiToolStripMenuItem";
+            this.thêmLịchThiToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
             // HocPhanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,8 +338,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem sửaSinhViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SuaHP;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI.WinForms.GunaButton btnSave;
+        private System.Windows.Forms.ToolStripMenuItem thêmLịchThiToolStripMenuItem;
     }
 }

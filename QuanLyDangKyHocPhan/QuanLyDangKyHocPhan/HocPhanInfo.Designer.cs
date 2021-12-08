@@ -167,7 +167,7 @@
             // mtxtMaHP
             // 
             this.mtxtMaHP.Location = new System.Drawing.Point(86, 12);
-            this.mtxtMaHP.Mask = "00000000";
+            this.mtxtMaHP.Mask = "aaaaaaaa";
             this.mtxtMaHP.Name = "mtxtMaHP";
             this.mtxtMaHP.Size = new System.Drawing.Size(100, 22);
             this.mtxtMaHP.TabIndex = 11;
@@ -367,7 +367,7 @@
             this.Controls.Add(this.label1);
             this.Name = "HocPhanInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HocPhanInfo";
+            this.Text = "Thông tin học phần";
             ((System.ComponentModel.ISupportInitialize)(this.nbSTC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbTCLT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbTCTH)).EndInit();

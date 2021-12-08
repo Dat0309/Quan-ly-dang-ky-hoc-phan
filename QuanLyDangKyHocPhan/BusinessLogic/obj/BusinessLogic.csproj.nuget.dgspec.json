@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj": {}
+    "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj": {}
   },
   "projects": {
-    "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj": {
+    "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj",
         "projectName": "BusinessLogic",
-        "projectPath": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\obj\\",
+        "projectPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\Kin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\BusinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -49,21 +49,21 @@
               "version": "[6.0.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\NAM3\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Kin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kin\\Documents\\GitHub\\Quan-ly-dang-ky-hoc-phan\\QuanLyDangKyHocPhan\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,7 +98,7 @@
               "version": "[6.0.0, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

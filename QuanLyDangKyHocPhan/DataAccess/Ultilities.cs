@@ -60,5 +60,10 @@ namespace DataAccess
 
         public static string HocPhi_GetAll = "HocPhi_GetAll";
         public static string HocPhi_InsertUpdateDelete = "HocPhi_InsertUpdateDelete";
+
+        public static string LichThi_GetAll = "LichThi_GetAll";
+        public static string LichThi_InsertUpdatedelete = "LichThi_InsertUpdatedelete";
+        public static string LoadLichThi = "LoadLichThi";
+        public static string CheckSVDangKyHocPhan = "CheckSVDangKyHocPhan";
     }
 }

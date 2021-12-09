@@ -187,5 +187,34 @@ namespace DataAccess
             return dr;
             dr.Close();
         }
+        public List<SinhVien> CheckSVDangKyHocPhan(string MaHP)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.CheckSVDangKyHocPhan;
+            cmd.Parameters.Add("@MaHP", SqlDbType.NVarChar, 20).Value = MaHP;
+
+            List<SinhVien> listSV = new List<SinhVien>();
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                SinhVien sv = new SinhVien();
+                sv.MSSV = int.Parse(dr["MSSV"].ToString());
+                sv.HoLot = dr["HoLot"].ToString();
+                sv.Ten = dr["Ten"].ToString();
+                sv.TenLop = dr["TenLop"].ToString();
+                sv.Khoa = dr["Khoa"].ToString();
+                sv.GioiTinh = bool.Parse(dr["GioiTinh"].ToString());
+                sv.NgaySinh = dr["NgaySinh"].ToString();
+                sv.DiaChi = dr["DiaChi"].ToString();
+                listSV.Add(sv);
+            }
+            conn.Close();
+            dr.Close();
+            return listSV;
+        }
     }
 }

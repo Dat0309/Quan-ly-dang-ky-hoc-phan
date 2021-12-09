@@ -119,6 +119,12 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietDangKyHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietDangKyHocPhan.Designer.cs">
+      <DependentUpon>ChiTietDangKyHocPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKyHocPhanForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     <Compile Include="LichThiForm.Designer.cs">
       <DependentUpon>LichThiForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichThiInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichThiInfo.Designer.cs">
+      <DependentUpon>LichThiInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadingFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +241,12 @@
     <Compile Include="TaiKhoanInfo.Designer.cs">
       <DependentUpon>TaiKhoanInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemLichThiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemLichThiForm.Designer.cs">
+      <DependentUpon>ThemLichThiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinSVForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +256,9 @@
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietDangKyHocPhan.resx">
+      <DependentUpon>ChiTietDangKyHocPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangKyHocPhanForm.resx">
       <DependentUpon>DangKyHocPhanForm.cs</DependentUpon>
@@ -275,6 +296,9 @@
     <EmbeddedResource Include="LichThiForm.resx">
       <DependentUpon>LichThiForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LichThiInfo.resx">
+      <DependentUpon>LichThiInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoadingFrm.resx">
       <DependentUpon>LoadingFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaiKhoanInfo.resx">
       <DependentUpon>TaiKhoanInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemLichThiForm.resx">
+      <DependentUpon>ThemLichThiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinSVForm.resx">
       <DependentUpon>ThongTinSVForm.cs</DependentUpon>

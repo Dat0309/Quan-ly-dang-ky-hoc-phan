@@ -54,11 +54,6 @@ namespace QuanLyDangKyHocPhan
             setContent(new HocPhanForm());
         }
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnAccount_Click(object sender, EventArgs e)
         {
             setContent(new TaiKhoanForm());
@@ -75,6 +70,11 @@ namespace QuanLyDangKyHocPhan
             this.Hide();
             DangNhap.ShowDialog();
             this.Close();
+        }
+
+        private void btnXemLichThi_Click(object sender, EventArgs e)
+        {
+            setContent(new ThemLichThiForm());
         }
     }
 }

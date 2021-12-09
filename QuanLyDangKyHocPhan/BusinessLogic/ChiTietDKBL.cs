@@ -107,5 +107,9 @@ namespace BusinessLogic
         {
             return ctdkDA.GetChiTietDKHPTheeoHocKy(hocky, nam);
         }
+        public List<SinhVien> CheckSVDangKyHocPhan(string MaHP)
+        {
+            return ctdkDA.CheckSVDangKyHocPhan(MaHP);
+        }
     }
 }

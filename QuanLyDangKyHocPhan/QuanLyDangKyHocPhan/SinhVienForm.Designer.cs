@@ -44,6 +44,7 @@
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,8 +72,8 @@
             // 
             // toolbar
             // 
-            this.toolbar.Controls.Add(this.btnSave);
-            this.toolbar.Controls.Add(this.btnAddFromFile);
+            this.toolbar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.toolbar.Controls.Add(this.gunaLabel2);
             this.toolbar.Controls.Add(this.txtSearch);
             this.toolbar.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolbar.Location = new System.Drawing.Point(0, 0);
@@ -94,7 +95,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = null;
             this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(151, 10);
+            this.btnSave.Location = new System.Drawing.Point(140, 70);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnHoverBaseColor = System.Drawing.Color.DarkGreen;
             this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -121,7 +122,7 @@
             this.btnAddFromFile.ForeColor = System.Drawing.Color.White;
             this.btnAddFromFile.Image = null;
             this.btnAddFromFile.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddFromFile.Location = new System.Drawing.Point(12, 10);
+            this.btnAddFromFile.Location = new System.Drawing.Point(12, 70);
             this.btnAddFromFile.Name = "btnAddFromFile";
             this.btnAddFromFile.OnHoverBaseColor = System.Drawing.Color.Black;
             this.btnAddFromFile.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -180,9 +181,9 @@
             this.lvSV.FullRowSelect = true;
             this.lvSV.GridLines = true;
             this.lvSV.HideSelection = false;
-            this.lvSV.Location = new System.Drawing.Point(12, 113);
+            this.lvSV.Location = new System.Drawing.Point(12, 118);
             this.lvSV.Name = "lvSV";
-            this.lvSV.Size = new System.Drawing.Size(1180, 471);
+            this.lvSV.Size = new System.Drawing.Size(1180, 466);
             this.lvSV.TabIndex = 4;
             this.lvSV.UseCompatibleStateImageBehavior = false;
             this.lvSV.View = System.Windows.Forms.View.Details;
@@ -265,11 +266,24 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel2.Location = new System.Drawing.Point(12, 19);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(165, 22);
+            this.gunaLabel2.TabIndex = 17;
+            this.gunaLabel2.Text = "Quản lý sinh viên";
+            // 
             // SinhVienForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 653);
+            this.Controls.Add(this.btnAddFromFile);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lvSV);
             this.Controls.Add(this.btnDelete);
@@ -279,6 +293,7 @@
             this.Text = "SinhVienForm";
             this.Load += new System.EventHandler(this.SinhVienForm_Load);
             this.toolbar.ResumeLayout(false);
+            this.toolbar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -301,5 +316,6 @@
         private Guna.UI.WinForms.GunaButton btnAdd;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI.WinForms.GunaButton btnSave;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
     }
 }

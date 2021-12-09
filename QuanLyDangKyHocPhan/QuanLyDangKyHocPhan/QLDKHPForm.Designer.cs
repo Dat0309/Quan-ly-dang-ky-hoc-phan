@@ -49,16 +49,16 @@
             this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.btnSearch = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.Controls.Add(this.btnFilter);
-            this.gunaPanel1.Controls.Add(this.gunaLabel1);
-            this.gunaPanel1.Controls.Add(this.cbbNamHoc);
-            this.gunaPanel1.Controls.Add(this.gunaLabel4);
-            this.gunaPanel1.Controls.Add(this.cbbHK);
+            this.gunaPanel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaPanel1.Controls.Add(this.gunaLabel2);
+            this.gunaPanel1.Controls.Add(this.txtSearch);
+            this.gunaPanel1.Controls.Add(this.btnSearch);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
@@ -78,7 +78,7 @@
             this.btnFilter.ForeColor = System.Drawing.Color.White;
             this.btnFilter.Image = null;
             this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFilter.Location = new System.Drawing.Point(1112, 12);
+            this.btnFilter.Location = new System.Drawing.Point(1123, 70);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -96,7 +96,7 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(17, 21);
+            this.gunaLabel1.Location = new System.Drawing.Point(8, 88);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(69, 20);
             this.gunaLabel1.TabIndex = 23;
@@ -118,7 +118,7 @@
             "1",
             "2",
             "3"});
-            this.cbbNamHoc.Location = new System.Drawing.Point(92, 15);
+            this.cbbNamHoc.Location = new System.Drawing.Point(83, 82);
             this.cbbNamHoc.Name = "cbbNamHoc";
             this.cbbNamHoc.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbNamHoc.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -130,7 +130,7 @@
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(304, 20);
+            this.gunaLabel4.Location = new System.Drawing.Point(295, 87);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(54, 20);
             this.gunaLabel4.TabIndex = 21;
@@ -148,7 +148,7 @@
             this.cbbHK.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbHK.ForeColor = System.Drawing.Color.Black;
             this.cbbHK.FormattingEnabled = true;
-            this.cbbHK.Location = new System.Drawing.Point(364, 15);
+            this.cbbHK.Location = new System.Drawing.Point(355, 82);
             this.cbbHK.Name = "cbbHK";
             this.cbbHK.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbHK.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -168,7 +168,7 @@
             this.txtSearch.FocusedBorderColor = System.Drawing.Color.Silver;
             this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.Location = new System.Drawing.Point(904, 70);
+            this.txtSearch.Location = new System.Drawing.Point(915, 12);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.Radius = 18;
@@ -301,7 +301,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = null;
             this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSearch.Location = new System.Drawing.Point(838, 74);
+            this.btnSearch.Location = new System.Drawing.Point(849, 16);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -315,16 +315,30 @@
             this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel2.Location = new System.Drawing.Point(8, 16);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(243, 22);
+            this.gunaLabel2.TabIndex = 16;
+            this.gunaLabel2.Text = "Quản lý đăng ký học phần";
+            // 
             // QLDKHPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
-            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.btnFilter);
+            this.Controls.Add(this.cbbNamHoc);
+            this.Controls.Add(this.gunaLabel4);
+            this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.lvQL);
             this.Controls.Add(this.gunaPanel1);
-            this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLDKHPForm";
             this.Text = "QLDKHPForm";
@@ -332,6 +346,7 @@
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -358,5 +373,6 @@
         private Guna.UI.WinForms.GunaComboBox cbbHK;
         private Guna.UI.WinForms.GunaButton btnFilter;
         private Guna.UI.WinForms.GunaButton btnSearch;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
     }
 }

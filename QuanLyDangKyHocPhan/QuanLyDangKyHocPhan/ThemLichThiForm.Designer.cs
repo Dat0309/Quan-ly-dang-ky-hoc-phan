@@ -142,7 +142,7 @@
             this.toolStripSeparator1,
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(296, 110);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(296, 82);
             // 
             // thêmLịchThiToolStripMenuItem
             // 
@@ -178,7 +178,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1222, 51);
+            this.gunaPanel1.Size = new System.Drawing.Size(1222, 64);
             this.gunaPanel1.TabIndex = 19;
             // 
             // txtNamHoc
@@ -197,7 +197,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(22, 13);
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 22);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(457, 22);
             this.gunaLabel1.TabIndex = 0;

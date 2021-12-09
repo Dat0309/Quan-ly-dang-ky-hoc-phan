@@ -38,26 +38,33 @@ namespace DataAccess
 
         public int Insert_Update_Delete(ChiTietDangKy ctdk, int action)
         {
-            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
-            conn.Open();
+            try
+            {
+                SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+                conn.Open();
 
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = Ultilities.CTDK_InsertUpdateDelete;
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = Ultilities.CTDK_InsertUpdateDelete;
 
-            cmd.Parameters.Add("@MSSV", SqlDbType.Int).Value = ctdk.MSSV;
-            cmd.Parameters.Add("@MaHP", SqlDbType.NVarChar, 20).Value = ctdk.MaHP;
-            cmd.Parameters.Add("@NgayDangKy", SqlDbType.DateTime).Value = ctdk.NgayDangKy;
-            cmd.Parameters.Add("@HocKy", SqlDbType.Int).Value = ctdk.HocKy;
-            cmd.Parameters.Add("@NamHoc", SqlDbType.NVarChar, 20).Value = ctdk.NamHoc;
+                cmd.Parameters.Add("@MSSV", SqlDbType.Int).Value = ctdk.MSSV;
+                cmd.Parameters.Add("@MaHP", SqlDbType.NVarChar, 20).Value = ctdk.MaHP;
+                cmd.Parameters.Add("@NgayDangKy", SqlDbType.DateTime).Value = ctdk.NgayDangKy;
+                cmd.Parameters.Add("@HocKy", SqlDbType.Int).Value = ctdk.HocKy;
+                cmd.Parameters.Add("@NamHoc", SqlDbType.NVarChar, 20).Value = ctdk.NamHoc;
 
-            cmd.Parameters.Add("@Action", SqlDbType.Int).Value = action;
+                cmd.Parameters.Add("@Action", SqlDbType.Int).Value = action;
 
-            int result = cmd.ExecuteNonQuery();
-            if (result > 0)
-                return 1;
-            return 0;
-            conn.Close();
+                int result = cmd.ExecuteNonQuery();
+                if (result > 0)
+                    return 1;
+                return 0;
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
         public int InsertMulti(List<ChiTietDangKy> ctdks, int action)

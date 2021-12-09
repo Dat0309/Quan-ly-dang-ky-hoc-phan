@@ -49,8 +49,8 @@
             this.pbLoad.IdleColor = System.Drawing.Color.Gainsboro;
             this.pbLoad.Location = new System.Drawing.Point(60, 107);
             this.pbLoad.Name = "pbLoad";
-            this.pbLoad.ProgressMaxColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.pbLoad.ProgressMinColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.pbLoad.ProgressMaxColor = System.Drawing.Color.Lime;
+            this.pbLoad.ProgressMinColor = System.Drawing.Color.DarkGreen;
             this.pbLoad.Size = new System.Drawing.Size(395, 29);
             this.pbLoad.Style = Guna.UI.WinForms.ProgressBarStyle.Marquee;
             this.pbLoad.TabIndex = 1;

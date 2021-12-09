@@ -32,7 +32,7 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.btnLogout = new Guna.UI.WinForms.GunaButton();
             this.btnAccount = new Guna.UI.WinForms.GunaButton();
-            this.btnXemLichThi = new Guna.UI.WinForms.GunaButton();
+            this.btnQLHV = new Guna.UI.WinForms.GunaButton();
             this.btnQLDKHP = new Guna.UI.WinForms.GunaButton();
             this.btnQLHP = new Guna.UI.WinForms.GunaButton();
             this.btnQLSV = new Guna.UI.WinForms.GunaButton();
@@ -51,7 +51,7 @@
             this.gunaPanel1.BackColor = System.Drawing.Color.White;
             this.gunaPanel1.Controls.Add(this.btnLogout);
             this.gunaPanel1.Controls.Add(this.btnAccount);
-            this.gunaPanel1.Controls.Add(this.btnXemLichThi);
+            this.gunaPanel1.Controls.Add(this.btnQLHV);
             this.gunaPanel1.Controls.Add(this.btnQLDKHP);
             this.gunaPanel1.Controls.Add(this.btnQLHP);
             this.gunaPanel1.Controls.Add(this.btnQLSV);
@@ -112,29 +112,29 @@
             this.btnAccount.Text = "Quản lý Người Dùng";
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
-            // btnXemLichThi
+            // btnQLHV
             // 
-            this.btnXemLichThi.AnimationHoverSpeed = 0.07F;
-            this.btnXemLichThi.AnimationSpeed = 0.03F;
-            this.btnXemLichThi.BaseColor = System.Drawing.Color.White;
-            this.btnXemLichThi.BorderColor = System.Drawing.Color.Black;
-            this.btnXemLichThi.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnXemLichThi.FocusedColor = System.Drawing.Color.Empty;
-            this.btnXemLichThi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnXemLichThi.ForeColor = System.Drawing.Color.Black;
-            this.btnXemLichThi.Image = ((System.Drawing.Image)(resources.GetObject("btnXemLichThi.Image")));
-            this.btnXemLichThi.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXemLichThi.Location = new System.Drawing.Point(4, 251);
-            this.btnXemLichThi.Name = "btnXemLichThi";
-            this.btnXemLichThi.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnXemLichThi.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnXemLichThi.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnXemLichThi.OnHoverImage = null;
-            this.btnXemLichThi.OnPressedColor = System.Drawing.Color.Black;
-            this.btnXemLichThi.Size = new System.Drawing.Size(254, 86);
-            this.btnXemLichThi.TabIndex = 4;
-            this.btnXemLichThi.Text = "Quản lý Học Vụ";
-            this.btnXemLichThi.Click += new System.EventHandler(this.btnXemLichThi_Click);
+            this.btnQLHV.AnimationHoverSpeed = 0.07F;
+            this.btnQLHV.AnimationSpeed = 0.03F;
+            this.btnQLHV.BaseColor = System.Drawing.Color.White;
+            this.btnQLHV.BorderColor = System.Drawing.Color.Black;
+            this.btnQLHV.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnQLHV.FocusedColor = System.Drawing.Color.Empty;
+            this.btnQLHV.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnQLHV.ForeColor = System.Drawing.Color.Black;
+            this.btnQLHV.Image = ((System.Drawing.Image)(resources.GetObject("btnQLHV.Image")));
+            this.btnQLHV.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnQLHV.Location = new System.Drawing.Point(4, 251);
+            this.btnQLHV.Name = "btnQLHV";
+            this.btnQLHV.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnQLHV.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnQLHV.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnQLHV.OnHoverImage = null;
+            this.btnQLHV.OnPressedColor = System.Drawing.Color.Black;
+            this.btnQLHV.Size = new System.Drawing.Size(254, 86);
+            this.btnQLHV.TabIndex = 4;
+            this.btnQLHV.Text = "Quản lý Học Vụ";
+            this.btnQLHV.Click += new System.EventHandler(this.btnQLHV_Click);
             // 
             // btnQLDKHP
             // 
@@ -264,7 +264,7 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaButton btnQLSV;
         private Guna.UI.WinForms.GunaButton btnAccount;
-        private Guna.UI.WinForms.GunaButton btnXemLichThi;
+        private Guna.UI.WinForms.GunaButton btnQLHV;
         private Guna.UI.WinForms.GunaButton btnQLDKHP;
         private Guna.UI.WinForms.GunaButton btnQLHP;
         private Guna.UI.WinForms.GunaButton btnLogout;

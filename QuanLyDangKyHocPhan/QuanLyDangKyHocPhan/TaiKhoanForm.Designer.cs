@@ -41,13 +41,14 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnXoa = new Guna.UI.WinForms.GunaButton();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.Controls.Add(this.cbbLoc);
-            this.gunaPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaPanel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaPanel1.Controls.Add(this.gunaLabel2);
             this.gunaPanel1.Controls.Add(this.txtSearch);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
@@ -67,7 +68,7 @@
             this.cbbLoc.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbLoc.ForeColor = System.Drawing.Color.Black;
             this.cbbLoc.FormattingEnabled = true;
-            this.cbbLoc.Location = new System.Drawing.Point(55, 19);
+            this.cbbLoc.Location = new System.Drawing.Point(85, 70);
             this.cbbLoc.Name = "cbbLoc";
             this.cbbLoc.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbLoc.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -80,7 +81,7 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(12, 22);
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 73);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(37, 23);
             this.gunaLabel1.TabIndex = 2;
@@ -215,11 +216,24 @@
             this.btnThem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel2.Location = new System.Drawing.Point(12, 19);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(167, 22);
+            this.gunaLabel2.TabIndex = 18;
+            this.gunaLabel2.Text = "Quản lý tài khoản";
+            // 
             // TaiKhoanForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 706);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.cbbLoc);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.lvTaiKhoan);
             this.Controls.Add(this.btnXoa);
@@ -231,6 +245,7 @@
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -249,5 +264,6 @@
         private Guna.UI.WinForms.GunaComboBox cbbLoc;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel2;
     }
 }

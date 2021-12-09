@@ -43,7 +43,6 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.thêmLịchThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaLịchThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
@@ -138,11 +137,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.thêmLịchThiToolStripMenuItem,
-            this.sửaLịchThiToolStripMenuItem,
             this.toolStripSeparator1,
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(296, 82);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(296, 86);
             // 
             // thêmLịchThiToolStripMenuItem
             // 
@@ -150,13 +148,6 @@
             this.thêmLịchThiToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
             this.thêmLịchThiToolStripMenuItem.Text = "Thêm lịch thi";
             this.thêmLịchThiToolStripMenuItem.Click += new System.EventHandler(this.thêmLịchThiToolStripMenuItem_Click);
-            // 
-            // sửaLịchThiToolStripMenuItem
-            // 
-            this.sửaLịchThiToolStripMenuItem.Name = "sửaLịchThiToolStripMenuItem";
-            this.sửaLịchThiToolStripMenuItem.Size = new System.Drawing.Size(295, 24);
-            this.sửaLịchThiToolStripMenuItem.Text = "Sửa lịch thi";
-            this.sửaLịchThiToolStripMenuItem.Click += new System.EventHandler(this.sửaLịchThiToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -305,7 +296,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmLịchThiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sửaLịchThiToolStripMenuItem;
         private Guna.UI.WinForms.GunaButton btnFilter;
         private Guna.UI.WinForms.GunaLabel txtNamHoc;
         private System.Windows.Forms.ToolStripMenuItem xemDanhSáchSinhViênĐăngKýToolStripMenuItem;

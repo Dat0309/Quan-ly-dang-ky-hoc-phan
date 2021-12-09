@@ -29,12 +29,10 @@
         private void InitializeComponent()
         {
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
+            this.lbLichThi = new Guna.UI.WinForms.GunaLabel();
+            this.cbbHocky = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvLichThi = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -50,87 +48,62 @@
             // gunaPanel1
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaPanel1.Controls.Add(this.lbLichThi);
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1222, 51);
             this.gunaPanel1.TabIndex = 13;
             // 
-            // gunaLabel1
+            // lbLichThi
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(22, 13);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(75, 22);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Lịch thi";
+            this.lbLichThi.AutoSize = true;
+            this.lbLichThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLichThi.ForeColor = System.Drawing.Color.White;
+            this.lbLichThi.Location = new System.Drawing.Point(22, 13);
+            this.lbLichThi.Name = "lbLichThi";
+            this.lbLichThi.Size = new System.Drawing.Size(75, 22);
+            this.lbLichThi.TabIndex = 0;
+            this.lbLichThi.Text = "Lịch thi";
             // 
-            // gunaLabel2
+            // cbbHocky
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(22, 69);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(69, 20);
-            this.gunaLabel2.TabIndex = 14;
-            this.gunaLabel2.Text = "Năm học";
-            // 
-            // gunaComboBox1
-            // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.BorderSize = 1;
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.Location = new System.Drawing.Point(97, 64);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Radius = 10;
-            this.gunaComboBox1.Size = new System.Drawing.Size(121, 31);
-            this.gunaComboBox1.TabIndex = 15;
-            // 
-            // gunaComboBox2
-            // 
-            this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox2.BorderSize = 1;
-            this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox2.FormattingEnabled = true;
-            this.gunaComboBox2.Location = new System.Drawing.Point(318, 64);
-            this.gunaComboBox2.Name = "gunaComboBox2";
-            this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaComboBox2.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox2.Radius = 10;
-            this.gunaComboBox2.Size = new System.Drawing.Size(121, 31);
-            this.gunaComboBox2.TabIndex = 17;
+            this.cbbHocky.BackColor = System.Drawing.Color.Transparent;
+            this.cbbHocky.BaseColor = System.Drawing.Color.White;
+            this.cbbHocky.BorderColor = System.Drawing.Color.Silver;
+            this.cbbHocky.BorderSize = 1;
+            this.cbbHocky.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbHocky.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbHocky.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbHocky.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbHocky.ForeColor = System.Drawing.Color.Black;
+            this.cbbHocky.FormattingEnabled = true;
+            this.cbbHocky.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbbHocky.Location = new System.Drawing.Point(82, 64);
+            this.cbbHocky.Name = "cbbHocky";
+            this.cbbHocky.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbHocky.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbHocky.Radius = 10;
+            this.cbbHocky.Size = new System.Drawing.Size(121, 31);
+            this.cbbHocky.TabIndex = 17;
+            this.cbbHocky.SelectedIndexChanged += new System.EventHandler(this.cbbHocky_SelectedIndexChanged);
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(253, 69);
+            this.gunaLabel3.Location = new System.Drawing.Point(17, 69);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(54, 20);
             this.gunaLabel3.TabIndex = 16;
             this.gunaLabel3.Text = "Học kỳ";
             // 
-            // listView1
+            // lvLichThi
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvLichThi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -140,14 +113,14 @@
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 101);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1198, 640);
-            this.listView1.TabIndex = 18;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvLichThi.GridLines = true;
+            this.lvLichThi.HideSelection = false;
+            this.lvLichThi.Location = new System.Drawing.Point(12, 101);
+            this.lvLichThi.Name = "lvLichThi";
+            this.lvLichThi.Size = new System.Drawing.Size(1198, 640);
+            this.lvLichThi.TabIndex = 18;
+            this.lvLichThi.UseCompatibleStateImageBehavior = false;
+            this.lvLichThi.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -206,15 +179,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.gunaComboBox2);
+            this.Controls.Add(this.lvLichThi);
+            this.Controls.Add(this.cbbHocky);
             this.Controls.Add(this.gunaLabel3);
-            this.Controls.Add(this.gunaComboBox1);
-            this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LichThiForm";
             this.Text = "LichThiForm";
+            this.Load += new System.EventHandler(this.LichThiForm_Load);
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -225,12 +197,10 @@
         #endregion
 
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
+        private Guna.UI.WinForms.GunaLabel lbLichThi;
+        private Guna.UI.WinForms.GunaComboBox cbbHocky;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvLichThi;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

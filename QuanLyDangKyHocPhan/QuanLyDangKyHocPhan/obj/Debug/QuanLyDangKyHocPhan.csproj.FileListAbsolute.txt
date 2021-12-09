@@ -238,3 +238,6 @@ C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanL
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LichThiInFo.resources
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.ThemLichThiForm.resources
 C:\Users\Kin\Documents\GitHub\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.ChiTietDangKyHocPhan.resources
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.ChiTietDangKyHocPhan.resources
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.LichThiInfo.resources
+E:\NAM3\Quan-ly-dang-ky-hoc-phan\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.ThemLichThiForm.resources

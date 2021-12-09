@@ -45,8 +45,8 @@
             this.cbbPhongThi = new System.Windows.Forms.ComboBox();
             this.dtpNgayThi = new System.Windows.Forms.DateTimePicker();
             this.txtThoiLuong = new System.Windows.Forms.TextBox();
-            this.txtDiaDiem = new System.Windows.Forms.TextBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.cbbLocation = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -75,6 +75,7 @@
             this.btnThoat.TabIndex = 14;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnThem
             // 
@@ -130,7 +131,6 @@
             this.btnCapNhat.TabIndex = 13;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label1
             // 
@@ -273,7 +273,7 @@
             // dtpNgayThi
             // 
             this.dtpNgayThi.CustomFormat = "dd/MM/yyyy";
-            this.dtpNgayThi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayThi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThi.Location = new System.Drawing.Point(137, 98);
             this.dtpNgayThi.Name = "dtpNgayThi";
             this.dtpNgayThi.Size = new System.Drawing.Size(123, 22);
@@ -283,15 +283,8 @@
             // 
             this.txtThoiLuong.Location = new System.Drawing.Point(139, 156);
             this.txtThoiLuong.Name = "txtThoiLuong";
-            this.txtThoiLuong.Size = new System.Drawing.Size(121, 22);
+            this.txtThoiLuong.Size = new System.Drawing.Size(175, 22);
             this.txtThoiLuong.TabIndex = 6;
-            // 
-            // txtDiaDiem
-            // 
-            this.txtDiaDiem.Location = new System.Drawing.Point(137, 184);
-            this.txtDiaDiem.Name = "txtDiaDiem";
-            this.txtDiaDiem.Size = new System.Drawing.Size(277, 22);
-            this.txtDiaDiem.TabIndex = 7;
             // 
             // txtGhiChu
             // 
@@ -301,17 +294,27 @@
             this.txtGhiChu.Size = new System.Drawing.Size(330, 178);
             this.txtGhiChu.TabIndex = 8;
             // 
+            // cbbLocation
+            // 
+            this.cbbLocation.FormattingEnabled = true;
+            this.cbbLocation.Items.AddRange(new object[] {
+            "DHDL"});
+            this.cbbLocation.Location = new System.Drawing.Point(139, 185);
+            this.cbbLocation.Name = "cbbLocation";
+            this.cbbLocation.Size = new System.Drawing.Size(175, 24);
+            this.cbbLocation.TabIndex = 15;
+            // 
             // LichThiInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 450);
+            this.Controls.Add(this.cbbLocation);
             this.Controls.Add(this.dtpNgayThi);
             this.Controls.Add(this.cbbPhongThi);
             this.Controls.Add(this.mtxtGioThi);
             this.Controls.Add(this.mtxtTenHP);
             this.Controls.Add(this.txtGhiChu);
-            this.Controls.Add(this.txtDiaDiem);
             this.Controls.Add(this.txtThoiLuong);
             this.Controls.Add(this.txtMaHP);
             this.Controls.Add(this.label11);
@@ -352,7 +355,7 @@
         private System.Windows.Forms.ComboBox cbbPhongThi;
         private System.Windows.Forms.DateTimePicker dtpNgayThi;
         private System.Windows.Forms.TextBox txtThoiLuong;
-        private System.Windows.Forms.TextBox txtDiaDiem;
         private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.ComboBox cbbLocation;
     }
 }

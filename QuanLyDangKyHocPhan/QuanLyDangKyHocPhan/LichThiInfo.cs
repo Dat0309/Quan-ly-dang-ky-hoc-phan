@@ -14,14 +14,33 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class LichThiInfo : Form
     {
+        string namHoc;
+        int hocKy;
         public LichThiInfo()
         {
             InitializeComponent();
         }
-        public void LoadHocPhan(HocPhan hp)
+        public void LoadHocPhan(HocPhan hp, string nam, int hocKy)
         {
+            this.namHoc = nam;
+            this.hocKy = hocKy;
             txtMaHP.Text = hp.MaHP;
             mtxtTenHP.Text = hp.TenHP;
+        }
+        
+        public void LoadHocPhanUpdate(HocPhan hp,LichThi lt, string nam, int hocKy)
+        {
+            this.namHoc = nam;
+            this.hocKy = hocKy;
+
+            txtMaHP.Text = hp.MaHP;
+            mtxtTenHP.Text = hp.TenHP;
+            mtxtGioThi.Text = lt.GioThi;
+            dtpNgayThi.Value = DateTime.Parse(lt.NgayThi);
+            cbbPhongThi.Text = lt.PhongThi;
+            txtThoiLuong.Text = lt.ThoiLuong.ToString();
+            cbbLocation.Text = lt.DiaDiem;
+            txtGhiChu.Text = lt.GhiChu;
         }
         public void LoadLichThi(LichThi lt)
         {
@@ -29,7 +48,7 @@ namespace QuanLyDangKyHocPhan
             dtpNgayThi.Text = lt.NgayThi;
             cbbPhongThi.Text = lt.PhongThi;
             txtThoiLuong.Text = lt.ThoiLuong.ToString();
-            txtDiaDiem.Text = lt.DiaDiem;
+            cbbLocation.Text = lt.DiaDiem;
             txtGhiChu.Text = lt.GhiChu;
         }
         public void LoadStatusAdd()
@@ -47,7 +66,7 @@ namespace QuanLyDangKyHocPhan
         {
             LichThi lich = new LichThi();
             lich.MaHP = "";
-            if (mtxtGioThi.Text == "" || txtDiaDiem.Text == "")
+            if (mtxtGioThi.Text == "" || cbbLocation.Text == "")
             {
                 MessageBox.Show("Không thể thêm lịch thi, vui lòng kiểm tra lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -55,38 +74,20 @@ namespace QuanLyDangKyHocPhan
             {
                 lich.MaHP = txtMaHP.Text;
                 lich.NgayThi = dtpNgayThi.Text;
+                lich.HocKy = hocKy;
+                lich.NamHoc = namHoc;
                 lich.GioThi = mtxtGioThi.Text;
                 lich.ThoiLuong = int.Parse(txtThoiLuong.Text);
                 lich.PhongThi = cbbPhongThi.Text;
-                lich.DiaDiem = txtDiaDiem.Text;
+                lich.DiaDiem = cbbLocation.Text;
                 lich.GhiChu = txtGhiChu.Text;
-                LichThiBL ltBL = new LichThiBL();
+
+                LichThiBL ltBL = LichThiBL.Instance();
                 return ltBL.Insert(lich);
             }
             return -1;
         }
-        public int UpdateLichThi()
-        {
-            LichThi lich = new LichThi();
-            lich.MaHP = "";
-            if (mtxtGioThi.Text == "" || txtDiaDiem.Text == "")
-            {
-                MessageBox.Show("Không thể thêm lịch thi, vui lòng kiểm tra lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                lich.MaHP = txtMaHP.Text;
-                lich.NgayThi = dtpNgayThi.Text;
-                lich.GioThi = mtxtGioThi.Text;
-                lich.ThoiLuong = int.Parse(txtThoiLuong.Text);
-                lich.PhongThi = cbbPhongThi.Text;
-                lich.DiaDiem = txtDiaDiem.Text;
-                lich.GhiChu = txtGhiChu.Text;
-                LichThiBL ltBL = new LichThiBL();
-                return ltBL.Update(lich);
-            }
-            return -1;
-        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             int result = InsertLichThi();
@@ -98,15 +99,9 @@ namespace QuanLyDangKyHocPhan
             DialogResult = DialogResult.OK;
         }
 
-        private void btnCapNhat_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
-            int result = UpdateLichThi();
-            if (result > 0)
-            {
-                MessageBox.Show("Cập nhật học phần thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult = DialogResult.OK;
-            }
-            else MessageBox.Show("Cập nhật thất bại, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            this.Close();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace DataAccess
         public int id { get; set; }
         public string MaHP { get; set; }
         public int HocKy { get; set; }
-        public int NamHoc { get; set; }
+        public string NamHoc { get; set; }
         public string NgayThi { get; set; }
         public string GioThi { get; set; }
         public int ThoiLuong { get; set; }

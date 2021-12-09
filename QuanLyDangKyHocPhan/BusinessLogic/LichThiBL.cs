@@ -11,15 +11,15 @@ namespace BusinessLogic
     public class LichThiBL
     {
         LichThiDA lichThiDA = new LichThiDA();
-        private static LichThiDA instance;
-        public LichThiBL()
+        private static LichThiBL instance;
+        private LichThiBL()
         {
 
         }
-        public static LichThiDA Instance()
+        public static LichThiBL Instance()
         {
             if(instance == null)
-                instance= new LichThiDA();
+                instance= new LichThiBL();
             return instance;
         }
         public List<LichThi> GetAll()
@@ -74,6 +74,16 @@ namespace BusinessLogic
         public SqlDataReader LoadLichThi(string namHoc, int hocKy)
         {
             return lichThiDA.LoadLichThi(namHoc, hocKy);
+        }
+
+        /// <summary>
+        /// Hàm lấy lịch thi của một sinh viên
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <returns></returns>
+        public List<LichThi> GetLichThiSV(int mssv, int hocky)
+        {
+            return lichThiDA.GetLichThiSV(mssv, hocky);
         }
     }
 }

@@ -52,7 +52,7 @@ namespace QuanLyDangKyHocPhan
 
         private void btnLichThi_Click(object sender, EventArgs e)
         {
-            setContent(new LichThiForm());
+            setContent(new LichThiForm(userName));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace QuanLyDangKyHocPhan
         List<ChiTietDangKy> listCTDK;
         ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
         HocPhan hocPhanCurrent;
-        LichThiBL lichThiBL = new LichThiBL();
+        LichThiBL lichThiBL = LichThiBL.Instance();
         string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
         List<LichThi> listLichThi;
         LichThi lichThi;
@@ -124,40 +124,8 @@ namespace QuanLyDangKyHocPhan
                 ListViewItem item = lvLichThi.SelectedItems[0];
                 hocPhanCurrent.MaHP = item.SubItems[0].Text;
                 hocPhanCurrent.TenHP = item.SubItems[1].Text;
-                lichThiInfo.LoadHocPhan(hocPhanCurrent);
+                lichThiInfo.LoadHocPhan(hocPhanCurrent,currentYear, int.Parse(cbbHocKy.Text));
                 lichThiInfo.LoadStatusAdd();
-                if (lichThiInfo.ShowDialog() == DialogResult.OK)
-                {
-                    LoadItemToLV(currentYear, int.Parse(cbbHocKy.Text));
-                }
-            }
-        }
-
-        private void sửaLịchThiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (lvLichThi.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn môn học để cập nhật lịch thi", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                var lichThiInfo = new LichThiInfo();
-                hocPhanCurrent = new HocPhan();
-                lichThi = new LichThi();
-                ListViewItem item = lvLichThi.SelectedItems[0];
-                hocPhanCurrent.MaHP = item.SubItems[0].Text;
-                hocPhanCurrent.TenHP = item.SubItems[1].Text;
-                hocPhanCurrent.Khoa = item.SubItems[2].Text;
-                hocPhanCurrent.TongSoTC = int.Parse(item.SubItems[3].Text);
-                lichThi.GioThi = item.SubItems[5].Text;
-                lichThi.NgayThi = item.SubItems[6].Text;
-                lichThi.PhongThi = item.SubItems[7].Text;
-                lichThi.ThoiLuong = int.Parse(item.SubItems[8].Text);
-                lichThi.DiaDiem = item.SubItems[9].Text;
-                lichThi.GhiChu = item.SubItems[10].Text;
-                lichThiInfo.LoadHocPhan(hocPhanCurrent);
-                lichThiInfo.LoadLichThi(lichThi);
-                lichThiInfo.LoadStatusUpdate();
                 if (lichThiInfo.ShowDialog() == DialogResult.OK)
                 {
                     LoadItemToLV(currentYear, int.Parse(cbbHocKy.Text));

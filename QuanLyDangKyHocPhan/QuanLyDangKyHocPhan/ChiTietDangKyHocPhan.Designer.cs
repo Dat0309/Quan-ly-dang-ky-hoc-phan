@@ -37,6 +37,8 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSave = new Guna.UI.WinForms.GunaButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // lvCTHP
@@ -58,7 +60,7 @@
             this.lvCTHP.HideSelection = false;
             this.lvCTHP.Location = new System.Drawing.Point(12, 12);
             this.lvCTHP.Name = "lvCTHP";
-            this.lvCTHP.Size = new System.Drawing.Size(1320, 600);
+            this.lvCTHP.Size = new System.Drawing.Size(1320, 556);
             this.lvCTHP.TabIndex = 0;
             this.lvCTHP.UseCompatibleStateImageBehavior = false;
             this.lvCTHP.View = System.Windows.Forms.View.Details;
@@ -104,15 +106,44 @@
             this.columnHeader8.Text = "Địa chỉ";
             this.columnHeader8.Width = 190;
             // 
+            // btnSave
+            // 
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor = System.Drawing.Color.DarkRed;
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = null;
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.Location = new System.Drawing.Point(1172, 574);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = null;
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 5;
+            this.btnSave.Size = new System.Drawing.Size(160, 38);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Xuất danh sách thi";
+            this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // ChiTietDangKyHocPhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 624);
+            this.ClientSize = new System.Drawing.Size(1344, 616);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lvCTHP);
             this.Name = "ChiTietDangKyHocPhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách sinh viên đăng ký";
+            this.Load += new System.EventHandler(this.ChiTietDangKyHocPhan_Load);
             this.ResumeLayout(false);
 
         }
@@ -128,5 +159,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private Guna.UI.WinForms.GunaButton btnSave;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

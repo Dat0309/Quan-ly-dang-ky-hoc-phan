@@ -389,7 +389,7 @@ from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKH
 where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP
 order by a.MaHP
 
-alter procedure GetChiTietTheoHocKyVaNam
+create procedure GetChiTietTheoHocKyVaNam
 @hocky int,
 @nam varchar(20)
 as
@@ -397,7 +397,6 @@ select a.MSSV, a.MaHP, b.HoLot, b.Ten, c.TenHP, b.TenLop, c.LoaiHP, b.Khoa, c.ST
 from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
 where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP and a.HocKy = @hocky and a.NamHoc = @nam
 order by a.MaHP
-
 
 create table Khoa
 (
@@ -412,3 +411,109 @@ create table Lop
 
 drop table Khoa
 drop table Lop
+
+alter procedure [dbo].[LichThi_GetAll]
+as
+select * from HocPhan a, LichThi b where a.MaHP = b.MaHP
+go
+
+create procedure [dbo].[LichThi_InsertUpdatedelete]
+	@id int output,
+	@MaHP nvarchar(20),
+	@HocKy int,
+	@NamHoc int,
+	@NgayThi smalldatetime,
+	@GioThi time,
+	@ThoiLuong int,
+	@PhongThi nvarchar(100),
+	@DiaDiem nvarchar(1000),
+	@GhiChu nvarchar(3000),
+	@Action int
+as
+if @Action = 0
+	begin
+		if not exists (select * from LichThi where MaHP = @MaHP)
+			begin
+				insert into [LichThi] ([MaHP], [HocKy], [NamHoc], [NgayThi], [GioThi], [ThoiLuong], [PhongThi], [DiaDiem], [GhiChu])
+				values (@MaHP, @HocKy, @NamHoc, @NgayThi, @GioThi, @ThoiLuong, @PhongThi, @DiaDiem, @GhiChu)
+				set @id=@@IDENTITY
+			end
+	end
+else if @Action = 1
+	begin	
+		update [LichThi]
+		set [MaHP] = @MaHP,
+			[HocKy] = @HocKy,
+			[NamHoc] = @NamHoc,
+			[NgayThi] = @NgayThi,
+			[GioThi] = @GioThi,
+			[ThoiLuong] = @ThoiLuong,
+			[PhongThi] = @PhongThi,
+			[DiaDiem] = @DiaDiem,
+			[GhiChu] = @GhiChu
+			where [id] = @id
+	end
+else if @Action = 2
+	begin
+		delete from [LichThi] where [id] = @id
+	end
+
+select * from HocPhan a, CT_DKHP b where a.MaHP = b.MaHP and b.NamHoc = '2021 - 2022' and b.HocKy = 1
+
+create procedure GetChiTietTheoHocKyVaNam
+@hocky int,
+@nam varchar(20)
+as
+select a.MaHP, c.TenHP, c.STC, b.TenLop, c.LoaiHP, b.Khoa, c.STC,SLDK.SLDK, a.HocKy, a.NamHoc
+from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP and a.HocKy = @hocky and a.NamHoc = @nam
+order by a.MaHP
+
+create procedure GetChiTietTheoHocKyVaNam
+@hocky int,
+@nam varchar(20)
+as
+select a.MaHP, c.TenHP, c.STC, b.TenLop, c.LoaiHP, b.Khoa, c.STC,SLDK.SLDK, a.HocKy, a.NamHoc
+from CT_DKHP a, SinhVien b, HocPhan c, (select MaHP,count(*) as SLDK from CT_DKHP group by CT_DKHP.MaHP) SLDK
+where a.MSSV = b.MSSV and a.MaHP = c.MaHP and SLDK.MaHP = c.MaHP and a.HocKy = @hocky and a.NamHoc = @nam
+order by a.MaHP
+
+select*from CT_DKHP
+
+alter procedure QLChiTietHP
+as
+select a.MaHP, a.TenHP, a.Khoa, a.STC, sldk.SLDK, a.HocKy, b.GioThi, b.DiaDiem, b.ThoiLuong, b.GhiChu
+from HocPhan a, (select MaHP, COUNT(*)as SLDK From CT_DKHP group by CT_DKHP.MaHP) as sldk,
+(select MaHP, COUNT(*)as GioThi, DiaDiem, ThoiLuong, GhiChu
+from LichThi 
+group by LichThi.MaHP,GioThi, DiaDiem, ThoiLuong, GhiChu)as b
+where a.MaHP = sldk.MaHP and b.MaHP = a.MaHP
+order by a.MaHP
+
+Create procedure GetHocPhanTheoHocKyVaNam
+@NamHoc varchar(20),
+@HocKy int
+As
+select a.MaHP, a.TenHP, a.Khoa, a.STC, sldk.SLDK
+from HocPhan a, (select MaHP, COUNT(*)as SLDK From CT_DKHP group by CT_DKHP.MaHP) as sldk
+where a.MaHP in (select distinct MaHP from CT_DKHP where NamHoc = @NamHoc and HocKy = @HocKy ) and a.MaHP = sldk.MaHP
+order by a.MaHP
+
+create procedure CheckSVDangKyHocPhan
+@MaHP nvarchar(20)
+as
+begin
+	select *
+	from SinhVien a
+	where a.MSSV in (select MSSV from CT_DKHP where MaHP = 'CT3120D')
+end
+
+create proc LoadLichThi
+@NamHoc nvarchar(20),
+@HocKy int
+as
+begin
+select distinct  a.MaHP, a.TenHP, a.Khoa, a.STC, sldk.SLDK, b.NgayThi, b.GioThi, b.PhongThi, b.ThoiLuong, b.DiaDiem, b.GhiChu
+from HocPhan a left join LichThi b on a.MaHP = b.MaHP, CT_DKHP c, (select MaHP, COUNT(*)as SLDK From CT_DKHP group by CT_DKHP.MaHP) as sldk
+where a.HocKy = @HocKy and c.NamHoc = @NamHoc and c.MaHP = a.MaHP and a.MaHP = sldk.MaHP
+end

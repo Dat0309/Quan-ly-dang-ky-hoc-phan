@@ -87,7 +87,6 @@ namespace QuanLyDangKyHocPhan
             }
             return -1;
         }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             int result = InsertLichThi();

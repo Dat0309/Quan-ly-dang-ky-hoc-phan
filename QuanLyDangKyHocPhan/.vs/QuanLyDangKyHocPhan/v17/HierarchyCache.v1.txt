@@ -40,9 +40,8 @@ i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-d
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\kqdkhpform.cs
 ++LichThiForm.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiform.cs
-++LichThiInFo.cs
-++LichThiInFo.Designer.cs
-++LichThiInFo.resx
+++LichThiInfo.cs
+i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiinfo.cs
 ++LoadingFrm.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\loadingfrm.cs
 ++packages.config
@@ -57,14 +56,8 @@ i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-d
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\sinhvieninfo.cs
 ++TaiKhoanForm.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\taikhoanform.cs
-++TaiKhoanInfo.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\taikhoaninfo.cs
 ++ThemLichThiForm.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\themlichthiform.cs
-++ThemLichThiForm.Designer.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\themlichthiform.designer.cs
-++ThemLichThiForm.resx
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\themlichthiform.resx
 ++ThongTinSVForm.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\thongtinsvform.cs
 ++Utils.cs
@@ -244,6 +237,10 @@ i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-d
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiform.designer.cs
 ++LichThiForm.resx
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiform.resx
+++LichThiInfo.Designer.cs
+i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiinfo.designer.cs
+++LichThiInfo.resx
+i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiinfo.resx
 ++LoadingFrm.Designer.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\loadingfrm.designer.cs
 ++LoadingFrm.resx
@@ -264,10 +261,10 @@ i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-d
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\taikhoanform.designer.cs
 ++TaiKhoanForm.resx
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\taikhoanform.resx
-++TaiKhoanInfo.Designer.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\taikhoaninfo.designer.cs
-++TaiKhoanInfo.resx
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\taikhoaninfo.resx
+++ThemLichThiForm.Designer.cs
+i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\themlichthiform.designer.cs
+++ThemLichThiForm.resx
+i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\themlichthiform.resx
 ++ThongTinSVForm.Designer.cs
 i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\thongtinsvform.designer.cs
 ++ThongTinSVForm.resx
@@ -287,10 +284,10 @@ i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-d
 i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\hocphibl.cs
 ++KhoaBL.cs
 i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\khoabl.cs
+++LichThiBL.cs
+i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\lichthibl.cs
 ++LopBL.cs
 i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\lopbl.cs
-++QuyenBL.cs
-i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\quyenbl.cs
 ++SinhVienBL.cs
 i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\sinhvienbl.cs
 ++TaiKhoanBL.cs
@@ -310,7 +307,7 @@ i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\program files (x86)\reference assemb
 i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.7.2\system.runtime.serialization.dll
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.7.2\system.runtime.serialization.dll
 ++Microsoft.Extensions.Configuration.Abstractions (6.0.0)
-i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:>251
+i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:>261
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:>265
 ++ChiTietDangKy.cs
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\chitietdangky.cs
@@ -328,14 +325,16 @@ i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-d
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\khoa.cs
 ++KhoaDA.cs
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\khoada.cs
+++LichThi.cs
+i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\lichthi.cs
+++LichThiDA.cs
+i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\lichthida.cs
 ++Lop.cs
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\lop.cs
 ++LopDA.cs
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\lopda.cs
 ++Quyen.cs
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\quyen.cs
-++QuyenDA.cs
-i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\quyenda.cs
 ++SinhVien.cs
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\sinhvien.cs
 ++SinhVienDA.cs
@@ -348,21 +347,3 @@ i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-d
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\ultilities.cs
 ++System.Configuration.ConfigurationManager (6.0.0)
 i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:>266
-++LichThi.cs
-i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\lichthi.cs
-++LichThiDA.cs
-i:{09fedf26-c5bc-45a2-a5b9-d058f11f6482}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\dataaccess\lichthida.cs
-++LichThiBL.cs
-i:{ed7f5d2c-8540-4e91-be2d-a682f6c57c53}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\businesslogic\lichthibl.cs
-++ChiTietDangKyHocPhan.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\chitietdangkyhocphan.cs
-++ChiTietDangKyHocPhan.Designer.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\chitietdangkyhocphan.designer.cs
-++ChiTietDangKyHocPhan.resx
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\chitietdangkyhocphan.resx
-++LichThiInfo.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiinfo.cs
-++LichThiInfo.Designer.cs
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiinfo.designer.cs
-++LichThiInfo.resx
-i:{5ca8e49a-b82a-40a4-bcf1-2c028d94d6d4}:c:\users\kin\documents\github\quan-ly-dang-ky-hoc-phan\quanlydangkyhocphan\quanlydangkyhocphan\lichthiinfo.resx

@@ -22,6 +22,7 @@ namespace QuanLyDangKyHocPhan
         string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
         List<LichThi> listLichThi;
         LichThi lichThi;
+
         public ThemLichThiForm()
         {
             InitializeComponent();
@@ -43,8 +44,10 @@ namespace QuanLyDangKyHocPhan
                 item.SubItems.Add(reader["ThoiLuong"].ToString());
                 item.SubItems.Add(reader["DiaDiem"].ToString());
                 item.SubItems.Add(reader["GhiChu"].ToString());
+
             }
         }
+
         private void LoadHPTheoHKVaNam(string namHoc, int hocKy)
         {
             lvLichThi.Items.Clear();
@@ -68,16 +71,31 @@ namespace QuanLyDangKyHocPhan
 
         private void ThemLichThiForm_Load(object sender, EventArgs e)
         {
+            LoadLichThiToLV();
             LoadItemToLV(currentYear, int.Parse(cbbHocKy.Text == "" ? "0" : cbbHocKy.Text));
             txtNamHoc.Text = currentYear;
-        }
 
+        }
         private void btnFilter_Click(object sender, EventArgs e)
         {
             int hocKy = int.Parse(cbbHocKy.Text == "" ? "0" : cbbHocKy.Text);
             LoadHPTheoHKVaNam(currentYear, hocKy);
         }
-
+        private void LoadLichThiToLV()
+        {
+            lvLichThi.Items.Clear();
+            listLichThi = lichThiBL.GetAll();
+            SqlDataReader reader = ctdkBL.QLChiTietHP();
+            foreach (var lichThi in listLichThi)
+            {
+                ListViewItem item1 = lvLichThi.Items.Add(lichThi.MaHP);
+                item1.SubItems.Add(lichThi.NgayThi);
+                item1.SubItems.Add(lichThi.GioThi);
+                item1.SubItems.Add(lichThi.PhongThi);
+                item1.SubItems.Add(lichThi.ThoiLuong.ToString());
+                item1.SubItems.Add(lichThi.GhiChu);
+            }
+        }
         private void xemDanhSáchSinhViênĐăngKýToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string maHP;
@@ -93,7 +111,6 @@ namespace QuanLyDangKyHocPhan
                 frm.ShowDialog();
             }
         }
-
         private void thêmLịchThiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (lvLichThi.SelectedItems.Count == 0)

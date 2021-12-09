@@ -38,7 +38,7 @@ namespace BusinessLogic
             List<ChiTietDangKy> list = GetAll();
             foreach (var item in list)
             {
-                if(item.MSSV == mssv)
+                if (item.MSSV == mssv)
                     return item;
             }
             return null;
@@ -62,12 +62,11 @@ namespace BusinessLogic
 
             foreach (var hp in list)
             {
-                if (hp.MaHP.Contains(key) || hp.NamHoc.Contains(key))
+                if (hp.MaHP.Contains(key) || hp.NamHoc.Contains(key)||hp.HocKy.ToString().Contains(key))
                     result.Add(hp);
             }
             return result;
         }
-
         public int Insert(ChiTietDangKy ct)
         {
             return ctdkDA.Insert_Update_Delete(ct, 0);
@@ -106,6 +105,16 @@ namespace BusinessLogic
         public SqlDataReader GetChiTietDKHPTheoHocKy(int hocky, string nam)
         {
             return ctdkDA.GetChiTietDKHPTheeoHocKy(hocky, nam);
+        }
+
+        public SqlDataReader QLChiTietHP()
+        {
+            return ctdkDA.QLChiTietHP();
+        }
+
+        public SqlDataReader GetHocPhanTheoHocKyVaNam(int hocKy, string nam)
+        {
+            return ctdkDA.GetHocPhanTheoHocKyVaNam(hocKy, nam);
         }
         public List<SinhVien> CheckSVDangKyHocPhan(string MaHP)
         {

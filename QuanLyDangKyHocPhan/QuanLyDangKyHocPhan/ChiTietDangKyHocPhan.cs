@@ -39,5 +39,9 @@ namespace QuanLyDangKyHocPhan
                 item.SubItems.Add(sv.DiaChi);
             }
         }
+
+        private void lvCTHP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

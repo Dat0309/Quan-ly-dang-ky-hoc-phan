@@ -46,11 +46,11 @@
             this.sửaLịchThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cbbHocKy = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.txtNamHoc = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.cbbHocKy = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.btnFilter = new Guna.UI.WinForms.GunaButton();
             this.contextMenuStrip1.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -74,10 +74,10 @@
             this.lvLichThi.FullRowSelect = true;
             this.lvLichThi.GridLines = true;
             this.lvLichThi.HideSelection = false;
-            this.lvLichThi.Location = new System.Drawing.Point(12, 110);
+            this.lvLichThi.Location = new System.Drawing.Point(12, 107);
             this.lvLichThi.Name = "lvLichThi";
             this.lvLichThi.Size = new System.Drawing.Size(1198, 640);
-            this.lvLichThi.TabIndex = 29;
+            this.lvLichThi.TabIndex = 24;
             this.lvLichThi.UseCompatibleStateImageBehavior = false;
             this.lvLichThi.View = System.Windows.Forms.View.Details;
             // 
@@ -170,39 +170,16 @@
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem.Text = "Xem danh sách sinh viên đăng ký";
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem.Click += new System.EventHandler(this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem_Click);
             // 
-            // cbbHocKy
+            // gunaPanel1
             // 
-            this.cbbHocKy.BackColor = System.Drawing.Color.Transparent;
-            this.cbbHocKy.BaseColor = System.Drawing.Color.White;
-            this.cbbHocKy.BorderColor = System.Drawing.Color.Silver;
-            this.cbbHocKy.BorderSize = 1;
-            this.cbbHocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbHocKy.FocusedColor = System.Drawing.Color.Empty;
-            this.cbbHocKy.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbHocKy.ForeColor = System.Drawing.Color.Black;
-            this.cbbHocKy.FormattingEnabled = true;
-            this.cbbHocKy.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.cbbHocKy.Location = new System.Drawing.Point(77, 73);
-            this.cbbHocKy.Name = "cbbHocKy";
-            this.cbbHocKy.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbbHocKy.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbHocKy.Radius = 10;
-            this.cbbHocKy.Size = new System.Drawing.Size(121, 31);
-            this.cbbHocKy.TabIndex = 28;
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(12, 78);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(54, 20);
-            this.gunaLabel3.TabIndex = 27;
-            this.gunaLabel3.Text = "Học kỳ";
+            this.gunaPanel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.gunaPanel1.Controls.Add(this.txtNamHoc);
+            this.gunaPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(1222, 51);
+            this.gunaPanel1.TabIndex = 19;
             // 
             // txtNamHoc
             // 
@@ -226,16 +203,39 @@
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Danh sách học phần được đăng ký trong năm học:";
             // 
-            // gunaPanel1
+            // cbbHocKy
             // 
-            this.gunaPanel1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.gunaPanel1.Controls.Add(this.txtNamHoc);
-            this.gunaPanel1.Controls.Add(this.gunaLabel1);
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1222, 51);
-            this.gunaPanel1.TabIndex = 26;
+            this.cbbHocKy.BackColor = System.Drawing.Color.Transparent;
+            this.cbbHocKy.BaseColor = System.Drawing.Color.White;
+            this.cbbHocKy.BorderColor = System.Drawing.Color.Silver;
+            this.cbbHocKy.BorderSize = 1;
+            this.cbbHocKy.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbHocKy.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbHocKy.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbHocKy.ForeColor = System.Drawing.Color.Black;
+            this.cbbHocKy.FormattingEnabled = true;
+            this.cbbHocKy.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cbbHocKy.Location = new System.Drawing.Point(77, 70);
+            this.cbbHocKy.Name = "cbbHocKy";
+            this.cbbHocKy.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbHocKy.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbHocKy.Radius = 10;
+            this.cbbHocKy.Size = new System.Drawing.Size(121, 31);
+            this.cbbHocKy.TabIndex = 23;
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(12, 75);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(54, 20);
+            this.gunaLabel3.TabIndex = 22;
+            this.gunaLabel3.Text = "Học kỳ";
             // 
             // btnFilter
             // 
@@ -250,7 +250,7 @@
             this.btnFilter.ForeColor = System.Drawing.Color.White;
             this.btnFilter.Image = null;
             this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFilter.Location = new System.Drawing.Point(204, 73);
+            this.btnFilter.Location = new System.Drawing.Point(204, 70);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -259,7 +259,7 @@
             this.btnFilter.OnPressedColor = System.Drawing.Color.Black;
             this.btnFilter.Radius = 10;
             this.btnFilter.Size = new System.Drawing.Size(98, 31);
-            this.btnFilter.TabIndex = 30;
+            this.btnFilter.TabIndex = 25;
             this.btnFilter.Text = "Lọc";
             this.btnFilter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -269,11 +269,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
+            this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.lvLichThi);
+            this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.cbbHocKy);
             this.Controls.Add(this.gunaLabel3);
-            this.Controls.Add(this.gunaPanel1);
-            this.Controls.Add(this.btnFilter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThemLichThiForm";
             this.Text = "frmThemLichThi";
@@ -290,6 +290,10 @@
 
         private System.Windows.Forms.ListView lvLichThi;
         private System.Windows.Forms.ColumnHeader columnHeader1;
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaComboBox cbbHocKy;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
@@ -299,17 +303,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem thêmLịchThiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sửaLịchThiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem xemDanhSáchSinhViênĐăngKýToolStripMenuItem;
-        private Guna.UI.WinForms.GunaComboBox cbbHocKy;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLabel txtNamHoc;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaButton btnFilter;
+        private Guna.UI.WinForms.GunaLabel txtNamHoc;
+        private System.Windows.Forms.ToolStripMenuItem xemDanhSáchSinhViênĐăngKýToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

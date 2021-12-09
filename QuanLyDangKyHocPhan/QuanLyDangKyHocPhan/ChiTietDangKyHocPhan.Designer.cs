@@ -58,10 +58,11 @@
             this.lvCTHP.HideSelection = false;
             this.lvCTHP.Location = new System.Drawing.Point(12, 12);
             this.lvCTHP.Name = "lvCTHP";
-            this.lvCTHP.Size = new System.Drawing.Size(1108, 537);
-            this.lvCTHP.TabIndex = 1;
+            this.lvCTHP.Size = new System.Drawing.Size(1320, 600);
+            this.lvCTHP.TabIndex = 0;
             this.lvCTHP.UseCompatibleStateImageBehavior = false;
             this.lvCTHP.View = System.Windows.Forms.View.Details;
+            this.lvCTHP.SelectedIndexChanged += new System.EventHandler(this.lvCTHP_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -107,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 561);
+            this.ClientSize = new System.Drawing.Size(1344, 624);
             this.Controls.Add(this.lvCTHP);
             this.Name = "ChiTietDangKyHocPhan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -18,8 +18,8 @@ namespace BusinessLogic
         }
         public static LichThiDA Instance()
         {
-            if (instance == null)
-                instance = new LichThiDA();
+            if(instance == null)
+                instance= new LichThiDA();
             return instance;
         }
         public List<LichThi> GetAll()
@@ -28,8 +28,8 @@ namespace BusinessLogic
         }
         public LichThi GetByMaHP(string maHP)
         {
-            List<LichThi> list = GetAll();
-            foreach (LichThi lt in list)
+            List<LichThi>list =GetAll();
+            foreach(LichThi lt in list)
             {
                 if (lt.MaHP == maHP)
                     return lt;
@@ -37,10 +37,10 @@ namespace BusinessLogic
             return null;
         }
 
-        public List<LichThi> Find(string key)
+        public List<LichThi>Find(string key)
         {
             List<LichThi> list = GetAll();
-            List<LichThi> result = new List<LichThi>();
+            List<LichThi>result=new List<LichThi>();
             foreach (var lt in list)
             {
                 if (lt.id.ToString().Contains(key)

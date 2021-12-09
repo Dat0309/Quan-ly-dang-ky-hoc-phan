@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace DataAccess
 {
@@ -21,10 +21,12 @@ namespace DataAccess
 
             SqlDataReader reader = cmd.ExecuteReader();
             List<LichThi> list = new List<LichThi>();
+            // ***************************************
             List<HocPhan> listHP = new List<HocPhan>();
             while (reader.Read())
             {
                 LichThi lich = new LichThi();
+                //***************************
                 HocPhan hp = new HocPhan();
                 lich.id = Convert.ToInt32(reader["id"]);
                 lich.MaHP = reader["MaHp"].ToString();
@@ -92,7 +94,7 @@ namespace DataAccess
             cmd.CommandText = Ultilities.LoadLichThi;
 
             cmd.Parameters.Add("@NamHoc", SqlDbType.NVarChar, 20).Value = namHoc;
-            cmd.Parameters.Add("@HocKy", SqlDbType.Int).Value = hocKy;
+            cmd.Parameters.Add("@HocKy", SqlDbType.Int).Value=hocKy;
 
             SqlDataReader dr = cmd.ExecuteReader();
             return dr;

@@ -187,6 +187,36 @@ namespace DataAccess
             return dr;
             dr.Close();
         }
+        public SqlDataReader GetHocPhanTheoHocKyVaNam(int hocKy, string nam)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.GetHocPhanTheoHocKyVaNam;
+
+            cmd.Parameters.Add("@NamHoc", SqlDbType.VarChar, 20).Value = nam;
+            cmd.Parameters.Add("@HocKy", SqlDbType.Int).Value = hocKy;
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+            dr.Close();
+        }
+        public SqlDataReader QLChiTietHP()
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.QLChiTietHP;
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            return dr;
+            dr.Close();
+
+        }
         public List<SinhVien> CheckSVDangKyHocPhan(string MaHP)
         {
             SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
@@ -195,7 +225,7 @@ namespace DataAccess
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = Ultilities.CheckSVDangKyHocPhan;
-            cmd.Parameters.Add("@MaHP", SqlDbType.NVarChar, 20).Value = MaHP;
+            cmd.Parameters.Add("@MaHP",SqlDbType.NVarChar,20).Value=MaHP;
 
             List<SinhVien> listSV = new List<SinhVien>();
             SqlDataReader dr = cmd.ExecuteReader();
@@ -216,5 +246,6 @@ namespace DataAccess
             dr.Close();
             return listSV;
         }
+
     }
 }

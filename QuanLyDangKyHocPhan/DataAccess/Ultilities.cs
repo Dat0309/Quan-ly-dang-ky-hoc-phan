@@ -34,6 +34,7 @@ namespace DataAccess
         public static string GetHPNgoaiKeHoach = "GetHPNgoaiKeHoach";
         public static string GetKQDK = "GetKQDK";
         public static string GetKQDK_HienTai = "GetKQDK_HienTai";
+        public static string GetHocPhanTheoHocKyVaNam = "GetHocPhanTheoHocKyVaNam";
 
         /// <summary>
         /// TaiKhoan procedure
@@ -56,7 +57,10 @@ namespace DataAccess
         public static string UpdateCTDKHP = "UpdateCTDKHP";
         public static string DeleteByKey = "DeleteByKey";
         public static string QLChiTietDKHP = "QLChiTietDKHP";
+        public static string QLChiTietHP = "QLChiTietHP";
         public static string GetChiTietTheoHocKyVaNam = "GetChiTietTheoHocKyVaNam";
+        public static string CheckSVDangKyHocPhan = "CheckSVDangKyHocPhan";
+
 
         public static string HocPhi_GetAll = "HocPhi_GetAll";
         public static string HocPhi_InsertUpdateDelete = "HocPhi_InsertUpdateDelete";
@@ -64,6 +68,6 @@ namespace DataAccess
         public static string LichThi_GetAll = "LichThi_GetAll";
         public static string LichThi_InsertUpdatedelete = "LichThi_InsertUpdatedelete";
         public static string LoadLichThi = "LoadLichThi";
-        public static string CheckSVDangKyHocPhan = "CheckSVDangKyHocPhan";
+
     }
 }

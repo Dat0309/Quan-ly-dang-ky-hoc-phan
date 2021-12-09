@@ -111,15 +111,13 @@ namespace QuanLyDangKyHocPhan
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            int result = UpdateHocPhan();
+            if (result > 0)
             {
-                int result = UpdateHocPhan();
-                if (result > 0)
-                {
-                    MessageBox.Show("Cập nhật học phần thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult = DialogResult.OK;
-                }
-                else MessageBox.Show("Cập nhật thất bại, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cập nhật học phần thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
             }
+            else MessageBox.Show("Cập nhật thất bại, vui lòng nhập lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         public void LoadHocPhan(HocPhan hocPhan)
         {

@@ -102,6 +102,7 @@ namespace QuanLyDangKyHocPhan
                 ListViewItem item = lvTaiKhoan.SelectedItems[0];
                 tkscurret.Id = int.Parse(item.SubItems[0].Text); 
                 tkscurret.UserName = item.SubItems[1].Text;
+                tkscurret.Password = "";
                 tkscurret.Active = item.SubItems[2].Text == "True" ? true : false;
                 tkscurret.IDQuyen = int.Parse(item.SubItems[3].Text);
                 tkscurret.CreateDate = item.SubItems[4].Text;
@@ -109,6 +110,7 @@ namespace QuanLyDangKyHocPhan
                 if (taikhoanBL.Delete(tkscurret) > 0)
                 {
                     MessageBox.Show("Xóa tài khoản thành công");
+                    LoadTaiKhoantoListView();
                 }
                 else MessageBox.Show("Xóa thất bại");
             }

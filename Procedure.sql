@@ -202,7 +202,7 @@ begin
 end
 go
 
-create procedure TaiKhoan_InsertUpdateDelete
+alter procedure TaiKhoan_InsertUpdateDelete
 	@Id int output,
 	@UserName nvarchar(100),
 	@Password nvarchar(100),

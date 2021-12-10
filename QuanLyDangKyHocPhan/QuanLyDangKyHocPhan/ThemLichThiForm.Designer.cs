@@ -57,6 +57,9 @@
             // 
             // lvLichThi
             // 
+            this.lvLichThi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvLichThi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader10,
@@ -140,7 +143,7 @@
             this.toolStripSeparator1,
             this.xemDanhSáchSinhViênĐăngKýToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(296, 86);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(296, 58);
             // 
             // thêmLịchThiToolStripMenuItem
             // 
@@ -177,7 +180,7 @@
             this.txtNamHoc.AutoSize = true;
             this.txtNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamHoc.ForeColor = System.Drawing.Color.White;
-            this.txtNamHoc.Location = new System.Drawing.Point(540, 13);
+            this.txtNamHoc.Location = new System.Drawing.Point(539, 22);
             this.txtNamHoc.Name = "txtNamHoc";
             this.txtNamHoc.Size = new System.Drawing.Size(28, 22);
             this.txtNamHoc.TabIndex = 0;

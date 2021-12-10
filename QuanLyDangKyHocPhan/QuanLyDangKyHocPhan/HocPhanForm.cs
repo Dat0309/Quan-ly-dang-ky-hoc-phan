@@ -176,7 +176,7 @@ namespace QuanLyDangKyHocPhan
         }
         private void btnThemExcel_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = @"D:\";
+            openFileDialog1.InitialDirectory = @"E:\";
             openFileDialog1.DefaultExt = "xlsx";
             openFileDialog1.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
 

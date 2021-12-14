@@ -19,14 +19,33 @@ namespace QuanLyDangKyHocPhan
     {
         List<string> years = new List<string>();
         List<string> courses = new List<string>();
-
+        KhoaBL khoaBL = KhoaBL.getInstance();
+        List<Khoa> listkhoa;
+        LopBL lopBL = LopBL.getInstance();
+        List<Lop> listLop;
         ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
+
         public QLDKHPForm()
         {
             InitializeComponent();
         }
 
         #region
+
+        public void LoadcomboboxKhoa()
+        {
+            listkhoa = khoaBL.GetAll();
+            cbbKhoa.DataSource = listkhoa;
+            cbbKhoa.ValueMember = "TenKhoa";
+            cbbKhoa.DisplayMember = "TenKhoa";
+        }
+        private void LoadcomboboxLop(string key)
+        {
+            listLop = lopBL.Find(key);
+            cbbLop.DataSource = listLop;
+            cbbLop.ValueMember = "TenLop";
+            cbbLop.DisplayMember = "TenLop";
+        }
 
         /// <summary>
         /// Hàm xuất thông tin học phần đăng ký
@@ -93,6 +112,60 @@ namespace QuanLyDangKyHocPhan
                 x.SubItems[4].Text.Contains(key) ||
                 x.SubItems[5].Text.Contains(key) ||
                 x.SubItems[7].Text.Contains(key)))
+                .ToList();
+
+            lvQL.Items.Clear();
+            foreach (var ct in items)
+            {
+                ListViewItem item = lvQL.Items.Add(ct.SubItems[0].Text);
+                item.SubItems.Add(ct.SubItems[1].Text);
+                item.SubItems.Add(ct.SubItems[2].Text);
+                item.SubItems.Add(ct.SubItems[3].Text);
+                item.SubItems.Add(ct.SubItems[4].Text);
+                item.SubItems.Add(ct.SubItems[5].Text);
+                item.SubItems.Add(ct.SubItems[6].Text);
+                item.SubItems.Add(ct.SubItems[7].Text);
+                item.SubItems.Add(ct.SubItems[8].Text);
+                item.SubItems.Add(ct.SubItems[9].Text);
+            }
+        }
+
+        /// <summary>
+        /// Xuất danh sách theo khoa
+        /// </summary>
+        /// <param name="khoa"></param>
+        private void GetByKhoa(string khoa)
+        {
+            LoadItem();
+            var items = this.lvQL.Items.Cast<ListViewItem>()
+                .Where(x => (
+                x.SubItems[7].Text.Equals(khoa.Trim())
+                ))
+                .ToList();
+
+            lvQL.Items.Clear();
+            foreach (var ct in items)
+            {
+                ListViewItem item = lvQL.Items.Add(ct.SubItems[0].Text);
+                item.SubItems.Add(ct.SubItems[1].Text);
+                item.SubItems.Add(ct.SubItems[2].Text);
+                item.SubItems.Add(ct.SubItems[3].Text);
+                item.SubItems.Add(ct.SubItems[4].Text);
+                item.SubItems.Add(ct.SubItems[5].Text);
+                item.SubItems.Add(ct.SubItems[6].Text);
+                item.SubItems.Add(ct.SubItems[7].Text);
+                item.SubItems.Add(ct.SubItems[8].Text);
+                item.SubItems.Add(ct.SubItems[9].Text);
+            }
+        }
+
+        private void GetByLop(string lop)
+        {
+            LoadItem();
+            var items = this.lvQL.Items.Cast<ListViewItem>()
+                .Where(x => (
+                x.SubItems[5].Text.Equals(lop.Trim())
+                ))
                 .ToList();
 
             lvQL.Items.Clear();
@@ -192,6 +265,8 @@ namespace QuanLyDangKyHocPhan
 
         private void QLDKHPForm_Load(object sender, EventArgs e)
         {
+            LoadcomboboxKhoa();
+            LoadcomboboxLop(cbbKhoa.Text);
             LoadItem();
             cbbNamHoc.DataSource = years;
             cbbHK.DataSource = courses;
@@ -217,7 +292,6 @@ namespace QuanLyDangKyHocPhan
         {
             int hocKy = int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text);
             string nam = cbbNamHoc.Text;
-
             LoadItemWithCourse(hocKy, nam);
         }
 
@@ -232,6 +306,17 @@ namespace QuanLyDangKyHocPhan
         {
             if (txtSearch.Text == "")
                 LoadItem();
+        }
+
+        private void cbbKhoa_TextChanged(object sender, EventArgs e)
+        {
+            LoadcomboboxLop(cbbKhoa.Text);
+            GetByKhoa(cbbKhoa.Text);
+        }
+
+        private void cbbLop_TextChanged(object sender, EventArgs e)
+        {
+            GetByLop(cbbLop.Text);
         }
     }
 }

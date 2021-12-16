@@ -292,11 +292,20 @@ namespace QuanLyDangKyHocPhan
             if (cbbHK.Text == "") return;
             LoadDSHP();
             LoadCurrent_DSKQ();
+            if (listKQ.Count > 0)
+            {
+                if (MessageBox.Show("Bạn đã đăng ký học phần của học kỳ này, Chọn chức năng \"Điều chỉnh học phần\" để điều chỉnh?", "Hệ thống", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    DCKQDKForm frm = new DCKQDKForm(currentSV.MSSV.ToString());
+                    frm.ShowDialog(this);
+                }
+            }
         }
 
         private void DKTheoKeHoachForm_Load(object sender, EventArgs e)
         {
-            LoadDSHP();
+            //LoadDSHP();
+            //LoadCurrent_DSKQ();
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)

@@ -54,6 +54,9 @@
             this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.cbbCourse = new Guna.UI.WinForms.GunaComboBox();
+            this.btnThongKe = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -386,11 +389,76 @@
             this.gunaLabel5.TabIndex = 28;
             this.gunaLabel5.Text = "Lớp";
             // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel6.Location = new System.Drawing.Point(597, 76);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(43, 20);
+            this.gunaLabel6.TabIndex = 30;
+            this.gunaLabel6.Text = "Khoá";
+            // 
+            // cbbCourse
+            // 
+            this.cbbCourse.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCourse.BaseColor = System.Drawing.Color.White;
+            this.cbbCourse.BorderColor = System.Drawing.Color.Silver;
+            this.cbbCourse.BorderSize = 1;
+            this.cbbCourse.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCourse.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbCourse.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbCourse.ForeColor = System.Drawing.Color.Black;
+            this.cbbCourse.FormattingEnabled = true;
+            this.cbbCourse.Items.AddRange(new object[] {
+            ""});
+            this.cbbCourse.Location = new System.Drawing.Point(646, 71);
+            this.cbbCourse.Name = "cbbCourse";
+            this.cbbCourse.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbCourse.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbCourse.Radius = 5;
+            this.cbbCourse.Size = new System.Drawing.Size(216, 31);
+            this.cbbCourse.TabIndex = 29;
+            this.cbbCourse.TextChanged += new System.EventHandler(this.cbbCourse_TextChanged);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThongKe.AnimationHoverSpeed = 0.07F;
+            this.btnThongKe.AnimationSpeed = 0.03F;
+            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnThongKe.BorderColor = System.Drawing.Color.Black;
+            this.btnThongKe.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnThongKe.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Image = null;
+            this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThongKe.Location = new System.Drawing.Point(872, 714);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnThongKe.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThongKe.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThongKe.OnHoverImage = null;
+            this.btnThongKe.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThongKe.Radius = 10;
+            this.btnThongKe.Size = new System.Drawing.Size(119, 30);
+            this.btnThongKe.TabIndex = 31;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
             // QLDKHPForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 753);
+            this.Controls.Add(this.btnThongKe);
+            this.Controls.Add(this.gunaLabel6);
+            this.Controls.Add(this.cbbCourse);
+            this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.cbbLop);
@@ -402,7 +470,6 @@
             this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.lvQL);
-            this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLDKHPForm";
             this.Text = "QLDKHPForm";
@@ -442,5 +509,8 @@
         private Guna.UI.WinForms.GunaComboBox cbbLop;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaComboBox cbbCourse;
+        private Guna.UI.WinForms.GunaButton btnThongKe;
     }
 }

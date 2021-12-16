@@ -66,6 +66,7 @@ namespace DataAccess
         /// </summary>
         public static string HocPhi_GetAll = "HocPhi_GetAll";
         public static string HocPhi_InsertUpdateDelete = "HocPhi_InsertUpdateDelete";
+        public static string validationHocPhi = "validationHocPhi";
 
         /// <summary>
         /// Lịch thi

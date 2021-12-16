@@ -63,5 +63,24 @@ namespace DataAccess
             return 0;
             conn.Close();
         }
+
+        public int KiemTraHocPhi(string mssv, string namHoc)
+        {
+            SqlConnection conn = new SqlConnection(Ultilities.ConnectionString);
+            conn.Open();
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = Ultilities.validationHocPhi;
+
+            cmd.Parameters.Add("@mssv", SqlDbType.Int).Value = mssv;
+            cmd.Parameters.Add("@namhoc", SqlDbType.NVarChar, 20).Value = namHoc;
+
+            SqlDataReader rd = cmd.ExecuteReader();
+            if (rd.Read())
+                return 1;
+            return 0;
+            conn.Close();
+        }
     }
 }

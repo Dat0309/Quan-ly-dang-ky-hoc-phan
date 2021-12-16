@@ -46,6 +46,10 @@ namespace QuanLyDangKyHocPhan
             cbbLop.ValueMember = "TenLop";
             cbbLop.DisplayMember = "TenLop";
         }
+        private void LoadcbbCourse()
+        {
+            cbbCourse.DataSource = GetCourse();
+        }
 
         /// <summary>
         /// Hàm xuất thông tin học phần đăng ký
@@ -131,6 +135,24 @@ namespace QuanLyDangKyHocPhan
         }
 
         /// <summary>
+        /// Lấy danh sách 6 khoá còn học trong năm nay
+        /// </summary>
+        /// <returns></returns>
+        private List<int> GetCourse()
+        {
+            List<int> result = new List<int>();
+            int i = 0;
+            int yearOld = 1976;
+            while (i < 6)
+            {
+                result.Add(DateTime.Now.Year - yearOld);
+                yearOld++;
+                i++;
+            }
+            return result;
+        }
+
+        /// <summary>
         /// Xuất danh sách theo khoa
         /// </summary>
         /// <param name="khoa"></param>
@@ -159,12 +181,45 @@ namespace QuanLyDangKyHocPhan
             }
         }
 
+        /// <summary>
+        /// Xuất danh sách theo lớp
+        /// </summary>
+        /// <param name="lop"></param>
         private void GetByLop(string lop)
         {
             LoadItem();
             var items = this.lvQL.Items.Cast<ListViewItem>()
                 .Where(x => (
                 x.SubItems[5].Text.Equals(lop.Trim())
+                ))
+                .ToList();
+
+            lvQL.Items.Clear();
+            foreach (var ct in items)
+            {
+                ListViewItem item = lvQL.Items.Add(ct.SubItems[0].Text);
+                item.SubItems.Add(ct.SubItems[1].Text);
+                item.SubItems.Add(ct.SubItems[2].Text);
+                item.SubItems.Add(ct.SubItems[3].Text);
+                item.SubItems.Add(ct.SubItems[4].Text);
+                item.SubItems.Add(ct.SubItems[5].Text);
+                item.SubItems.Add(ct.SubItems[6].Text);
+                item.SubItems.Add(ct.SubItems[7].Text);
+                item.SubItems.Add(ct.SubItems[8].Text);
+                item.SubItems.Add(ct.SubItems[9].Text);
+            }
+        }
+
+        /// <summary>
+        /// Xuất danh sách theo khoá học
+        /// </summary>
+        /// <param name="course"></param>
+        private void GetByCourse(int course)
+        {
+            LoadItem();
+            var items = this.lvQL.Items.Cast<ListViewItem>()
+                .Where(x => (
+                (2000 + int.Parse(x.SubItems[0].Text.Substring(0, 2)) - 1976).Equals(course)
                 ))
                 .ToList();
 
@@ -267,6 +322,7 @@ namespace QuanLyDangKyHocPhan
         {
             LoadcomboboxKhoa();
             LoadcomboboxLop(cbbKhoa.Text);
+            LoadcbbCourse();
             LoadItem();
             cbbNamHoc.DataSource = years;
             cbbHK.DataSource = courses;
@@ -317,6 +373,19 @@ namespace QuanLyDangKyHocPhan
         private void cbbLop_TextChanged(object sender, EventArgs e)
         {
             GetByLop(cbbLop.Text);
+        }
+
+        private void cbbCourse_TextChanged(object sender, EventArgs e)
+        {
+            GetByCourse(int.Parse(cbbCourse.Text));
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            SqlDataReader reader = LichThiBL.Instance().LoadLichThi(cbbNamHoc.Text, int.Parse(cbbHK.Text));
+            ThongKeFrm frm = new ThongKeFrm();
+            frm.LoadChart(reader, cbbNamHoc.Text, cbbHK.Text);
+            frm.ShowDialog();
         }
     }
 }

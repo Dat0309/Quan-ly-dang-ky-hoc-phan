@@ -44,7 +44,15 @@ namespace QuanLyDangKyHocPhan
 
         private void DKHPForm_Load(object sender, EventArgs e)
         {
+            string preYear = (DateTime.Now.Year - 1).ToString() + " - " + DateTime.Now.Year.ToString();
             LoadHPToLV();
+            if (HocPhiBL.getInstance().KiemTraHocPhi(user, preYear) == 1)
+            {
+                MessageBox.Show("Sinh viên vui lòng hoàn thành học phí còn nợ trước khi đăng ký học phần");
+                btnKeHoach.Enabled = false;
+                btnCaiThien.Enabled = false;
+                btnDCHP.Enabled = false;
+            }
         }
 
         private void btnKeHoach_Click(object sender, EventArgs e)

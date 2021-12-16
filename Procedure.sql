@@ -508,3 +508,12 @@ alter procedure GetLichThiSV
 as
 select * from LichThi
 where MaHP in (select MaHP from CT_DKHP where MSSV = @mssv and HocKy = @hocky)
+
+select * from HocPhi where MSSV = 1911153 and NamHoc = '2020 - 2021' and TinhTrang = 'false'
+
+alter procedure validationHocPhi
+@mssv int,
+@namhoc nvarchar(20)
+as
+select * from HocPhi where MSSV = @mssv and NamHoc = @namhoc and TinhTrang = 'false'
+go

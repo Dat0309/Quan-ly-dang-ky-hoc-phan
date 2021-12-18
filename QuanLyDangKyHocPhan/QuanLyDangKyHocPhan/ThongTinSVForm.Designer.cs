@@ -51,9 +51,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
             this.gunaLabel1.Location = new System.Drawing.Point(22, 13);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(313, 22);
+            this.gunaLabel1.Size = new System.Drawing.Size(181, 22);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Đăng ký học phần ngoài kế hoạch";
+            this.gunaLabel1.Text = "Thông tin sinh viên";
             // 
             // gunaPanel1
             // 
@@ -132,6 +132,7 @@
             // 
             this.btnDoiMK.AnimationHoverSpeed = 0.07F;
             this.btnDoiMK.AnimationSpeed = 0.03F;
+            this.btnDoiMK.BackColor = System.Drawing.Color.Transparent;
             this.btnDoiMK.BaseColor = System.Drawing.Color.Firebrick;
             this.btnDoiMK.BorderColor = System.Drawing.Color.Black;
             this.btnDoiMK.DialogResult = System.Windows.Forms.DialogResult.None;

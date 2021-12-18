@@ -167,18 +167,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HocPhanForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HocPhanForm.Designer.cs">
-      <DependentUpon>HocPhanForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HocPhanInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HocPhanInfo.Designer.cs">
-      <DependentUpon>HocPhanInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="HocPhiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,12 +185,6 @@
     <Compile Include="LichThiForm.Designer.cs">
       <DependentUpon>LichThiForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LichThiInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LichThiInfo.Designer.cs">
-      <DependentUpon>LichThiInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoadingFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,36 +198,6 @@
     </Compile>
     <Compile Include="QLDKHPForm.Designer.cs">
       <DependentUpon>QLDKHPForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVienForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SinhVienForm.Designer.cs">
-      <DependentUpon>SinhVienForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SinhVienInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SinhVienInfo.Designer.cs">
-      <DependentUpon>SinhVienInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TaiKhoanForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TaiKhoanForm.Designer.cs">
-      <DependentUpon>TaiKhoanForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TaiKhoanInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TaiKhoanInfo.Designer.cs">
-      <DependentUpon>TaiKhoanInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThemLichThiForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemLichThiForm.Designer.cs">
-      <DependentUpon>ThemLichThiForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongKeFrm.cs">
       <SubType>Form</SubType>
@@ -287,12 +239,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HocPhanForm.resx">
-      <DependentUpon>HocPhanForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HocPhanInfo.resx">
-      <DependentUpon>HocPhanInfo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HocPhiForm.resx">
       <DependentUpon>HocPhiForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,9 +247,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LichThiForm.resx">
       <DependentUpon>LichThiForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LichThiInfo.resx">
-      <DependentUpon>LichThiInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingFrm.resx">
       <DependentUpon>LoadingFrm.cs</DependentUpon>
@@ -315,21 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLDKHPForm.resx">
       <DependentUpon>QLDKHPForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SinhVienForm.resx">
-      <DependentUpon>SinhVienForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SinhVienInfo.resx">
-      <DependentUpon>SinhVienInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TaiKhoanForm.resx">
-      <DependentUpon>TaiKhoanForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TaiKhoanInfo.resx">
-      <DependentUpon>TaiKhoanInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThemLichThiForm.resx">
-      <DependentUpon>ThemLichThiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKeFrm.resx">
       <DependentUpon>ThongKeFrm.cs</DependentUpon>

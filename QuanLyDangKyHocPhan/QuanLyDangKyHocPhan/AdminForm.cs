@@ -41,22 +41,18 @@ namespace QuanLyDangKyHocPhan
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            setContent(new SinhVienForm());
         }
 
         private void btnQLSV_Click(object sender, EventArgs e)
         {
-            setContent(new SinhVienForm());
         }
 
         private void btnQLHP_Click(object sender, EventArgs e)
         {
-            setContent(new HocPhanForm());
         }
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            setContent(new TaiKhoanForm());
         }
 
         private void btnQLDKHP_Click(object sender, EventArgs e)
@@ -74,7 +70,6 @@ namespace QuanLyDangKyHocPhan
 
         private void btnQLHV_Click(object sender, EventArgs e)
         {
-            setContent(new ThemLichThiForm());
         }
     }
 }

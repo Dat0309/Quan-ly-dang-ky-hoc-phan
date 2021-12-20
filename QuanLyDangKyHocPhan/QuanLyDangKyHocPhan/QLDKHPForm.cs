@@ -121,6 +121,7 @@ namespace QuanLyDangKyHocPhan
                 x.SubItems[3].Text.Contains(key) ||
                 x.SubItems[4].Text.Contains(key) ||
                 x.SubItems[5].Text.Contains(key) ||
+                x.SubItems[6].Text.Contains(key) ||
                 x.SubItems[7].Text.Contains(key)))
                 .ToList();
 

@@ -19,10 +19,12 @@ namespace QuanLyDangKyHocPhan
     {
         List<string> years = new List<string>();
         List<string> courses = new List<string>();
+
         KhoaBL khoaBL = KhoaBL.getInstance();
         List<Khoa> listkhoa;
         LopBL lopBL = LopBL.getInstance();
         List<Lop> listLop;
+
         ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
 
         public QLDKHPForm()
@@ -30,8 +32,9 @@ namespace QuanLyDangKyHocPhan
             InitializeComponent();
         }
 
-        #region
+        #region các hàm xử lý
 
+        #region item combobox
         public void LoadcomboboxKhoa()
         {
             listkhoa = khoaBL.GetAll();
@@ -50,6 +53,7 @@ namespace QuanLyDangKyHocPhan
         {
             cbbCourse.DataSource = GetCourse();
         }
+        #endregion
 
         /// <summary>
         /// Hàm xuất thông tin học phần đăng ký
@@ -77,6 +81,8 @@ namespace QuanLyDangKyHocPhan
                     AddCourses(reader["HocKy"].ToString());
             }
         }
+
+        #region hàm lọc
 
         /// <summary>
         /// Lọc danh sách đăng ký học phần theo các tiêu chí
@@ -257,8 +263,10 @@ namespace QuanLyDangKyHocPhan
             courses.Add(course);
         }
 
+        #endregion
+
         /// <summary>
-        /// Xuất kêt quả đăng ký
+        /// Xuất file excel
         /// </summary>
         /// <param name="lv"></param>
         /// <param name="listKQDK"></param>

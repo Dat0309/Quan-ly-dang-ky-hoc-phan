@@ -16,10 +16,17 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class DKNgoaiKHForm : Form
     {
+        // Danh sách học phần được mở giảng dạy trong học kỳ này
         List<HocPhan> listHP;
+        // Danh sách kết quả đăng ký
         List<HocPhan> listKQ;
+
         SinhVien currentSV;
+
         SinhVienBL svBL = SinhVienBL.getInstance();
+        HocPhanBL hpBL = HocPhanBL.getInstance();
+
+        // Lấy năm của sinh viên
         string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
 
         public DKNgoaiKHForm(string user)
@@ -28,15 +35,14 @@ namespace QuanLyDangKyHocPhan
             InitializeComponent();
         }
 
-        #region
+        #region các hàm xử lý
 
         /// <summary>
-        /// Hàm lấy danh sách các môn học đã đăng ký trong học kỳ này
+        /// Hàm lấy danh sách các học phần đã đăng ký trong học kỳ này
         /// </summary>
         private void LoadCurrent_DSKQ()
         {
             int soLuongDangKy = 0;
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             lvKQDK.Items.Clear();
 
@@ -62,7 +68,6 @@ namespace QuanLyDangKyHocPhan
         /// </summary>
         private void LoadDSHP()
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listHP = hpBL.GetHPNgoaiKeHoach(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentSV.Khoa);
             lvHP.Items.Clear();
 
@@ -146,9 +151,7 @@ namespace QuanLyDangKyHocPhan
                 {
                     listKQ.Add(GetHPLV(this.lvHP.CheckedItems[i]));
                     i--;
-
                 }
-
                 foreach (var item in listKQ)
                 {
                     ct.MSSV = currentSV.MSSV;
@@ -306,7 +309,7 @@ namespace QuanLyDangKyHocPhan
 
         private void lvHP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            listKQ = HocPhanBL.getInstance().GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
+            listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             int i = this.lvHP.CheckedItems.Count - 1;
             while (i >= 0)
             {

@@ -28,7 +28,7 @@ namespace QuanLyDangKyHocPhan
             LoadDetail();
         }
 
-        #region
+        #region các hàm xử lý
 
         private void LoadDSHP()
         {

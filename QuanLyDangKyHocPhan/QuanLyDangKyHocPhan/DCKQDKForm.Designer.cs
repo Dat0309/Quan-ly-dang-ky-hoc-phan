@@ -253,7 +253,7 @@
             this.btnDangKy.Radius = 10;
             this.btnDangKy.Size = new System.Drawing.Size(97, 42);
             this.btnDangKy.TabIndex = 16;
-            this.btnDangKy.Text = "Đăng ký";
+            this.btnDangKy.Text = "Lưu";
             this.btnDangKy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 

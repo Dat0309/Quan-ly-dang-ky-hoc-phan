@@ -18,9 +18,13 @@ namespace QuanLyDangKyHocPhan
     {
         List<HocPhan> listHP;
         List<HocPhan> listKQ;
+
         SinhVien currentSV;
+
         int nam;
         string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
+
+        HocPhanBL hpBL = HocPhanBL.getInstance();
         SinhVienBL svBL = SinhVienBL.getInstance();
 
         public DKTheoKeHoachForm(string user)
@@ -37,7 +41,6 @@ namespace QuanLyDangKyHocPhan
         private void LoadCurrent_DSKQ()
         {
             int soLuongDangKy = 0;
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             lvKQDK.Items.Clear();
 
@@ -77,7 +80,6 @@ namespace QuanLyDangKyHocPhan
         /// </summary>
         private void LoadDSHP()
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listHP = hpBL.GetHPTheoKeHoach(currentSV.MSSV, nam, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentSV.Khoa);
             lvHP.Items.Clear();
 
@@ -150,7 +152,6 @@ namespace QuanLyDangKyHocPhan
         /// <returns></returns>
         private int InsertChiTietDK()
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             ChiTietDangKy ct = new ChiTietDangKy();
             if (lvKQDK.Items.Count < 0)
                 MessageBox.Show("Chưa chọn học phần để đăng ký, vui lòng chọn học phần");
@@ -164,7 +165,6 @@ namespace QuanLyDangKyHocPhan
                     i--;
 
                 }
-
                 foreach (var item in listKQ)
                 {
                     ct.MSSV = currentSV.MSSV;
@@ -235,18 +235,6 @@ namespace QuanLyDangKyHocPhan
                 Byte[] bin = p.GetAsByteArray();
                 File.WriteAllBytes(path, bin);
             }
-        }
-
-        /// <summary>
-        /// Xoá học phần vừa đăng ký ra khỏi phiếu học phần
-        /// </summary>
-        /// <param name="mssv"></param>
-        /// <param name="mahp"></param>
-        /// <returns></returns>
-        private int Delete(int mssv, string mahp)
-        {
-            ChiTietDKBL ctdkBL = ChiTietDKBL.getInstance();
-            return ctdkBL.DeleteByKey(mssv, mahp);
         }
 
         /// <summary>

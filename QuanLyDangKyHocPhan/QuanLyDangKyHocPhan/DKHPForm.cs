@@ -15,16 +15,18 @@ namespace QuanLyDangKyHocPhan
     public partial class DKHPForm : Form
     {
         List<HocPhan> listHP;
-        SinhVien currentSV;
         string user;
+
         public DKHPForm(string user)
         {
             this.user = user;
             InitializeComponent();
         }
 
-        #region
-
+        #region các hàm xử lý
+        /// <summary>
+        /// Xuất danh sách các học phần chưa tích luỹ
+        /// </summary>
         private void LoadHPToLV()
         {
             HocPhanBL hpBL = HocPhanBL.getInstance();

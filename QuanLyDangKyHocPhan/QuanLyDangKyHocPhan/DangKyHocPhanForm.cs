@@ -19,7 +19,7 @@ namespace QuanLyDangKyHocPhan
             userName = user;
         }
 
-        #region
+        #region các hàm chức năng
 
         /// <summary>
         /// Hiện giao diện trên container

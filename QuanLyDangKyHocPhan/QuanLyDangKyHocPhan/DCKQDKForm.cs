@@ -16,11 +16,18 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class DCKQDKForm : Form
     {
+        // Danh sách các học phần chưa tích luỹ
         List<HocPhan> listHP;
+        // Danh sách kết quả đăng ký học phần
         List<HocPhan> listKQ;
+        // Sinh viên đang đăng nhập
         SinhVien currentSV;
+
         SinhVienBL svBL = SinhVienBL.getInstance();
+        HocPhanBL hpBL = HocPhanBL.getInstance();
+
         int nam, soLuongDangKy;
+        // Năm học hiện tại
         string currentYear = DateTime.Now.Year.ToString() + " - " + (DateTime.Now.Year + 1).ToString();
 
         public DCKQDKForm(string mssv)
@@ -31,7 +38,7 @@ namespace QuanLyDangKyHocPhan
             InitializeComponent();
         }
 
-        #region
+        #region các hàm xử lý
 
         /// <summary>
         /// Hàm tính năm học của sinh viên: vd
@@ -52,7 +59,6 @@ namespace QuanLyDangKyHocPhan
         /// </summary>
         private void LoadCurrent_DSKQ()
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             lvKQDK.Items.Clear();
 
@@ -88,7 +94,7 @@ namespace QuanLyDangKyHocPhan
             {
                 soLuongDangKy += hp.TongSoTC;
                 txtQuantity.Text = soLuongDangKy.ToString();
-                
+
 
                 if (soLuongDangKy <= 25)
                 {
@@ -116,7 +122,6 @@ namespace QuanLyDangKyHocPhan
         /// </summary>
         private void LoadDSHP()
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listHP = hpBL.GetHPTheoKeHoach(currentSV.MSSV, nam, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentSV.Khoa);
             lvHP.Items.Clear();
 
@@ -330,7 +335,6 @@ namespace QuanLyDangKyHocPhan
 
         private void lvHP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             int i = this.lvHP.CheckedItems.Count - 1;
             while (i >= 0)
@@ -353,11 +357,11 @@ namespace QuanLyDangKyHocPhan
                     int result = Delete(currentSV.MSSV, item.SubItems[0].Text.ToString().Trim());
                     if (result > 0)
                     {
-                        UpdateHocPhi();
+                        //UpdateHocPhi();
                         lvKQDK.Items.Remove(item);
                         LoadDSHP();
                     }
-                    else MessageBox.Show("Cập nhật dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");
+                    else MessageBox.Show("Xoá dữ liệu không thành công. Vui lòng kiểm tra lại dữ liệu nhập");
                 }
             }
         }

@@ -48,5 +48,36 @@ namespace QuanLyDangKyHocPhan
         {
             this.Close();
         }
+
+        private void cbShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowPass.Checked)
+                txtMK.UseSystemPasswordChar = false;
+            else
+                txtMK.UseSystemPasswordChar = true;
+        }
+
+        private void cbShowNewPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowNewPass.Checked)
+                txtNewMK.UseSystemPasswordChar = false;
+            else
+                txtNewMK.UseSystemPasswordChar = true;
+        }
+
+        private void cbShowRePass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowRePass.Checked)
+                txtReNewMK.UseSystemPasswordChar = false;
+            else
+                txtReNewMK.UseSystemPasswordChar = true;
+        }
+
+        private void DoiMKForm_Load(object sender, EventArgs e)
+        {
+            txtMK.UseSystemPasswordChar = true;
+            txtNewMK.UseSystemPasswordChar = true;
+            txtReNewMK.UseSystemPasswordChar = true;
+        }
     }
 }

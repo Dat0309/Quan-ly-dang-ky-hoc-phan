@@ -36,6 +36,9 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.btnXacNhan = new Guna.UI.WinForms.GunaButton();
             this.btnHuy = new Guna.UI.WinForms.GunaButton();
+            this.cbShowPass = new System.Windows.Forms.CheckBox();
+            this.cbShowNewPass = new System.Windows.Forms.CheckBox();
+            this.cbShowRePass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtMK
@@ -54,7 +57,7 @@
             this.txtMK.PasswordChar = '\0';
             this.txtMK.Radius = 5;
             this.txtMK.SelectedText = "";
-            this.txtMK.Size = new System.Drawing.Size(342, 32);
+            this.txtMK.Size = new System.Drawing.Size(281, 32);
             this.txtMK.TabIndex = 0;
             // 
             // txtNewMK
@@ -73,7 +76,7 @@
             this.txtNewMK.PasswordChar = '\0';
             this.txtNewMK.Radius = 5;
             this.txtNewMK.SelectedText = "";
-            this.txtNewMK.Size = new System.Drawing.Size(342, 32);
+            this.txtNewMK.Size = new System.Drawing.Size(281, 32);
             this.txtNewMK.TabIndex = 1;
             // 
             // txtReNewMK
@@ -92,7 +95,7 @@
             this.txtReNewMK.PasswordChar = '\0';
             this.txtReNewMK.Radius = 5;
             this.txtReNewMK.SelectedText = "";
-            this.txtReNewMK.Size = new System.Drawing.Size(342, 32);
+            this.txtReNewMK.Size = new System.Drawing.Size(281, 32);
             this.txtReNewMK.TabIndex = 2;
             // 
             // gunaLabel1
@@ -179,11 +182,47 @@
             this.btnHuy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
+            // cbShowPass
+            // 
+            this.cbShowPass.AutoSize = true;
+            this.cbShowPass.Location = new System.Drawing.Point(435, 17);
+            this.cbShowPass.Name = "cbShowPass";
+            this.cbShowPass.Size = new System.Drawing.Size(57, 20);
+            this.cbShowPass.TabIndex = 8;
+            this.cbShowPass.Text = "Hiện";
+            this.cbShowPass.UseVisualStyleBackColor = true;
+            this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged);
+            // 
+            // cbShowNewPass
+            // 
+            this.cbShowNewPass.AutoSize = true;
+            this.cbShowNewPass.Location = new System.Drawing.Point(435, 69);
+            this.cbShowNewPass.Name = "cbShowNewPass";
+            this.cbShowNewPass.Size = new System.Drawing.Size(57, 20);
+            this.cbShowNewPass.TabIndex = 9;
+            this.cbShowNewPass.Text = "Hiện";
+            this.cbShowNewPass.UseVisualStyleBackColor = true;
+            this.cbShowNewPass.CheckedChanged += new System.EventHandler(this.cbShowNewPass_CheckedChanged);
+            // 
+            // cbShowRePass
+            // 
+            this.cbShowRePass.AutoSize = true;
+            this.cbShowRePass.Location = new System.Drawing.Point(435, 121);
+            this.cbShowRePass.Name = "cbShowRePass";
+            this.cbShowRePass.Size = new System.Drawing.Size(57, 20);
+            this.cbShowRePass.TabIndex = 10;
+            this.cbShowRePass.Text = "Hiện";
+            this.cbShowRePass.UseVisualStyleBackColor = true;
+            this.cbShowRePass.CheckedChanged += new System.EventHandler(this.cbShowRePass_CheckedChanged);
+            // 
             // DoiMKForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 223);
+            this.Controls.Add(this.cbShowRePass);
+            this.Controls.Add(this.cbShowNewPass);
+            this.Controls.Add(this.cbShowPass);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.gunaLabel3);
@@ -195,6 +234,7 @@
             this.Name = "DoiMKForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DoiMKForm";
+            this.Load += new System.EventHandler(this.DoiMKForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +250,8 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaButton btnXacNhan;
         private Guna.UI.WinForms.GunaButton btnHuy;
+        private System.Windows.Forms.CheckBox cbShowPass;
+        private System.Windows.Forms.CheckBox cbShowNewPass;
+        private System.Windows.Forms.CheckBox cbShowRePass;
     }
 }

@@ -61,13 +61,11 @@
             // columnHeader8
             // 
             this.columnHeader8.Text = "STC";
-            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader8.Width = 200;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Tên học phần";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader6.Width = 400;
             // 
             // columnHeader5
@@ -157,7 +155,6 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Loại HP";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader7.Width = 200;
             // 
             // columnHeader11
@@ -215,19 +212,16 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "STC";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 200;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Loại HP";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 200;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên HP";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader2.Width = 450;
             // 
             // columnHeader1

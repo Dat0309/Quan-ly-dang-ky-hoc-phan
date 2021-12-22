@@ -247,6 +247,12 @@
     <Compile Include="ThemLichThiForm.Designer.cs">
       <DependentUpon>ThemLichThiForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongKeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeFrm.Designer.cs">
+      <DependentUpon>ThongKeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongTinSVForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemLichThiForm.resx">
       <DependentUpon>ThemLichThiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeFrm.resx">
+      <DependentUpon>ThongKeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinSVForm.resx">
       <DependentUpon>ThongTinSVForm.cs</DependentUpon>

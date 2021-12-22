@@ -15,8 +15,8 @@ namespace QuanLyDangKyHocPhan
     public partial class DKHPForm : Form
     {
         List<HocPhan> listHP;
-        SinhVien currentSV;
         string user;
+
         public DKHPForm(string user)
         {
             this.user = user;
@@ -25,6 +25,9 @@ namespace QuanLyDangKyHocPhan
 
         #region
 
+        /// <summary>
+        /// Xuất danh sách các học phần chưa tích luỹ
+        /// </summary>
         private void LoadHPToLV()
         {
             HocPhanBL hpBL = HocPhanBL.getInstance();
@@ -44,7 +47,15 @@ namespace QuanLyDangKyHocPhan
 
         private void DKHPForm_Load(object sender, EventArgs e)
         {
+            string preYear = (DateTime.Now.Year - 1).ToString() + " - " + DateTime.Now.Year.ToString();
             LoadHPToLV();
+            if (HocPhiBL.getInstance().KiemTraHocPhi(user, preYear) == 1)
+            {
+                MessageBox.Show("Sinh viên vui lòng hoàn thành học phí còn nợ trước khi đăng ký học phần");
+                btnKeHoach.Enabled = false;
+                btnCaiThien.Enabled = false;
+                btnDCHP.Enabled = false;
+            }
         }
 
         private void btnKeHoach_Click(object sender, EventArgs e)

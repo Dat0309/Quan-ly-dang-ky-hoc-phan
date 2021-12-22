@@ -16,7 +16,7 @@ namespace BusinessLogic
         private HocPhiBL() { }
         public static HocPhiBL getInstance()
         {
-            if(instance == null)
+            if (instance == null)
                 return instance = new HocPhiBL();
             return instance;
         }
@@ -75,6 +75,17 @@ namespace BusinessLogic
         public int Delete(HocPhi hp)
         {
             return hpDA.Insert_Update_Delete(hp, 2);
+        }
+
+        /// <summary>
+        /// Kiểm tra xem sinh viên có nợ học phí của năm trước không
+        /// </summary>
+        /// <param name="mssv"></param>
+        /// <param name="namHoc"></param>
+        /// <returns></returns>
+        public int KiemTraHocPhi(string mssv, string namHoc)
+        {
+            return hpDA.KiemTraHocPhi(mssv, namHoc);
         }
     }
 }

@@ -96,7 +96,6 @@ namespace DataAccess
             conn.Close();
         }
 
-
         /// <summary>
         /// Hàm điều chỉnh học phần
         /// </summary>

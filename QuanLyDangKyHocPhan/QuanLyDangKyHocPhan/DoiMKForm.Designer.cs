@@ -36,9 +36,9 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.btnXacNhan = new Guna.UI.WinForms.GunaButton();
             this.btnHuy = new Guna.UI.WinForms.GunaButton();
-            this.cbShowPass = new Guna.UI.WinForms.GunaCheckBox();
-            this.cbShowNewPas = new Guna.UI.WinForms.GunaCheckBox();
-            this.cbShowRePass = new Guna.UI.WinForms.GunaCheckBox();
+            this.cbShowPass = new System.Windows.Forms.CheckBox();
+            this.cbShowNewPass = new System.Windows.Forms.CheckBox();
+            this.cbShowRePass = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtMK
@@ -57,7 +57,7 @@
             this.txtMK.PasswordChar = '\0';
             this.txtMK.Radius = 5;
             this.txtMK.SelectedText = "";
-            this.txtMK.Size = new System.Drawing.Size(300, 32);
+            this.txtMK.Size = new System.Drawing.Size(281, 32);
             this.txtMK.TabIndex = 0;
             // 
             // txtNewMK
@@ -76,7 +76,7 @@
             this.txtNewMK.PasswordChar = '\0';
             this.txtNewMK.Radius = 5;
             this.txtNewMK.SelectedText = "";
-            this.txtNewMK.Size = new System.Drawing.Size(300, 32);
+            this.txtNewMK.Size = new System.Drawing.Size(281, 32);
             this.txtNewMK.TabIndex = 1;
             // 
             // txtReNewMK
@@ -95,7 +95,7 @@
             this.txtReNewMK.PasswordChar = '\0';
             this.txtReNewMK.Radius = 5;
             this.txtReNewMK.SelectedText = "";
-            this.txtReNewMK.Size = new System.Drawing.Size(300, 32);
+            this.txtReNewMK.Size = new System.Drawing.Size(281, 32);
             this.txtReNewMK.TabIndex = 2;
             // 
             // gunaLabel1
@@ -141,7 +141,7 @@
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
             this.btnXacNhan.Image = null;
             this.btnXacNhan.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnXacNhan.Location = new System.Drawing.Point(420, 169);
+            this.btnXacNhan.Location = new System.Drawing.Point(374, 169);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnXacNhan.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -168,7 +168,7 @@
             this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.Image = null;
             this.btnHuy.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnHuy.Location = new System.Drawing.Point(298, 169);
+            this.btnHuy.Location = new System.Drawing.Point(252, 169);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnHuy.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -184,50 +184,44 @@
             // 
             // cbShowPass
             // 
-            this.cbShowPass.BaseColor = System.Drawing.Color.White;
-            this.cbShowPass.CheckedOffColor = System.Drawing.Color.Gray;
-            this.cbShowPass.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbShowPass.FillColor = System.Drawing.Color.White;
-            this.cbShowPass.Location = new System.Drawing.Point(455, 17);
+            this.cbShowPass.AutoSize = true;
+            this.cbShowPass.Location = new System.Drawing.Point(435, 17);
             this.cbShowPass.Name = "cbShowPass";
-            this.cbShowPass.Size = new System.Drawing.Size(64, 20);
+            this.cbShowPass.Size = new System.Drawing.Size(57, 20);
             this.cbShowPass.TabIndex = 8;
-            this.cbShowPass.Text = "Show";
+            this.cbShowPass.Text = "Hiện";
+            this.cbShowPass.UseVisualStyleBackColor = true;
             this.cbShowPass.CheckedChanged += new System.EventHandler(this.cbShowPass_CheckedChanged);
             // 
-            // cbShowNewPas
+            // cbShowNewPass
             // 
-            this.cbShowNewPas.BaseColor = System.Drawing.Color.White;
-            this.cbShowNewPas.CheckedOffColor = System.Drawing.Color.Gray;
-            this.cbShowNewPas.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbShowNewPas.FillColor = System.Drawing.Color.White;
-            this.cbShowNewPas.Location = new System.Drawing.Point(455, 69);
-            this.cbShowNewPas.Name = "cbShowNewPas";
-            this.cbShowNewPas.Size = new System.Drawing.Size(64, 20);
-            this.cbShowNewPas.TabIndex = 9;
-            this.cbShowNewPas.Text = "Show";
-            this.cbShowNewPas.CheckedChanged += new System.EventHandler(this.cbShowNewPas_CheckedChanged);
+            this.cbShowNewPass.AutoSize = true;
+            this.cbShowNewPass.Location = new System.Drawing.Point(435, 69);
+            this.cbShowNewPass.Name = "cbShowNewPass";
+            this.cbShowNewPass.Size = new System.Drawing.Size(57, 20);
+            this.cbShowNewPass.TabIndex = 9;
+            this.cbShowNewPass.Text = "Hiện";
+            this.cbShowNewPass.UseVisualStyleBackColor = true;
+            this.cbShowNewPass.CheckedChanged += new System.EventHandler(this.cbShowNewPass_CheckedChanged);
             // 
             // cbShowRePass
             // 
-            this.cbShowRePass.BaseColor = System.Drawing.Color.White;
-            this.cbShowRePass.CheckedOffColor = System.Drawing.Color.Gray;
-            this.cbShowRePass.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.cbShowRePass.FillColor = System.Drawing.Color.White;
-            this.cbShowRePass.Location = new System.Drawing.Point(454, 121);
+            this.cbShowRePass.AutoSize = true;
+            this.cbShowRePass.Location = new System.Drawing.Point(435, 121);
             this.cbShowRePass.Name = "cbShowRePass";
-            this.cbShowRePass.Size = new System.Drawing.Size(64, 20);
+            this.cbShowRePass.Size = new System.Drawing.Size(57, 20);
             this.cbShowRePass.TabIndex = 10;
-            this.cbShowRePass.Text = "Show";
+            this.cbShowRePass.Text = "Hiện";
+            this.cbShowRePass.UseVisualStyleBackColor = true;
             this.cbShowRePass.CheckedChanged += new System.EventHandler(this.cbShowRePass_CheckedChanged);
             // 
             // DoiMKForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 223);
+            this.ClientSize = new System.Drawing.Size(502, 223);
             this.Controls.Add(this.cbShowRePass);
-            this.Controls.Add(this.cbShowNewPas);
+            this.Controls.Add(this.cbShowNewPass);
             this.Controls.Add(this.cbShowPass);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXacNhan);
@@ -256,8 +250,8 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaButton btnXacNhan;
         private Guna.UI.WinForms.GunaButton btnHuy;
-        private Guna.UI.WinForms.GunaCheckBox cbShowPass;
-        private Guna.UI.WinForms.GunaCheckBox cbShowNewPas;
-        private Guna.UI.WinForms.GunaCheckBox cbShowRePass;
+        private System.Windows.Forms.CheckBox cbShowPass;
+        private System.Windows.Forms.CheckBox cbShowNewPass;
+        private System.Windows.Forms.CheckBox cbShowRePass;
     }
 }

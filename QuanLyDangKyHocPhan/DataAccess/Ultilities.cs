@@ -76,5 +76,6 @@ namespace DataAccess
         public static string LoadLichThi = "LoadLichThi";
         public static string GetLichThiSV = "GetLichThiSV";
 
+
     }
 }

@@ -51,15 +51,15 @@ namespace QuanLyDangKyHocPhan
 
         private void cbShowPass_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbShowPass.Checked)
+            if (cbShowPass.Checked)
                 txtMK.UseSystemPasswordChar = false;
             else
                 txtMK.UseSystemPasswordChar = true;
         }
 
-        private void cbShowNewPas_CheckedChanged(object sender, EventArgs e)
+        private void cbShowNewPass_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbShowNewPas.Checked)
+            if (cbShowNewPass.Checked)
                 txtNewMK.UseSystemPasswordChar = false;
             else
                 txtNewMK.UseSystemPasswordChar = true;

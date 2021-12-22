@@ -50,10 +50,10 @@
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnXuat = new Guna.UI.WinForms.GunaButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.cbbKhoa = new Guna.UI.WinForms.GunaComboBox();
-            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.cbbKhoa = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.cbbCourse = new Guna.UI.WinForms.GunaComboBox();
             this.btnThongKe = new Guna.UI.WinForms.GunaButton();
@@ -145,7 +145,7 @@
             this.btnFilter.ForeColor = System.Drawing.Color.White;
             this.btnFilter.Image = null;
             this.btnFilter.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFilter.Location = new System.Drawing.Point(13, 70);
+            this.btnFilter.Location = new System.Drawing.Point(1123, 70);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnFilter.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -163,7 +163,7 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(106, 76);
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 79);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(69, 20);
             this.gunaLabel1.TabIndex = 23;
@@ -185,19 +185,19 @@
             "1",
             "2",
             "3"});
-            this.cbbNamHoc.Location = new System.Drawing.Point(181, 70);
+            this.cbbNamHoc.Location = new System.Drawing.Point(87, 73);
             this.cbbNamHoc.Name = "cbbNamHoc";
             this.cbbNamHoc.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbNamHoc.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbNamHoc.Radius = 5;
-            this.cbbNamHoc.Size = new System.Drawing.Size(172, 31);
+            this.cbbNamHoc.Size = new System.Drawing.Size(183, 31);
             this.cbbNamHoc.TabIndex = 22;
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(106, 113);
+            this.gunaLabel4.Location = new System.Drawing.Point(12, 114);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(54, 20);
             this.gunaLabel4.TabIndex = 21;
@@ -215,12 +215,12 @@
             this.cbbHK.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbHK.ForeColor = System.Drawing.Color.Black;
             this.cbbHK.FormattingEnabled = true;
-            this.cbbHK.Location = new System.Drawing.Point(181, 108);
+            this.cbbHK.Location = new System.Drawing.Point(87, 109);
             this.cbbHK.Name = "cbbHK";
             this.cbbHK.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbHK.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbHK.Radius = 5;
-            this.cbbHK.Size = new System.Drawing.Size(172, 31);
+            this.cbbHK.Size = new System.Drawing.Size(183, 31);
             this.cbbHK.TabIndex = 20;
             // 
             // lvQL
@@ -242,9 +242,9 @@
             this.lvQL.FullRowSelect = true;
             this.lvQL.GridLines = true;
             this.lvQL.HideSelection = false;
-            this.lvQL.Location = new System.Drawing.Point(12, 145);
+            this.lvQL.Location = new System.Drawing.Point(12, 155);
             this.lvQL.Name = "lvQL";
-            this.lvQL.Size = new System.Drawing.Size(1198, 563);
+            this.lvQL.Size = new System.Drawing.Size(1198, 553);
             this.lvQL.TabIndex = 13;
             this.lvQL.UseCompatibleStateImageBehavior = false;
             this.lvQL.View = System.Windows.Forms.View.Details;
@@ -325,6 +325,16 @@
             this.btnXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(295, 79);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(43, 20);
+            this.gunaLabel3.TabIndex = 28;
+            this.gunaLabel3.Text = "Khoa";
+            // 
             // cbbKhoa
             // 
             this.cbbKhoa.BackColor = System.Drawing.Color.Transparent;
@@ -338,15 +348,27 @@
             this.cbbKhoa.ForeColor = System.Drawing.Color.Black;
             this.cbbKhoa.FormattingEnabled = true;
             this.cbbKhoa.Items.AddRange(new object[] {
-            ""});
-            this.cbbKhoa.Location = new System.Drawing.Point(430, 70);
+            "1",
+            "2",
+            "3"});
+            this.cbbKhoa.Location = new System.Drawing.Point(344, 73);
             this.cbbKhoa.Name = "cbbKhoa";
             this.cbbKhoa.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbKhoa.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbKhoa.Radius = 5;
-            this.cbbKhoa.Size = new System.Drawing.Size(216, 31);
-            this.cbbKhoa.TabIndex = 25;
+            this.cbbKhoa.Size = new System.Drawing.Size(183, 31);
+            this.cbbKhoa.TabIndex = 27;
             this.cbbKhoa.TextChanged += new System.EventHandler(this.cbbKhoa_TextChanged);
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel5.Location = new System.Drawing.Point(295, 114);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(34, 20);
+            this.gunaLabel5.TabIndex = 26;
+            this.gunaLabel5.Text = "Lớp";
             // 
             // cbbLop
             // 
@@ -360,40 +382,20 @@
             this.cbbLop.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbLop.ForeColor = System.Drawing.Color.Black;
             this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Location = new System.Drawing.Point(430, 107);
+            this.cbbLop.Location = new System.Drawing.Point(344, 109);
             this.cbbLop.Name = "cbbLop";
             this.cbbLop.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbLop.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbLop.Radius = 5;
-            this.cbbLop.Size = new System.Drawing.Size(216, 31);
-            this.cbbLop.TabIndex = 26;
+            this.cbbLop.Size = new System.Drawing.Size(183, 31);
+            this.cbbLop.TabIndex = 25;
             this.cbbLop.TextChanged += new System.EventHandler(this.cbbLop_TextChanged);
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(381, 75);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(43, 20);
-            this.gunaLabel3.TabIndex = 27;
-            this.gunaLabel3.Text = "Khoa";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel5.Location = new System.Drawing.Point(381, 112);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(34, 20);
-            this.gunaLabel5.TabIndex = 28;
-            this.gunaLabel5.Text = "Lớp";
             // 
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(670, 75);
+            this.gunaLabel6.Location = new System.Drawing.Point(562, 79);
             this.gunaLabel6.Name = "gunaLabel6";
             this.gunaLabel6.Size = new System.Drawing.Size(43, 20);
             this.gunaLabel6.TabIndex = 30;
@@ -412,13 +414,15 @@
             this.cbbCourse.ForeColor = System.Drawing.Color.Black;
             this.cbbCourse.FormattingEnabled = true;
             this.cbbCourse.Items.AddRange(new object[] {
-            ""});
-            this.cbbCourse.Location = new System.Drawing.Point(719, 70);
+            "1",
+            "2",
+            "3"});
+            this.cbbCourse.Location = new System.Drawing.Point(611, 74);
             this.cbbCourse.Name = "cbbCourse";
             this.cbbCourse.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbCourse.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbCourse.Radius = 5;
-            this.cbbCourse.Size = new System.Drawing.Size(216, 31);
+            this.cbbCourse.Size = new System.Drawing.Size(183, 31);
             this.cbbCourse.TabIndex = 29;
             this.cbbCourse.TextChanged += new System.EventHandler(this.cbbCourse_TextChanged);
             // 
@@ -428,7 +432,7 @@
             this.btnThongKe.AnimationHoverSpeed = 0.07F;
             this.btnThongKe.AnimationSpeed = 0.03F;
             this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKe.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnThongKe.BaseColor = System.Drawing.Color.Brown;
             this.btnThongKe.BorderColor = System.Drawing.Color.Black;
             this.btnThongKe.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnThongKe.FocusedColor = System.Drawing.Color.Empty;
@@ -436,7 +440,7 @@
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.Image = null;
             this.btnThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKe.Location = new System.Drawing.Point(872, 714);
+            this.btnThongKe.Location = new System.Drawing.Point(894, 714);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnThongKe.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -444,7 +448,7 @@
             this.btnThongKe.OnHoverImage = null;
             this.btnThongKe.OnPressedColor = System.Drawing.Color.Black;
             this.btnThongKe.Radius = 10;
-            this.btnThongKe.Size = new System.Drawing.Size(119, 30);
+            this.btnThongKe.Size = new System.Drawing.Size(98, 30);
             this.btnThongKe.TabIndex = 31;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -458,11 +462,10 @@
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.cbbCourse);
-            this.Controls.Add(this.gunaPanel1);
-            this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaLabel3);
-            this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.cbbKhoa);
+            this.Controls.Add(this.gunaLabel5);
+            this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.cbbNamHoc);
@@ -470,6 +473,7 @@
             this.Controls.Add(this.cbbHK);
             this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.lvQL);
+            this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QLDKHPForm";
             this.Text = "QLDKHPForm";
@@ -505,10 +509,10 @@
         private Guna.UI.WinForms.GunaButton btnFilter;
         private Guna.UI.WinForms.GunaButton btnSearch;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaComboBox cbbKhoa;
-        private Guna.UI.WinForms.GunaComboBox cbbLop;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaComboBox cbbKhoa;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaComboBox cbbLop;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaComboBox cbbCourse;
         private Guna.UI.WinForms.GunaButton btnThongKe;

@@ -16,7 +16,7 @@ namespace BusinessLogic
         private HocPhiBL() { }
         public static HocPhiBL getInstance()
         {
-            if(instance == null)
+            if (instance == null)
                 return instance = new HocPhiBL();
             return instance;
         }

@@ -292,8 +292,7 @@ namespace QuanLyDangKyHocPhan
 
         private void DKTheoKeHoachForm_Load(object sender, EventArgs e)
         {
-            //LoadDSHP();
-            //LoadCurrent_DSKQ();
+            
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
@@ -311,7 +310,6 @@ namespace QuanLyDangKyHocPhan
 
         private void lvHP_ItemChecked(object sender, ItemCheckedEventArgs e)
         {
-            HocPhanBL hpBL = HocPhanBL.getInstance();
             listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             int i = this.lvHP.CheckedItems.Count - 1;
             while (i >= 0)

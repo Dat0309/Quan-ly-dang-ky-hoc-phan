@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using BusinessLogic;
-using OfficeOpenXml;
 using System.IO;
+using OfficeOpenXml;
 
 namespace QuanLyDangKyHocPhan
 {
@@ -48,7 +48,7 @@ namespace QuanLyDangKyHocPhan
         private void LoadDetail()
         {
             int SoLuongTC = 0;
-            lbName.Text = currentSV.HoLot +" "+ currentSV.Ten + " Lớp: " + currentSV.TenLop + " Khoa: "+currentSV.Khoa;
+            lbName.Text = currentSV.HoLot + " " + currentSV.Ten + " Lớp: " + currentSV.TenLop + " Khoa: " + currentSV.Khoa;
             foreach (var item in listHP)
             {
                 SoLuongTC += item.TongSoTC;

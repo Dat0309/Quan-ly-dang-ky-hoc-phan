@@ -23,7 +23,8 @@ namespace QuanLyDangKyHocPhan
             InitializeComponent();
         }
 
-        #region các hàm xử lý
+        #region
+
         /// <summary>
         /// Xuất danh sách các học phần chưa tích luỹ
         /// </summary>

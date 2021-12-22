@@ -58,7 +58,7 @@ namespace QuanLyDangKyHocPhan
         /// Hàm lấy danh sách các môn học đã đăng ký trong học kỳ này
         /// </summary>
         private void LoadCurrent_DSKQ()
-        { 
+        {
             listKQ = hpBL.GetCurrentKQHP(currentSV.MSSV, int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text), currentYear);
             lvKQDK.Items.Clear();
 
@@ -94,7 +94,7 @@ namespace QuanLyDangKyHocPhan
             {
                 soLuongDangKy += hp.TongSoTC;
                 txtQuantity.Text = soLuongDangKy.ToString();
-                
+
 
                 if (soLuongDangKy <= 25)
                 {

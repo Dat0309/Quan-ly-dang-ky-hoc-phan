@@ -357,6 +357,7 @@ namespace QuanLyDangKyHocPhan
         {
             int hocKy = int.Parse(cbbHK.Text == "" ? "0" : cbbHK.Text);
             string nam = cbbNamHoc.Text;
+
             LoadItemWithCourse(hocKy, nam);
         }
 
@@ -373,6 +374,14 @@ namespace QuanLyDangKyHocPhan
                 LoadItem();
         }
 
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            SqlDataReader reader = LichThiBL.Instance().LoadLichThi(cbbNamHoc.Text, int.Parse(cbbHK.Text));
+            ThongKeFrm frm = new ThongKeFrm();
+            frm.LoadChart(reader, cbbNamHoc.Text, cbbHK.Text);
+            frm.ShowDialog();
+        }
+
         private void cbbKhoa_TextChanged(object sender, EventArgs e)
         {
             LoadcomboboxLop(cbbKhoa.Text);
@@ -387,14 +396,6 @@ namespace QuanLyDangKyHocPhan
         private void cbbCourse_TextChanged(object sender, EventArgs e)
         {
             GetByCourse(int.Parse(cbbCourse.Text));
-        }
-
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            SqlDataReader reader = LichThiBL.Instance().LoadLichThi(cbbNamHoc.Text, int.Parse(cbbHK.Text));
-            ThongKeFrm frm = new ThongKeFrm();
-            frm.LoadChart(reader, cbbNamHoc.Text, cbbHK.Text);
-            frm.ShowDialog();
         }
     }
 }
